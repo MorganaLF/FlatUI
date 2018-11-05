@@ -11,3 +11,17 @@ light-shadow = #fafafa
 dark-grey = #4f4f4f
 primary-color = #e75735
 grey = #747474
+
+/* Mixins */
+
+fontUrl(file)
+  return 'fonts/' + file
+
+fontFace(family, style, weight, file)
+  @font-face
+    font-family family
+    font-style style
+    font-weight weight
+    src url(fontUrl(file + '.svg')),
+        url(fontUrl(file + '.woff')),
+        url(fontUrl(file + '.ttf'))
