@@ -1,17 +1,31 @@
 .wrapper
   display: flex
+  flex-wrap: wrap
+  align-items flex-end
   max-width: 700px
-  height: 100vh
   margin: 0 auto
-  padding: 0 52px
+  padding: 62px 52px
+  text-align: center
+  font-size: 0
   //background: lightblue
   &__col
     flex-shrink: 0
-    height: 100vh
+    margin-bottom: 19px
     //background: pink
     //border: 1px solid black
     &_size_3
       width: 25%
       padding: 0 12px
-
+    &:nth-child(1)
+      text-align: right
+    &:nth-child(5)
+      text-align: right
+    &:nth-child(9)
+      text-align: right
+    &:nth-child(4)
+      text-align: left
+    &:nth-child(8)
+      text-align: left
+    &:nth-child(12)
+      text-align: left
 
