@@ -1,5 +1,6 @@
-mixin arrowButton(bg, direction)
+mixin arrowButton(bg, direction, isDisabled)
     button.arrow-button(
         class=bg ? 'arrow-button_bg_' + bg : ''
         class=direction ? 'arrow-button_arrow_' + direction : ''
+        disabled=isDisabled
     )

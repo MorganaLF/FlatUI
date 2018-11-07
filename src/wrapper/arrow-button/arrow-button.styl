@@ -20,9 +20,11 @@
       background-color: none
       &:hover
         background-color: secondary-color
-      &.arrow-button_arrow_left-secondary:hover
+      &.arrow-button_arrow_left-secondary:hover,
+      &.arrow-button_arrow_left-secondary:disabled
         background-image: url('images/arrow-white-left.svg')
-      &.arrow-button_arrow_right-secondary:hover
+      &.arrow-button_arrow_right-secondary:hover,
+      &.arrow-button_arrow_right-secondary:disabled
         background-image: url('images/arrow-white-right.svg')
     &_disabled
       background-color light-grey
@@ -39,3 +41,6 @@
       background-image: url('images/arrow-left.svg')
     &_right-secondary
       background-image: url('images/arrow-right.svg')
+  &:disabled
+    border: none
+    background-color light-grey
