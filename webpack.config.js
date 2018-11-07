@@ -23,8 +23,9 @@ let conf = {
         to: './fonts'
       },
       {
-        from: './src/images',
-        to: './images'
+        from: './src/wrapper/**/*.svg',
+        to: './images',
+        flatten: true
       }
     ]),
     require('autoprefixer'),

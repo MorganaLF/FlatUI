@@ -4,35 +4,32 @@ mixin wrapper
             include standart-buttons/standart-buttons
             +button('BUTTON', 'small', 'secondary')
         .wrapper__col.wrapper__col_size_3
-            include standart-buttons/standart-buttons
             +button('BUTTON', '', 'secondary')
         .wrapper__col.wrapper__col_size_3
-            include standart-buttons/standart-buttons
             +button('BUTTON')
         .wrapper__col.wrapper__col_size_3
-            include standart-buttons/standart-buttons
             +button('BUTTON', 'small')
         .wrapper__col.wrapper__col_size_3
-            include standart-buttons/standart-buttons
             +button('BUTTON', 'small', 'secondary-shadow')
         .wrapper__col.wrapper__col_size_3
-            include standart-buttons/standart-buttons
             +button('BUTTON', '', 'secondary-shadow')
         .wrapper__col.wrapper__col_size_3
-            include standart-buttons/standart-buttons
             +button('BUTTON', '', 'primary-shadow')
         .wrapper__col.wrapper__col_size_3
-            include standart-buttons/standart-buttons
             +button('BUTTON', 'small', 'primary-shadow')
         .wrapper__col.wrapper__col_size_3
-            include standart-buttons/standart-buttons
             +button('BUTTON', 'small', 'transparent-secondary')
         .wrapper__col.wrapper__col_size_3
-            include standart-buttons/standart-buttons
             +button('BUTTON', '', 'transparent-secondary')
         .wrapper__col.wrapper__col_size_3
-            include standart-buttons/standart-buttons
             +button('BUTTON', '', 'transparent-primary')
         .wrapper__col.wrapper__col_size_3
-            include standart-buttons/standart-buttons
             +button('BUTTON', 'small', 'transparent-primary')
+        .arrow-buttons__container
+            include arrow-button/arrow-button
+            +arrowButton('transparent-secondary', 'left-secondary')
+            +arrowButton('transparent-secondary', 'right-secondary')
+            +arrowButton('disabled', 'left-white')
+            +arrowButton('disabled', 'right-white')
+            +arrowButton('secondary', 'left-white')
+            +arrowButton('secondary', 'right-white')
