@@ -11,12 +11,19 @@
   margin: 0 12px
   border: none
   border-radius: 50%
-  background: url('images/arrow-left.svg') 12px 10px no-repeat;
-  background-size: contain
+  background: url('images/arrow-left.svg') no-repeat center center
+  background-size: 36%
+  transition background 0.3s ease
   &_bg
     &_transparent-secondary
       border 3px solid secondary-color
       background-color: none
+      &:hover
+        background-color: secondary-color
+      &.arrow-button_arrow_left-secondary:hover
+        background-image: url('images/arrow-white-left.svg')
+      &.arrow-button_arrow_right-secondary:hover
+        background-image: url('images/arrow-white-right.svg')
     &_disabled
       background-color light-grey
     &_secondary
@@ -24,15 +31,11 @@
   &_arrow
     &_left-white
       background-image: url('images/arrow-white-left.svg')
-      background-position: center center
-      background-size: 35%
+      background-size: 32%
     &_right-white
       background-image: url('images/arrow-white-right.svg')
-      background-position: center center
-      background-size: 35%
+      background-size: 32%
     &_left-secondary
       background-image: url('images/arrow-left.svg')
     &_right-secondary
       background-image: url('images/arrow-right.svg')
-      background-position: center center
-      background-size: 35%
