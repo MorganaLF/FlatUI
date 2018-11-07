@@ -1,31 +1,26 @@
+include subheading/subheading
+include standart-buttons/standart-buttons
+
 mixin wrapper
     .wrapper
-        .wrapper__col.wrapper__col_size_3
-            include standart-buttons/standart-buttons
+        .standard-buttons__container
+            +subheading('STANDARD BUTTONS')
             +button('BUTTON', 'small', 'secondary')
-        .wrapper__col.wrapper__col_size_3
             +button('BUTTON', '', 'secondary')
-        .wrapper__col.wrapper__col_size_3
             +button('BUTTON')
-        .wrapper__col.wrapper__col_size_3
             +button('BUTTON', 'small')
-        .wrapper__col.wrapper__col_size_3
+        .standard-buttons__container
             +button('BUTTON', 'small', 'secondary-shadow')
-        .wrapper__col.wrapper__col_size_3
             +button('BUTTON', '', 'secondary-shadow')
-        .wrapper__col.wrapper__col_size_3
             +button('BUTTON', '', 'primary-shadow')
-        .wrapper__col.wrapper__col_size_3
             +button('BUTTON', 'small', 'primary-shadow')
-        .wrapper__col.wrapper__col_size_3
+        .standard-buttons__container
             +button('BUTTON', 'small', 'transparent-secondary')
-        .wrapper__col.wrapper__col_size_3
             +button('BUTTON', '', 'transparent-secondary')
-        .wrapper__col.wrapper__col_size_3
             +button('BUTTON', '', 'transparent-primary')
-        .wrapper__col.wrapper__col_size_3
             +button('BUTTON', 'small', 'transparent-primary')
         .arrow-buttons__container
+            +subheading('ARROW BUTTONS')
             include arrow-button/arrow-button
             +arrowButton('transparent-secondary', 'left-secondary')
             +arrowButton('transparent-secondary', 'right-secondary')
