@@ -1,7 +1,1 @@
-<svg 
- xmlns="http://www.w3.org/2000/svg"
- xmlns:xlink="http://www.w3.org/1999/xlink"
->
-<path fill-rule="evenodd"  fill="rgb(78, 183, 168)"
- d="M14.663,21.531 L12.031,24.163 L0.185,12.318 L0.232,12.271 L0.185,12.224 L12.031,0.379 L14.663,3.011 L5.403,12.271 L14.663,21.531 Z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 24"><defs><path id="vj8va" d="M167.03 438.379l2.633 2.632-9.26 9.26 9.26 9.26-2.632 2.632-11.846-11.845.047-.047-.047-.047z"/></defs><g><g transform="translate(-155 -438)"><use fill="#4eb7a8" xlink:href="#vj8va"/></g></g></svg>
