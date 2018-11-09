@@ -1,16 +1,14 @@
-.jchart--donut--segment, .jchartpie--segment {
-  transition: stroke-dasharray 1s ease;
-}
+.pie-chart
+  max-width: 95px
 
-.jchart {
-  width: 110px;
-  height: 110px;
-}
+.ct-series-a .ct-slice-donut
+  stroke grey
+.ct-series-b .ct-slice-donut
+  stroke primary-color
+.ct-series-c .ct-slice-donut
+  stroke secondary-color
+.ct-series-d .ct-slice-donut
+  stroke light-grey
 
-.jchart--body {
-  width: 100%;
-  height: 100%;
-}
-
-.jchart__donut__ringjchart__donut__ring-circle
-  fill: transparent
+.ct-series .ct-slice-donut
+  stroke-width: 16px !important
