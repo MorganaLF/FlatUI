@@ -1,8 +1,64 @@
-#custom-handle {
-  width: 3em;
-  height: 1.6em;
-  top: 50%;
-  margin-top: -.8em;
-  text-align: center;
-  line-height: 1.6em;
-}
+//#custom-handle {
+//  width: 3em;
+//  height: 1.6em;
+//  top: 50%;
+//  margin-top: -.8em;
+//  text-align: center;
+//  line-height: 1.6em;
+//}
+
+.ui-widget.ui-widget-content
+  height: 5px
+  background-color light-grey
+  border: none
+
+.ui-state-default, .ui-widget-content .ui-state-default
+  top: -0.6em
+  width: 20px
+  height: 20px
+  border-radius: 50%
+  background: primary-color
+  border none
+
+.slider
+  &_progress-bg_secondary .ui-slider-range
+  &_progress-bg_secondary .ui-state-default
+  &_progress-bg_secondary .ui-widget-content .ui-state-default
+    background: secondary-color
+  &__scale
+    list-style-type none
+    display: flex
+    justify-content: space-between
+    margin-top: 12px
+    font-size 11px
+    font-weight: 900
+    letter-spacing 0.55px
+    color light-grey-text
+
+.slider__tip
+  position: absolute
+  top: -40px
+  left: -8px
+  width 35px
+  padding: 7px 0
+  border-radius: 5px
+  font-weight: 900
+  font-size 13px
+  text-align: center
+  letter-spacing 0.65px
+  color #fff
+  background: primary-color
+  &:after
+    content: ''
+    position: absolute
+    bottom: -5px
+    left: 12px
+    width: 10px
+    height: 10px
+    transform rotate(45deg)
+    background: primary-color
+
+
+
+
+

@@ -1,4 +1,14 @@
-mixin slider
-    .slider
+mixin slider(isTip, isScale, progressBg)
+    .slider(class=progressBg?'slider_is-progress slider_progress-bg_' + progressBg:'')
         .custom-handle.ui-slider-handle
-            .slider__tip
+            if isTip
+                .slider__tip
+
+    if isScale
+        ul.slider__scale
+            li.slider__scale-item 0
+            li.slider__scale-item 25
+            li.slider__scale-item 50
+            li.slider__scale-item 75
+            li.slider__scale-item 100
+
