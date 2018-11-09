@@ -2,6 +2,8 @@ include subheading/subheading
 include standart-buttons/standart-buttons
 include arrow-button/arrow-button
 include percentages-and-charts/percentages-and-charts
+include sliders/sliders
+
 mixin wrapper
     .wrapper
         .standard-buttons__container
@@ -30,3 +32,6 @@ mixin wrapper
             +arrowButton('transparent-secondary', 'right-secondary')
         .percentages-and-charts__container
             +percentagesAndCharts
+        .sliders__container
+            +subheading('SLIDERS')
+            +sliders
