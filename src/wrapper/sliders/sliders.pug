@@ -1,5 +1,8 @@
 include slider/slider
 
 mixin sliders
-    +slider(true)
-    +slider(false, true, 'secondary')
+    .sliders__container
+        .sliders__col
+            +slider(true)
+        .sliders__col
+            +slider(false, true, 'secondary')
