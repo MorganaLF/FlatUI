@@ -1,6 +1,11 @@
 include contact-from/contact-form
+include toggle/toggle
+include ../subheading/subheading
 
 mixin form-elements
     .form-elements__col
         +contact-form
     .form-elements__col
+        +subheading('TOGGLES')
+        +toggle('toggle-1')
+        +toggle('toggle-2')
