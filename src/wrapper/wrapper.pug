@@ -4,6 +4,7 @@ include arrow-button/arrow-button
 include percentages-and-charts/percentages-and-charts
 include sliders/sliders
 include stage/stage
+include form-elements/form-elements
 
 mixin wrapper
     .wrapper
@@ -39,3 +40,6 @@ mixin wrapper
         .stages__container
             +subheading('STAGES')
             +stage(5, 3)
+        .form-elements__container
+            +subheading('FORM ELEMENTS')
+            +form-elements

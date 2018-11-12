@@ -1,0 +1,8 @@
+mixin contact-form
+    form.contact-form
+        input.contact-form__input(type='text', name='name', placeholder='Your Name')
+        .contact-form__tip ERROR
+        input.contact-form__input(type='email', name='email', placeholder='Your Email')
+        .contact-form__tip.contact-form__tip_bg_secondary THANKS!
+        textarea.contact-form__textarea(name='message', placeholder='Your Message')
+        +button('SUBMIT', '', 'secondary-shadow')
