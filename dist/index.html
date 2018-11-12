@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FlatUI</title>
+    <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <body>
             <div class="wrapper">
               <div class="standard-buttons__container">
@@ -51,12 +52,94 @@
               </div>
               <div class="arrow-buttons__container">
                       <h2 class="subheading">ARROW BUTTONS</h2>
-                          <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_left-secondary"></button>
-                          <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_right-secondary"></button>
-                          <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_left-secondary" disabled></button>
-                          <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_right-secondary" disabled></button>
-                          <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_left-secondary"></button>
-                          <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_right-secondary"></button>
+                      <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_left-secondary"></button>
+                      <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_right-secondary"></button>
+                      <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_left-secondary" disabled></button>
+                      <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_right-secondary" disabled></button>
+                      <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_left-secondary"></button>
+                      <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_right-secondary"></button>
+              </div>
+              <div class="percentages-and-charts__container">
+                            <h2 class="subheading">PERCENTAGES / PIE CHART</h2><span class="percentage"><span class="percentage__value">0</span></span><span class="percentage"><span class="percentage__value">38</span></span><span class="percentage"><span class="percentage__value">62</span></span><span class="percentage"><span class="percentage__value">89</span></span>
+                            <div class="pie-chart ct-chart ct-square"></div>
+              </div>
+              <div class="sliders-block__container">
+                      <h2 class="subheading">SLIDERS</h2>
+                      <div class="sliders__container">
+                        <div class="sliders__col">
+                                <div class="slider">
+                                  <div class="custom-handle ui-slider-handle">
+                                    <div class="slider__tip"></div>
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="sliders__col">
+                                <div class="slider slider_is-progress slider_progress-bg_secondary">
+                                  <div class="custom-handle ui-slider-handle">
+                                  </div>
+                                </div>
+                                <ul class="slider__scale">
+                                  <li class="slider__scale-item">0</li>
+                                  <li class="slider__scale-item">25</li>
+                                  <li class="slider__scale-item">50</li>
+                                  <li class="slider__scale-item">75</li>
+                                  <li class="slider__scale-item">100</li>
+                                </ul>
+                        </div>
+                      </div>
+              </div>
+              <div class="stages__container">
+                      <h2 class="subheading">STAGES</h2>
+                      <ul class="stage">
+                        <li class="stage__item">1</li>
+                        <li class="stage__line"></li>
+                        <li class="stage__item">2</li>
+                        <li class="stage__line"></li>
+                        <li class="stage__item">3</li>
+                        <li class="stage__line stage__line_inactive"></li>
+                        <li class="stage__item stage__item_inactive">4</li>
+                        <li class="stage__line stage__line_inactive"></li>
+                        <li class="stage__item stage__item_inactive">5</li>
+                      </ul>
+              </div>
+              <div class="form-elements__container">
+                      <h2 class="subheading">FORM ELEMENTS</h2>
+                      <div class="form-elements__col">
+                              <form class="contact-form">
+                                <input class="contact-form__input" type="text" name="name" placeholder="Your Name">
+                                <div class="contact-form__tip">ERROR</div>
+                                <input class="contact-form__input" type="email" name="email" placeholder="Your Email">
+                                <div class="contact-form__tip contact-form__tip_bg_secondary">THANKS!</div>
+                                <textarea class="contact-form__textarea" name="message" placeholder="Your Message"></textarea>
+                                      <button class="button button_bg_secondary-shadow">SUBMIT
+                                        <div class="button__shadow"></div>
+                                      </button>
+                              </form>
+                      </div>
+                      <div class="form-elements__col">
+                              <h2 class="subheading">TOGGLES</h2>
+                              <label class="toggle" for="toggle-1">
+                                <input class="toggle__input" type="checkbox" id="toggle-1">
+                                <div class="toggle__switch">
+                                  <div class="toggle__switch--text">on</div>
+                                  <div class="toggle__switch--round"></div>
+                                  <div class="toggle__switch--text">off</div>
+                                </div>
+                              </label>
+                              <label class="toggle" for="toggle-2">
+                                <input class="toggle__input" type="checkbox" id="toggle-2" checked>
+                                <div class="toggle__switch">
+                                  <div class="toggle__switch--text">on</div>
+                                  <div class="toggle__switch--round"></div>
+                                  <div class="toggle__switch--text">off</div>
+                                </div>
+                              </label>
+                              <h2 class="subheading">TICK BOXES</h2>
+                              <label class="tick-box">
+                                <input class="tick-box__input" type="checkbox">
+                                <div class="tick-box__round"></div>
+                              </label>
+                      </div>
               </div>
             </div>
     <script type="text/javascript" src="https://morganalf.github.io/portfolio/dist/main.js"></script></body>

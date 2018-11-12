@@ -1,6 +1,7 @@
 include contact-from/contact-form
 include toggle/toggle
 include ../subheading/subheading
+include tick-box/tick-box
 
 mixin form-elements
     .form-elements__col
@@ -9,3 +10,6 @@ mixin form-elements
         +subheading('TOGGLES')
         +toggle('toggle-1')
         +toggle('toggle-2', true)
+        +subheading('TICK BOXES')
+        +tickBox(true)
+        +tickBox
