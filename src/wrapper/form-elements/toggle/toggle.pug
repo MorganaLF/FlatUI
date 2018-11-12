@@ -1,6 +1,6 @@
-mixin toggle(inputId)
-    label.toggle(for=inputId)
-        input.toggle__input(type='checkbox', id=inputId)
+mixin toggle(toggleId, isChecked)
+    label.toggle(for=toggleId)
+        input.toggle__input(type='checkbox', id=toggleId, checked=isChecked)
         .toggle__switch
             .toggle__switch--text on
             .toggle__switch--round

@@ -12,9 +12,10 @@
     &:checked + .toggle__switch
       background-color secondary-color
     &:checked + .toggle__switch
-      transform: translateX(0)
+      //transform: translateX(0)
+      margin-left: 0
   &__switch
-    width: 100px
+    width: 101px
     height: 100%
     display: flex
     justify-content: center
@@ -22,7 +23,8 @@
     cursor: pointer
     top: 0
     background-color light-grey
-    transform: translateX(-34px)
+    margin-left: -35px
+    //transform: translateX(-34px)
     transition: .4s
   &__switch
     &--round
