@@ -1,0 +1,30 @@
+.stages__container
+  .subheading
+    margin: 28px 0 16px
+
+.stage
+  display: flex
+  justify-content: space-between
+  align-items center
+  list-style-type: none
+  &__line
+    top: calc(50% - 2.5px)
+    left: 0
+    width: 100%
+    border-bottom: 5px solid primary-color
+    &_inactive
+      border-bottom-color light-grey
+  &__item
+    flex-shrink 0
+    width: 29px
+    height: 29px
+    border-radius: 50%
+    padding-top: 6px
+    background-color primary-color
+    font-size 14px
+    font-weight: 700
+    color #fff
+    &_inactive
+      background-color light-grey
+      color dark-grey-text
+

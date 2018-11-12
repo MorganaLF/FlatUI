@@ -3,6 +3,7 @@ include standart-buttons/standart-buttons
 include arrow-button/arrow-button
 include percentages-and-charts/percentages-and-charts
 include sliders/sliders
+include stage/stage
 
 mixin wrapper
     .wrapper
@@ -35,3 +36,6 @@ mixin wrapper
         .sliders-block__container
             +subheading('SLIDERS')
             +sliders
+        .stages__container
+            +subheading('STAGES')
+            +stage(5, 3)
