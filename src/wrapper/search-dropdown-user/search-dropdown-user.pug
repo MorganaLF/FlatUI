@@ -1,0 +1,10 @@
+include ../subheading/subheading
+include search-and-dropdown/search-and-dropdown
+
+mixin searchDropdownUser
+    .search-dropdown-user__col
+        +subheading('SEARCH / DROP DOWN')
+        +search('Search')
+        +search('I’ve not found what I’m looking for...', 'primary')
+
+    .search-dropdown-user__col

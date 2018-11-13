@@ -1,0 +1,8 @@
+mixin search(placeholderText, searchBg)
+    form.search(action="", method="get")
+        input.search__input(type='search',
+                            name='search',
+                            placeholder=placeholderText,
+                            class=searchBg ?
+                                'search__input_color_' + searchBg: '')
+        input.search__button(type='submit', value='')

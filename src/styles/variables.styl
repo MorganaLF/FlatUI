@@ -25,3 +25,23 @@ fontFace(family, style, weight, file)
     src url(fontUrl(file + '.svg')),
         url(fontUrl(file + '.woff')),
         url(fontUrl(file + '.ttf'))
+
+placeholder()
+  &::-webkit-input-placeholder
+    {block}
+  &:-moz-placeholder
+    {block}
+  &::-moz-placeholder
+    {block}
+  &:-ms-input-placeholder
+    {block}
+
+placeholder-focus()
+  &:focus::-webkit-input-placeholder
+    {block}
+  &:focus:-moz-placeholder
+    {block}
+  &:focus::-moz-placeholder
+    {block}
+  &:focus:-ms-input-placeholder
+    {block}
