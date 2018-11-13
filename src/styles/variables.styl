@@ -14,6 +14,8 @@ grey = #747474
 
 /* Mixins */
 
+/* Font-Face */
+
 fontUrl(file)
   return 'fonts/' + file
 
@@ -25,6 +27,8 @@ fontFace(family, style, weight, file)
     src url(fontUrl(file + '.svg')),
         url(fontUrl(file + '.woff')),
         url(fontUrl(file + '.ttf'))
+
+/* Placeholder */
 
 placeholder()
   &::-webkit-input-placeholder
@@ -45,3 +49,18 @@ placeholder-focus()
     {block}
   &:focus:-ms-input-placeholder
     {block}
+
+/* input */
+
+input()
+  padding: 6px 12px
+  border: none
+  background-color light-grey
+  font-size 14px
+  letter-spacing 0.14px
+  border-radius: 3px
+  +placeholder()
+    color dark-grey-text
+    transition color 0.3s ease
+  +placeholder-focus()
+    color: transparent
