@@ -1,0 +1,38 @@
+.select2-container--default .select2-selection--single
+  input()
+.select2-container--default .select2-selection--single .select2-selection__rendered
+  color dark-grey-text
+  line-height: 1
+  text-align: left
+  padding-left: 0
+
+.select2-selection__arrow
+  top: 0 !important
+  right: 0 !important
+  bottom: 0
+  height: auto !important
+  width 33px !important
+  border-radius: 0 3px 3px 0
+  background secondary-color url("images/dropdown-arrow.svg") no-repeat center
+  background-size: 50%
+  b
+    display: none
+
+.dropdown
+  width: 100%
+
+.dropdown__option
+  padding 6px 0
+  border: none
+  border-radius: 3px
+  background secondary-color
+  color #ffffff
+
+.select2-results__option
+  padding: 6px 12px
+
+.select2-container--default .select2-results__option[aria-selected=true]
+  background-color lightness(secondary-color, 65%)
+
+.select2-container--default .select2-results__option--highlighted[aria-selected]
+  background-color lightness(secondary-color, 65%)

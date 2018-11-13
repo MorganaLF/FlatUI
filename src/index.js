@@ -8,6 +8,8 @@ import './wrapper/percentages-and-charts/percentage/percentage'
 import './wrapper/percentages-and-charts/pie-chart/jchart'
 import './wrapper/percentages-and-charts/pie-chart/pie-chart'
 import './wrapper/sliders/slider/slider'
+import '../node_modules/select2/dist/js/select2.full.min'
+import './wrapper/search-dropdown-user/dropdown/dropdown'
 
 console.log(jQuery);
 
