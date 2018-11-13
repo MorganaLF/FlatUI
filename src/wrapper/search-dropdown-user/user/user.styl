@@ -1,0 +1,81 @@
+.user
+  display: flex
+  align-items flex-start
+  &__picture-container
+    flex-shrink 0
+    width: calc(36.5% - 5px)
+    height: auto
+    margin-right: 5px
+    border: 5px solid light-grey
+    border-radius: 50%
+    font-size: 0
+    overflow: hidden
+    &:after
+      content: ''
+      float: left
+      padding-top: 100%
+  &__picture
+    width: 100%
+  &__info
+    position: relative
+    width: calc(63.5% - 7px)
+    margin: 1px 0 0 7px
+    padding: 10px 0 14px
+    border-radius: 10px
+    background-color light-grey
+    &:after
+      content: ''
+      position: absolute
+      top: calc(50% - 4px)
+      left: -5px
+      width: 10px
+      height: 10px
+      transform rotate(45deg)
+      background-color light-grey
+    &_bg_secondary
+      background-color secondary-color
+      &:after
+        background-color secondary-color
+  &__name
+    margin-bottom: 4px
+    font-size 18px
+    color primary-color
+    &_color_white
+      color #ffffff
+  &__profession
+    margin-bottom: 14px
+    font-size 11px
+    font-weight: 700
+    text-transform uppercase
+    letter-spacing 0.55px
+    color dark-grey
+    &_color_white
+      color #ffffff
+  &__social-icons
+    display: flex
+    justify-content: space-between
+    max-width: 95px
+    margin: 0 auto
+  &__social-icon
+    &_1
+      width 10px
+      height 21px
+      background url("images/FB.png") no-repeat center
+      background-size: 100%
+      &-white
+        background-image: url("images/FB_copy.png")
+    &_2
+      width 25px
+      height 20px
+      background url("images/Twitter.png") no-repeat center
+      background-size: 100%
+      &-white
+        background-image: url("images/Twitter_copy.png")
+    &_3
+      width 21px
+      height 21px
+      background url("images/Dribbble.png") no-repeat center
+      background-size: 100%
+      &-white
+        background-image: url("images/Dribbble_copy.png")
+

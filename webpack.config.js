@@ -23,6 +23,16 @@ let conf = {
         to: './fonts'
       },
       {
+        from: './src/wrapper/**/*.jpg',
+        to: './images',
+        flatten: true
+      },
+      {
+        from: './src/wrapper/**/*.png',
+        to: './images',
+        flatten: true
+      },
+      {
         from: './src/wrapper/**/*.svg',
         to: './images',
         flatten: true
