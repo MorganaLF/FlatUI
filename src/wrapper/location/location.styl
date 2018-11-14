@@ -1,0 +1,47 @@
+.location__container
+  .subheading
+    margin: 36px 0 20px
+
+.map
+  width: 100%
+  border-radius: 4px 4px 0 0
+  overflow: hidden
+  &:after
+    content: ''
+    padding-top: 34%
+    float: left
+  &__footer
+    display: flex
+    align-items center
+    padding: 13px 22px 18px 29px
+    border-radius: 0 0 4px 4px
+    color #ffffff
+    background-color primary-color
+  &__title
+    font-size 30px
+    font-weight 300
+  &__adress
+    margin: 7px 0 0 22px
+    &--span
+      display: block
+      margin-bottom: 2px
+      font-size 13px
+      font-weight: 700
+      letter-spacing 0.63px
+      text-transform uppercase
+      text-align: left
+  &__buttons
+    margin: 8px 0 0 auto
+  &__geolocation
+    border: none
+    width 27px
+    height 26px
+    margin: 2px 14px 0 0
+    background: url('images/My-Location.svg') no-repeat center center
+    background-size: contain
+  &__add
+    border: none
+    width 27px
+    height 26px
+    background: url('images/map-marker.svg') no-repeat center center
+    background-size: contain

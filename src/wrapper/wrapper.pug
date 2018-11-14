@@ -6,7 +6,8 @@ include sliders/sliders
 include stage/stage
 include form-elements/form-elements
 include search-dropdown-user/search-dropdown-user
-include news-and-events/news-and-events    
+include news-and-events/news-and-events
+include location/location
 
 mixin wrapper
     .wrapper
@@ -48,3 +49,7 @@ mixin wrapper
         .search-dropdown-user__container
             +searchDropdownUser
         +newsAndEvents
+        .location__container
+            +subheading('LOCATION')
+            +location
+

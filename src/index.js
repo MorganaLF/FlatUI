@@ -10,6 +10,7 @@ import './wrapper/percentages-and-charts/pie-chart/pie-chart'
 import './wrapper/sliders/slider/slider'
 import '../node_modules/select2/dist/js/select2.full.min'
 import './wrapper/search-dropdown-user/dropdown/dropdown'
+import './wrapper/location/map'
 
 console.log(jQuery);
 
