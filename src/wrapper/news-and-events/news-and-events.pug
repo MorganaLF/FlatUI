@@ -1,0 +1,23 @@
+include ../subheading/subheading
+include news/news
+
+mixin newsAndEvents
+    .news-and-events__row
+        +subheading('NEWS & EVENTS')
+        .news-and-events__col
+            +news(
+                'news-1',
+                'It’s all going downhill',
+                '24  AUGUST  2013',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
+                'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
+                'nunc, a tincidunt eros.'
+            )
+        .news-and-events__col
+            +news(
+                'news-2',
+                'THIS IS THE TITLE',
+                ['24', 'Aug'],
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                true
+            )
