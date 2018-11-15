@@ -8,6 +8,7 @@ include form-elements/form-elements
 include search-dropdown-user/search-dropdown-user
 include news-and-events/news-and-events
 include location/location
+include calendar-and-messaging/calendar-and-messaging
 
 mixin wrapper
     .wrapper
@@ -52,4 +53,5 @@ mixin wrapper
         .location__container
             +subheading('LOCATION')
             +location
+        +calendarAndMessaging
 

@@ -33,6 +33,11 @@ let conf = {
         flatten: true
       },
       {
+        from: './src/jQuery-UI/**/*.png',
+        to: './images',
+        flatten: true
+      },
+      {
         from: './src/wrapper/**/*.svg',
         to: './images',
         flatten: true
