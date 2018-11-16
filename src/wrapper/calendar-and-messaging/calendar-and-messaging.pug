@@ -1,6 +1,11 @@
 include calendar/calendar
+include messaging/messaging
 
 mixin calendarAndMessaging
     .calendar-and-messaging
         .calendar-and-messaging__col
+            +subheading('CALENDAR')
             +calendar
+        .calendar-and-messaging__col
+            +subheading('MESSAGING')
+            +messaging

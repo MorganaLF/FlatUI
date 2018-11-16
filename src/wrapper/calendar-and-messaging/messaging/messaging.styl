@@ -1,0 +1,82 @@
+.messaging
+  border-radius: 4px
+  overflow: hidden
+  background-color #f2f2f2
+  &__header
+    padding: 20px 0 25px
+    background-color secondary-color
+    border-bottom: 34px solid darker-secondary-color
+  &__title
+    font-family Source Sans Pro
+    font-size 34px
+    font-weight: 300
+    letter-spacing -1.02px
+    color #ffffff
+  &__body
+    padding: 0 22px 26px
+  &__photo
+    width 94px
+    height 94px
+    border-radius: 50%
+    border: 5px solid light-grey
+    overflow: hidden
+    &-img
+      width: 100%
+  &__icons
+    display: flex
+    justify-content: space-between
+    align-items: flex-end
+    margin: -47px 0 15px
+    padding: 0 6px
+  &__icon
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: contain
+    cursor: pointer
+    &_chat
+      flex-shrink: 0
+      width 20px
+      height 22px
+      margin-bottom: 4px
+      background-image: url('images/Chat_Icon.svg')
+    &_camera
+      flex-shrink: 0
+      width 25px
+      height 20px
+      margin-bottom: 7px
+      background-image: url('images/Camera_Icon.svg')
+  &__incoming
+    position: relative
+    margin-bottom: 18px
+    padding: 16px 20px 22px
+    border-radius: 5px
+    background-color #ffffff
+    &:after
+      position: absolute
+      top: -5px
+      left: 0
+      margin-left: calc(50%-5px)
+      content: ''
+      width: 10px
+      height: 10px
+      transform rotate(45deg)
+      background-color #ffffff
+    &-paragraph
+      font-size 13px
+      letter-spacing 0.63px
+      line-height: 1.2
+      text-align: left
+      color #868686
+  &__textarea
+    width: 100%
+    height 88px
+    margin-bottom: 11px
+    padding: 16px 20px
+    border-radius: 5px
+    border 3px solid #ffffff
+    font-size 13px
+    letter-spacing 0.63px
+    background-color light-grey
+    color #777777
+  .button
+    width: 100%
