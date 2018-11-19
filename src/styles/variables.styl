@@ -1,3 +1,5 @@
+/* Colors */
+
 secondary-color = #4eb7a8
 dark-grey-text = #888888
 grey-text = #9d9d9d
@@ -12,7 +14,40 @@ dark-grey = #4f4f4f
 primary-color = #e75735
 grey = #747474
 
+/* Font-size */
+root-font-size = 14px
+
+/* Media */
+
+$md = 1024px
+$sm = 800px
+$xs = 620px
+$xxs = 400px
+
 /* Mixins */
+
+/* Px to Rem */
+
+rem(size)
+  return 1rem * size / root-font-size
+
+/* Media mixin */
+
+md()
+  @media screen and (max-width: $md)
+    {block}
+
+sm()
+  @media screen and (max-width: $sm)
+    {block}
+
+xs()
+  @media screen and (max-width: $xs)
+    {block}
+
+xxs()
+  @media screen and (max-width: $xxs)
+    {block}
 
 /* Font-Face */
 
