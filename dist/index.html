@@ -231,9 +231,101 @@
               </div>
                     <div class="calendar-and-messaging">
                       <div class="calendar-and-messaging__col">
-                              <div class="calendar"></div>
+                              <h2 class="subheading">CALENDAR</h2>
+                              <div class="calendar-container">
+                                <div class="calendar__header">00</div>
+                                <div class="calendar"></div>
+                                <div class="calendar__footer">today</div>
+                              </div>
+                      </div>
+                      <div class="calendar-and-messaging__col">
+                              <h2 class="subheading">MESSAGING</h2>
+                              <div class="messaging">
+                                <div class="messaging__header">
+                                  <h3 class="messaging__title">Sarah Brown</h3>
+                                </div>
+                                <div class="messaging__body">
+                                  <div class="messaging__icons">
+                                    <div class="messaging__icon messaging__icon_chat"></div>
+                                    <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div>
+                                    <div class="messaging__icon messaging__icon_camera"></div>
+                                  </div>
+                                  <div class="messaging__incoming">
+                                    <p class="messaging__incoming-paragraph">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
+                                  </div>
+                                  <form>
+                                    <textarea class="messaging__textarea">Yeah that sounds great. See you then.</textarea>
+                                          <button class="button button_bg_secondary-shadow">REPLY
+                                            <div class="button__shadow"></div>
+                                          </button>
+                                  </form>
+                                </div>
+                              </div>
                       </div>
                     </div>
+              <div class="video__container">
+                            <h2 class="subheading">VIDEO</h2>
+                      <div id="player"></div>
+                      <script>
+                        // 2. This code loads the IFrame Player API code asynchronously.
+                        var tag = document.createElement('script');
+                        
+                        tag.src = "https://www.youtube.com/iframe_api";
+                        var firstScriptTag = document.getElementsByTagName('script')[0];
+                        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                        
+                        // 3. This function creates an <iframe> (and YouTube player)
+                        //    after the API code downloads.
+                        var player;
+                        function onYouTubeIframeAPIReady() {
+                        player = new YT.Player('player', {
+                            height: '360',
+                            width: '640',
+                            playerVars: { 'autoplay': 0, 'controls': 0, 'showinfo': 0, 'rel': 0},
+                            videoId: 'rPmGtZAUxNs',
+                            events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                        });
+                        }
+                        
+                        // 4. The API will call this function when the video player is ready.
+                        function onPlayerReady(event) {
+                            event.target.playVideo();
+                        }
+                        
+                        // 5. The API calls this function when the player's state changes.
+                        //    The function indicates that when playing a video (state=1),
+                        //    the player should play for six seconds and then stop.
+                        var done = false;
+                        function onPlayerStateChange(event) {
+                            if (event.data == YT.PlayerState.PLAYING && !done) {
+                                setTimeout(stopVideo, 6000);
+                                done = true;
+                        }
+                        }
+                        function stopVideo() {
+                            player.stopVideo();
+                        }
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                      </script>
+                      <!--.video-->
+                      <!--    button.video__play(onclick="player.playVideo();") включить-->
+                      <!--    button.video__full на весь экран-->
+                      <!--    .video__progress//iframe(src="https://www.youtube.com/embed/rPmGtZAUxNs" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+                      -->
+              </div>
             </div>
       <!--script( src="/main.js")-->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3R36qjSlfYo06Y6XZ6Htu6r0ivjSmcOg&amp;callback=initMap" async defer></script>

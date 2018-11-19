@@ -9,6 +9,7 @@ include search-dropdown-user/search-dropdown-user
 include news-and-events/news-and-events
 include location/location
 include calendar-and-messaging/calendar-and-messaging
+include video/video
 
 mixin wrapper
     .wrapper
@@ -54,4 +55,6 @@ mixin wrapper
             +subheading('LOCATION')
             +location
         +calendarAndMessaging
+        .video__container
+            +video
 
