@@ -16,15 +16,20 @@
       border-bottom-color light-grey
   &__item
     flex-shrink 0
-    width: 29px
-    height: 29px
+    width: rem(29px)
+    height: rem(29px)
     border-radius: 50%
-    padding-top: 6px
+    padding-top: rem(6px)
     background-color primary-color
-    font-size 14px
+    font-size rem(14px)
     font-weight: 700
     color #fff
     &_inactive
       background-color light-grey
       color dark-grey-text
+    +xxs()
+      width: rem(25px)
+      height: rem(25px)
+      padding-top: rem(6px)
+      font-size rem(11px)
 
