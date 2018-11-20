@@ -1,5 +1,17 @@
 .pie-chart
-  max-width: 95px
+  flex-shrink: 0
+  width: 16.32%
+  height: 100%
+  position: relative
+  overflow: hidden
+  +xs()
+    width: 27%
+    margin: 20px 3%
+  +xxs()
+    width: 60%
+    margin: 20px 0
+
+
 
 .ct-series-a .ct-slice-donut
   stroke grey

@@ -1,3 +1,7 @@
 mixin percentage(progress)
-    span.percentage
+    //span.percentage
+    //    span.percentage__value= progress
+    .percentage
         span.percentage__value= progress
+        svg(class="percentage__svg" viewBox="0 0 190 190")
+            circle(class="percentage__bar" r="90" cx="95" cy="95" fill="transparent")
