@@ -6,10 +6,19 @@
 .sliders
   &__container
     display: flex
+    flex-wrap: wrap
+    padding: 0 rem(10px)
   &__col
     width: 50%
     //flex-shrink 0
     &:first-child
-      margin-right: 35px
+      padding-right: 6%
     &:last-child
-      margin-left: 35px
+      padding-left: 6%
+    +xs()
+      width: 100%
+      &:first-child
+        margin-bottom: 40px
+        padding-right: 0
+      &:last-child
+        padding-left: 0
