@@ -13,35 +13,63 @@
   &__footer
     display: flex
     align-items center
-    padding: 13px 22px 18px 29px
+    padding: rem(13px) rem(23px) rem(18px) rem(29px)
     border-radius: 0 0 4px 4px
     color #ffffff
     background-color primary-color
   &__title
-    font-size 30px
+    font-size rem(30px)
     font-weight 300
   &__adress
-    margin: 7px 0 0 22px
+    margin: rem(7px) 0 0 4.04%
     &--span
       display: block
-      margin-bottom: 2px
-      font-size 13px
+      margin-bottom: rem(2px)
+      font-size rem(13px)
       font-weight: 700
-      letter-spacing 0.63px
+      letter-spacing rem(0.63px)
       text-transform uppercase
       text-align: left
   &__buttons
-    margin: 8px 0 0 auto
+    display: flex
+    align-items: center
+    margin: rem(8px) 0 0 auto
   &__geolocation
+    flex-shrink: 0
     border: none
-    width 27px
-    height 26px
-    margin: 2px 14px 0 0
+    width rem(27px)
+    height rem(26px)
+    margin: rem(2px) rem(15px) 0 0
     background: url('images/My-Location.svg') no-repeat center center
     background-size: contain
   &__add
+    flex-shrink: 0
     border: none
-    width 27px
-    height 26px
+    width rem(27px)
+    height rem(26px)
     background: url('images/map-marker.svg') no-repeat center center
     background-size: contain
+  +xs()
+    &:after
+      padding-top: 60%
+    &__geolocation
+      margin-right: rem(7px)
+  +xxs()
+    &:after
+      padding-top: 100%
+    &__footer
+      flex-wrap: wrap
+      justify-content: space-between
+    &__adress
+      order: 3
+      width: 100%
+      margin-left: 0
+      text-align: left
+      &--span
+        display: inline
+        &:last-child
+          margin-left: rem(10px)
+    &__geolocation
+      margin-right: rem(5px)
+
+
