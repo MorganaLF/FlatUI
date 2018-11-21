@@ -35,9 +35,9 @@
       border-radius: 3px
       background-color primary-color
   &__play-button
-    width 10px
-    height 14px
-    margin: 0 19px 0 21px
+    width rem(10px)
+    height rem(14px)
+    margin: 0 rem(19px) 0 rem(21px)
     background: url("images/Play_Icon.svg") no-repeat center center;
     background-size: cover
     transition all 0.3s ease
@@ -52,4 +52,7 @@
     background-size: 47%
     transition all 0.3s ease
     &_opened
-      background-image: url("images/exit-full.svg");
+      background-image: url("images/exit-full.svg")
+    +xxs()
+      width: 35px
+      height: 35px
