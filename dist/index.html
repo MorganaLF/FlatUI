@@ -60,7 +60,35 @@
                       <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_right-secondary"></button>
               </div>
               <div class="percentages-and-charts__container">
-                            <h2 class="subheading">PERCENTAGES / PIE CHART</h2><span class="percentage"><span class="percentage__value">0</span></span><span class="percentage"><span class="percentage__value">38</span></span><span class="percentage"><span class="percentage__value">62</span></span><span class="percentage"><span class="percentage__value">89</span></span>
+                            <h2 class="subheading">PERCENTAGES / PIE CHART</h2>
+                            <!--span.percentage-->
+                            <!--    span.percentage__value= progress-->
+                            <div class="percentage"><span class="percentage__value">0</span>
+                              <svg class="percentage__svg" viewBox="0 0 190 190">
+                                <circle class="percentage__bar" r="90" cx="95" cy="95" fill="transparent"></circle>
+                              </svg>
+                            </div>
+                            <!--span.percentage-->
+                            <!--    span.percentage__value= progress-->
+                            <div class="percentage"><span class="percentage__value">38</span>
+                              <svg class="percentage__svg" viewBox="0 0 190 190">
+                                <circle class="percentage__bar" r="90" cx="95" cy="95" fill="transparent"></circle>
+                              </svg>
+                            </div>
+                            <!--span.percentage-->
+                            <!--    span.percentage__value= progress-->
+                            <div class="percentage"><span class="percentage__value">62</span>
+                              <svg class="percentage__svg" viewBox="0 0 190 190">
+                                <circle class="percentage__bar" r="90" cx="95" cy="95" fill="transparent"></circle>
+                              </svg>
+                            </div>
+                            <!--span.percentage-->
+                            <!--    span.percentage__value= progress-->
+                            <div class="percentage"><span class="percentage__value">89</span>
+                              <svg class="percentage__svg" viewBox="0 0 190 190">
+                                <circle class="percentage__bar" r="90" cx="95" cy="95" fill="transparent"></circle>
+                              </svg>
+                            </div>
                             <div class="pie-chart ct-chart ct-square"></div>
               </div>
               <div class="sliders-block__container">
@@ -106,10 +134,14 @@
                       <h2 class="subheading">FORM ELEMENTS</h2>
                       <div class="form-elements__col">
                               <form class="contact-form">
-                                <input class="contact-form__input" type="text" name="name" placeholder="Your Name">
-                                <div class="contact-form__tip">ERROR</div>
-                                <input class="contact-form__input" type="email" name="email" placeholder="Your Email">
-                                <div class="contact-form__tip contact-form__tip_bg_secondary">THANKS!</div>
+                                <div class="contact-form__input-group">
+                                  <input class="contact-form__input" type="text" name="name" placeholder="Your Name">
+                                  <div class="contact-form__tip">ERROR</div>
+                                </div>
+                                <div class="contact-form__input-group">
+                                  <input class="contact-form__input" type="email" name="email" placeholder="Your Email">
+                                  <div class="contact-form__tip contact-form__tip_bg_secondary">THANKS!</div>
+                                </div>
                                 <textarea class="contact-form__textarea" name="message" placeholder="Your Message"></textarea>
                                       <button class="button button_bg_secondary-shadow">SUBMIT
                                         <div class="button__shadow"></div>
@@ -265,66 +297,150 @@
                     </div>
               <div class="video__container">
                             <h2 class="subheading">VIDEO</h2>
-                      <div id="player"></div>
-                      <script>
-                        // 2. This code loads the IFrame Player API code asynchronously.
-                        var tag = document.createElement('script');
-                        
-                        tag.src = "https://www.youtube.com/iframe_api";
-                        var firstScriptTag = document.getElementsByTagName('script')[0];
-                        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-                        
-                        // 3. This function creates an <iframe> (and YouTube player)
-                        //    after the API code downloads.
-                        var player;
-                        function onYouTubeIframeAPIReady() {
-                        player = new YT.Player('player', {
-                            height: '360',
-                            width: '640',
-                            playerVars: { 'autoplay': 0, 'controls': 0, 'showinfo': 0, 'rel': 0},
-                            videoId: 'rPmGtZAUxNs',
-                            events: {
-                            'onReady': onPlayerReady,
-                            'onStateChange': onPlayerStateChange
-                        }
-                        });
-                        }
-                        
-                        // 4. The API will call this function when the video player is ready.
-                        function onPlayerReady(event) {
-                            event.target.playVideo();
-                        }
-                        
-                        // 5. The API calls this function when the player's state changes.
-                        //    The function indicates that when playing a video (state=1),
-                        //    the player should play for six seconds and then stop.
-                        var done = false;
-                        function onPlayerStateChange(event) {
-                            if (event.data == YT.PlayerState.PLAYING && !done) {
-                                setTimeout(stopVideo, 6000);
-                                done = true;
-                        }
-                        }
-                        function stopVideo() {
-                            player.stopVideo();
-                        }
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                      </script>
-                      <!--.video-->
-                      <!--    button.video__play(onclick="player.playVideo();") включить-->
-                      <!--    button.video__full на весь экран-->
-                      <!--    .video__progress//iframe(src="https://www.youtube.com/embed/rPmGtZAUxNs" style="position:absolute;width:100%;height:100%;left:0" width="640" height="360" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
-                      -->
+                      <div class="video">
+                        <video class="video__iframe" src="video/Landscapes-Volume-Two.mp4"></video>
+                        <div class="video__footer">
+                          <div class="video__play-button"></div>
+                          <div class="video__progress">
+                            <div class="video__progress--full"></div>
+                          </div>
+                          <div class="video__full-button"></div>
+                        </div>
+                      </div>
+                      <!--script.-->
+                      <!---->
+                      <!--        // 2. This code loads the IFrame Player API code asynchronously.-->
+                      <!--        var tag = document.createElement('script');-->
+                      <!---->
+                      <!--        tag.src = "https://www.youtube.com/iframe_api";-->
+                      <!--        var firstScriptTag = document.getElementsByTagName('script')[0];-->
+                      <!--        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);-->
+                      <!---->
+                      <!--        // 3. This function creates an <iframe> (and YouTube player)-->
+                      <!--        //    after the API code downloads.-->
+                      <!--        var player;-->
+                      <!--        function onYouTubeIframeAPIReady() {-->
+                      <!--        player = new YT.Player(document.querySelector('.video__iframe'), {-->
+                      <!--            height: '360',-->
+                      <!--            width: '640',-->
+                      <!--            playerVars: { 'autoplay': 0, 'controls': 0, 'fs': 0, 'modestbranding': 1},-->
+                      <!--            videoId: 'rPmGtZAUxNs',-->
+                      <!--            events: {-->
+                      <!--            'onReady': onPlayerReady,-->
+                      <!--            'onStateChange': onPlayerStateChange-->
+                      <!--        }-->
+                      <!--        });-->
+                      <!--        }-->
+                      <!---->
+                      <!--        // 4. The API will call this function when the video player is ready.-->
+                      <!--        function onPlayerReady(event) {-->
+                      <!--            event.target.playVideo();-->
+                      <!---->
+                      <!--              updateProgressBar();-->
+                      <!---->
+                      <!--              var time_update_interval = setInterval(function () {-->
+                      <!--                updateProgressBar();-->
+                      <!--              }, 1000);-->
+                      <!--        }-->
+                      <!---->
+                      <!--        // 5. The API calls this function when the player's state changes.-->
+                      <!--        //    The function indicates that when playing a video (state=1),-->
+                      <!--        //    the player should play for six seconds and then stop.-->
+                      <!--        var done = false;-->
+                      <!--        var iStatus;-->
+                      <!--        function onPlayerStateChange(event) {-->
+                      <!--              if (event.data == YT.PlayerState.PAUSED) {-->
+                      <!--                iStatus = YT.PlayerState.PAUSED;-->
+                      <!--                document.querySelector('.video__play-button').classList.remove('video__play-button_playing');-->
+                      <!--              } else if (event.data == YT.PlayerState.PLAYING) {-->
+                      <!--                iStatus = YT.PlayerState.PLAYING;-->
+                      <!--                document.querySelector('.video__play-button').classList.add('video__play-button_playing');-->
+                      <!--              }-->
+                      <!--            if (event.data == YT.PlayerState.PLAYING && !done) {-->
+                      <!--                setTimeout(stopVideo, 6000);-->
+                      <!--                done = true;-->
+                      <!--            }-->
+                      <!--        }-->
+                      <!--        function stopVideo() {-->
+                      <!--            player.stopVideo();-->
+                      <!--        }-->
+                      <!---->
+                      <!--        /* Развернуть на весь экран */-->
+                      <!--        let isFull = false;-->
+                      <!--        function playFullscreen (){-->
+                      <!---->
+                      <!--          var doc = document.querySelector('.video');-->
+                      <!---->
+                      <!--          if (!isFull) {-->
+                      <!--            document.querySelector('.video__full-button').classList.add('video__full-button_opened')-->
+                      <!--            if (doc.requestFullscreen) {-->
+                      <!--              doc.requestFullscreen();-->
+                      <!--            }-->
+                      <!--            else if (doc.mozRequestFullScreen) {-->
+                      <!--              doc.mozRequestFullScreen();-->
+                      <!--            }-->
+                      <!--            else if (doc.webkitRequestFullScreen) {-->
+                      <!--              doc.webkitRequestFullScreen();-->
+                      <!--            }-->
+                      <!--          } else {-->
+                      <!--            document.querySelector('.video__full-button').classList.remove('video__full-button_opened');-->
+                      <!--            if (document.exitFullscreen) {-->
+                      <!--              document.exitFullscreen();-->
+                      <!--            }-->
+                      <!--            else if (document.mozCancelFullScreen) {-->
+                      <!--              document.mozCancelFullScreen();-->
+                      <!--            }-->
+                      <!--            else if (document.webkitCancelFullScreen) {-->
+                      <!--              document.webkitCancelFullScreen();-->
+                      <!--            }-->
+                      <!--          }-->
+                      <!---->
+                      <!--          isFull = !isFull;-->
+                      <!--        }-->
+                      <!---->
+                      <!--        // Обновляем прогресс-->
+                      <!--        function updateProgressBar(){-->
+                      <!--            var line_width = document.querySelector('.video__progress').clientWidth;-->
+                      <!--            var persent = (player.getCurrentTime() / player.getDuration());-->
+                      <!--            document.querySelector('.video__progress--full').style.width = persent * line_width + 'px';-->
+                      <!--            //var per = persent * 100;-->
+                      <!--            //document.getElementById('fader').style.left = per+'%';-->
+                      <!--        }-->
+                      <!---->
+                      <!--        /* Линия прогресса */-->
+                      <!--        function progress (event) {-->
+                      <!---->
+                      <!--            var line_width = document.querySelector('.video__progress').clientWidth;-->
+                      <!--            // положение элемента-->
+                      <!--            //var pos = document.getElementById('line').offset();-->
+                      <!--            var elem_left = document.querySelector('.video__progress').getBoundingClientRect().left;-->
+                      <!--            // положение курсора внутри элемента-->
+                      <!--            var Xinner = event.pageX - elem_left;-->
+                      <!--            var newTime = player.getDuration() * (Xinner / line_width);-->
+                      <!--            // Skip video to new time.-->
+                      <!--            player.seekTo(newTime);-->
+                      <!--        }-->
+                      <!---->
+                      <!--        /* Включить видео */-->
+                      <!---->
+                      <!--        function playVideo(event) {-->
+                      <!--          var state = player.getPlayerState();-->
+                      <!--          if (iStatus == YT.PlayerState.PLAYING) {-->
+                      <!--            player.pauseVideo();-->
+                      <!--          } else if (iStatus == YT.PlayerState.PAUSED) {-->
+                      <!--            player.playVideo();-->
+                      <!--          }-->
+                      <!--        }-->
+                      <!---->
+                      <!--        /* Добавление событий */-->
+                      <!--        document.querySelector('.video__play-button')-->
+                      <!--            .addEventListener('click', playVideo);-->
+                      <!---->
+                      <!--        document.querySelector('.video__progress')-->
+                      <!--            .addEventListener('click', progress);-->
+                      <!---->
+                      <!--        document.querySelector('.video__full-button')-->
+                      <!--            .addEventListener('click', playFullscreen);-->
               </div>
             </div>
       <!--script( src="/main.js")-->

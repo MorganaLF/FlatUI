@@ -1,51 +1,92 @@
 import $ from 'jquery'
 
-// var cssLink = document.createElement("link");
-// cssLink.href = "styles.css";
-// cssLink.rel = "stylesheet";
-// cssLink.type = "text/css";
-//
-// //document.getElementsByTagName('iframe')[0].head.appendChild(cssLink);
-//
-// $('.iframe').contents().find("head").append(cssLink);
+$( function() {
+  let durarion;
+  let time_update_interval;
+  let video = $('.video').get(0);
+  let playButton = $('.video__play-button');
+
+  /* Воспроизведение видео */
+
+  function playVideo () {
+    if (video.paused) {
+      $('.video__play-button').addClass('video__play-button_playing');
+      video.play();
+      time_update_interval = setInterval(function () {
+        updateProgressBar();
+      }, 1000);
+    } else {
+      $('.video__play-button').removeClass('video__play-button_playing');
+      video.pause();
+      clearInterval(time_update_interval);
+    }
+  }
+  //$('.video__wrapper').click(playVideo);
+  playButton.click(playVideo);
+
+  /* Развернуть на весь экран */
+          let isFull = false;
+          function playFullscreen (){
+
+           var doc = document.querySelector('.video__wrapper');
+
+          if (!isFull) {
+              document.querySelector('.video__full-button').classList.add('video__full-button_opened')
+              if (doc.requestFullscreen) {
+                doc.requestFullscreen();
+              }
+              else if (doc.mozRequestFullScreen) {
+                doc.mozRequestFullScreen();
+              }
+              else if (doc.webkitRequestFullScreen) {
+               doc.webkitRequestFullScreen();
+             }
+            } else {
+              document.querySelector('.video__full-button').classList.remove('video__full-button_opened');
+             if (document.exitFullscreen) {
+               document.exitFullscreen();
+              }
+             else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+             }
+              else if (document.webkitCancelFullScreen) {
+                document.webkitCancelFullScreen();
+              }
+            }
+
+            isFull = !isFull;
+          }
+
+  $('.video__full-button').click(playFullscreen);
 
 
+  /* Линия прогресса */
+         function progress (event) {
+
+             let line_width = document.querySelector('.video__progress').clientWidth;
+             // положение элемента
+             //var pos = document.getElementById('line').offset();
+             let elem_left = document.querySelector('.video__progress').getBoundingClientRect().left;
+             // положение курсора внутри элемента
+             let Xinner = event.pageX - elem_left;
+             let newTime = video.duration * (Xinner / line_width);
+             // Skip video to new time.
+             video.currentTime = newTime;
+             updateProgressBar();
+         }
+
+  // Обновляем прогресс
+         function updateProgressBar(){
+             let line_width = document.querySelector('.video__progress').clientWidth;
+             let persent = (video.currentTime / video.duration);
+             document.querySelector('.video__progress--full').style.width = persent * line_width + 'px';
+             //var per = persent * 100;
+             //document.getElementById('fader').style.left = per+'%';
+         }
+
+      document.querySelector('.video__progress').addEventListener('click', progress);
 
 
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
-
-// var player;
-// function onYouTubeIframeAPIReady() {
-//   player = new YT.Player('player', {
-//     height: '360',
-//     width: '640',
-//     videoId: 'M7lc1UVf-VE',
-//     events: {
-//       'onReady': onPlayerReady,
-//       'onStateChange': onPlayerStateChange
-//     }
-//   });
-// }
-//
-// // 4. The API will call this function when the video player is ready.
-// function onPlayerReady(event) {
-//   event.target.playVideo();
-// }
-//
-// // 5. The API calls this function when the player's state changes.
-// //    The function indicates that when playing a video (state=1),
-// //    the player should play for six seconds and then stop.
-// var done = false;
-// function onPlayerStateChange(event) {
-//   if (event.data == YT.PlayerState.PLAYING && !done) {
-//     setTimeout(stopVideo, 6000);
-//     done = true;
-//   }
-// }
-// function stopVideo() {
-//   player.stopVideo();
-// }
-
+});
 
 

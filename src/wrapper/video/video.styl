@@ -3,19 +3,38 @@
     margin: 42px 0 13px
 
 .video
-  position: relative
+  position: absolute
   width: 100%
-  padding-bottom: 56.25%
-  border-radius: 4px
-  overflow: hidden
-  &__iframe
-    position: absolute
+  height: 100%
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  &__wrapper
+    position: relative
     width: 100%
-    height: 100%
+    padding-bottom: 56.25%
+    border-radius: 4px
+    background: url("images/video.jpg") no-repeat center
+    background-size: cover
+    overflow: hidden
+  &__header
+    position: absolute
     top: 0
-    right: 0
-    bottom: 0
     left: 0
+    width: 100%
+    padding: 25px 39px
+    text-align: left
+    color #ffffff
+  &__title
+    margin-bottom: 4px
+    font-size 36px
+    font-weight 300
+    letter-spacing -1.08px
+  &__author
+    font-size 13px
+    text-transform uppercase
+    letter-spacing 0.63px
   &__footer
     position: absolute
     bottom: 0
@@ -23,12 +42,13 @@
     display: flex
     align-items center
     width: 100%
-    background-color #000000
+    background-color rgba(0, 0, 0, 0.29)
   &__progress
     width: 100%
     height: 5px
     border-radius: 3px
     background-color light-grey
+    cursor: pointer
     &--full
       width: 0
       height: 100%
@@ -41,6 +61,7 @@
     background: url("images/Play_Icon.svg") no-repeat center center;
     background-size: cover
     transition all 0.3s ease
+    cursor: pointer
     &_playing
       background-image: url("images/pause.svg");
   &__full-button
@@ -51,6 +72,7 @@
     background primary-color url("images/full.svg") no-repeat center center
     background-size: 47%
     transition all 0.3s ease
+    cursor: pointer
     &_opened
       background-image: url("images/exit-full.svg")
     +xxs()

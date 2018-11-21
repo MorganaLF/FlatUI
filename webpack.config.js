@@ -41,6 +41,11 @@ let conf = {
         from: './src/wrapper/**/*.svg',
         to: './images',
         flatten: true
+      },
+      {
+        from: './src/wrapper/**/*.mp4',
+        to: './video',
+        flatten: true
       }
     ]),
     require('autoprefixer'),
