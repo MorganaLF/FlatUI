@@ -22,13 +22,20 @@ $( function() {
   /* Адаптивный шрифт */
 
   let width = $( ".calendar .ui-widget.ui-widget-content" ).width();
-
+  $( ".calendar__header" ).css('font-size', width / 3.5);
+  $( ".ui-datepicker .ui-datepicker-title" ).css('font-size', width / 11.6);
+  $( ".ui-datepicker-calendar thead" ).css('font-size', width / 31.1);
+  $( ".calendar__footer" ).css('font-size', width / 21.5);
   $( ".ui-datepicker td span, .ui-datepicker td a" ).css('font-size', width / 14.5);
 
   /* Адаптивный шрифт при ресайзе окна */
 
   $( window ).resize(function() {
     width = $( ".calendar .ui-widget.ui-widget-content" ).width();
+    $( ".calendar__header" ).css('font-size', width / 3.5);
+    $( ".ui-datepicker .ui-datepicker-title" ).css('font-size', width / 11.6);
+    $( ".ui-datepicker-calendar thead" ).css('font-size', width / 31.1);
+    $( ".calendar__footer" ).css('font-size', width / 21.5);
     $( ".ui-datepicker td span, .ui-datepicker td a" ).css('font-size', width / 14.5)
   });
 

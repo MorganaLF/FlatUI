@@ -1,5 +1,6 @@
 .calendar-and-messaging
   display: flex
+  flex-wrap: wrap
   &__col
     width: 50%
     flex-shrink: 0
@@ -7,5 +8,12 @@
       padding-right: 18px
     &:last-child
       padding-left: 8px
+    +xs()
+      width: 100%
+      max-width: 400px
+      margin: 0 auto
+      &:first-child
+      &:last-child
+        padding: 0
   .subheading
     margin: 40px 0 14px
