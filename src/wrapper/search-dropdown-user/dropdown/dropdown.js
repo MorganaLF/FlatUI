@@ -7,3 +7,14 @@ $(document).ready(function() {
     placeholder: 'Choose An Option'
   });
 });
+
+/* Реинициализация для адаптивности */
+
+$( window ).resize(function() {
+  $('.dropdown').select2('destroy');
+  $('.dropdown').select2({
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: 'dropdown__option',
+    placeholder: 'Choose An Option'
+  });
+});

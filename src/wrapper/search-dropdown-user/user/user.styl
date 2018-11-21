@@ -1,11 +1,13 @@
 .user
   display: flex
-  align-items flex-start
+  align-items center
+  max-width: 300px
+  margin: 0 auto
   &__picture-container
     flex-shrink 0
-    width: calc(36.5% - 5px)
+    width: calc(35.5%)
     height: auto
-    margin-right: 5px
+    margin-right: 0.8%
     border: 5px solid light-grey
     border-radius: 50%
     font-size: 0
@@ -18,18 +20,18 @@
     width: 100%
   &__info
     position: relative
-    width: calc(63.5% - 7px)
-    margin: 1px 0 0 7px
-    padding: 10px 0 14px
+    width: 'calc(63.5% - %s)' % rem(7px)
+    margin: 1px 0 0 rem(7px)
+    padding: rem(10px) 0 rem(14px)
     border-radius: 10px
     background-color light-grey
     &:after
       content: ''
       position: absolute
-      top: calc(50% - 4px)
-      left: -5px
-      width: 10px
-      height: 10px
+      top: 'calc(50% - %s)' % rem(4px)
+      left: rem(-5px)
+      width: rem(10px)
+      height: rem(10px)
       transform rotate(45deg)
       background-color light-grey
     &_bg_secondary
@@ -37,45 +39,46 @@
       &:after
         background-color secondary-color
   &__name
-    margin-bottom: 4px
-    font-size 18px
+    margin-bottom: rem(4px)
+    font-size rem(18px)
     color primary-color
     &_color_white
       color #ffffff
   &__profession
-    margin-bottom: 14px
-    font-size 11px
+    margin-bottom: rem(14px)
+    font-size rem(11px)
     font-weight: 700
     text-transform uppercase
-    letter-spacing 0.55px
+    letter-spacing rem(0.55px)
     color dark-grey
     &_color_white
       color #ffffff
   &__social-icons
     display: flex
     justify-content: space-between
-    max-width: 95px
+    max-width: rem(95px)
     margin: 0 auto
   &__social-icon
     &_1
-      width 10px
-      height 21px
+      width rem(10px)
+      height rem(21px)
       background url("images/FB.png") no-repeat center
       background-size: 100%
       &-white
         background-image: url("images/FB_copy.png")
     &_2
-      width 25px
-      height 20px
+      width rem(25px)
+      height rem(20px)
       background url("images/Twitter.png") no-repeat center
       background-size: 100%
       &-white
         background-image: url("images/Twitter_copy.png")
     &_3
-      width 21px
-      height 21px
+      width rem(21px)
+      height rem(21px)
       background url("images/Dribbble.png") no-repeat center
       background-size: 100%
       &-white
         background-image: url("images/Dribbble_copy.png")
+
 
