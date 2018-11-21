@@ -1,5 +1,5 @@
 .form-elements__container .subheading
-  margin: 43px 0 39px
+  margin: 42px 0 39px
 
 .form-elements__container
   display: flex
@@ -7,18 +7,22 @@
 .form-elements__col
   flex-shrink 0
   width: 50%
-  min-height: 20px
   .subheading
     margin: 0 0 34px
     line-height: 0.8
     &:nth-child(4)
       margin: 38px 0 35px
   &:nth-child(2)
-    padding-right: 10px
+    padding-right: 1.68%
   &:last-child
-    padding-left: 11px
+    padding-left: 1.68%
     .toggle
-      margin: 0 6px
+      margin: 0 2.05%
     .tick-box
-      margin: 0 10px
-    //background lightcoral
+      margin: 0 3.5%
+  +xxs()
+    width: 100%
+    &:nth-child(2)
+      padding-right: 0
+    &:last-child
+      padding-left: 0

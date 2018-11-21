@@ -1,33 +1,35 @@
 .contact-form
-  display: flex
-  flex-wrap: wrap
-  justify-content: flex-end
+  text-align: right
+  &__input-group
+    display: flex
   &__input
   &__textarea
     input()
   &__input
-    width: 72.7%
-    margin-bottom: 12px
+    width: rem(72px)
+    flex-grow: 1
+    margin-bottom: rem(12px)
   &__tip
     position: relative
-    width: calc(27.3% - 7px)
-    margin: 0 0 12px 7px
-    padding: 8px 0
+    width: rem(72px)
+    //width: 'calc(27.3% - %s)' % rem(7px)
+    margin: 0 0 rem(12px) rem(7px)
+    padding: rem(8px) 0
     border-radius: 5px
     font-weight: 700
-    font-size 10px
+    font-size rem(10px)
     text-align: center
-    letter-spacing 0.5px
+    letter-spacing rem(0.5px)
     text-transform uppercase
     color #fff
     background: primary-color
     &:after
       content: ''
       position: absolute
-      top: 11px
-      left: -3px
-      width: 7px
-      height: 7px
+      top: rem(11px)
+      left: rem(-3px)
+      width: rem(7px)
+      height: rem(7px)
       transform rotate(45deg)
       background: primary-color
     &_bg_secondary
@@ -36,6 +38,8 @@
         background: secondary-color
   &__textarea
     width: 100%
-    height 88px
-    margin-bottom: 10px
-    padding: 11px 12px
+    height rem(88px)
+    margin-bottom: rem(7px)
+    padding: rem(11px) rem(12px)
+  +xxs()
+    margin-bottom: 39px
