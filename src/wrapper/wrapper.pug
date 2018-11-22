@@ -3,7 +3,7 @@ include standart-buttons/standart-buttons
 include arrow-buttons/arrow-buttons
 include percentages-and-charts/percentages-and-charts
 include sliders/sliders
-include stage/stage
+include stages/stages
 include form-elements/form-elements
 include search-dropdown-user/search-dropdown-user
 include news-and-events/news-and-events
@@ -17,9 +17,7 @@ mixin wrapper
         +arrowButtons
         +percentagesAndCharts
         +sliders
-        .stages__container
-            +subheading('STAGES')
-            +stage(5, 3)
+        +stages
         .form-elements__container
             +subheading('FORM ELEMENTS')
             +form-elements

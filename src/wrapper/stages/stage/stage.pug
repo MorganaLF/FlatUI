@@ -1,0 +1,14 @@
+mixin stage(length, fullLength)
+    ul.stage
+        -for (var i = 1; i <= length; i++)
+        if i < fullLength
+            li.stage__item= i
+            li.stage__line
+        else if i === fullLength
+            li.stage__item= i
+            li.stage__line.stage__line_inactive
+        else if i < length
+            li.stage__item.stage__item_inactive= i
+            li.stage__line.stage__line_inactive
+        else
+            li.stage__item.stage__item_inactive= i
