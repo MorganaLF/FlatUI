@@ -1,34 +1,22 @@
 import $ from 'jquery';
 
-// jQuery(".percentage").progressPie({
-//   size: 95,
-//   ringWidth: 5,
-//   strokeWidth: 0,
-//   ringEndsRounded: true,
-//   valueSelector: ".percentage__value",
-//   color: "#e75735"
-// });
-
-
-/* Рассчитать длину для каждой диаграммы */
-//let circleWidth = $('.percentages-and-charts__container').width();
-//$('.percentage__value').css('font-size', circleWidth + 'px');
+/* Адаптивный шрифт */
 
 setTimeout(() => {
-  let circleWidth = $('.percentage').width();
-  $('.percentage__value').css('font-size', circleWidth / 100 * 42 + 'px');
+  $('.percentage__value').css('font-size', $('.percentage').width() / 100 * 42 + 'px');
 }, 4);
 
 $( window ).resize(function() {
-  let circleWidth = $('.percentage').width();
-  $('.percentage__value').css('font-size', circleWidth / 100 * 42 + 'px');
+  $('.percentage__value').css('font-size', $('.percentage').width() / 100 * 42 + 'px');
 });
+
+/* Создание шкалы */
 
 $('.percentage').each(function(){
   let val = $(this).find('.percentage__value').html();
   let circle = $(this).find('.percentage__bar');
 
-   if (isNaN(val)) {
+  if (isNaN(val)) {
     val = 100;
   }
   else{
@@ -40,7 +28,7 @@ $('.percentage').each(function(){
 
     let pct = ((100-val)/100)*c;
 
-    circle.css({ strokeDasharray: Math.PI*(r*2)});
+    circle.css({ strokeDasharray: c});
     circle.css({ strokeDashoffset: pct});
 
   }
