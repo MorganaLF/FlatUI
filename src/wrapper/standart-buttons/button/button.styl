@@ -5,16 +5,12 @@
   border-radius: 3px
   font-size rem(12px)
   font-weight: 700
-  color #ffffff
   text-transform uppercase
   letter-spacing 0.6px
-  background-color primary-color
+  color #ffffff
   cursor: pointer
   &__shadow
     position: absolute
-    top: 0
-    bottom: 0
-    left: calc(50% - 25px)
     display: none
     width: rem(50px)
     height: rem(50px)
@@ -25,20 +21,19 @@
     padding: rem(6px) rem(17px)
     font-size rem(10px)
   &_bg
+    &_primary
+      background-color primary-color
     &_primary-shadow
-      padding: rem(10px) rem(33px) rem(9px)
+      background-color primary-color
       border-bottom: 3px solid dark-primary-color
       &.button_size_small
-        padding: rem(6px) rem(17px) rem(5px)
         border-bottom: 2px solid dark-primary-color
     &_secondary
       background-color secondary-color
     &_secondary-shadow
-      padding: rem(10px) rem(33px) rem(9px)
       background-color secondary-color
       border-bottom: 3px solid dark-secondary-color
       &.button_size_small
-        padding: rem(6px) rem(17px) rem(5px)
         border-bottom: 2px solid dark-secondary-color
     &_transparent-primary
       padding: rem(9px) rem(32px) rem(8px)
