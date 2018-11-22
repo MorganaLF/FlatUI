@@ -1,6 +1,6 @@
 include subheading/subheading
 include standart-buttons/standart-buttons
-include arrow-button/arrow-button
+include arrow-buttons/arrow-buttons
 include percentages-and-charts/percentages-and-charts
 include sliders/sliders
 include stage/stage
@@ -14,14 +14,7 @@ include video/video
 mixin wrapper
     .wrapper
         +standartButtons
-        .arrow-buttons__container
-            +subheading('ARROW BUTTONS')
-            +arrowButton('transparent-secondary', 'left-secondary')
-            +arrowButton('transparent-secondary', 'right-secondary')
-            +arrowButton('transparent-secondary', 'left-secondary', true)
-            +arrowButton('transparent-secondary', 'right-secondary', true)
-            +arrowButton('transparent-secondary', 'left-secondary')
-            +arrowButton('transparent-secondary', 'right-secondary')
+        +arrowButtons
         .percentages-and-charts__container
             +percentagesAndCharts
         .sliders-block__container
