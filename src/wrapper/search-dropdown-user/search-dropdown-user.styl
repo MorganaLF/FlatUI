@@ -1,24 +1,23 @@
-.search-dropdown-user__container
+.search-dropdown-user
   display: flex
   flex-wrap wrap
-
-.search-dropdown-user__col
-  flex-shrink 0
-  width: 50%
-  &:first-child
-    padding-right: 1.68%
-  &:last-child
-    padding-left: 4.7%
-    .subheading
-      margin: 54px -12px 18px
-  .subheading
-    margin: 54px -4px 10px
-  .search
-    margin-bottom: rem(16px)
-  .user
-    margin-bottom: rem(24px)
-  +xs()
-    width: 100%
-    &:first-child,
+  &__col
+    flex-shrink 0
+    width: 50%
+    &:first-child
+      padding-right: 1.68%
+      .subheading
+        margin: 54px -4px 10px
     &:last-child
-      padding: 0
+      padding-left: 4.7%
+      .subheading
+        margin: 54px -12px 18px
+    .search
+      margin-bottom: rem(16px)
+    .user
+      margin-bottom: rem(24px)
+    +xs()
+      width: 100%
+      &:first-child,
+      &:last-child
+        padding: 0

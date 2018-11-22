@@ -11,10 +11,10 @@ $(document).ready(function() {
 /* Реинициализация для адаптивности */
 
 $( window ).resize(function() {
-  $('.dropdown').select2('destroy');
-  $('.dropdown').select2({
-    minimumResultsForSearch: Infinity,
-    dropdownCssClass: 'dropdown__option',
-    placeholder: 'Choose An Option'
-  });
+  $('.dropdown').select2('destroy')
+                .select2({
+                  minimumResultsForSearch: Infinity,
+                  dropdownCssClass: 'dropdown__option',
+                  placeholder: 'Choose An Option'
+                });
 });

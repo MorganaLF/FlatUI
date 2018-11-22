@@ -4,12 +4,17 @@ include dropdown/dropdown
 include user/user
 
 mixin searchDropdownUser
-    .search-dropdown-user__col
-        +subheading('SEARCH / DROP DOWN')
-        +search('Search')
-        +search('I’ve not found what I’m looking for...', 'primary')
-        +dropdown
-    .search-dropdown-user__col
-        +subheading('USER PROFILE')
-        +user('user-1', 'John Smith', 'UX DESIGNER')
-        +user('user-2', 'Sarah Brown', 'DEVELOPER', 'secondary')
+    .search-dropdown-user
+            .search-dropdown-user__col
+                +subheading('SEARCH / DROP DOWN')
+                +search('Search')
+                +search('I’ve not found what I’m looking for...', 'primary')
+                +dropdown({
+                  '1': 'Option 1',
+                  '2': 'Option 2',
+                  '3': 'Option 3'
+                })
+            .search-dropdown-user__col
+                +subheading('USER PROFILE')
+                +user('user-1', 'John Smith', 'UX DESIGNER')
+                +user('user-2', 'Sarah Brown', 'DEVELOPER', 'secondary')

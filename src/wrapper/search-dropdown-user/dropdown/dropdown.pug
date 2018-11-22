@@ -1,6 +1,6 @@
-mixin dropdown
-    select.dropdown(name="state")
-        option
-        option(value="1") Option 1
-        option(value="2") Option 2
-        option(value="3") Option 3
+mixin dropdown(options)
+    .dropdown__container
+        select.dropdown(name="state")
+            option
+            each val, index in options
+                option(value=index)= val
