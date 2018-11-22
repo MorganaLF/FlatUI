@@ -1,27 +1,18 @@
-//#custom-handle {
-//  width: 3em;
-//  height: 1.6em;
-//  top: 50%;
-//  margin-top: -.8em;
-//  text-align: center;
-//  line-height: 1.6em;
-//}
-
 .slider
-  &.ui-widget.ui-widget-content
+  &.ui-slider
     height: rem(5px)
     background-color light-grey
     border: none
-  .ui-state-default, .ui-widget-content .ui-state-default
+  .ui-slider-handle
     top: rem(-7.5px)
     width: rem(20px)
     height: rem(20px)
     border-radius: 50%
     background: primary-color
     border none
+    cursor: pointer
   &_progress-bg_secondary .ui-slider-range
-  &_progress-bg_secondary .ui-state-default
-  &_progress-bg_secondary .ui-widget-content .ui-state-default
+  &_progress-bg_secondary .ui-slider-handle
     background: secondary-color
   &__scale
     list-style-type none
@@ -32,29 +23,29 @@
     font-weight: 900
     letter-spacing rem(0.55px)
     color light-grey-text
-
-.slider__tip
-  position: absolute
-  top: rem(-31px)
-  left: rem(-8px)
-  width rem(35px)
-  padding: rem(5px) 0 rem(5px)
-  border-radius: 5px
-  font-weight: 700
-  font-size rem(13px)
-  text-align: center
-  letter-spacing rem(0.65px)
-  color #fff
-  background: primary-color
-  &:after
-    content: ''
+  &__tip
     position: absolute
-    bottom: rem(-4px)
-    left: rem(14px)
-    width: rem(7px)
-    height: rem(7px)
-    transform rotate(45deg)
+    top: rem(-31px)
+    left: rem(-8px)
+    width rem(35px)
+    padding: rem(5px) 0 rem(5px)
+    border-radius: 5px
+    font-weight: 700
+    font-size rem(13px)
+    text-align: center
+    letter-spacing rem(0.65px)
+    color #fff
     background: primary-color
+    cursor: pointer
+    &:after
+      content: ''
+      position: absolute
+      bottom: rem(-4px)
+      left: rem(14px)
+      width: rem(7px)
+      height: rem(7px)
+      transform rotate(45deg)
+      background: primary-color
 
 
 

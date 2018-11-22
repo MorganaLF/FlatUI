@@ -1,9 +1,8 @@
 mixin slider(isTip, isScale, progressBg)
-    .slider(class=progressBg?'slider_is-progress slider_progress-bg_' + progressBg:'')
+    .slider(class= progressBg ? 'slider_is-progress slider_progress-bg_' + progressBg:'')
         .custom-handle.ui-slider-handle
             if isTip
                 .slider__tip
-
     if isScale
         ul.slider__scale
             li.slider__scale-item 0
