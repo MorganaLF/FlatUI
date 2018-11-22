@@ -13,22 +13,7 @@ include video/video
 
 mixin wrapper
     .wrapper
-        .standard-buttons__container
-            +subheading('STANDARD BUTTONS')
-            +button('BUTTON', 'small', 'secondary')
-            +button('BUTTON', '', 'secondary')
-            +button('BUTTON')
-            +button('BUTTON', 'small')
-        .standard-buttons__container
-            +button('BUTTON', 'small', 'secondary-shadow')
-            +button('BUTTON', '', 'secondary-shadow')
-            +button('BUTTON', '', 'primary-shadow')
-            +button('BUTTON', 'small', 'primary-shadow')
-        .standard-buttons__container
-            +button('BUTTON', 'small', 'transparent-secondary')
-            +button('BUTTON', '', 'transparent-secondary')
-            +button('BUTTON', '', 'transparent-primary')
-            +button('BUTTON', 'small', 'transparent-primary')
+        +standartButtons
         .arrow-buttons__container
             +subheading('ARROW BUTTONS')
             +arrowButton('transparent-secondary', 'left-secondary')

@@ -1,109 +1,32 @@
-.standard-buttons__container
-  display: flex
-  flex-wrap: wrap
-  justify-content center
-  align-items flex-end
-  +xs()
-    max-width: 380px
-    margin: 0 auto
-    &:nth-child(1)
-      .button
-        &:nth-child(4)
-          order: 2
-        &:nth-child(2)
-          order: 3
-        &:nth-child(5)
-          order: 4
-    .button
-      &:nth-child(1)
-        order: 2
-      &:nth-child(4)
-        order: 3
-  +xxs()
-    max-width: 200px
-  &:nth-child(3) .button
-    margin-bottom: 0
+.standard-buttons
+  &__buttons-container
+    display: flex
+    flex-wrap: wrap
+    justify-content center
+    align-items flex-end
     +xs()
-      margin-bottom: rem(19px)
-  .button
-    margin: 0 rem(12px) rem(19px)
-    //+xs()
-    //  width: 'calc(50% - %s)' % (rem(24px))
-    //+xxs()
-      //width: 100%
-      //  margin: 0 0 rem(19px) 0
-
-.button
-  position: relative
-  //width: 100%
-  //max-width: 118px
-  padding: rem(10px) rem(33px)
-  border: none
-  border-radius: 3px
-  font-size rem(12px)
-  font-weight: 700
-  color #ffffff
-  text-transform uppercase
-  letter-spacing 0.6px
-  background-color primary-color
-  cursor: pointer
-  &__shadow
-    position: absolute
-    top: 0
-    bottom: 0
-    left: calc(50% - 25px)
-    display: none
-    width: rem(50px)
-    height: rem(50px)
-    border-radius: 50%
-    background-color light-shadow
-    opacity 0.3
-  &_size_small
-    //max-width: 78px
-    padding: rem(6px) rem(17px)
-    font-size rem(10px)
-  &_bg
-    &_primary-shadow
-      padding: rem(10px) rem(33px) rem(9px)
-      border-bottom: 3px solid dark-primary-color
-      &.button_size_small
-        padding: rem(6px) rem(17px) rem(5px)
-        border-bottom: 2px solid dark-primary-color
-    &_secondary
-      background-color secondary-color
-    &_secondary-shadow
-      padding: rem(10px) rem(33px) rem(9px)
-      background-color secondary-color
-      border-bottom: 3px solid dark-secondary-color
-      &.button_size_small
-        padding: rem(6px) rem(17px) rem(5px)
-        border-bottom: 2px solid dark-secondary-color
-    &_transparent-primary
-      padding: rem(9px) rem(32px) rem(8px)
-      background: #fff
-      color: primary-color
-      border: 1px solid primary-color
-      border-bottom: 4px solid primary-color
-      &.button_size_small
-        padding: rem(5px) rem(16px) rem(4px)
-        border-bottom: 3px solid primary-color
-    &_transparent-secondary
-      padding: rem(9px) rem(32px) rem(8px)
-      background: #fff
-      color: secondary-color
-      border: 1px solid secondary-color
-      border-bottom: 4px solid secondary-color
-      &.button_size_small
-        padding: rem(5px) rem(16px) rem(4px)
-        border-bottom: 3px solid secondary-color
-    &_transparent-dark-secondary
-      padding: rem(9px) rem(32px) rem(8px)
-      background: #fff
-      color: secondary-color
-      border: 1px solid secondary-color
-      border-bottom: 4px solid dark-secondary-color
-      &.button_size_small
-        padding: rem(5px) rem(16px) rem(4px)
-        border-bottom: 3px solid dark-secondary-color
+      max-width: 380px
+      margin: 0 auto
+      &:nth-child(1)
+        .button
+          &:nth-child(4)
+            order: 2
+          &:nth-child(2)
+            order: 3
+          &:nth-child(5)
+            order: 4
+      .button
+        &:nth-child(1)
+          order: 2
+        &:nth-child(4)
+          order: 3
+    +xxs()
+      max-width: 200px
+    &:nth-child(4) .button
+      margin-bottom: 0
+      +xs()
+        margin-bottom: rem(19px)
+    .button
+      margin: 0 rem(12px) rem(19px)
 
 

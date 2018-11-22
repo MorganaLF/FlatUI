@@ -1,6 +1,21 @@
-mixin button(text, size, bg)
-    button.button(
-        class=size ? 'button_size_' + size : ''
-        class=bg ? 'button_bg_' + bg : ''
-        )= text
-        .button__shadow
+include button/button
+
+mixin standartButtons
+    section.standard-buttons
+        .standard-buttons__title-container
+            +subheading('STANDARD BUTTONS')
+        .standard-buttons__buttons-container
+            +button('BUTTON', 'small', 'secondary')
+            +button('BUTTON', '', 'secondary')
+            +button('BUTTON')
+            +button('BUTTON', 'small')
+        .standard-buttons__buttons-container
+            +button('BUTTON', 'small', 'secondary-shadow')
+            +button('BUTTON', '', 'secondary-shadow')
+            +button('BUTTON', '', 'primary-shadow')
+            +button('BUTTON', 'small', 'primary-shadow')
+        .standard-buttons__buttons-container
+            +button('BUTTON', 'small', 'transparent-secondary')
+            +button('BUTTON', '', 'transparent-secondary')
+            +button('BUTTON', '', 'transparent-primary')
+            +button('BUTTON', 'small', 'transparent-primary')

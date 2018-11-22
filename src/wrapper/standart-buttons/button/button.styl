@@ -1,0 +1,69 @@
+.button
+  position: relative
+  padding: rem(10px) rem(33px)
+  border: none
+  border-radius: 3px
+  font-size rem(12px)
+  font-weight: 700
+  color #ffffff
+  text-transform uppercase
+  letter-spacing 0.6px
+  background-color primary-color
+  cursor: pointer
+  &__shadow
+    position: absolute
+    top: 0
+    bottom: 0
+    left: calc(50% - 25px)
+    display: none
+    width: rem(50px)
+    height: rem(50px)
+    border-radius: 50%
+    background-color light-shadow
+    opacity 0.3
+  &_size_small
+    padding: rem(6px) rem(17px)
+    font-size rem(10px)
+  &_bg
+    &_primary-shadow
+      padding: rem(10px) rem(33px) rem(9px)
+      border-bottom: 3px solid dark-primary-color
+      &.button_size_small
+        padding: rem(6px) rem(17px) rem(5px)
+        border-bottom: 2px solid dark-primary-color
+    &_secondary
+      background-color secondary-color
+    &_secondary-shadow
+      padding: rem(10px) rem(33px) rem(9px)
+      background-color secondary-color
+      border-bottom: 3px solid dark-secondary-color
+      &.button_size_small
+        padding: rem(6px) rem(17px) rem(5px)
+        border-bottom: 2px solid dark-secondary-color
+    &_transparent-primary
+      padding: rem(9px) rem(32px) rem(8px)
+      background: #fff
+      color: primary-color
+      border: 1px solid primary-color
+      border-bottom: 4px solid primary-color
+      &.button_size_small
+        padding: rem(5px) rem(16px) rem(4px)
+        border-bottom: 3px solid primary-color
+    &_transparent-secondary
+      padding: rem(9px) rem(32px) rem(8px)
+      background: #fff
+      color: secondary-color
+      border: 1px solid secondary-color
+      border-bottom: 4px solid secondary-color
+      &.button_size_small
+        padding: rem(5px) rem(16px) rem(4px)
+        border-bottom: 3px solid secondary-color
+    &_transparent-dark-secondary
+      padding: rem(9px) rem(32px) rem(8px)
+      background: #fff
+      color: secondary-color
+      border: 1px solid secondary-color
+      border-bottom: 4px solid dark-secondary-color
+      &.button_size_small
+        padding: rem(5px) rem(16px) rem(4px)
+        border-bottom: 3px solid dark-secondary-color
