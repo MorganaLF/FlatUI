@@ -3,35 +3,35 @@ import $ from 'jquery'
 $( function() {
   let durarion;
   let time_update_interval;
-  let video = $('.video').get(0);
-  let playButton = $('.video__play-button');
+  let video = $('.player').get(0);
+  let playButton = $('.player__play-button');
 
   /* Воспроизведение видео */
 
   function playVideo () {
     if (video.paused) {
-      $('.video__play-button').addClass('video__play-button_playing');
+      $('.player__play-button').addClass('player__play-button_playing');
       video.play();
       time_update_interval = setInterval(function () {
         updateProgressBar();
       }, 1000);
     } else {
-      $('.video__play-button').removeClass('video__play-button_playing');
+      $('.player__play-button').removeClass('player__play-button_playing');
       video.pause();
       clearInterval(time_update_interval);
     }
   }
-  //$('.video__wrapper').click(playVideo);
+  $('.player').click(playVideo);
   playButton.click(playVideo);
 
   /* Развернуть на весь экран */
           let isFull = false;
           function playFullscreen (){
 
-           var doc = document.querySelector('.video__wrapper');
+           var doc = document.querySelector('.player__wrapper');
 
           if (!isFull) {
-              document.querySelector('.video__full-button').classList.add('video__full-button_opened')
+              document.querySelector('.player__full-button').classList.add('player__full-button_opened');
               if (doc.requestFullscreen) {
                 doc.requestFullscreen();
               }
@@ -42,7 +42,7 @@ $( function() {
                doc.webkitRequestFullScreen();
              }
             } else {
-              document.querySelector('.video__full-button').classList.remove('video__full-button_opened');
+              document.querySelector('.player__full-button').classList.remove('player__full-button_opened');
              if (document.exitFullscreen) {
                document.exitFullscreen();
               }
@@ -57,16 +57,16 @@ $( function() {
             isFull = !isFull;
           }
 
-  $('.video__full-button').click(playFullscreen);
+  $('.player__full-button').click(playFullscreen);
 
 
   /* Линия прогресса */
          function progress (event) {
 
-             let line_width = document.querySelector('.video__progress').clientWidth;
+             let line_width = document.querySelector('.player__progress').clientWidth;
              // положение элемента
              //var pos = document.getElementById('line').offset();
-             let elem_left = document.querySelector('.video__progress').getBoundingClientRect().left;
+             let elem_left = document.querySelector('.player__progress').getBoundingClientRect().left;
              // положение курсора внутри элемента
              let Xinner = event.pageX - elem_left;
              let newTime = video.duration * (Xinner / line_width);
@@ -77,14 +77,12 @@ $( function() {
 
   // Обновляем прогресс
          function updateProgressBar(){
-             let line_width = document.querySelector('.video__progress').clientWidth;
+             let line_width = document.querySelector('.player__progress').clientWidth;
              let persent = (video.currentTime / video.duration);
-             document.querySelector('.video__progress--full').style.width = persent * line_width + 'px';
-             //var per = persent * 100;
-             //document.getElementById('fader').style.left = per+'%';
+             document.querySelector('.player__progress--full').style.width = persent * line_width + 'px';
          }
 
-      document.querySelector('.video__progress').addEventListener('click', progress);
+      document.querySelector('.player__progress').addEventListener('click', progress);
 
 
 });

@@ -9,7 +9,7 @@ import '../node_modules/select2/dist/js/select2.full.min'
 import './wrapper/search-dropdown-user/dropdown/dropdown'
 import './wrapper/location/map/map'
 import './wrapper/calendar-and-messaging/calendar/calendar'
-import './wrapper/video/video'
+import './wrapper/video/player/player'
 
 
 
