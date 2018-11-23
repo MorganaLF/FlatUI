@@ -7,7 +7,7 @@ import './wrapper/percentages-and-charts/pie-chart/pie-chart'
 import './wrapper/sliders/slider/slider'
 import '../node_modules/select2/dist/js/select2.full.min'
 import './wrapper/search-dropdown-user/dropdown/dropdown'
-import './wrapper/location/map'
+import './wrapper/location/map/map'
 import './wrapper/calendar-and-messaging/calendar/calendar'
 import './wrapper/video/video'
 
