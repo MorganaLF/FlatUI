@@ -6,13 +6,21 @@
     content: ''
     float: left
     padding-top: 100%
+  &__svg
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0 /* Необходимо для корректного отображения высоты в IE */
+    width: 100%
+    height: 100%
+    transform rotate(-90deg)
+    -ms-transform: rotate(-90deg)
+    transform-origin center center
   &__bar
     stroke: primary-color
     stroke-width: 10px
     stroke-dashoffset: 0
-    transform rotate(-90deg)
-    transform-origin center center
-    transition: stroke-dashoffset 1s linear
   &__value
     position: absolute
     top: 0

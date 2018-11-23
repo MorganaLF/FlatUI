@@ -12,7 +12,7 @@ $('.ct-chart').each(function(){
         chartPadding: -22,
         fullWidth: true
       }
-      ).on('draw', function(data) {
+      )/*.on('draw', function(data) {
     if(data.type === 'slice') {
 
       let pathLength = data.element._node.getTotalLength();
@@ -41,5 +41,5 @@ $('.ct-chart').each(function(){
 
       data.element.animate(animationDefinition, false);
     }
-  });
+  })*/;
 });
