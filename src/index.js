@@ -1,6 +1,6 @@
-import './wrapper/standart-buttons/button/button.js'
 import css from './styles/main.styl'
 import jQuery from 'jquery'
+import './wrapper/standart-buttons/button/button.js'
 import './jQuery-UI/jquery-ui.min'
 import './wrapper/percentages-and-charts/percentage/percentage'
 import './wrapper/percentages-and-charts/pie-chart/pie-chart'
