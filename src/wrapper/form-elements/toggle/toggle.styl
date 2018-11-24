@@ -12,7 +12,7 @@
     &:checked + .toggle__switch
       background-color secondary-color
     &:checked + .toggle__switch
-      margin-left: 0
+      margin-left: -1px
   &__switch
     width: rem(101px)
     height: 100%
@@ -35,7 +35,9 @@
     &--text
       padding: rem(5px) rem(7px)
       font-size rem(12px)
-      font-weight: 700
+      font-weight: 900
       letter-spacing rem(0.6px)
       text-transform uppercase
       color #ffffff
+      &:last-child
+        padding: rem(5px) rem(9px) rem(5px) rem(5px)

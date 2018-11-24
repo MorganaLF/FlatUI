@@ -1,5 +1,7 @@
 .dropdown
   width: 100%
+  font-family: Source Sans Pro
+  font-weight: 400
   &__container
     .select2-selection--single
       input()
@@ -19,14 +21,17 @@
       background-size: 45%
       b
         display: none
-    .select2-results__option
-      padding: rem(6px) rem(12px)
   &__option
     padding rem(6px) 0
     border: none
     border-radius: 3px
     background secondary-color
     color #ffffff
+    font-family: Source Sans Pro
+    font-weight: 400
+
+.select2-results__option
+  padding: rem(6px) rem(12px)
 
 .select2-container--default .select2-results__option[aria-selected=true]
   background-color lightness(secondary-color, 65%)
