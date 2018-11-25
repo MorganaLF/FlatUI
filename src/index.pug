@@ -1,11 +1,7 @@
-doctype html
-html
-    head
-        meta(charset='utf-8')
-        meta(name='viewport' content="width=device-width, initial-scale=1")
-        title FlatUI
-        script( src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js")
-    body
-        include wrapper/wrapper
-        +wrapper
+extends layout.pug
+
+include wrapper/wrapper
+
+block content
+    +wrapper
 

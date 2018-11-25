@@ -16,6 +16,10 @@ let conf = {
       filename: 'index.html',
       template: path.resolve(__dirname, './src/index.pug')
     }),
+    new HtmlWebpackPlugin({
+      filename: 'main.html',
+      template: path.resolve(__dirname, './src/main.pug')
+    }),
     new ExtractTextPlugin('styles.css'),
     new CopyWebpackPlugin([
       {

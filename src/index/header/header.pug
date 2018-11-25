@@ -1,0 +1,17 @@
+include ../menu/menu
+
+mixin header
+    header.header
+        .header__menu-container
+            .container.header__menu-container-flex
+                +menu([
+                  'account',
+                  'log out'
+                ])
+                +menu([
+                  'get started',
+                  'freelancers',
+                  'news and events',
+                  'contact us'
+                ])
+        h1.header__title Welcome to our awesome freelance-exchange!
