@@ -1,6 +1,14 @@
 extends layout.pug
 
 include index/header/header
+include wrapper/subheading/subheading
+include wrapper/standart-buttons/button/button
+include wrapper/form-elements/toggle/toggle
+include index/tariff-plan/tariff-plan
 
 block content
     +header
+    .container
+        +subheading('choose your tariff plan')
+        +tariffPlan
+
