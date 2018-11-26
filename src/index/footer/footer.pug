@@ -1,0 +1,31 @@
+include ../../wrapper/search-dropdown-user/search/search
+mixin footer
+    footer.footer
+        .container.footer__container
+            div
+                +subheading('search on site')
+                +search('Search', 'primary')
+            div
+                ul.footer__menu
+                    li.footer__menu-item
+                        a.footer__menu-link(href='#') Account
+                    li.footer__menu-item
+                        a.footer__menu-link(href='#') Get started
+                    li.footer__menu-item
+                        a.footer__menu-link(href='#') Freelancers
+            div
+                ul.footer__menu
+                    li.footer__menu-item
+                        a.footer__menu-link(href='#') News and events
+                    li.footer__menu-item
+                        a.footer__menu-link(href='#') Sitemap
+                    li.footer__menu-item
+                        a.footer__menu-link(href='#') Rules
+            div.footer__copyright
+                p © Freelance Exchange 2018
+                p 4743866@mail.ru
+
+
+
+
+
