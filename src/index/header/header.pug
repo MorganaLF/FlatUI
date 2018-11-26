@@ -1,9 +1,10 @@
 include ../menu/menu
+include ../../wrapper/search-dropdown-user/search/search
 
 mixin header
     header.header
         .header__menu-container
-            .container.header__menu-container-flex
+            .header__menu-container-flex
                 +menu([
                   'account',
                   'log out'
@@ -15,3 +16,6 @@ mixin header
                   'contact us'
                 ])
         h1.header__title Welcome to our awesome freelance-exchange!
+        .header__search-container
+            p.header__search-title Find new orders!
+            +search('search orders...')
