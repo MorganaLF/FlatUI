@@ -6,37 +6,37 @@ mixin tariffPlan
             ul.tariff-plan__list
                 li.tariff-plan__list-item
                     p unlimited applications
-                    +toggle('tariff-plan-1')
+                    +toggle('tariff-plan-1', false, true)
                 li.tariff-plan__list-item
                     p unlimited categories
-                    +toggle('tariff-plan-2')
+                    +toggle('tariff-plan-2', false, true)
                 li.tariff-plan__list-item
                     p commission from the order
-                    +toggle('tariff-plan-3', true)
+                    +toggle('tariff-plan-3', true, true)
             +button('choose', '', 'primary')
         .tariff-plan
             h3.tariff-plan__title Premium
             ul.tariff-plan__list
                 li.tariff-plan__list-item
                     p unlimited applications
-                    +toggle('tariff-plan-4', true)
+                    +toggle('tariff-plan-4', true, true)
                 li.tariff-plan__list-item
                     p unlimited categories
-                    +toggle('tariff-plan-5', true)
+                    +toggle('tariff-plan-5', true, true)
                 li.tariff-plan__list-item
                     p commission from the order
-                    +toggle('tariff-plan-6')
+                    +toggle('tariff-plan-6', false, true)
             +button('choose', '', 'primary')
         .tariff-plan
             h3.tariff-plan__title Standard
             ul.tariff-plan__list
                 li.tariff-plan__list-item
                     p unlimited applications
-                    +toggle('tariff-plan-7')
+                    +toggle('tariff-plan-7', false, true)
                 li.tariff-plan__list-item
                     p unlimited categories
-                    +toggle('tariff-plan-8', true)
+                    +toggle('tariff-plan-8', true, true)
                 li.tariff-plan__list-item
                     p commission from the order
-                    +toggle('tariff-plan-9', true)
+                    +toggle('tariff-plan-9', true, true)
             +button('choose', '', 'primary')
