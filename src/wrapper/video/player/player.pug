@@ -1,9 +1,9 @@
-mixin player
+mixin player(src, title, author)
     .player__wrapper
-        video.player(src='http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4', width='100%', preload="none" )
+        video.player(src=src, width='100%', preload="none" )
         .player__header
-            .player__title New Zealand Landscapes Timelapse
-            .player__author from Bevan Percival
+            .player__title= title
+            .player__author= author
         .player__footer
             .player__play-button
             .player__progress
