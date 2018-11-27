@@ -7,336 +7,281 @@
     <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
   <link href="https://morganalf.github.io/portfolio/dist/styles.css" rel="stylesheet"></head>
   <body>
-    <div class="wrapper">
-      <section class="standard-buttons">
-        <div class="standard-buttons__title-container">
-          <h2 class="subheading">STANDARD BUTTONS</h2>
-        </div>
-        <div class="standard-buttons__buttons-container">
-          <button class="button button_size_small button_bg_secondary">BUTTON
-            <div class="button__shadow"></div>
-          </button>
-          <button class="button button_bg_secondary">BUTTON
-            <div class="button__shadow"></div>
-          </button>
-          <button class="button button_bg_primary">BUTTON
-            <div class="button__shadow"></div>
-          </button>
-          <button class="button button_size_small button_bg_primary">BUTTON
-            <div class="button__shadow"></div>
-          </button>
-        </div>
-        <div class="standard-buttons__buttons-container">
-          <button class="button button_size_small button_bg_secondary-shadow">BUTTON
-            <div class="button__shadow"></div>
-          </button>
-          <button class="button button_bg_secondary-shadow">BUTTON
-            <div class="button__shadow"></div>
-          </button>
-          <button class="button button_bg_primary-shadow">BUTTON
-            <div class="button__shadow"></div>
-          </button>
-          <button class="button button_size_small button_bg_primary-shadow">BUTTON
-            <div class="button__shadow"></div>
-          </button>
-        </div>
-        <div class="standard-buttons__buttons-container">
-          <button class="button button_size_small button_bg_transparent-secondary">BUTTON
-            <div class="button__shadow"></div>
-          </button>
-          <button class="button button_bg_transparent-secondary">BUTTON
-            <div class="button__shadow"></div>
-          </button>
-          <button class="button button_bg_transparent-primary">BUTTON
-            <div class="button__shadow"></div>
-          </button>
-          <button class="button button_size_small button_bg_transparent-primary">BUTTON
-            <div class="button__shadow"></div>
-          </button>
-        </div>
-      </section>
-      <section class="arrow-buttons">
-        <div class="arrow-buttons__title-container">
-          <h2 class="subheading">ARROW BUTTONS</h2>
-        </div>
-        <div class="arrow-buttons__buttons-container">
-          <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_left-secondary"></button>
-          <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_right-secondary"></button>
-          <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_left-secondary" disabled></button>
-          <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_right-secondary" disabled></button>
-          <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_left-secondary"></button>
-          <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_right-secondary"></button>
-        </div>
-      </section>
-      <div class="percentages-and-charts">
-        <div class="percentages-and-charts__title-container">
-          <h2 class="subheading">PERCENTAGES / PIE CHART</h2>
-        </div>
-        <div class="percentages-and-charts__container">
-          <div class="percentage"><span class="percentage__value">0</span>
-            <svg class="percentage__svg" viewBox="0 0 190 190">
-              <circle class="percentage__bar" r="90" cx="95" cy="95" fill="transparent"></circle>
-            </svg>
-          </div>
-          <div class="percentage"><span class="percentage__value">38</span>
-            <svg class="percentage__svg" viewBox="0 0 190 190">
-              <circle class="percentage__bar" r="90" cx="95" cy="95" fill="transparent"></circle>
-            </svg>
-          </div>
-          <div class="percentage"><span class="percentage__value">62</span>
-            <svg class="percentage__svg" viewBox="0 0 190 190">
-              <circle class="percentage__bar" r="90" cx="95" cy="95" fill="transparent"></circle>
-            </svg>
-          </div>
-          <div class="percentage"><span class="percentage__value">89</span>
-            <svg class="percentage__svg" viewBox="0 0 190 190">
-              <circle class="percentage__bar" r="90" cx="95" cy="95" fill="transparent"></circle>
-            </svg>
-          </div>
-          <div class="pie-chart ct-chart ct-square" data-series="30, 85, 100, 100"></div>
-        </div>
-      </div>
-      <div class="sliders">
-        <div class="sliders__title-container">
-          <h2 class="subheading">SLIDERS</h2>
-        </div>
-        <div class="sliders__container">
-          <div class="sliders__col">
-            <div class="slider">
-              <div class="custom-handle ui-slider-handle">
-                <div class="slider__tip"></div>
-              </div>
-            </div>
-          </div>
-          <div class="sliders__col">
-            <div class="slider slider_is-progress slider_progress-bg_secondary">
-              <div class="custom-handle ui-slider-handle">
-              </div>
-            </div>
-            <ul class="slider__scale">
-              <li class="slider__scale-item">0</li>
-              <li class="slider__scale-item">25</li>
-              <li class="slider__scale-item">50</li>
-              <li class="slider__scale-item">75</li>
-              <li class="slider__scale-item">100</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="stages">
-        <div class="stages__title-container">
-          <h2 class="subheading">STAGES</h2>
-        </div>
-        <ul class="stage">
-          <li class="stage__item">1</li>
-          <li class="stage__line"></li>
-          <li class="stage__item">2</li>
-          <li class="stage__line"></li>
-          <li class="stage__item">3</li>
-          <li class="stage__line stage__line_inactive"></li>
-          <li class="stage__item stage__item_inactive">4</li>
-          <li class="stage__line stage__line_inactive"></li>
-          <li class="stage__item stage__item_inactive">5</li>
-        </ul>
-      </div>
-      <section class="form-elements">
-        <div class="form-elements__title-container">
-          <h2 class="subheading">FORM ELEMENTS</h2>
-        </div>
-        <div class="form-elements__container">
-          <div class="form-elements__col">
-            <form class="contact-form">
-              <div class="contact-form__input-group">
-                <input class="contact-form__input" type="text" name="name" placeholder="Your Name">
-                <div class="contact-form__tip">ERROR</div>
-              </div>
-              <div class="contact-form__input-group">
-                <input class="contact-form__input" type="email" name="email" placeholder="Your Email">
-                <div class="contact-form__tip contact-form__tip_bg_secondary">THANKS!</div>
-              </div>
-              <textarea class="contact-form__textarea" name="message" placeholder="Your Message"></textarea>
-              <button class="button button_bg_secondary-shadow">SUBMIT
+    <header class="header">
+      <div class="header__menu-container">
+        <div class="header__menu-container-flex">
+          <ul class="menu">
+            <li class="menu__item">
+              <button class="button button_bg_secondary">account
                 <div class="button__shadow"></div>
               </button>
+            </li>
+            <li class="menu__item">
+              <button class="button button_bg_secondary">log out
+                <div class="button__shadow"></div>
+              </button>
+            </li>
+          </ul>
+          <ul class="menu">
+            <li class="menu__item">
+              <button class="button button_bg_secondary">get started
+                <div class="button__shadow"></div>
+              </button>
+            </li>
+            <li class="menu__item">
+              <button class="button button_bg_secondary">freelancers
+                <div class="button__shadow"></div>
+              </button>
+            </li>
+            <li class="menu__item">
+              <button class="button button_bg_secondary">news and events
+                <div class="button__shadow"></div>
+              </button>
+            </li>
+            <li class="menu__item">
+              <button class="button button_bg_secondary">contact us
+                <div class="button__shadow"></div>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h1 class="header__title">Welcome to our awesome freelance-exchange!</h1>
+      <div class="header__search-container">
+        <p class="header__search-title">Find new orders!</p>
+        <form class="search" action="" method="get">
+          <input class="search__input" type="search" name="search" placeholder="search orders...">
+          <input class="search__button" type="submit" value="">
+        </form>
+      </div>
+    </header>
+    <div class="container">
+      <h2 class="subheading">choose your tariff plan</h2>
+      <div class="tariff-plan__container">
+        <div class="tariff-plan">
+          <h3 class="tariff-plan__title">Lite</h3>
+          <ul class="tariff-plan__list">
+            <li class="tariff-plan__list-item">
+              <p>unlimited applications</p>
+              <label class="toggle" for="tariff-plan-1">
+                <input class="toggle__input" type="checkbox" id="tariff-plan-1" disabled>
+                <div class="toggle__switch">
+                  <div class="toggle__switch--text">on</div>
+                  <div class="toggle__switch--round"></div>
+                  <div class="toggle__switch--text">off</div>
+                </div>
+              </label>
+            </li>
+            <li class="tariff-plan__list-item">
+              <p>unlimited categories</p>
+              <label class="toggle" for="tariff-plan-2">
+                <input class="toggle__input" type="checkbox" id="tariff-plan-2" disabled>
+                <div class="toggle__switch">
+                  <div class="toggle__switch--text">on</div>
+                  <div class="toggle__switch--round"></div>
+                  <div class="toggle__switch--text">off</div>
+                </div>
+              </label>
+            </li>
+            <li class="tariff-plan__list-item">
+              <p>commission from the order</p>
+              <label class="toggle" for="tariff-plan-3">
+                <input class="toggle__input" type="checkbox" id="tariff-plan-3" checked disabled>
+                <div class="toggle__switch">
+                  <div class="toggle__switch--text">on</div>
+                  <div class="toggle__switch--round"></div>
+                  <div class="toggle__switch--text">off</div>
+                </div>
+              </label>
+            </li>
+          </ul>
+          <button class="button button_bg_primary">choose
+            <div class="button__shadow"></div>
+          </button>
+        </div>
+        <div class="tariff-plan">
+          <h3 class="tariff-plan__title">Premium</h3>
+          <ul class="tariff-plan__list">
+            <li class="tariff-plan__list-item">
+              <p>unlimited applications</p>
+              <label class="toggle" for="tariff-plan-4">
+                <input class="toggle__input" type="checkbox" id="tariff-plan-4" checked disabled>
+                <div class="toggle__switch">
+                  <div class="toggle__switch--text">on</div>
+                  <div class="toggle__switch--round"></div>
+                  <div class="toggle__switch--text">off</div>
+                </div>
+              </label>
+            </li>
+            <li class="tariff-plan__list-item">
+              <p>unlimited categories</p>
+              <label class="toggle" for="tariff-plan-5">
+                <input class="toggle__input" type="checkbox" id="tariff-plan-5" checked disabled>
+                <div class="toggle__switch">
+                  <div class="toggle__switch--text">on</div>
+                  <div class="toggle__switch--round"></div>
+                  <div class="toggle__switch--text">off</div>
+                </div>
+              </label>
+            </li>
+            <li class="tariff-plan__list-item">
+              <p>commission from the order</p>
+              <label class="toggle" for="tariff-plan-6">
+                <input class="toggle__input" type="checkbox" id="tariff-plan-6" disabled>
+                <div class="toggle__switch">
+                  <div class="toggle__switch--text">on</div>
+                  <div class="toggle__switch--round"></div>
+                  <div class="toggle__switch--text">off</div>
+                </div>
+              </label>
+            </li>
+          </ul>
+          <button class="button button_bg_primary">choose
+            <div class="button__shadow"></div>
+          </button>
+        </div>
+        <div class="tariff-plan">
+          <h3 class="tariff-plan__title">Standard</h3>
+          <ul class="tariff-plan__list">
+            <li class="tariff-plan__list-item">
+              <p>unlimited applications</p>
+              <label class="toggle" for="tariff-plan-7">
+                <input class="toggle__input" type="checkbox" id="tariff-plan-7" disabled>
+                <div class="toggle__switch">
+                  <div class="toggle__switch--text">on</div>
+                  <div class="toggle__switch--round"></div>
+                  <div class="toggle__switch--text">off</div>
+                </div>
+              </label>
+            </li>
+            <li class="tariff-plan__list-item">
+              <p>unlimited categories</p>
+              <label class="toggle" for="tariff-plan-8">
+                <input class="toggle__input" type="checkbox" id="tariff-plan-8" checked disabled>
+                <div class="toggle__switch">
+                  <div class="toggle__switch--text">on</div>
+                  <div class="toggle__switch--round"></div>
+                  <div class="toggle__switch--text">off</div>
+                </div>
+              </label>
+            </li>
+            <li class="tariff-plan__list-item">
+              <p>commission from the order</p>
+              <label class="toggle" for="tariff-plan-9">
+                <input class="toggle__input" type="checkbox" id="tariff-plan-9" checked disabled>
+                <div class="toggle__switch">
+                  <div class="toggle__switch--text">on</div>
+                  <div class="toggle__switch--round"></div>
+                  <div class="toggle__switch--text">off</div>
+                </div>
+              </label>
+            </li>
+          </ul>
+          <button class="button button_bg_primary">choose
+            <div class="button__shadow"></div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="background-container">
+      <div class="container how-it">
+        <h2 class="subheading">how it works?</h2>
+        <!--p.how-it__title Watch a small video about our exchange-->
+        <div class="player__wrapper">
+          <video class="player" src="http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4" width="100%" preload="none"></video>
+          <div class="player__header">
+            <div class="player__title">About our awesome company</div>
+            <div class="player__author">freelance exchange</div>
+          </div>
+          <div class="player__footer">
+            <div class="player__play-button"></div>
+            <div class="player__progress">
+              <div class="player__progress--full"></div>
+            </div>
+            <div class="player__full-button"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="index-news">
+        <h2 class="subheading">latest news</h2>
+        <div class="index-news__container">
+          <article class="news">
+            <div class="news__picture" style="background-image: url(&quot;images/news-1.jpg&quot;)"></div>
+            <div class="news__text-block">
+              <h3 class="news__title">It’s all going downhill</h3><span class="news__date">24  AUGUST  2013</span>
+              <p class="news__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
+            </div>
+          </article>
+          <article class="news">
+            <div class="news__picture" style="background-image: url(&quot;images/news-2.jpg&quot;)"></div>
+            <div class="news__text-block">
+              <h3 class="news__title">It’s all going downhill</h3><span class="news__date">24  AUGUST  2013</span>
+              <p class="news__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
+            </div>
+          </article>
+          <article class="news">
+            <div class="news__picture" style="background-image: url(&quot;images/news-1.jpg&quot;)"></div>
+            <div class="news__text-block">
+              <h3 class="news__title">It’s all going downhill</h3><span class="news__date">24  AUGUST  2013</span>
+              <p class="news__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
+            </div>
+          </article>
+          <article class="news">
+            <div class="news__picture" style="background-image: url(&quot;images/news-2.jpg&quot;)"></div>
+            <div class="news__text-block">
+              <h3 class="news__title">It’s all going downhill</h3><span class="news__date">24  AUGUST  2013</span>
+              <p class="news__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
+            </div>
+          </article>
+          <article class="news">
+            <div class="news__picture" style="background-image: url(&quot;images/news-1.jpg&quot;)"></div>
+            <div class="news__text-block">
+              <h3 class="news__title">It’s all going downhill</h3><span class="news__date">24  AUGUST  2013</span>
+              <p class="news__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
+            </div>
+          </article>
+          <article class="news">
+            <div class="news__picture" style="background-image: url(&quot;images/news-2.jpg&quot;)"></div>
+            <div class="news__text-block">
+              <h3 class="news__title">It’s all going downhill</h3><span class="news__date">24  AUGUST  2013</span>
+              <p class="news__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="background-container">
+      <footer class="footer">
+        <div class="container footer__container">
+          <div>
+            <h2 class="subheading">search on site</h2>
+            <form class="search" action="" method="get">
+              <input class="search__input search__input_color_primary" type="search" name="search" placeholder="Search">
+              <input class="search__button" type="submit" value="">
             </form>
           </div>
-          <div class="form-elements__col">
-            <h2 class="subheading">TOGGLES</h2>
-            <label class="toggle" for="toggle-1">
-              <input class="toggle__input" type="checkbox" id="toggle-1">
-              <div class="toggle__switch">
-                <div class="toggle__switch--text">on</div>
-                <div class="toggle__switch--round"></div>
-                <div class="toggle__switch--text">off</div>
-              </div>
-            </label>
-            <label class="toggle" for="toggle-2">
-              <input class="toggle__input" type="checkbox" id="toggle-2" checked>
-              <div class="toggle__switch">
-                <div class="toggle__switch--text">on</div>
-                <div class="toggle__switch--round"></div>
-                <div class="toggle__switch--text">off</div>
-              </div>
-            </label>
-            <h2 class="subheading">TICK BOXES</h2>
-            <label class="tick-box">
-              <input class="tick-box__input" type="checkbox" checked>
-              <div class="tick-box__round"></div>
-            </label>
-            <label class="tick-box">
-              <input class="tick-box__input" type="checkbox">
-              <div class="tick-box__round"></div>
-            </label>
+          <div>
+            <ul class="footer__menu">
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Account</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Get started</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Freelancers</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul class="footer__menu">
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">News and events</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Sitemap</a></li>
+              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Rules</a></li>
+            </ul>
+          </div>
+          <div class="footer__copyright">
+            <p>© Freelance Exchange 2018</p>
+            <p>4743866@mail.ru</p>
           </div>
         </div>
-      </section>
-      <div class="search-dropdown-user">
-        <div class="search-dropdown-user__col">
-          <h2 class="subheading">SEARCH / DROP DOWN</h2>
-          <form class="search" action="" method="get">
-            <input class="search__input" type="search" name="search" placeholder="Search">
-            <input class="search__button" type="submit" value="">
-          </form>
-          <form class="search" action="" method="get">
-            <input class="search__input search__input_color_primary" type="search" name="search" placeholder="I’ve not found what I’m looking for...">
-            <input class="search__button" type="submit" value="">
-          </form>
-          <div class="dropdown__container">
-            <select class="dropdown" name="state">
-              <option></option>
-              <option value="1">Option 1</option>
-              <option value="2">Option 2</option>
-              <option value="3">Option 3</option>
-            </select>
-          </div>
-        </div>
-        <div class="search-dropdown-user__col">
-          <h2 class="subheading">USER PROFILE</h2>
-          <div class="user">
-            <div class="user__picture-container"><img class="user__picture" src="images/user-1.jpg"></div>
-            <div class="user__info">
-              <div class="user__name">John Smith</div>
-              <div class="user__profession">UX DESIGNER</div>
-              <div class="user__social-icons">
-                <div class="user__social-icon_1"></div>
-                <div class="user__social-icon_2"></div>
-                <div class="user__social-icon_3"></div>
-              </div>
-            </div>
-          </div>
-          <div class="user">
-            <div class="user__picture-container"><img class="user__picture" src="images/user-2.jpg"></div>
-            <div class="user__info user__info_bg_secondary">
-              <div class="user__name user__name_color_white">Sarah Brown</div>
-              <div class="user__profession user__profession_color_white">DEVELOPER</div>
-              <div class="user__social-icons">
-                <div class="user__social-icon_1 user__social-icon_1-white"></div>
-                <div class="user__social-icon_2 user__social-icon_2-white"></div>
-                <div class="user__social-icon_3 user__social-icon_3-white"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="news-and-events">
-        <div class="news-and-events__title-container">
-          <h2 class="subheading">NEWS &amp; EVENTS</h2>
-        </div>
-        <div class="news-and-events__container">
-          <div class="news-and-events__col">
-            <article class="news">
-              <div class="news__picture" style="background-image: url(&quot;images/news-1.jpg&quot;)"></div>
-              <div class="news__text-block">
-                <h3 class="news__title">It’s all going downhill</h3><span class="news__date">24  AUGUST  2013</span>
-                <p class="news__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum aliquet venenatis. Etiam a nisi nunc, a tincidunt eros.</p>
-              </div>
-            </article>
-          </div>
-          <div class="news-and-events__col">
-            <article class="news news_bg_secondary">
-              <div class="news__picture" style="background-image: url(&quot;images/news-2.jpg&quot;)"></div>
-              <div class="news__text-block"><span class="news__date news__date_size_big"><span class="news__day">24 </span><span class="news__month">Aug</span></span>
-                <h3 class="news__title news__title_size_small">THIS IS THE TITLE</h3>
-                <p class="news__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                <div class="news__button-container">
-                  <button class="button button_size_small button_bg_transparent-dark-secondary">add to calendar
-                    <div class="button__shadow"></div>
-                  </button>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-      <section class="location">
-        <div class="location__title-container">
-          <h2 class="subheading">LOCATION</h2>
-        </div>
-        <div class="map"></div>
-        <div class="map__footer">
-          <h3 class="map__title">Meet us!</h3>
-          <p class="map__adress"><span class="map__adress--span">1259  CALIFORNIA ST</span><span class="map__adress--span">San Francisco, CA</span></p>
-          <div class="map__buttons">
-            <button class="map__geolocation"></button>
-            <button class="map__add"></button>
-          </div>
-        </div>
-      </section>
-      <div class="calendar-and-messaging">
-        <div class="calendar-and-messaging__col">
-          <h2 class="subheading">CALENDAR</h2>
-          <div class="calendar__container">
-            <div class="calendar__header">01</div>
-            <div class="calendar"></div>
-            <div class="calendar__footer">today</div>
-          </div>
-        </div>
-        <div class="calendar-and-messaging__col">
-          <h2 class="subheading">MESSAGING</h2>
-          <div class="messaging">
-            <div class="messaging__header">
-              <h3 class="messaging__title">Sarah Brown</h3>
-            </div>
-            <div class="messaging__body">
-              <div class="messaging__icons">
-                <div class="messaging__icon messaging__icon_chat"></div>
-                <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div>
-                <div class="messaging__icon messaging__icon_camera"></div>
-              </div>
-              <div class="messaging__incoming">
-                <p class="messaging__incoming-paragraph">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
-              </div>
-              <form>
-                <textarea class="messaging__textarea">Yeah that sounds great. See you then.</textarea>
-                <button class="button button_bg_secondary-shadow">REPLY
-                  <div class="button__shadow"></div>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="video__container">
-        <div class="video">
-          <div class="video__title-container">
-            <h2 class="subheading">VIDEO</h2>
-          </div>
-          <div class="player__wrapper">
-            <video class="player" src="http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4" width="100%" preload="none"></video>
-            <div class="player__header">
-              <div class="player__title">New Zealand Landscapes Timelapse</div>
-              <div class="player__author">from Bevan Percival</div>
-            </div>
-            <div class="player__footer">
-              <div class="player__play-button"></div>
-              <div class="player__progress">
-                <div class="player__progress--full"></div>
-              </div>
-              <div class="player__full-button"></div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </footer>
     </div>
   <script type="text/javascript" src="https://morganalf.github.io/portfolio/dist/main.js"></script></body>
 </html>
