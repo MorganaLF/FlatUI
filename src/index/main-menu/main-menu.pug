@@ -1,0 +1,16 @@
+include ../menu/menu
+
+mixin mainMenu
+
+    .main-menu__container
+        .main-menu
+            +menu([
+              'account',
+              'log out'
+            ])
+            +menu([
+              'get started',
+              'freelancers',
+              'news and events',
+              'contact us'
+            ])

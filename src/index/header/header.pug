@@ -1,20 +1,9 @@
-include ../menu/menu
+include ../main-menu/main-menu
 include ../../wrapper/search-dropdown-user/search/search
 
-mixin header
+mixin header(isIndex)
     header.header
-        .header__menu-container
-            .header__menu-container-flex
-                +menu([
-                  'account',
-                  'log out'
-                ])
-                +menu([
-                  'get started',
-                  'freelancers',
-                  'news and events',
-                  'contact us'
-                ])
+        +mainMenu
         h1.header__title Welcome to our awesome freelance-exchange!
         .header__search-container
             p.header__search-title Find new orders!
