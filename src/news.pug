@@ -1,0 +1,101 @@
+extends layout.pug
+include index/main-menu/main-menu
+include index/footer/footer
+include wrapper/subheading/subheading
+include wrapper/news-and-events/news/news
+include wrapper/calendar-and-messaging/calendar/calendar
+include wrapper/search-dropdown-user/search/search
+include wrapper/arrow-buttons/arrow-button/arrow-button
+include wrapper/standart-buttons/button/button
+
+block content
+    +mainMenu
+    .container
+        .news-page
+            .news-page__col.news-page__col_size_4
+                +subheading('search news')
+                +search('Search...')
+                +calendar
+            .news-page__col.news-page__col_size_8
+                +subheading('news')
+                +news(
+                    'news-1',
+                    'It’s all going downhill',
+                    '24  AUGUST  2013',
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
+                    'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
+                    'nunc, a tincidunt eros.'
+                )
+                +news(
+                    'news-1',
+                    'It’s all going downhill',
+                    '24  AUGUST  2013',
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
+                    'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
+                    'nunc, a tincidunt eros.'
+                )
+                +news(
+                    'news-1',
+                    'It’s all going downhill',
+                    '24  AUGUST  2013',
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
+                    'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
+                    'nunc, a tincidunt eros.'
+                )
+                +news(
+                    'news-1',
+                    'It’s all going downhill',
+                    '24  AUGUST  2013',
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
+                    'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
+                    'nunc, a tincidunt eros.'
+                )
+                .news-page__nav
+                    +arrowButton('transparent-secondary', 'left-secondary', false, 'small')
+                    .news-page__nav-buttons
+                        +button('1', 'small', 'secondary')
+                        +button('2', 'small', 'transparent-secondary')
+                        +button('3', 'small', 'transparent-secondary')
+                        +button('4', 'small', 'transparent-secondary')
+                        +button('5', 'small', 'transparent-secondary')
+                    +arrowButton('transparent-secondary', 'right-secondary', false, 'small')
+                +subheading('upcoming events')
+                +news(
+                    'news-2',
+                    'THIS IS THE TITLE',
+                    ['24', 'Aug'],
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    true
+                )
+                +news(
+                    'news-2',
+                    'THIS IS THE TITLE',
+                    ['24', 'Aug'],
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    true
+                )
+                +news(
+                    'news-2',
+                    'THIS IS THE TITLE',
+                    ['24', 'Aug'],
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    true
+                )
+                +news(
+                    'news-2',
+                    'THIS IS THE TITLE',
+                    ['24', 'Aug'],
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+                    true
+                )
+                .news-page__nav
+                    +arrowButton('transparent-secondary', 'left-secondary', false, 'small')
+                    .news-page__nav-buttons
+                        +button('1', 'small', 'secondary')
+                        +button('2', 'small', 'transparent-secondary')
+                        +button('3', 'small', 'transparent-secondary')
+                        +button('4', 'small', 'transparent-secondary')
+                        +button('5', 'small', 'transparent-secondary')
+                    +arrowButton('transparent-secondary', 'right-secondary', false, 'small')
+    .background-container
+        +footer

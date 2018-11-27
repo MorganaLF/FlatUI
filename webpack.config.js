@@ -24,6 +24,10 @@ let conf = {
       filename: 'account.html',
       template: path.resolve(__dirname, './src/account.pug')
     }),
+    new HtmlWebpackPlugin({
+      filename: 'news.html',
+      template: path.resolve(__dirname, './src/news.pug')
+    }),
     new ExtractTextPlugin('styles.css'),
     new CopyWebpackPlugin([
       {
