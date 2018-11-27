@@ -101,9 +101,9 @@ $( function() {
     $('.ui-datepicker-title').html(str);
 
 
-    let curWidth = $( ".calendar .ui-widget.ui-widget-content" ).width();
+    let curWidth = $(this).find( ".ui-widget.ui-widget-content" ).width();
 
-    $( ".ui-datepicker td span, .ui-datepicker td a" ).css('font-size', curWidth / 14.5);
+    $(this).find( ".ui-datepicker td span, .ui-datepicker td a" ).css('font-size', curWidth / 14.5);
 
   }
 
