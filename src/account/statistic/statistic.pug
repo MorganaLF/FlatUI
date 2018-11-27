@@ -1,0 +1,13 @@
+include ../../wrapper/percentages-and-charts/pie-chart/pie-chart
+
+mixin statistic
+    .statistic
+        .statistic__col
+            ul.statistic__list
+                li.statistic__list-item.statistic__list-item_color_grey html - 5%
+                li.statistic__list-item.statistic__list-item_color_red php - 15%
+                li.statistic__list-item.statistic__list-item_color_green css - 60%
+                li.statistic__list-item.statistic__list-item_color_light-grey javascript - 20%
+        .statistic__col
+            +pieChart('5, 15, 60, 20')
+
