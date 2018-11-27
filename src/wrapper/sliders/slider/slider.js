@@ -2,7 +2,11 @@ import $ from 'jquery'
 
 $( function() {
 
-  $( ".slider" ).slider();
+  $( ".slider" ).each(function(){
+    $(this).slider({
+      value: $(this).data('value')
+    });
+  });
 
   $( ".slider__tip" ).each(function() {
     $(this).text($(this).closest('.slider').slider( "value" ));
