@@ -1,0 +1,13 @@
+include ../../wrapper/percentages-and-charts/percentage/percentage
+
+mixin deadlinesStatistic
+    .deadlines-statistic
+        .deadlines-statistic__col
+            h3.deadlines-statistic__title Ahead of time
+            +percentage(30)
+        .deadlines-statistic__col
+            h3.deadlines-statistic__title On time
+            +percentage(70)
+        .deadlines-statistic__col
+            h3.deadlines-statistic__title Expired
+            +percentage(0)
