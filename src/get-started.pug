@@ -1,0 +1,38 @@
+extends layout.pug
+
+include index/main-menu/main-menu
+include wrapper/subheading/subheading
+include wrapper/standart-buttons/button/button
+include wrapper/form-elements/tick-box/tick-box
+include wrapper/form-elements/toggle/toggle
+include wrapper/sliders/slider/slider
+include wrapper/stages/stage/stage
+include index/tariff-plan/tariff-plan
+include index/footer/footer
+
+block content
+    +mainMenu
+    .container.get-started__container
+        +subheading('how to start?')
+        +stage(5, 1, true)
+            .stage__content-item
+                .get-started__content-item
+                    h3.get-started__content-title Step 1: Choose optimal tariff plan
+                    p.get-started__content-paragraph.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, impedit, quidem. Id laudantium molestias optio placeat praesentium quasi sed vero!
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, impedit, quidem. Id laudantium molestias optio placeat praesentium quasi sed vero!
+                    +tariffPlan
+            .stage__content-item
+                .get-started__content-item
+                    h3.get-started__content-title Step 2: Register an account
+            .stage__content-item
+                .get-started__content-item
+                    h3.get-started__content-title Step 3
+            .stage__content-item
+                .get-started__content-item
+                    h3.get-started__content-title Step 4
+            .stage__content-item
+                .get-started__content-item
+                    h3.get-started__content-title Step 5
+    .background-container
+        +footer

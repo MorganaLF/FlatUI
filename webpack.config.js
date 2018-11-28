@@ -28,6 +28,10 @@ let conf = {
       filename: 'news.html',
       template: path.resolve(__dirname, './src/news.pug')
     }),
+    new HtmlWebpackPlugin({
+      filename: 'get-started.html',
+      template: path.resolve(__dirname, './src/get-started.pug')
+    }),
     new ExtractTextPlugin('styles.css'),
     new CopyWebpackPlugin([
       {
