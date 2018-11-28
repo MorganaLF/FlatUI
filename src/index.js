@@ -10,6 +10,7 @@ import './wrapper/search-dropdown-user/dropdown/dropdown'
 import './wrapper/location/map/map'
 import './wrapper/calendar-and-messaging/calendar/calendar'
 import './wrapper/video/player/player'
+import './wrapper/stages/stage/stage'
 
 
 
