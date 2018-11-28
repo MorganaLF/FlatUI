@@ -32,6 +32,10 @@ let conf = {
       filename: 'get-started.html',
       template: path.resolve(__dirname, './src/get-started.pug')
     }),
+    new HtmlWebpackPlugin({
+      filename: 'contact.html',
+      template: path.resolve(__dirname, './src/contact.pug')
+    }),
     new ExtractTextPlugin('styles.css'),
     new CopyWebpackPlugin([
       {
