@@ -47,28 +47,18 @@ let conf = {
         to: './fonts'
       },
       {
-        from: './src/wrapper/**/*.jpg',
+        from: './src/**/*.jpg',
         to: './images',
         flatten: true
       },
       {
-        from: './src/wrapper/**/*.png',
+        from: './src/**/*.png',
         to: './images',
         flatten: true
       },
       {
-        from: './src/jQuery-UI/**/*.png',
+        from: './src/**/*.svg',
         to: './images',
-        flatten: true
-      },
-      {
-        from: './src/wrapper/**/*.svg',
-        to: './images',
-        flatten: true
-      },
-      {
-        from: './src/wrapper/**/*.mp4',
-        to: './video',
         flatten: true
       }
     ]),
