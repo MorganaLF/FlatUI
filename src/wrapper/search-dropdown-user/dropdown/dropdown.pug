@@ -1,6 +1,6 @@
-mixin dropdown(options)
+mixin dropdown(options, placeholder)
     .dropdown__container
-        select.dropdown(name="state")
+        select.dropdown(name="state", data-placeholder=placeholder)
             option
             each val, index in options
                 option(value=index)= val
