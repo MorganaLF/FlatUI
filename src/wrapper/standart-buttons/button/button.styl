@@ -1,4 +1,5 @@
 .button
+  display: inline-block
   position: relative
   padding: rem(10px) rem(33px)
   border: none
@@ -7,6 +8,7 @@
   font-weight: 900
   text-transform uppercase
   letter-spacing 0.6px
+  text-decoration: none
   color #ffffff
   cursor: pointer
   &__shadow
@@ -16,7 +18,9 @@
     height: rem(50px)
     border-radius: 50%
     background-color light-shadow
-    opacity 0.3
+    opacity 0
+    &_animated
+      animation: shadow  0.2s ease-in-out
   &_size_small
     padding: rem(6px) rem(17px)
     font-size rem(10px)
@@ -65,3 +69,18 @@
       &.button_size_small
         padding: rem(5px) rem(16px) rem(4px)
         border-bottom: 3px solid dark-secondary-color
+
+@keyframes shadow {
+  from {
+    transform scale(1)
+    opacity: 0
+  }
+  50% {
+    transform scale(1.2)
+    opacity: 0.3
+  }
+  to {
+    transform scale(1)
+    opacity: 0
+  }
+}

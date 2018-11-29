@@ -12,18 +12,16 @@ $(function() {
     child.css('top', e.clientY - parentTop - 25 + 'px');
     child.css('left', e.clientX - parentLeft - 25 + 'px');
     child.css('display', 'block');
+    child.eq(0).addClass('button__shadow_animated');
 
-  }
-
-  function buttonRemoveClick () {
     setTimeout(() => {
-      $(this).find('.button__shadow').css('display', 'none');
-    }, 50);
+      $(this).find('.button__shadow').removeClass('button__shadow_animated').css('display', 'none');
+    }, 300);
+
   }
 
-  $('button').each(function(){
-    $(this).on('mousedown', buttonOnClick);
-    $(this).on('mouseup', buttonRemoveClick);
+  $('.button').each(function(){
+    $(this).on('click', buttonOnClick);
   });
 });
 
