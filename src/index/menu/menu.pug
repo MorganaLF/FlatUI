@@ -4,4 +4,4 @@ mixin menu(items)
     ul.menu
         each item in items
             li.menu__item
-                +button(item, '', 'secondary')
+                +button(item[0], '', 'secondary', 'a', item[1] + '.html')
