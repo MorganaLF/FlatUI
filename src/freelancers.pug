@@ -1,0 +1,103 @@
+extends layout.pug
+
+include index/main-menu/main-menu
+include wrapper/subheading/subheading
+include wrapper/standart-buttons/button/button
+include wrapper/arrow-buttons/arrow-button/arrow-button
+include wrapper/search-dropdown-user/user/user
+include wrapper/search-dropdown-user/search/search
+include wrapper/search-dropdown-user/dropdown/dropdown
+include wrapper/form-elements/tick-box/tick-box
+include wrapper/form-elements/toggle/toggle
+include wrapper/sliders/slider/slider
+include index/footer/footer
+
+block content
+    +mainMenu
+    .freelancers
+        .container.freelancers__container
+            .freelancers__col
+                +subheading('search')
+                +search('Search freelancers')
+                +subheading('filter')
+                .freelancers__filter
+                    .freelancers__filter-row
+                        h3.freelancers__subtitle Choose category
+                        +dropdown({
+                          'category-1': 'Web design',
+                          'category-2': 'HTML',
+                          'category-3': 'CMS'
+                        },
+                        'Choose Category')
+                    .freelancers__filter-row
+                        h3.freelancers__subtitle Min cost of work
+                        +slider(true, '', '', '10')
+                    .freelancers__filter-row
+                        h3.freelancers__subtitle Max cost of work
+                        +slider(true, '', '', '90')
+                    .freelancers__filter-row.freelancers__filter-row_flex
+                        h3.freelancers__subtitle Show busy freelancers
+                        +tickBox(true)
+                    .freelancers__filter-row.freelancers__filter-row_flex
+                        h3.freelancers__subtitle Show only best freelancers
+                        +tickBox
+                    +button('show results', '', 'primary')
+            .freelancers__col
+                +subheading('search freelancers')
+                .news-page__nav
+                    +arrowButton('transparent-secondary', 'left-secondary', false, 'small')
+                    .news-page__nav-buttons
+                        +button('1', 'small', 'secondary')
+                        +button('2', 'small', 'transparent-secondary')
+                        +button('3', 'small', 'transparent-secondary')
+                        +button('4', 'small', 'transparent-secondary')
+                        +button('5', 'small', 'transparent-secondary')
+                    +arrowButton('transparent-secondary', 'right-secondary', false, 'small')
+                .freelancers__freelancer
+                    +user('user-1', 'John Smith', 'UX DESIGNER')
+                    .freelancers__freelancer-footer
+                        span Best freelancer!
+                        +button('hire', '', 'primary-shadow')
+                .freelancers__freelancer
+                    +user('user-2', 'Sarah Brown', 'DEVELOPER', 'secondary')
+                    .freelancers__freelancer-footer
+                        +button('hire', '', 'transparent-secondary')
+                .freelancers__freelancer
+                    +user('user-1', 'John Smith', 'UX DESIGNER')
+                    .freelancers__freelancer-footer
+                        span Best freelancer!
+                        +button('hire', '', 'primary-shadow')
+                .freelancers__freelancer
+                    +user('user-2', 'Sarah Brown', 'DEVELOPER', 'secondary')
+                    .freelancers__freelancer-footer
+                        +button('hire', '', 'transparent-secondary')
+                .freelancers__freelancer
+                    +user('user-1', 'John Smith', 'UX DESIGNER')
+                    .freelancers__freelancer-footer
+                        span Best freelancer!
+                        +button('hire', '', 'primary-shadow')
+                .freelancers__freelancer
+                    +user('user-2', 'Sarah Brown', 'DEVELOPER', 'secondary')
+                    .freelancers__freelancer-footer
+                        +button('hire', '', 'transparent-secondary')
+                .freelancers__freelancer
+                    +user('user-1', 'John Smith', 'UX DESIGNER')
+                    .freelancers__freelancer-footer
+                        span Best freelancer!
+                        +button('hire', '', 'primary-shadow')
+                .freelancers__freelancer
+                    +user('user-2', 'Sarah Brown', 'DEVELOPER', 'secondary')
+                    .freelancers__freelancer-footer
+                        +button('hire', '', 'transparent-secondary')
+                .news-page__nav
+                    +arrowButton('transparent-secondary', 'left-secondary', false, 'small')
+                    .news-page__nav-buttons
+                        +button('1', 'small', 'secondary')
+                        +button('2', 'small', 'transparent-secondary')
+                        +button('3', 'small', 'transparent-secondary')
+                        +button('4', 'small', 'transparent-secondary')
+                        +button('5', 'small', 'transparent-secondary')
+                    +arrowButton('transparent-secondary', 'right-secondary', false, 'small')
+
+    .background-container
+        +footer
