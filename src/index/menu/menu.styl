@@ -1,6 +1,16 @@
 .menu
-  padding: 20px 0
+  padding: 20px 5px
   list-style-type: none
   display: flex
+  +md()
+    flex-direction: column
+    padding: 0
   &__item
-    margin: 0 10px
+    margin: 0 5px
+    +md()
+      margin-bottom: 10px
+  .button
+    padding-left: 15px
+    padding-right: 15px
+    +md()
+      width: 220px
