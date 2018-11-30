@@ -2,10 +2,10 @@ include ../../wrapper/search-dropdown-user/search/search
 mixin footer
     footer.footer
         .container.footer__container
-            div
+            div.footer__search-container
                 +subheading('search on site')
                 +search('Search', 'primary')
-            div
+            div.footer__menu-container
                 ul.footer__menu
                     li.footer__menu-item
                         a.footer__menu-link(href='#') Account
@@ -13,7 +13,7 @@ mixin footer
                         a.footer__menu-link(href='#') Get started
                     li.footer__menu-item
                         a.footer__menu-link(href='#') Freelancers
-            div
+            div.footer__menu-container
                 ul.footer__menu
                     li.footer__menu-item
                         a.footer__menu-link(href='#') News and events

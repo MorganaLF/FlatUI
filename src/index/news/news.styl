@@ -1,7 +1,15 @@
 .index-news
   &__container
     display: flex
+    justify-content: space-around
     flex-wrap: wrap
+    padding: 0 10px
   .news
-    width: 27.33333333333333%
-    margin: 0 3% 40px
+    width: 30%
+    margin: 0 0 40px
+    +md()
+      width: 45%
+    +sm()
+      width: 90%
+    +xxs()
+      width: 100%
