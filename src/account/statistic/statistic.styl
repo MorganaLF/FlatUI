@@ -1,14 +1,23 @@
 .statistic
   display: flex
+  flex-wrap: wrap
   align-items: center
   margin: 0 auto
   overflow: hidden
+  +sm()
+    max-width: 500px
   &__col
     width: 50%
+    +xxs()
+      width: 80%
+      margin: 0 auto
   &__list
     list-style-type: none
     font-size: 20px
     font-weight: 900
+    +xxs()
+      margin-bottom: 40px
+      text-align: center
     &-item
       margin-bottom: 10px
       &_color

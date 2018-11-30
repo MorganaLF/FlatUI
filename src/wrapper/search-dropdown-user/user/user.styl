@@ -5,20 +5,28 @@
   margin: 0 auto
   text-align: center
   &_size_big
-    max-width: 500px
-    margin: 0
+    max-width: 450px
+    margin: 0 auto
+    .user__info
+      padding: rem(15px) 0 rem(21px)
     .user__name
-      font-size: 2.5vw
-      margin-bottom: 0.4vw
+      font-size: 27px
+      margin-bottom: 5px
     .user__profession
-      font-size: 1.53vw
-      margin-bottom: 1.53vw
+      font-size: 17px
+      margin-bottom: 18px
     .user__social-icons
-      max-width: 200px
+      max-width: 141px
     .user__social-icon
-      width: 50px
-      height: 40px
-      background-size: contain
+      &_1
+        width rem(15px)
+        height rem(32px)
+      &_2
+        width rem(38px)
+        height rem(32px)
+      &_3
+        width rem(32px)
+        height rem(32px)
   &__picture-container
     flex-shrink 0
     width: calc(35.5%)
@@ -78,23 +86,23 @@
     &_1
       width rem(10px)
       height rem(21px)
-      background url("images/FB.png") no-repeat center
+      background url("images/facebook-f-brands.svg") no-repeat center
       background-size: 100%
       &-white
-        background-image: url("images/FB_copy.png")
+        background-image: url("images/facebook-f-brands-white.svg")
     &_2
       width rem(25px)
       height rem(20px)
-      background url("images/Twitter.png") no-repeat center
+      background url("images/twitter-brands.svg") no-repeat center
       background-size: 100%
       &-white
-        background-image: url("images/Twitter_copy.png")
+        background-image: url("images/twitter-brands-white.svg")
     &_3
       width rem(21px)
       height rem(21px)
-      background url("images/Dribbble.png") no-repeat center
+      background url("images/dribbble-brands.svg") no-repeat center
       background-size: 100%
       &-white
-        background-image: url("images/Dribbble_copy.png")
+        background-image: url("images/dribbble-brands-white.svg")
 
 
