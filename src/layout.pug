@@ -1,7 +1,12 @@
 include ./head
+include index/mobile-menu/mobile-menu
+include index/main-menu/main-menu
 
 doctype html
 html
     +head
     body
-        block content
+        +mainMenu
+        .body-wrapper
+            +mobileMenu
+            block content
