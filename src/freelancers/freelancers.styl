@@ -1,11 +1,18 @@
 .freelancers
-  padding: 80px 0
+  padding: 80px 10px
   &__container
     display: flex
+    flex-wrap: wrap
   &__col
     &:first-child
       width: 25%
       padding-right: 3%
+      +sm()
+        order: 2
+        width: 100%
+        max-width: 450px
+        margin: 0 auto
+        padding-right: 0
       .subheading
         padding-bottom: 20px
       .slider
@@ -18,6 +25,12 @@
       align-content flex-start
       width: 75%
       padding-left: 3%
+      +sm()
+        width: 100%
+        padding-left: 0
+      +xs()
+        flex-direction: column
+        align-items center
   &__subtitle
     font-size: 18px
     margin: 0 10px 20px 0
@@ -31,6 +44,16 @@
     margin: 0 2.166666666666667% 60px
     padding-bottom: 10px
     border-bottom: 1px solid light-grey-text
+    +md()
+      width: 42%
+      margin: 0 4% 60px
+    +sm()
+      width: 38%
+      margin: 0 6% 60px
+    +xs()
+      width: 100%
+      max-width: 300px
+      margin: 0 0 60px
     &-footer
       display: flex
       justify-content: space-between
@@ -48,6 +71,9 @@
       padding: 0 0 10px
       border-top: 0
       border-bottom: 1px solid light-grey-text
+  .tick-box
+    flex-shrink: 0
+
 
 
 
