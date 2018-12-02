@@ -1,18 +1,41 @@
 .news-page
   display: flex
-  padding: 80px 0
+  flex-wrap: wrap
+  padding: 80px 10px
   &__col
     &_size
       &_8
         display: flex
         flex-wrap: wrap
         width: 70%
+        +md()
+          width: 75%
+        +sm()
+          width: 70%
+        +xs()
+          width: 100%
+          max-width: 450px
+          margin: 0 auto
         .news
           width: 47%
           margin: 0 1.5% 20px
+          +sm()
+            width: 100%
+            margin-right: 0
       &_4
         padding: 121px 5% 0 0
         width: 30%
+        +md()
+          width: 25%
+          padding-right: 1.5%
+        +sm()
+          width: 30%
+        +xs()
+          order: 2
+          width: 100%
+          max-width: 450px
+          margin: 0 auto
+          padding-right: 0
         .subheading
           padding: 0
         .search

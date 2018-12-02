@@ -1,7 +1,10 @@
-extends layout.pug
-
+include ./head
 include wrapper/wrapper
 
-block content
-    +wrapper
+doctype html
+html
+    +head
+    body
+        .body-wrapper
+            +wrapper
 
