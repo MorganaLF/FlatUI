@@ -3,93 +3,100 @@ import $ from 'jquery'
 
 /* Подключение скрипта после main.js */
 
-$('body').append('<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3R36qjSlfYo06Y6XZ6Htu6r0ivjSmcOg&callback=initMap" async defer>');
+if ($('.map').length > 0) {
+  $('body').append('<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3R36qjSlfYo06Y6XZ6Htu6r0ivjSmcOg&callback=initMap" async defer>');
+}
 
 /* Инициализация карты */
 
-function initMap () {
-  let currentLocation = null;
-  let addButton = document.querySelector('.map__add');
-  let geolocationButton = document.querySelector('.map__geolocation');
-  let markers = [];
-  let pos = {lat: 37.791337, lng: -122.415077};
-  let opt = {
-    center: pos,
-    zoom: 15
-  };
+$('.map').each(function () {
+  let mapSelector = $(this);
 
-  let map = new google.maps.Map(document.querySelector('.map'), opt);
+  function initMap () {
+    let currentLocation = null;
+    let addButton = $(mapSelector).closest('.map__container').find('.map__add');
+    let geolocationButton = $(mapSelector).closest('.map__container').find('.map__geolocation');
+    let markers = [];
+    let pos = {lat: 37.791337, lng: -122.415077};
+    let opt = {
+      center: pos,
+      zoom: 15
+    };
 
-  let infoWindow = new google.maps.InfoWindow;
+    let map = new google.maps.Map($(mapSelector)[0], opt); /* Исправить? */
 
-  /* Определение местоположения пользователя */
+    let infoWindow = new google.maps.InfoWindow;
 
-  function setGeolocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function(position) {
-        var pos = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        };
+    /* Определение местоположения пользователя */
 
-        infoWindow.setPosition(pos);
-        infoWindow.setContent('Location found.');
-        infoWindow.open(map);
-        map.setCenter(pos);
-      }, function() {
-        handleLocationError(true, infoWindow, map.getCenter());
-      });
-    } else {
-      handleLocationError(false, infoWindow, map.getCenter());
+    function setGeolocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          var pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+
+          infoWindow.setPosition(pos);
+          infoWindow.setContent('Location found.');
+          infoWindow.open(map);
+          map.setCenter(pos);
+        }, function() {
+          handleLocationError(true, infoWindow, map.getCenter());
+        });
+      } else {
+        handleLocationError(false, infoWindow, map.getCenter());
+      }
     }
-  }
 
-  geolocationButton.addEventListener('click', setGeolocation);
+    geolocationButton.on('click', setGeolocation);
 
-  function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-    infoWindow.setPosition(pos);
-    infoWindow.setContent(browserHasGeolocation ?
-        'Error: The Geolocation service failed.' :
-        'Error: Your browser doesn\'t support geolocation.');
-    infoWindow.open(map);
-  }
+    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+      infoWindow.setPosition(pos);
+      infoWindow.setContent(browserHasGeolocation ?
+          'Error: The Geolocation service failed.' :
+          'Error: Your browser doesn\'t support geolocation.');
+      infoWindow.open(map);
+    }
 
-  /* Определение координат в месте клика */
+    /* Определение координат в месте клика */
 
-  function saveCoordinates(location){
-    currentLocation = location;
-  }
+    function saveCoordinates(location){
+      currentLocation = location;
+    }
 
-  /* Добавление нового маркера */
+    /* Добавление нового маркера */
 
-  function placeMarker(location){
-    let newMarker = new google.maps.Marker({
+    function placeMarker(location){
+      let newMarker = new google.maps.Marker({
+        map: map,
+        position: location,
+        icon: 'images/map-marker.png'
+      });
+      newMarker.addListener('dblclick', function(event) {
+
+        this.setMap(null);
+
+      });
+      markers.push(newMarker);
+    }
+
+    let marker = new google.maps.Marker({
       map: map,
-      position: location,
+      position: pos,
       icon: 'images/map-marker.png'
     });
-    newMarker.addListener('dblclick', function(event) {
 
-      this.setMap(null);
-
+    google.maps.event.addListener(map, 'click', function(event) {
+      saveCoordinates(event.latLng);
     });
-    markers.push(newMarker);
+
+    addButton.on('click', function(event){
+      placeMarker(currentLocation);
+    });
+
   }
 
-  let marker = new google.maps.Marker({
-    map: map,
-    position: pos,
-    icon: 'images/map-marker.png'
-  });
+  global.initMap = initMap;
+});
 
-  google.maps.event.addListener(map, 'click', function(event) {
-    saveCoordinates(event.latLng);
-  });
-
-  addButton.addEventListener('click', function(event){
-    placeMarker(currentLocation);
-  });
-
-}
-
-global.initMap = initMap;
