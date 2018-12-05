@@ -59,9 +59,9 @@ fontFace(family, style, weight, file)
     font-family family
     font-style style
     font-weight weight
-    src url(fontUrl(file + '.svg')),
-        url(fontUrl(file + '.woff')),
-        url(fontUrl(file + '.ttf'))
+    src url(fontUrl(file + '.svg')) format('svg'),
+        url(fontUrl(file + '.woff')) format('woff'),
+        url(fontUrl(file + '.ttf')) format('ttf')
 
 /* Placeholder */
 
