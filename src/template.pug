@@ -1,0 +1,17 @@
+include ./head
+include components/mobile-menu/mobile-menu
+include components/page-menu/page-menu
+include components/page-footer/page-footer
+include components/page-messaging/page-messaging
+
+doctype html
+html
+    +head
+    body
+        +pageMenu
+        +mobileMenu
+        .body-wrapper
+            block content
+            .background-container
+                +pageFooter
+        +pageMessaging

@@ -1,0 +1,16 @@
+include ../contact-from/contact-form
+
+mixin getStartedRegistration
+    .get-started-registration
+        .get-started-registration__col
+            p.get-started__content-paragraph.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae est fugiat labore libero natus odit quia quos, rem, repudiandae, soluta vero.
+            h3.get-started__content-subtitle Registering an account you accept these rules:
+            ol.get-started__list
+                li.get-started__list-item Accusamus nemo reprehenderit sint sunt, temporibus voluptatibus! Ab asperiores eligendi, omnis rerum ut vero voluptatibus.
+                li.get-started__list-item Accusantium assumenda cumque eaque illum impedit natus optio provident quaerat quos veritatis.
+                li.get-started__list-item A blanditiis consequuntur dicta ducimus, enim eos, esse et ex exercitationem explicabo facere facilis, harum hic illum incidunt inventore ipsam magnam maiores natus pariatur quas quia quidem quos sapiente sed sequi sunt temporibus tenetur vel vitae!
+                li.get-started__list-item Aspernatur impedit tempora ut voluptatibus.
+        .get-started-registration__col
+            h3.get-started__content-subtitle Enter your personal info
+            +contact-form('left', false)

@@ -1,0 +1,19 @@
+include ../contact-from/contact-form
+include ../toggle/toggle
+include ../subheading/subheading
+include ../tick-box/tick-box
+
+mixin uiKitFormElements
+    section.ui-kit-form-elements
+        .ui-kit-form-elements__title-container
+            +subheading('FORM ELEMENTS')
+        .ui-kit-form-elements__container
+            .ui-kit-form-elements__col
+                +contact-form
+            .ui-kit-form-elements__col
+                +subheading('TOGGLES')
+                +toggle('toggle-1')
+                +toggle('toggle-2', true)
+                +subheading('TICK BOXES')
+                +tickBox(true)
+                +tickBox

@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://morganalf.github.io/portfolio/dist/styles.css" rel="stylesheet"></head>
   <body>
-    <div class="main-menu__container">
-      <div class="main-menu">
+    <div class="page-menu__container">
+      <div class="page-menu">
         <ul class="menu">
           <li class="menu__item">
-            <a class="button button_bg_secondary" href="main.html"><i class="fas fa-home"></i> home
+            <a class="button button_bg_secondary" href="index.html"><i class="fas fa-home"></i> home
               <div class="button__shadow"></div>
             </a>
           </li>
@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="menu__item">
-            <a class="button button_bg_secondary" href="news.html"><i class="far fa-file-alt"></i> news and events
+            <a class="button button_bg_secondary" href="index-news-page.html"><i class="far fa-file-alt"></i> index-news-page and events
               <div class="button__shadow"></div>
             </a>
           </li>
@@ -46,98 +46,127 @@
         </ul>
       </div>
     </div>
-    <div class="container contact">
-      <h2 class="subheading">contact us</h2>
-      <div class="contact__container">
-        <div class="contact__col">
-          <div class="map__container">
-            <div class="map"></div>
-            <div class="map__footer">
-              <h3 class="map__title">Meet us!</h3>
-              <p class="map__adress"><span class="map__adress--span">1259  CALIFORNIA ST</span><span class="map__adress--span">San Francisco, CA</span></p>
-              <div class="map__buttons">
-                <button class="map__geolocation"></button>
-                <button class="map__add"></button>
+    <div class="mobile-menu">
+      <div class="mobile-menu__button"><i class="fas fa-bars"></i></div>
+    </div>
+    <div class="body-wrapper">
+      <div class="container contact">
+        <h2 class="subheading">contact us</h2>
+        <div class="contact__container">
+          <div class="contact__col">
+            <div class="map__container">
+              <div class="map"></div>
+              <div class="map__footer">
+                <h3 class="map__title">Meet us!</h3>
+                <p class="map__adress"><span class="map__adress--span">1259  CALIFORNIA ST</span><span class="map__adress--span">San Francisco, CA</span></p>
+                <div class="map__buttons">
+                  <button class="map__geolocation"></button>
+                  <button class="map__add"></button>
+                </div>
               </div>
             </div>
+            <h3 class="contact__subtitle">Contact us through this form, we will answer!</h3>
+            <form class="contact-form">
+              <div class="contact-form__input-group">
+                <input class="contact-form__input" type="text" name="name" placeholder="Your Name">
+                <div class="contact-form__tip">ERROR</div>
+              </div>
+              <div class="contact-form__input-group">
+                <input class="contact-form__input" type="email" name="email" placeholder="Your Email">
+                <div class="contact-form__tip contact-form__tip_bg_secondary">THANKS!</div>
+              </div>
+              <textarea class="contact-form__textarea" name="message" placeholder="Your Message"></textarea>
+              <button class="button button_bg_secondary-shadow">SUBMIT
+                <div class="button__shadow"></div>
+              </button>
+            </form>
           </div>
-          <h3 class="contact__subtitle">Contact us through this form, we will answer!</h3>
-          <form class="contact-form">
-            <div class="contact-form__input-group">
-              <input class="contact-form__input" type="text" name="name" placeholder="Your Name">
-              <div class="contact-form__tip">ERROR</div>
+          <div class="contact__col">
+            <h3 class="contact__subtitle">How contact us</h3>
+            <ul class="contact__list">
+              <li class="contact__list-item"><span class="contact__list-span">Address:</span>1259 California St,
+                San Francisco, CA
+              </li>
+              <li class="contact__list-item"><span class="contact__list-span">Email:</span>exchange@gmail.com</li>
+              <li class="contact__list-item"><span class="contact__list-span">Phone:</span>8-800-123-45-67</li>
+              <li class="contact__list-item"><span class="contact__list-span">Skype:</span>exchange2018</li>
+            </ul>
+            <h3 class="contact__subtitle">Our office in Moscow</h3>
+            <ul class="contact__list">
+              <li class="contact__list-item"><span class="contact__list-span">Address:</span>Moscow,
+                Lenina St, 105
+              </li>
+              <li class="contact__list-item"><span class="contact__list-span">Email:</span>exchange@gmail.com</li>
+              <li class="contact__list-item"><span class="contact__list-span">Phone:</span>8-800-123-45-67</li>
+              <li class="contact__list-item"><span class="contact__list-span">Skype:</span>exchange2018</li>
+            </ul>
+            <h3 class="contact__subtitle">Our office in Kiev</h3>
+            <ul class="contact__list">
+              <li class="contact__list-item"><span class="contact__list-span">Address:</span>Kiev,
+                Lenina St, 105
+              </li>
+              <li class="contact__list-item"><span class="contact__list-span">Email:</span>exchange@gmail.com</li>
+              <li class="contact__list-item"><span class="contact__list-span">Phone:</span>8-800-123-45-67</li>
+              <li class="contact__list-item"><span class="contact__list-span">Skype:</span>exchange2018</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="background-container">
+        <footer class="page-footer">
+          <div class="container page-footer__container">
+            <div class="page-footer__search-container">
+              <h2 class="subheading">search on site</h2>
+              <form class="search" action="" method="get">
+                <input class="search__input search__input_color_primary" type="search" name="search" placeholder="Search">
+                <input class="search__button" type="submit" value="">
+              </form>
             </div>
-            <div class="contact-form__input-group">
-              <input class="contact-form__input" type="email" name="email" placeholder="Your Email">
-              <div class="contact-form__tip contact-form__tip_bg_secondary">THANKS!</div>
+            <div class="page-footer__menu-container">
+              <ul class="page-footer__menu">
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Account</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Get started</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Freelancers</a></li>
+              </ul>
             </div>
-            <textarea class="contact-form__textarea" name="message" placeholder="Your Message"></textarea>
-            <button class="button button_bg_secondary-shadow">SUBMIT
+            <div class="page-footer__menu-container">
+              <ul class="page-footer__menu">
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">News and events</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Sitemap</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Rules</a></li>
+              </ul>
+            </div>
+            <div class="page-footer__copyright">
+              <p>© Freelance Exchange 2018</p>
+              <p>4743866@mail.ru</p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <div class="page-messaging">
+      <div class="messaging">
+        <div class="messaging__header">
+          <h3 class="messaging__title">Sarah Brown</h3>
+        </div>
+        <div class="messaging__body">
+          <div class="messaging__icons">
+            <div class="messaging__icon messaging__icon_chat"></div>
+            <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div>
+            <div class="messaging__icon messaging__icon_camera"></div>
+          </div>
+          <div class="messaging__incoming">
+            <p class="messaging__incoming-paragraph">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
+          </div>
+          <form>
+            <textarea class="messaging__textarea">Yeah that sounds great. See you then.</textarea>
+            <button class="button button_bg_secondary-shadow">REPLY
               <div class="button__shadow"></div>
             </button>
           </form>
         </div>
-        <div class="contact__col">
-          <h3 class="contact__subtitle">How contact us</h3>
-          <ul class="contact__list">
-            <li class="contact__list-item"><span class="contact__list-span">Address:</span>1259 California St,
-              San Francisco, CA
-            </li>
-            <li class="contact__list-item"><span class="contact__list-span">Email:</span>exchange@gmail.com</li>
-            <li class="contact__list-item"><span class="contact__list-span">Phone:</span>8-800-123-45-67</li>
-            <li class="contact__list-item"><span class="contact__list-span">Skype:</span>exchange2018</li>
-          </ul>
-          <h3 class="contact__subtitle">Our office in Moscow</h3>
-          <ul class="contact__list">
-            <li class="contact__list-item"><span class="contact__list-span">Address:</span>Moscow,
-              Lenina St, 105
-            </li>
-            <li class="contact__list-item"><span class="contact__list-span">Email:</span>exchange@gmail.com</li>
-            <li class="contact__list-item"><span class="contact__list-span">Phone:</span>8-800-123-45-67</li>
-            <li class="contact__list-item"><span class="contact__list-span">Skype:</span>exchange2018</li>
-          </ul>
-          <h3 class="contact__subtitle">Our office in Kiev</h3>
-          <ul class="contact__list">
-            <li class="contact__list-item"><span class="contact__list-span">Address:</span>Kiev,
-              Lenina St, 105
-            </li>
-            <li class="contact__list-item"><span class="contact__list-span">Email:</span>exchange@gmail.com</li>
-            <li class="contact__list-item"><span class="contact__list-span">Phone:</span>8-800-123-45-67</li>
-            <li class="contact__list-item"><span class="contact__list-span">Skype:</span>exchange2018</li>
-          </ul>
-        </div>
       </div>
-    </div>
-    <div class="background-container">
-      <footer class="footer">
-        <div class="container footer__container">
-          <div>
-            <h2 class="subheading">search on site</h2>
-            <form class="search" action="" method="get">
-              <input class="search__input search__input_color_primary" type="search" name="search" placeholder="Search">
-              <input class="search__button" type="submit" value="">
-            </form>
-          </div>
-          <div>
-            <ul class="footer__menu">
-              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Account</a></li>
-              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Get started</a></li>
-              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Freelancers</a></li>
-            </ul>
-          </div>
-          <div>
-            <ul class="footer__menu">
-              <li class="footer__menu-item"><a class="footer__menu-link" href="#">News and events</a></li>
-              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Sitemap</a></li>
-              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Rules</a></li>
-            </ul>
-          </div>
-          <div class="footer__copyright">
-            <p>© Freelance Exchange 2018</p>
-            <p>4743866@mail.ru</p>
-          </div>
-        </div>
-      </footer>
+      <div class="page-messaging__button"><i class="far fa-comments"></i></div>
     </div>
   <script type="text/javascript" src="https://morganalf.github.io/portfolio/dist/main.js"></script></body>
 </html>

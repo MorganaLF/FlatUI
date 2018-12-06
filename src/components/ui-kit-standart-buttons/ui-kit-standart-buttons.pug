@@ -1,0 +1,21 @@
+include ../button/button
+
+mixin uiKitStandartButtons
+    section.ui-kit-standart-buttons
+        .ui-kit-standart-buttons__title-container
+            +subheading('STANDARD BUTTONS')
+        .ui-kit-standart-buttons__buttons-container
+            +button('BUTTON', 'small', 'secondary')
+            +button('BUTTON', '', 'secondary')
+            +button('BUTTON', '', 'primary')
+            +button('BUTTON', 'small', 'primary')
+        .ui-kit-standart-buttons__buttons-container
+            +button('BUTTON', 'small', 'secondary-shadow')
+            +button('BUTTON', '', 'secondary-shadow')
+            +button('BUTTON', '', 'primary-shadow')
+            +button('BUTTON', 'small', 'primary-shadow')
+        .ui-kit-standart-buttons__buttons-container
+            +button('BUTTON', 'small', 'transparent-secondary')
+            +button('BUTTON', '', 'transparent-secondary')
+            +button('BUTTON', '', 'transparent-primary')
+            +button('BUTTON', 'small', 'transparent-primary')

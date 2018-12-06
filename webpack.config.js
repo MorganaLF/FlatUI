@@ -13,32 +13,32 @@ let conf = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: path.resolve(__dirname, './src/index.pug')
+      filename: 'ui-kit.html',
+      template: path.resolve(__dirname, './src/components/ui-kit/ui-kit.pug')
     }),
     new HtmlWebpackPlugin({
-      filename: 'main.html',
-      template: path.resolve(__dirname, './src/main.pug')
+      filename: 'index.html',
+      template: path.resolve(__dirname, './src/components/index/index.pug')
     }),
     new HtmlWebpackPlugin({
       filename: 'account.html',
-      template: path.resolve(__dirname, './src/account.pug')
+      template: path.resolve(__dirname, './src/components/account/account.pug')
     }),
     new HtmlWebpackPlugin({
-      filename: 'news.html',
-      template: path.resolve(__dirname, './src/news.pug')
+      filename: 'index-news-page.html',
+      template: path.resolve(__dirname, './src/components/news-page/news-page.pug')
     }),
     new HtmlWebpackPlugin({
       filename: 'get-started.html',
-      template: path.resolve(__dirname, './src/get-started.pug')
+      template: path.resolve(__dirname, './src/components/get-started/get-started.pug')
     }),
     new HtmlWebpackPlugin({
       filename: 'contact.html',
-      template: path.resolve(__dirname, './src/contact.pug')
+      template: path.resolve(__dirname, './src/components/contact/contact.pug')
     }),
     new HtmlWebpackPlugin({
       filename: 'freelancers.html',
-      template: path.resolve(__dirname, './src/freelancers.pug')
+      template: path.resolve(__dirname, './src/components/freelancers/freelancers.pug')
     }),
     new ExtractTextPlugin('styles.css'),
     new CopyWebpackPlugin([

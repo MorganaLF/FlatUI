@@ -1,0 +1,12 @@
+include ../player/player
+
+mixin uiKitVideo
+    .ui-kit-video
+        .ui-kit-video__title-container
+            +subheading('VIDEO')
+        +player(
+            'http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4',
+            'New Zealand Landscapes Timelapse',
+            'from Bevan Percival'
+        )
+

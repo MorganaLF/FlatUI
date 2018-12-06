@@ -1,0 +1,13 @@
+include ../pie-chart/pie-chart
+
+mixin accountStatistic
+    .account-statistic
+        .account-statistic__col
+            ul.account-statistic__list
+                li.account-statistic__list-item.account-statistic__list-item_color_grey html - 5%
+                li.account-statistic__list-item.account-statistic__list-item_color_red php - 15%
+                li.account-statistic__list-item.account-statistic__list-item_color_green css - 60%
+                li.account-statistic__list-item.account-statistic__list-item_color_light-grey javascript - 20%
+        .account-statistic__col
+            +pieChart('5, 15, 60, 20')
+

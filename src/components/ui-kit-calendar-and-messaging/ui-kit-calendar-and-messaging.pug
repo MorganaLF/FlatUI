@@ -1,0 +1,11 @@
+include ../calendar/calendar
+include ../messaging/messaging
+
+mixin uiKitCalendarAndMessaging
+    .ui-kit-calendar-and-messaging
+        .ui-kit-calendar-and-messaging__col
+            +subheading('CALENDAR')
+            +calendar
+        .ui-kit-calendar-and-messaging__col
+            +subheading('MESSAGING')
+            +messaging

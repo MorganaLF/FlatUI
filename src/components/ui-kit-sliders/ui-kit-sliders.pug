@@ -1,0 +1,11 @@
+include ../slider/slider
+
+mixin uiKitSliders
+    .ui-kit-sliders
+        .ui-kit-sliders__title-container
+            +subheading('SLIDERS')
+        .ui-kit-sliders__container
+            .ui-kit-sliders__col
+                +slider(true)
+            .ui-kit-sliders__col
+                +slider(false, true, 'secondary')

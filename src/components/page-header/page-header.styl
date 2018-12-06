@@ -1,0 +1,34 @@
+.page-header
+  display: flex
+  flex-wrap: wrap
+  align-items: flex-start
+  justify-content: center
+  align-content: center
+  height: 100vh
+  padding: 0 10px
+  background: #009688
+  +md()
+    height: auto
+    padding: 100px 10px 70px
+  &__title
+    max-width: 65vw
+    font-size: 4.5vw
+    text-align: center
+    color #ffffff
+    font-weight: 300
+    +xs()
+      font-size: 5.5vw
+    +xxs()
+      max-width: 85vw
+      font-size: 7.5vw
+  &__search-container
+    width: 100%
+    max-width: 50vw
+    +xs()
+      max-width: 80%
+  &__search-title
+    margin-bottom: 10px
+    font-size: 18px
+    color: #ffffff
+    +sm()
+      font-size: 16px

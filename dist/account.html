@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://morganalf.github.io/portfolio/dist/styles.css" rel="stylesheet"></head>
   <body>
-    <div class="main-menu__container">
-      <div class="main-menu">
+    <div class="page-menu__container">
+      <div class="page-menu">
         <ul class="menu">
           <li class="menu__item">
-            <a class="button button_bg_secondary" href="main.html"><i class="fas fa-home"></i> home
+            <a class="button button_bg_secondary" href="index.html"><i class="fas fa-home"></i> home
               <div class="button__shadow"></div>
             </a>
           </li>
@@ -34,7 +34,7 @@
             </a>
           </li>
           <li class="menu__item">
-            <a class="button button_bg_secondary" href="news.html"><i class="far fa-file-alt"></i> news and events
+            <a class="button button_bg_secondary" href="index-news-page.html"><i class="far fa-file-alt"></i> index-news-page and events
               <div class="button__shadow"></div>
             </a>
           </li>
@@ -46,154 +46,185 @@
         </ul>
       </div>
     </div>
-    <div class="container account-container">
-      <div class="account__col">
-        <h2 class="subheading">your account</h2>
-        <div class="user user_size_big">
-          <div class="user__picture-container"><img class="user__picture" src="images/user-2.jpg"></div>
-          <div class="user__info">
-            <div class="user__name">John Smith</div>
-            <div class="user__profession">UX DESIGNER</div>
-            <div class="user__social-icons">
-              <div class="user__social-icon user__social-icon_1"></div>
-              <div class="user__social-icon user__social-icon_2"></div>
-              <div class="user__social-icon user__social-icon_3"></div>
-            </div>
-          </div>
-        </div>
-        <h2 class="subheading">settings</h2>
-        <ul class="settings">
-          <li class="settings__item">Send e-mail
-            <label class="toggle" for="settings-1">
-              <input class="toggle__input" type="checkbox" id="settings-1" checked>
-              <div class="toggle__switch">
-                <div class="toggle__switch--text">on</div>
-                <div class="toggle__switch--round"></div>
-                <div class="toggle__switch--text">off</div>
-              </div>
-            </label>
-          </li>
-          <li class="settings__item">Send sound
-            <label class="toggle" for="settings-2">
-              <input class="toggle__input" type="checkbox" id="settings-2" checked>
-              <div class="toggle__switch">
-                <div class="toggle__switch--text">on</div>
-                <div class="toggle__switch--round"></div>
-                <div class="toggle__switch--text">off</div>
-              </div>
-            </label>
-          </li>
-          <li class="settings__item">Send e-mail
-            <label class="toggle">
-              <input class="toggle__input" type="checkbox">
-              <div class="toggle__switch">
-                <div class="toggle__switch--text">on</div>
-                <div class="toggle__switch--round"></div>
-                <div class="toggle__switch--text">off</div>
-              </div>
-            </label>
-          </li>
-          <li class="settings__item">Send sound
-            <label class="toggle">
-              <input class="toggle__input" type="checkbox">
-              <div class="toggle__switch">
-                <div class="toggle__switch--text">on</div>
-                <div class="toggle__switch--round"></div>
-                <div class="toggle__switch--text">off</div>
-              </div>
-            </label>
-          </li>
-          <li class="settings__item">Sound
-            <div class="slider__container">
-              <div class="slider slider_is-progress slider_progress-bg_secondary" data-value="70">
-                <div class="custom-handle ui-slider-handle">
+    <div class="mobile-menu">
+      <div class="mobile-menu__button"><i class="fas fa-bars"></i></div>
+    </div>
+    <div class="body-wrapper">
+      <div class="container">
+        <main class="account">
+          <div class="account__col">
+            <h2 class="subheading">your account</h2>
+            <div class="user user_size_big">
+              <div class="user__picture-container"><img class="user__picture" src="images/user-6.jpg"></div>
+              <div class="user__info">
+                <div class="user__name">Peter Brown</div>
+                <div class="user__profession">DEVELOPER</div>
+                <div class="user__social-icons">
+                  <div class="user__social-icon user__social-icon_1"></div>
+                  <div class="user__social-icon user__social-icon_2"></div>
+                  <div class="user__social-icon user__social-icon_3"></div>
                 </div>
               </div>
-              <ul class="slider__scale">
-                <li class="slider__scale-item">0</li>
-                <li class="slider__scale-item">25</li>
-                <li class="slider__scale-item">50</li>
-                <li class="slider__scale-item">75</li>
-                <li class="slider__scale-item">100</li>
+            </div>
+            <h2 class="subheading">settings</h2>
+            <ul class="account-settings">
+              <li class="account-settings__item">Send e-mail
+                <label class="toggle" for="settings-1">
+                  <input class="toggle__input" type="checkbox" id="settings-1" checked>
+                  <div class="toggle__switch">
+                    <div class="toggle__switch--text">on</div>
+                    <div class="toggle__switch--round"></div>
+                    <div class="toggle__switch--text">off</div>
+                  </div>
+                </label>
+              </li>
+              <li class="account-settings__item">Send sound
+                <label class="toggle" for="settings-2">
+                  <input class="toggle__input" type="checkbox" id="settings-2" checked>
+                  <div class="toggle__switch">
+                    <div class="toggle__switch--text">on</div>
+                    <div class="toggle__switch--round"></div>
+                    <div class="toggle__switch--text">off</div>
+                  </div>
+                </label>
+              </li>
+              <li class="account-settings__item">Send e-mail
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox">
+                  <div class="toggle__switch">
+                    <div class="toggle__switch--text">on</div>
+                    <div class="toggle__switch--round"></div>
+                    <div class="toggle__switch--text">off</div>
+                  </div>
+                </label>
+              </li>
+              <li class="account-settings__item">Send sound
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox">
+                  <div class="toggle__switch">
+                    <div class="toggle__switch--text">on</div>
+                    <div class="toggle__switch--round"></div>
+                    <div class="toggle__switch--text">off</div>
+                  </div>
+                </label>
+              </li>
+              <li class="account-settings__item">Sound
+                <div class="slider__container">
+                  <div class="slider slider_is-progress slider_progress-bg_secondary" data-value="70">
+                    <div class="custom-handle ui-slider-handle">
+                    </div>
+                  </div>
+                  <ul class="slider__scale">
+                    <li class="slider__scale-item">0</li>
+                    <li class="slider__scale-item">25</li>
+                    <li class="slider__scale-item">50</li>
+                    <li class="slider__scale-item">75</li>
+                    <li class="slider__scale-item">100</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="account__col">
+            <h2 class="subheading">statistic</h2>
+            <div class="account-statistic">
+              <div class="account-statistic__col">
+                <ul class="account-statistic__list">
+                  <li class="account-statistic__list-item account-statistic__list-item_color_grey">html - 5%</li>
+                  <li class="account-statistic__list-item account-statistic__list-item_color_red">php - 15%</li>
+                  <li class="account-statistic__list-item account-statistic__list-item_color_green">css - 60%</li>
+                  <li class="account-statistic__list-item account-statistic__list-item_color_light-grey">javascript - 20%</li>
+                </ul>
+              </div>
+              <div class="account-statistic__col">
+                <div class="pie-chart ct-chart ct-square" data-series="5, 15, 60, 20"></div>
+              </div>
+            </div>
+            <h2 class="subheading">deadlines statistic</h2>
+            <section class="account-deadlines">
+              <div class="account-deadlines__col">
+                <h3 class="account-deadlines__title">Ahead of time</h3>
+                <div class="percentage"><span class="percentage__value">30</span>
+                  <svg class="percentage__svg" viewBox="0 0 193 193">
+                    <circle class="percentage__bar" r="90" cx="96" cy="95" fill="transparent"></circle>
+                  </svg>
+                </div>
+              </div>
+              <div class="account-deadlines__col">
+                <h3 class="account-deadlines__title">On time</h3>
+                <div class="percentage"><span class="percentage__value">70</span>
+                  <svg class="percentage__svg" viewBox="0 0 193 193">
+                    <circle class="percentage__bar" r="90" cx="96" cy="95" fill="transparent"></circle>
+                  </svg>
+                </div>
+              </div>
+              <div class="account-deadlines__col">
+                <h3 class="account-deadlines__title">Expired</h3>
+                <div class="percentage"><span class="percentage__value">0</span>
+                  <svg class="percentage__svg" viewBox="0 0 193 193">
+                    <circle class="percentage__bar" r="90" cx="96" cy="95" fill="transparent"></circle>
+                  </svg>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+      <div class="background-container">
+        <footer class="page-footer">
+          <div class="container page-footer__container">
+            <div class="page-footer__search-container">
+              <h2 class="subheading">search on site</h2>
+              <form class="search" action="" method="get">
+                <input class="search__input search__input_color_primary" type="search" name="search" placeholder="Search">
+                <input class="search__button" type="submit" value="">
+              </form>
+            </div>
+            <div class="page-footer__menu-container">
+              <ul class="page-footer__menu">
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Account</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Get started</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Freelancers</a></li>
               </ul>
             </div>
-          </li>
-        </ul>
-      </div>
-      <div class="account__col">
-        <h2 class="subheading">statistic</h2>
-        <div class="statistic">
-          <div class="statistic__col">
-            <ul class="statistic__list">
-              <li class="statistic__list-item statistic__list-item_color_grey">html - 5%</li>
-              <li class="statistic__list-item statistic__list-item_color_red">php - 15%</li>
-              <li class="statistic__list-item statistic__list-item_color_green">css - 60%</li>
-              <li class="statistic__list-item statistic__list-item_color_light-grey">javascript - 20%</li>
-            </ul>
-          </div>
-          <div class="statistic__col">
-            <div class="pie-chart ct-chart ct-square" data-series="5, 15, 60, 20"></div>
-          </div>
-        </div>
-        <h2 class="subheading">deadlines statistic</h2>
-        <div class="deadlines-statistic">
-          <div class="deadlines-statistic__col">
-            <h3 class="deadlines-statistic__title">Ahead of time</h3>
-            <div class="percentage"><span class="percentage__value">30</span>
-              <svg class="percentage__svg" viewBox="0 0 190 190">
-                <circle class="percentage__bar" r="90" cx="95" cy="95" fill="transparent"></circle>
-              </svg>
+            <div class="page-footer__menu-container">
+              <ul class="page-footer__menu">
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">News and events</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Sitemap</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Rules</a></li>
+              </ul>
+            </div>
+            <div class="page-footer__copyright">
+              <p>© Freelance Exchange 2018</p>
+              <p>4743866@mail.ru</p>
             </div>
           </div>
-          <div class="deadlines-statistic__col">
-            <h3 class="deadlines-statistic__title">On time</h3>
-            <div class="percentage"><span class="percentage__value">70</span>
-              <svg class="percentage__svg" viewBox="0 0 190 190">
-                <circle class="percentage__bar" r="90" cx="95" cy="95" fill="transparent"></circle>
-              </svg>
-            </div>
-          </div>
-          <div class="deadlines-statistic__col">
-            <h3 class="deadlines-statistic__title">Expired</h3>
-            <div class="percentage"><span class="percentage__value">0</span>
-              <svg class="percentage__svg" viewBox="0 0 190 190">
-                <circle class="percentage__bar" r="90" cx="95" cy="95" fill="transparent"></circle>
-              </svg>
-            </div>
-          </div>
-        </div>
+        </footer>
       </div>
     </div>
-    <div class="background-container">
-      <footer class="footer">
-        <div class="container footer__container">
-          <div>
-            <h2 class="subheading">search on site</h2>
-            <form class="search" action="" method="get">
-              <input class="search__input search__input_color_primary" type="search" name="search" placeholder="Search">
-              <input class="search__button" type="submit" value="">
-            </form>
-          </div>
-          <div>
-            <ul class="footer__menu">
-              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Account</a></li>
-              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Get started</a></li>
-              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Freelancers</a></li>
-            </ul>
-          </div>
-          <div>
-            <ul class="footer__menu">
-              <li class="footer__menu-item"><a class="footer__menu-link" href="#">News and events</a></li>
-              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Sitemap</a></li>
-              <li class="footer__menu-item"><a class="footer__menu-link" href="#">Rules</a></li>
-            </ul>
-          </div>
-          <div class="footer__copyright">
-            <p>© Freelance Exchange 2018</p>
-            <p>4743866@mail.ru</p>
-          </div>
+    <div class="page-messaging">
+      <div class="messaging">
+        <div class="messaging__header">
+          <h3 class="messaging__title">Sarah Brown</h3>
         </div>
-      </footer>
+        <div class="messaging__body">
+          <div class="messaging__icons">
+            <div class="messaging__icon messaging__icon_chat"></div>
+            <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div>
+            <div class="messaging__icon messaging__icon_camera"></div>
+          </div>
+          <div class="messaging__incoming">
+            <p class="messaging__incoming-paragraph">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
+          </div>
+          <form>
+            <textarea class="messaging__textarea">Yeah that sounds great. See you then.</textarea>
+            <button class="button button_bg_secondary-shadow">REPLY
+              <div class="button__shadow"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="page-messaging__button"><i class="far fa-comments"></i></div>
     </div>
   <script type="text/javascript" src="https://morganalf.github.io/portfolio/dist/main.js"></script></body>
 </html>

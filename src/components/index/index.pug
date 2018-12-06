@@ -1,0 +1,22 @@
+extends ../../template
+
+include ../page-header/page-header
+include ../subheading/subheading
+include ../index-tariff-plan/index-tariff-plan
+include ../index-how-it-works/index-how-it-works
+include ../index-news/index-news
+include ../page-footer/page-footer
+
+block content
+    +pageHeader
+    .container
+        +subheading('choose your tariff plan')
+        +indexTariffPlan
+    .background-container
+        +indexHowItWorks
+    .container
+        +indexNews
+
+
+
+
