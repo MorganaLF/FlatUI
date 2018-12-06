@@ -74,7 +74,7 @@ module.exports = (env, options) => {
   conf.devtool = production ? false : "eval-sourcemap";
 
   let cssMap = !production;
-  let publicDir = production ? "https://morganalf.github.io/portfolio/dist/" : "/";
+  let publicDir = production ? "https://morganalf.github.io/FlatUI/dist/" : "/";
 
   conf.output = {
     path: path.resolve(__dirname, './dist'),
