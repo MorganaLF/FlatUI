@@ -1,7 +1,7 @@
 import css from './styles/main.styl'
 import jQuery from 'jquery'
 import './components/button/button.js'
-import './jQuery-UI/jquery-ui.min'
+import './plugins/jQuery-UI/jquery-ui.min'
 import './components/percentage/percentage'
 import './components/pie-chart/pie-chart'
 import './components/slider/slider'

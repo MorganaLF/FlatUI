@@ -101,3 +101,12 @@ input()
     transition color 0.3s ease
   +placeholder-focus()
     color: transparent
+
+/* Adaptive square */
+
+square()
+  overflow: hidden
+  &:after
+    content ''
+    padding-top: 100%
+    float: left
