@@ -3,20 +3,31 @@ import $ from 'jquery';
 $(function() {
 
   function buttonOnClick (e) {
+    e.preventDefault();
 
-    let child = $(e.target).find('.button__shadow');
-    let parentCoord = this.getBoundingClientRect();
-    let parentTop = parentCoord.top;
-    let parentLeft = parentCoord.left;
+    let ink, d, x, y;
 
-    child.css('top', e.clientY - parentTop - 25 + 'px');
-    child.css('left', e.clientX - parentLeft - 25 + 'px');
-    child.css('display', 'block');
-    child.eq(0).addClass('button__shadow_animated');
+    if ($(this).find(".button__shadow").length === 0)
+      $(this).prepend("<span class='button__shadow'></span>");
 
-    setTimeout(() => {
-      $(this).find('.button__shadow').removeClass('button__shadow_animated').css('display', 'none');
-    }, 300);
+    ink = $(this).find(".button__shadow");
+    ink.removeClass("button__shadow_animated");
+
+    if(!ink.height() && !ink.width())
+    {
+      d = Math.max($(this).outerWidth(), $(this).outerHeight());
+      ink.css({height: d, width: d});
+    }
+
+    x = e.pageX - $(this).offset().left - ink.width()/2;
+    y = e.pageY - $(this).offset().top - ink.height()/2;
+
+    ink.css({top: y+'px', left: x+'px'}).addClass("button__shadow_animated");
+
+    if ($(this).attr('href')) {
+      let link = $(this).attr('href');
+      setTimeout(function() { window.location.href = link; }, 650);
+    }
 
   }
 
