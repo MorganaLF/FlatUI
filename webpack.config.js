@@ -57,7 +57,12 @@ let conf = {
         flatten: true
       },
       {
-        from: './src/**/*.svg',
+        from: './src/components/**/*.svg',
+        to: './images',
+        flatten: true
+      },
+      {
+        from: './src/plugins/**/*.svg',
         to: './images',
         flatten: true
       }
