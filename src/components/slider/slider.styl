@@ -26,9 +26,9 @@
   &__tip
     position: absolute
     top: rem(-31px)
-    left: rem(-8px)
-    width rem(35px)
-    padding: rem(5px) 0 rem(5px)
+    left: 50%
+    transform: translate(-50%, 0)
+    padding: rem(5px) rem(10px) rem(5px)
     border-radius: 5px
     font-weight: 900
     font-size rem(13px)
@@ -41,8 +41,8 @@
     &:after
       content: ''
       position: absolute
-      bottom: rem(-4px)
-      left: rem(14px)
+      bottom: rem(-3px)
+      left: 'calc(50% - %s)' % rem(3.5px)
       width: rem(7px)
       height: rem(7px)
       transform rotate(45deg)
