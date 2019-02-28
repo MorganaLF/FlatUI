@@ -37,16 +37,28 @@
   &_bg
     &_primary
       background-color primary-color
+      transition background 0.3s ease
+      &:hover
+        background-color dark-primary-color
     &_primary-shadow
       background-color primary-color
       border-bottom: 3px solid dark-primary-color
+      transition background 0.3s ease
+      &:hover
+        background-color dark-primary-color
       &.button_size_small
         border-bottom: 2px solid dark-primary-color
     &_secondary
       background-color secondary-color
+      transition background 0.3s ease
+      &:hover
+        background-color dark-secondary-color
     &_secondary-shadow
       background-color secondary-color
       border-bottom: 3px solid dark-secondary-color
+      transition background 0.3s ease
+      &:hover
+        background-color dark-secondary-color
       &.button_size_small
         border-bottom: 2px solid dark-secondary-color
     &_transparent-primary
@@ -55,6 +67,9 @@
       color: primary-color
       border: 1px solid primary-color
       border-bottom: 4px solid primary-color
+      transition background 0.3s ease
+      &:hover
+        background-color lighten(primary-color, 80%)
       &.button_size_small
         padding: rem(5px) rem(16px) rem(4px)
         border-bottom: 3px solid primary-color
@@ -64,6 +79,9 @@
       color: secondary-color
       border: 1px solid secondary-color
       border-bottom: 4px solid secondary-color
+      transition background 0.3s ease
+      &:hover
+        background-color lighten(secondary-color, 80%)
       &.button_size_small
         padding: rem(5px) rem(16px) rem(4px)
         border-bottom: 3px solid secondary-color
@@ -73,6 +91,9 @@
       color: secondary-color
       border: 1px solid secondary-color
       border-bottom: 4px solid dark-secondary-color
+      transition background 0.3s ease
+      &:hover
+        background-color lighten(secondary-color, 80%)
       &.button_size_small
         padding: rem(5px) rem(16px) rem(4px)
         border-bottom: 3px solid dark-secondary-color
