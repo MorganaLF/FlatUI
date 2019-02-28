@@ -86,18 +86,15 @@
   td
     width: 14.28571428571429%
     position: relative
-    overflow: hidden
     background-color #f2f2f2
     border: 1px solid #fff
     cursor: pointer
+    square()
     &:hover
       background-color lightness(primary-color, 75%)
       .ui-state-default
         color: #ffffff
-    &:before
-      content: ''
-      float: left
-      padding-top: 100%
+
   .ui-state-default
     height: 100%
     padding: 18% 0 0

@@ -102,11 +102,18 @@ input()
   +placeholder-focus()
     color: transparent
 
-/* Adaptive square */
+/* Adaptive height */
 
 square()
   overflow: hidden
-  &:after
+  &:before
     content ''
     padding-top: 100%
+    float: left
+
+rectangle(percent)
+  overflow: hidden
+  &:before
+    content ''
+    padding-top: '%s%' % percent
     float: left

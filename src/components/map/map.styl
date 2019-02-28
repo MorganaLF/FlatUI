@@ -1,11 +1,7 @@
 .map
   width: 100%
   border-radius: 3px 3px 0 0
-  overflow: hidden
-  &:after
-    content: ''
-    padding-top: 34%
-    float: left
+  rectangle(34)
   &__footer
     display: flex
     align-items center
@@ -46,12 +42,12 @@
     background: url('images/map-marker.svg') no-repeat center center
     background-size: contain
   +xs()
-    &:after
+    &:before
       padding-top: 60%
     &__geolocation
       margin-right: rem(7px)
   +xxs()
-    &:after
+    &:before
       padding-top: 100%
     &__footer
       flex-wrap: wrap
