@@ -5,18 +5,23 @@
   text-align: left
   overflow: hidden
   .button
-    margin: rem(18px) rem(4px) 0 0
+    margin-top: rem(18px)
     padding: rem(5px) rem(12px)
   &_bg_secondary
     background-color secondary-color
     .news__text-block
+      padding-left: rem(15px)
+      padding-top: rem(13px)
       padding-bottom: rem(25px)
+    .news__description
+      margin-left: rem(4px)
   &__picture
     flex-shrink: 0
     width: 33.5%
     background-position: top center
     background-size: cover
   &__text-block
+    min-width: 0
     padding: rem(22px) rem(22px) rem(36px) rem(22px)
   &__title
     margin-bottom: rem(14px)
@@ -24,8 +29,9 @@
     font-weight 300
     line-height rem(26px)
     color #ffffff
+    break-word()
     &_size_small
-      margin-bottom: rem(3px)
+      margin: 0 0 rem(3px) rem(4px)
       font-size rem(13px)
       font-weight: 900
       line-height: 1.2
@@ -41,10 +47,13 @@
     letter-spacing rem(0.55px)
     color #ffffff
     &_size_big
-      margin-bottom: rem(26px)
+      margin-bottom: rem(15px)
   &__day
+    display: inline-block
+    margin-right: rem(15px)
     font-size rem(73px)
     font-weight 300
+    line-height: 1
     letter-spacing rem(-2.92px)
   &__month
     font-size rem(30px)

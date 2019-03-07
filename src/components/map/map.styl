@@ -10,18 +10,21 @@
     color #ffffff
     background-color primary-color
   &__title
+    flex-shrink 0
     font-size rem(30px)
     font-weight 300
   &__adress
-    margin: rem(7px) 0 0 4.04%
+    min-width: 0
+    margin: rem(7px) 0 0 1.5%
     &--span
       display: block
-      margin-bottom: rem(2px)
+      margin: 0 rem(15px) rem(2px)
       font-size rem(13px)
       font-weight: 900
       letter-spacing rem(0.63px)
       text-transform uppercase
       text-align: left
+      break-word()
   &__buttons
     display: flex
     align-items: center
@@ -59,7 +62,6 @@
       text-align: left
       &--span
         display: inline
-        &:last-child
-          margin-left: rem(10px)
+        margin: 0
     &__geolocation
       margin-right: rem(5px)

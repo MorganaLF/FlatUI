@@ -14,7 +14,8 @@ mixin indexTariffPlan
         li.index-tariff-plan__list-item
           p.index-tariff-plan__text Commission from the order
           +toggle('tariff-plan-3', true, true)
-      +button('choose', '', 'primary')
+      .index-tariff-plan__button-container
+        +button('choose', '', 'primary')
     .index-tariff-plan
       h3.index-tariff-plan__title Premium
       ul.index-tariff-plan__list
@@ -27,7 +28,8 @@ mixin indexTariffPlan
         li.index-tariff-plan__list-item
           p.index-tariff-plan__text Commission from the order
           +toggle('tariff-plan-6', false, true)
-      +button('choose', '', 'primary')
+      .index-tariff-plan__button-container
+        +button('choose', '', 'primary')
     .index-tariff-plan
       h3.index-tariff-plan__title Standard
       ul.index-tariff-plan__list
@@ -40,4 +42,5 @@ mixin indexTariffPlan
         li.index-tariff-plan__list-item
           p.index-tariff-plan__text Commission from the order
           +toggle('tariff-plan-9', true, true)
-      +button('choose', '', 'primary')
+      .index-tariff-plan__button-container
+        +button('choose', '', 'primary')

@@ -96,6 +96,7 @@ input()
   font-weight: 400
   letter-spacing 0.14px
   border-radius: 3px
+  text-overflow: ellipsis
   +placeholder()
     color dark-grey-text
     transition color 0.3s ease
@@ -117,3 +118,10 @@ rectangle(percent)
     content ''
     padding-top: '%s%' % percent
     float: left
+
+// Break-word
+
+break-word()
+  overflow-wrap break-word
+  word-wrap break-word
+  hyphens auto
