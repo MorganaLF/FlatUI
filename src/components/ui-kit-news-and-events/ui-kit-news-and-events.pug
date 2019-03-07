@@ -2,24 +2,24 @@ include ../subheading/subheading
 include ../news/news
 
 mixin uiKitNewsAndEvents
-    .ui-kit-news-and-events
-        .ui-kit-news-and-events__title-container
-            +subheading('NEWS & EVENTS')
-        .ui-kit-news-and-events__container
-            .ui-kit-news-and-events__col
-                +news(
-                    'news-1',
-                    'It’s all going downhill',
-                    '24  AUGUST  2013',
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
-                    'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
-                    'nunc, a tincidunt eros.'
-                )
-            .ui-kit-news-and-events__col
-                +news(
-                    'news-2',
-                    'THIS IS THE TITLE',
-                    ['24', 'Aug'],
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-                    true
-                )
+  .ui-kit-news-and-events
+    .ui-kit-news-and-events__title-container
+      +subheading('NEWS & EVENTS')
+    .ui-kit-news-and-events__container
+      .ui-kit-news-and-events__col
+        +news(
+          'news-1',
+          'It’s all going downhill',
+          '24  AUGUST  2013',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
+          'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
+          'nunc, a tincidunt eros.'
+        )
+      .ui-kit-news-and-events__col
+        +news(
+          'news-2',
+          'THIS IS THE TITLE',
+          ['24', 'Aug'],
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          true
+        )

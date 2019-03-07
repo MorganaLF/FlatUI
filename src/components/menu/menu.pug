@@ -1,7 +1,7 @@
 include ../button/button
 
 mixin menu(items)
-    ul.menu
-        each item in items
-            li.menu__item
-                +button(item[0], '', 'secondary', 'a', item[1] + '.html')
+  ul.menu
+    each item in items
+      li.menu__item
+        +button(item[0], '', 'secondary', 'a', item[1] + '.html')

@@ -12,42 +12,61 @@ include ../player/player
 include ../page-footer/page-footer
 
 block content
-    .container.get-started__container
-        +subheading('how to start?')
-        +stage(4, 1, true)
-            .stage__content-item
-                .get-started__content-item
-                    h3.get-started__content-title Step 1: Choose optimal tariff plan
-                    p.get-started__content-paragraph.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, impedit, quidem. Id laudantium molestias optio placeat praesentium quasi sed vero!
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, impedit, quidem. Id laudantium molestias optio placeat praesentium quasi sed vero!
-                    +indexTariffPlan
-            .stage__content-item
-                .get-started__content-item
-                    h3.get-started__content-title Step 2: Register an account
-                    +getStartedRegistration
-            .stage__content-item
-                .get-started__content-item
-                    h3.get-started__content-title Step 3: Watch the video about how our exchange works
-                    p.get-started__content-paragraph.
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque commodi dignissimos ducimus, eum excepturi hic, necessitatibus odio perspiciatis quisquam sapiente sequi, tenetur. Beatae libero natus officiis omnis sequi voluptates.
-                    .get-started__flex-container
-                        .get-started__col
-                            +player(
-                                'http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4',
-                                'About our awesome company',
-                                'freelance exchange'
-                            )
-                        .get-started__col
-                            h3.get-started__content-subtitle How we work?
-                            ol.get-started__list
-                                li.get-started__list-item Accusamus nemo reprehenderit sint sunt, temporibus voluptatibus! Ab asperiores eligendi, omnis rerum ut vero voluptatibus.
-                                li.get-started__list-item Accusantium assumenda cumque eaque illum impedit natus optio provident quaerat quos veritatis.
-                                li.get-started__list-item A blanditiis consequuntur dicta ducimus, enim eos, esse et ex exercitationem explicabo facere facilis, harum hic illum incidunt inventore ipsam magnam maiores natus pariatur quas quia quidem quos sapiente sed sequi sunt temporibus tenetur vel vitae!
-                                li.get-started__list-item Aspernatur impedit tempora ut voluptatibus.
-            .stage__content-item
-                .get-started__content-item
-                    h3.get-started__content-title Step 4: Start working!
-                    h4.get-started__content-title_size_big Just find orders!
-                    .get-started__button-container
-                        +button('show new orders', 'big', 'primary')
+  .container.get-started__container
+    +subheading('how to start?')
+    +stage(4, 1, true)
+      .stage__content-item
+        .get-started__content-item
+          h3.get-started__content-title Step 1: Choose optimal tariff plan
+          p.get-started__content-paragraph.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Facere, impedit, quidem. Id laudantium molestias optio placeat
+            praesentium quasi sed vero!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Facere, impedit, quidem. Id laudantium molestias optio placeat
+            praesentium quasi sed vero!
+          +indexTariffPlan
+      .stage__content-item
+        .get-started__content-item
+          h3.get-started__content-title Step 2: Register an account
+          +getStartedRegistration
+      .stage__content-item
+        .get-started__content-item
+          h3.get-started__content-title.
+            Step 3: Watch the video about how our exchange works
+          p.get-started__content-paragraph.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Aperiam atque commodi dignissimos ducimus, eum excepturi hic,
+            necessitatibus odio perspiciatis quisquam sapiente sequi, tenetur.
+            Beatae libero natus officiis omnis sequi voluptates.
+          .get-started__flex-container
+            .get-started__col
+              +player(
+                'http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4',
+                'About our awesome company',
+                'freelance exchange'
+              )
+            .get-started__col
+              h3.get-started__content-subtitle How we work?
+              ol.get-started__list
+                li.get-started__list-item.
+                  Accusamus nemo reprehenderit sint sunt,
+                  temporibus voluptatibus! Ab asperiores eligendi,
+                  omnis rerum ut vero voluptatibus.
+                li.get-started__list-item.
+                  Accusantium assumenda cumque eaque illum
+                  impedit natus optio provident quaerat quos veritatis.
+                li.get-started__list-item.
+                  A blanditiis consequuntur dicta ducimus, enim eos,
+                  esse et ex exercitationem explicabo facere facilis,
+                  harum hic illum incidunt inventore ipsam magnam
+                  maiores natus pariatur quas quia quidem quos sapiente
+                  sed sequi sunt temporibus tenetur vel vitae!
+                li.get-started__list-item.
+                  Aspernatur impedit tempora ut voluptatibus.
+      .stage__content-item
+        .get-started__content-item
+          h3.get-started__content-title Step 4: Start working!
+          h4.get-started__content-title_size_big Just find orders!
+          .get-started__button-container
+            +button('show new orders', 'big', 'primary')

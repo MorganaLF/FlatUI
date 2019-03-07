@@ -1,6 +1,6 @@
 mixin button(text, size, bg, tag='button', href)
-    #{tag}.button(
-            class=size ? 'button_size_' + size : ''
-            class=bg ? 'button_bg_' + bg : ''
-            href=href ? href : false
-        )!= text
+  #{tag}.button(
+    class=size ? 'button_size_' + size : ''
+    class=bg ? 'button_bg_' + bg : ''
+    href=href ? href : false
+  )!= text

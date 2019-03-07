@@ -1,43 +1,43 @@
 include ../toggle/toggle
 
 mixin indexTariffPlan
-    .index-tariff-plan__container
-        .index-tariff-plan
-            h3.index-tariff-plan__title Lite
-            ul.index-tariff-plan__list
-                li.index-tariff-plan__list-item
-                    p.index-tariff-plan__text Unlimited applications
-                    +toggle('tariff-plan-1', false, true)
-                li.index-tariff-plan__list-item
-                    p.index-tariff-plan__text Unlimited categories
-                    +toggle('tariff-plan-2', false, true)
-                li.index-tariff-plan__list-item
-                    p.index-tariff-plan__text Commission from the order
-                    +toggle('tariff-plan-3', true, true)
-            +button('choose', '', 'primary')
-        .index-tariff-plan
-            h3.index-tariff-plan__title Premium
-            ul.index-tariff-plan__list
-                li.index-tariff-plan__list-item
-                    p.index-tariff-plan__text Unlimited applications
-                    +toggle('tariff-plan-4', true, true)
-                li.index-tariff-plan__list-item
-                    p.index-tariff-plan__text Unlimited categories
-                    +toggle('tariff-plan-5', true, true)
-                li.index-tariff-plan__list-item
-                    p.index-tariff-plan__text Commission from the order
-                    +toggle('tariff-plan-6', false, true)
-            +button('choose', '', 'primary')
-        .index-tariff-plan
-            h3.index-tariff-plan__title Standard
-            ul.index-tariff-plan__list
-                li.index-tariff-plan__list-item
-                    p.index-tariff-plan__text Unlimited applications
-                    +toggle('tariff-plan-7', false, true)
-                li.index-tariff-plan__list-item
-                    p.index-tariff-plan__text Unlimited categories
-                    +toggle('tariff-plan-8', true, true)
-                li.index-tariff-plan__list-item
-                    p.index-tariff-plan__text Commission from the order
-                    +toggle('tariff-plan-9', true, true)
-            +button('choose', '', 'primary')
+  .index-tariff-plan__container
+    .index-tariff-plan
+      h3.index-tariff-plan__title Lite
+      ul.index-tariff-plan__list
+        li.index-tariff-plan__list-item
+          p.index-tariff-plan__text Unlimited applications
+          +toggle('tariff-plan-1', false, true)
+        li.index-tariff-plan__list-item
+          p.index-tariff-plan__text Unlimited categories
+          +toggle('tariff-plan-2', false, true)
+        li.index-tariff-plan__list-item
+          p.index-tariff-plan__text Commission from the order
+          +toggle('tariff-plan-3', true, true)
+      +button('choose', '', 'primary')
+    .index-tariff-plan
+      h3.index-tariff-plan__title Premium
+      ul.index-tariff-plan__list
+        li.index-tariff-plan__list-item
+          p.index-tariff-plan__text Unlimited applications
+          +toggle('tariff-plan-4', true, true)
+        li.index-tariff-plan__list-item
+          p.index-tariff-plan__text Unlimited categories
+          +toggle('tariff-plan-5', true, true)
+        li.index-tariff-plan__list-item
+          p.index-tariff-plan__text Commission from the order
+          +toggle('tariff-plan-6', false, true)
+      +button('choose', '', 'primary')
+    .index-tariff-plan
+      h3.index-tariff-plan__title Standard
+      ul.index-tariff-plan__list
+        li.index-tariff-plan__list-item
+          p.index-tariff-plan__text Unlimited applications
+          +toggle('tariff-plan-7', false, true)
+        li.index-tariff-plan__list-item
+          p.index-tariff-plan__text Unlimited categories
+          +toggle('tariff-plan-8', true, true)
+        li.index-tariff-plan__list-item
+          p.index-tariff-plan__text Commission from the order
+          +toggle('tariff-plan-9', true, true)
+      +button('choose', '', 'primary')

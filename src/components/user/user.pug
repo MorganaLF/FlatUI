@@ -1,10 +1,17 @@
 mixin user(imageSrc, name, profession, bgColor, size)
-    .user(class=size ? 'user_size_' + size : '')
-        .user__picture-container
-            img.user__picture(src='images/' + imageSrc + '.jpg')
-        .user__info(class=bgColor ? 'user__info_bg_' + bgColor:'')
-            .user__name(class=bgColor ? 'user__name_color_white':'')= name
-            .user__profession(class=bgColor ? 'user__profession_color_white':'')= profession
-            .user__social-icons
-                -for(var i = 1; i <= 3; i++)
-                    .user__social-icon(class=bgColor?'user__social-icon_' + i + ' ' + 'user__social-icon_' + i + '-white': 'user__social-icon_' + i)
+  .user(class=size ? 'user_size_' + size : '')
+    .user__picture-container
+      img.user__picture(src='images/' + imageSrc + '.jpg')
+    .user__info(class=bgColor ? 'user__info_bg_' + bgColor : '')
+      .user__name(class=bgColor ? 'user__name_color_white' : '')= name
+      .user__profession(
+        class=bgColor ? 'user__profession_color_white' : ''
+      )= profession
+      .user__social-icons
+        -for(var i = 1; i <= 3; i++)
+          .user__social-icon(
+            class=bgColor ?
+                  'user__social-icon_' + i + ' ' +
+                  'user__social-icon_' + i + '-white' :
+                  'user__social-icon_' + i
+            )

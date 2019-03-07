@@ -1,11 +1,11 @@
 mixin player(src, title, author)
-    .player__wrapper
-        video.player(src=src, width='100%', preload="none" )
-        .player__header
-            .player__title= title
-            .player__author= author
-        .player__footer
-            .player__play-button
-            .player__progress
-                .player__progress--full
-            .player__full-button
+  .player__wrapper
+    video.player(src=src, width='100%', preload="none" )
+    .player__header
+      .player__title= title
+      .player__author= author
+    .player__footer
+      .player__play-button
+      .player__progress
+        .player__progress--full
+      .player__full-button

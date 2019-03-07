@@ -1,21 +1,21 @@
 include ../ui-kit-standart-buttons/ui-kit-standart-buttons
 
 mixin news(image, title, date, description, event)
-    if(!event)
-        article.news
-            .news__picture(style='background-image: url("images/' + image + '.jpg")')
-            .news__text-block
-                h3.news__title= title
-                span.news__date= date
-                p.news__description= description
-    else
-        article.news.news_bg_secondary
-            .news__picture(style='background-image: url("images/' + image + '.jpg")')
-            .news__text-block
-                span.news__date.news__date_size_big
-                    span.news__day= date[0] + ' '
-                    span.news__month= date[1]
-                h3.news__title.news__title_size_small= title
-                p.news__description= description
-                .news__button-container
-                    +button('add to calendar', 'small', 'transparent-dark-secondary')
+  if(!event)
+    article.news
+      .news__picture(style='background-image: url("images/' + image + '.jpg")')
+      .news__text-block
+        h3.news__title= title
+        span.news__date= date
+        p.news__description= description
+  else
+    article.news.news_bg_secondary
+      .news__picture(style='background-image: url("images/' + image + '.jpg")')
+      .news__text-block
+        span.news__date.news__date_size_big
+          span.news__day= date[0] + ' '
+          span.news__month= date[1]
+        h3.news__title.news__title_size_small= title
+        p.news__description= description
+        .news__button-container
+          +button('add to calendar', 'small', 'transparent-dark-secondary')
