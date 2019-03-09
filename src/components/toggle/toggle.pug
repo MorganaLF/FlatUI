@@ -3,7 +3,7 @@ mixin toggle(toggleId, isChecked, isDisabled)
     input.toggle__input(
         type='checkbox', id=toggleId, checked=isChecked, disabled=isDisabled
       )
-    .toggle__switch
-      .toggle__switch--text on
-      .toggle__switch--round
-      .toggle__switch--text off
+    span.toggle__switch
+      span.toggle__switch--text on
+      span.toggle__switch--round
+      span.toggle__switch--text off

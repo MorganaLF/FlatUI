@@ -16,10 +16,11 @@
     &:checked + .toggle__switch
       margin-left: -1px
   &__switch
+    display: inline-block
+    vertical-align: middle
     width: rem(101px)
     height: 100%
-    display: flex
-    justify-content: center
+
     cursor: pointer
     top: 0
     background-color light-grey
@@ -27,13 +28,16 @@
     transition: .4s
   &__switch
     &--round
+      display: inline-block
+      vertical-align: middle
       height: rem(18px)
       width: rem(18px)
-      margin-top: rem(3px)
       border-radius: 50%
       background-color: white
       transition: .4s
     &--text
+      display: inline-block
+      vertical-align: middle
       padding: rem(5px) rem(7px)
       font-size rem(12px)
       font-weight: 900
