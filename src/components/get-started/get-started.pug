@@ -12,10 +12,10 @@ include ../player/player
 include ../page-footer/page-footer
 
 block content
-  .container.get-started__container
+  main.container.get-started__container
     +subheading('how to start?', 'h1')
     +stage(4, 1, true)
-      .stage__content-item
+      section.stage__content-item
         .get-started__content-item
           h2.get-started__content-title Step 1: Choose optimal tariff plan
           p.get-started__content-paragraph.
@@ -26,11 +26,11 @@ block content
             Facere, impedit, quidem. Id laudantium molestias optio placeat
             praesentium quasi sed vero!
           +indexTariffPlan
-      .stage__content-item
+      section.stage__content-item
         .get-started__content-item
           h2.get-started__content-title Step 2: Register an account
           +getStartedRegistration
-      .stage__content-item
+      section.stage__content-item
         .get-started__content-item
           h2.get-started__content-title.
             Step 3: Watch the video about how our exchange works
@@ -64,7 +64,7 @@ block content
                   sed sequi sunt temporibus tenetur vel vitae!
                 li.get-started__list-item.
                   Aspernatur impedit tempora ut voluptatibus.
-      .stage__content-item
+      section.stage__content-item
         .get-started__content-item
           h2.get-started__content-title Step 4: Start working!
           p.get-started__content-title_size_big Just find orders!

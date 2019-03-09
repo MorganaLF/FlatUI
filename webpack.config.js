@@ -25,7 +25,7 @@ let conf = {
       template: path.resolve(__dirname, './src/components/account/account.pug')
     }),
     new HtmlWebpackPlugin({
-      filename: 'index-news-page.html',
+      filename: 'news-page.html',
       template: path.resolve(__dirname, './src/components/news-page/news-page.pug')
     }),
     new HtmlWebpackPlugin({

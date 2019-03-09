@@ -15,11 +15,11 @@ include ../page-footer/page-footer
 block content
   .freelancers
     .container.freelancers__container
-      .freelancers__col
+      aside.freelancers__col
         +subheading('search')
         +search('Search freelancers')
         +subheading('filter')
-        .freelancers__filter
+        section.freelancers__filter
           .freelancers__filter-row
             span.freelancers__subtitle Choose category
             +dropdown({
@@ -41,10 +41,10 @@ block content
             span.freelancers__subtitle Show only best freelancers
             +tickBox
           +button('show results', '', 'primary')
-      .freelancers__col
+      main.freelancers__col
         .freelancers__main-title
           +subheading('search freelancers', 'h1')
-        .news-page__nav
+        nav.news-page__nav
           +arrowButton('transparent-secondary', 'left-secondary', false, 'small')
           .news-page__nav-buttons
             +button('1', 'small', 'secondary')
@@ -53,42 +53,43 @@ block content
             +button('4', 'small', 'transparent-secondary')
             +button('5', 'small', 'transparent-secondary')
           +arrowButton('transparent-secondary', 'right-secondary', false, 'small')
-        .freelancers__freelancer
-          +user('user-1', 'John Smith', 'UX DESIGNER')
-          .freelancers__freelancer-footer
-            span Best freelancer!
-            +button('hire', '', 'primary-shadow')
-        .freelancers__freelancer
-          +user('user-2', 'Sarah Brown', 'DEVELOPER', 'secondary')
-          .freelancers__freelancer-footer
-            +button('hire', '', 'transparent-secondary')
-        .freelancers__freelancer
-          +user('user-3', 'Jane Taylor', 'seo copywriter', 'secondary')
-          .freelancers__freelancer-footer
-            +button('hire', '', 'transparent-secondary')
-        .freelancers__freelancer
-          +user('user-4', 'Grace Peters', 'DEVELOPER', 'secondary')
-          .freelancers__freelancer-footer
-            +button('hire', '', 'transparent-secondary')
-        .freelancers__freelancer
-          +user('user-5', 'David Walton', 'DEVELOPER')
-          .freelancers__freelancer-footer
-            span Best freelancer!
-            +button('hire', '', 'primary-shadow')
-        .freelancers__freelancer
-          +user('user-6', 'Peter Hoover', 'DEVELOPER', 'secondary')
-          .freelancers__freelancer-footer
-            +button('hire', '', 'transparent-secondary')
-        .freelancers__freelancer
-          +user('user-7', 'George Dalton', 'DESIGNER', 'secondary')
-          .freelancers__freelancer-footer
-            +button('hire', '', 'transparent-secondary')
-        .freelancers__freelancer
-          +user('user-8', 'Mary Charles', 'seo copywriter')
-          .freelancers__freelancer-footer
-            span Best freelancer!
-            +button('hire', '', 'primary-shadow')
-        .news-page__nav
+        ul.freelancers__list
+          li.freelancers__freelancer
+            +user('user-1', 'John Smith', 'UX DESIGNER')
+            .freelancers__freelancer-footer
+              span Best freelancer!
+              +button('hire', '', 'primary-shadow')
+          li.freelancers__freelancer
+            +user('user-2', 'Sarah Brown', 'DEVELOPER', 'secondary')
+            .freelancers__freelancer-footer
+              +button('hire', '', 'transparent-secondary')
+          li.freelancers__freelancer
+            +user('user-3', 'Jane Taylor', 'seo copywriter', 'secondary')
+            .freelancers__freelancer-footer
+              +button('hire', '', 'transparent-secondary')
+          li.freelancers__freelancer
+            +user('user-4', 'Grace Peters', 'DEVELOPER', 'secondary')
+            .freelancers__freelancer-footer
+              +button('hire', '', 'transparent-secondary')
+          li.freelancers__freelancer
+            +user('user-5', 'David Walton', 'DEVELOPER')
+            .freelancers__freelancer-footer
+              span Best freelancer!
+              +button('hire', '', 'primary-shadow')
+          li.freelancers__freelancer
+            +user('user-6', 'Peter Hoover', 'DEVELOPER', 'secondary')
+            .freelancers__freelancer-footer
+              +button('hire', '', 'transparent-secondary')
+          li.freelancers__freelancer
+            +user('user-7', 'George Dalton', 'DESIGNER', 'secondary')
+            .freelancers__freelancer-footer
+              +button('hire', '', 'transparent-secondary')
+          li.freelancers__freelancer
+            +user('user-8', 'Mary Charles', 'seo copywriter')
+            .freelancers__freelancer-footer
+              span Best freelancer!
+              +button('hire', '', 'primary-shadow')
+        nav.news-page__nav
           +arrowButton('transparent-secondary', 'left-secondary', false, 'small')
           .news-page__nav-buttons
             +button('1', 'small', 'secondary')

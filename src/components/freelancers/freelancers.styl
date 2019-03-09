@@ -20,17 +20,11 @@
       .button
         width: 100%
     &:last-child
-      display: flex
-      flex-wrap: wrap
-      align-content flex-start
       width: 75%
       padding-left: 3%
       +sm()
         width: 100%
         padding-left: 0
-      +xs()
-        flex-direction: column
-        align-items center
   &__main-title
     width: 100%
     margin: 0.83em 0
@@ -44,7 +38,17 @@
     &_flex
       display: flex
       justify-content: space-between
+  &__list
+    display: flex
+    flex-wrap: wrap
+    list-style-type: none
+    +xs()
+      flex-direction: column
+      align-items center
   &__freelancer
+    display: flex
+    flex-direction: column
+    align-items: stretch
     width: 29%
     margin: 0 2.166666666666667% 60px
     padding-bottom: 10px
@@ -63,11 +67,12 @@
       display: flex
       justify-content: space-between
       align-items: center
+      margin-top: auto
       color primary-color
     .button
       margin-left: auto
   .user
-    margin-bottom: 10px
+    margin: 0 0 10px
   .news-page__nav
     padding: 10px 0 0
     border-top: 1px solid light-grey-text

@@ -12,11 +12,11 @@ include ../button/button
 block content
   .container
     .news-page
-      .news-page__col.news-page__col_size_4
+      aside.news-page__col.news-page__col_size_4
         +subheading('search news')
         +search('Search...')
         +calendar
-      .news-page__col.news-page__col_size_8
+      main.news-page__col.news-page__col_size_8
         +subheading('news', 'h1')
         +news({
           image: 'news-3',
@@ -55,7 +55,7 @@ block content
               'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
               'nunc, a tincidunt eros.'
         })
-        .news-page__nav
+        nav.news-page__nav
           +arrowButton('transparent-secondary', 'left-secondary', false, 'small')
           .news-page__nav-buttons
             +button('1', 'small', 'secondary')
@@ -93,7 +93,7 @@ block content
           description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
           isEvent: true
         })
-        .news-page__nav
+        nav.news-page__nav
           +arrowButton('transparent-secondary', 'left-secondary', false, 'small')
           .news-page__nav-buttons
             +button('1', 'small', 'secondary')
