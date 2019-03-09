@@ -11,14 +11,18 @@ block content
   .container
     main.account
       .account__col
-        +subheading('your account')
+        .account__title
+          +subheading('your account', 'h1')
         +user('user-6', 'Peter Brown', 'DEVELOPER', '', 'big')
-        +subheading('settings')
+        .account__title
+          +subheading('settings')
         +accountSettings
       .account__col
-        +subheading('statistic')
+        .account__title
+          +subheading('statistic')
         +accountStatistic
-        +subheading('deadlines statistic')
+        .account__title
+          +subheading('deadlines statistic')
         +accountDeadlines
 
 

@@ -1,21 +1,22 @@
 include ../ui-kit-standart-buttons/ui-kit-standart-buttons
 
-mixin news(image, title, date, description, event)
-  if(!event)
+mixin news(options)
+  -var titleTag = options.titleTag || 'h3'
+  if(!options.isEvent)
     article.news
-      .news__picture(style='background-image: url("images/' + image + '.jpg")')
+      .news__picture(style='background-image: url("images/' + options.image + '.jpg")')
       .news__text-block
-        h3.news__title= title
-        span.news__date= date
-        p.news__description= description
+        #{titleTag}.news__title= options.title
+        span.news__date= options.date
+        p.news__description= options.description
   else
     article.news.news_bg_secondary
-      .news__picture(style='background-image: url("images/' + image + '.jpg")')
+      .news__picture(style='background-image: url("images/' + options.image + '.jpg")')
       .news__text-block
         span.news__date.news__date_size_big
-          span.news__day= date[0] + ' '
-          span.news__month= date[1]
-        h3.news__title.news__title_size_small= title
-        p.news__description= description
+          span.news__day= options.date[0] + ' '
+          span.news__month= options.date[1]
+        #{titleTag}.news__title.news__title_size_small= options.title
+        p.news__description= options.description
         .news__button-container
           +button('add to calendar', 'small', 'transparent-dark-secondary')

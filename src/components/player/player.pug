@@ -2,8 +2,8 @@ mixin player(src, title, author)
   .player__wrapper
     video.player(src=src, width='100%', preload="none" )
     .player__header
-      .player__title= title
-      .player__author= author
+      h3.player__title= title
+      h4.player__author= author
     .player__footer
       .player__play-button
       .player__progress

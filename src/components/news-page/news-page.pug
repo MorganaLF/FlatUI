@@ -17,39 +17,44 @@ block content
         +search('Search...')
         +calendar
       .news-page__col.news-page__col_size_8
-        +subheading('news')
-        +news(
-          'news-3',
-          'Top 5 professions in freelance',
-          '24  NOVEMBER  2018',
-          'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
-          'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
-          'nunc, a tincidunt eros.'
-        )
-        +news(
-          'news-7',
-          'How to prepare for an interview',
-          '23  NOVEMBER  2018',
-          'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
-          'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
-          'nunc, a tincidunt eros.'
-        )
-        +news(
-          'news-4',
-          'Work without leaving home',
-          '22  NOVEMBER  2018',
-          'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
-          'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
-          'nunc, a tincidunt eros.'
-        )
-        +news(
-          'news-5',
-          'What the designer should know',
-          '21  NOVEMBER  2018',
-          'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
-          'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
-          'nunc, a tincidunt eros.'
-        )
+        +subheading('news', 'h1')
+        +news({
+          image: 'news-3',
+          title: 'Top 5 professions in freelance',
+          titleTag: 'h2',
+          date: '24  NOVEMBER  2018',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
+              'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
+              'nunc, a tincidunt eros.'
+
+        })
+        +news({
+          image: 'news-7',
+          title: 'How to prepare for an interview',
+          titleTag: 'h2',
+          date: '23  NOVEMBER  2018',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
+              'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
+              'nunc, a tincidunt eros.'
+        })
+        +news({
+          image: 'news-4',
+          title: 'Work without leaving home',
+          titleTag: 'h2',
+          date: '22  NOVEMBER  2018',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
+              'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
+              'nunc, a tincidunt eros.'
+        })
+        +news({
+          image: 'news-5',
+          title: 'What the designer should know',
+          titleTag: 'h2',
+          date: '21  NOVEMBER  2018',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
+              'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
+              'nunc, a tincidunt eros.'
+        })
         .news-page__nav
           +arrowButton('transparent-secondary', 'left-secondary', false, 'small')
           .news-page__nav-buttons
@@ -60,34 +65,34 @@ block content
             +button('5', 'small', 'transparent-secondary')
           +arrowButton('transparent-secondary', 'right-secondary', false, 'small')
         +subheading('upcoming events')
-        +news(
-          'news-6',
-          'javascript webinar',
-          ['27', 'Jan'],
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          true
-        )
-        +news(
-          'news-8',
-          'open your own business',
-          ['22', 'Jan'],
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          true
-        )
-        +news(
-          'news-9',
-          'web design workshop',
-          ['14', 'Jan'],
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          true
-        )
-        +news(
-          'news-10',
-          'get a new profession',
-          ['10', 'Jan'],
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          true
-        )
+        +news({
+          image: 'news-6',
+          title: 'javascript webinar',
+          date: ['27', 'Jan'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          isEvent: true
+         })
+        +news({
+          image: 'news-8',
+          title: 'open your own business',
+          date: ['22', 'Jan'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          isEvent: true
+        })
+        +news({
+          image: 'news-9',
+          title: 'web design workshop',
+          date: ['14', 'Jan'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          isEvent: true
+        })
+        +news({
+          image: 'news-10',
+          title: 'get a new profession',
+          date: ['10', 'Jan'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          isEvent: true
+        })
         .news-page__nav
           +arrowButton('transparent-secondary', 'left-secondary', false, 'small')
           .news-page__nav-buttons

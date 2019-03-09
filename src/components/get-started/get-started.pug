@@ -13,11 +13,11 @@ include ../page-footer/page-footer
 
 block content
   .container.get-started__container
-    +subheading('how to start?')
+    +subheading('how to start?', 'h1')
     +stage(4, 1, true)
       .stage__content-item
         .get-started__content-item
-          h3.get-started__content-title Step 1: Choose optimal tariff plan
+          h2.get-started__content-title Step 1: Choose optimal tariff plan
           p.get-started__content-paragraph.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Facere, impedit, quidem. Id laudantium molestias optio placeat
@@ -28,11 +28,11 @@ block content
           +indexTariffPlan
       .stage__content-item
         .get-started__content-item
-          h3.get-started__content-title Step 2: Register an account
+          h2.get-started__content-title Step 2: Register an account
           +getStartedRegistration
       .stage__content-item
         .get-started__content-item
-          h3.get-started__content-title.
+          h2.get-started__content-title.
             Step 3: Watch the video about how our exchange works
           p.get-started__content-paragraph.
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -66,7 +66,7 @@ block content
                   Aspernatur impedit tempora ut voluptatibus.
       .stage__content-item
         .get-started__content-item
-          h3.get-started__content-title Step 4: Start working!
-          h4.get-started__content-title_size_big Just find orders!
+          h2.get-started__content-title Step 4: Start working!
+          p.get-started__content-title_size_big Just find orders!
           .get-started__button-container
             +button('show new orders', 'big', 'primary')

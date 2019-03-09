@@ -7,19 +7,19 @@ mixin uiKitNewsAndEvents
       +subheading('NEWS & EVENTS')
     .ui-kit-news-and-events__container
       .ui-kit-news-and-events__col
-        +news(
-          'news-1',
-          'It’s all going downhill',
-          '24  AUGUST  2013',
-          'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
-          'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
-          'nunc, a tincidunt eros.'
-        )
+        +news({
+          image: 'news-1',
+          title: 'It’s all going downhill',
+          date: '24  AUGUST  2013',
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing ' +
+              'elit. Sed condimentum aliquet venenatis. Etiam a nisi ' +
+              'nunc, a tincidunt eros.'
+        })
       .ui-kit-news-and-events__col
-        +news(
-          'news-2',
-          'THIS IS THE TITLE',
-          ['24', 'Aug'],
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-          true
-        )
+        +news({
+          image: 'news-2',
+          title: 'THIS IS THE TITLE',
+          date: ['24', 'Aug'],
+          description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+          isEvent: true
+        })

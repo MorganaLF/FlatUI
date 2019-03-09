@@ -8,15 +8,15 @@ include ../page-footer/page-footer
 
 block content
   .container.contact
-    +subheading('contact us')
+    +subheading('contact us', 'h1')
     .contact__container
       .contact__col
         +map
-        h3.contact__subtitle.
+        h2.contact__subtitle.
           Contact us through this form, we will answer!
         +contact-form
       .contact__col
-        h3.contact__subtitle How contact us
+        h2.contact__subtitle How contact us
         ul.contact__list
           li.contact__list-item
             span.contact__list-span Address:
@@ -31,7 +31,7 @@ block content
           li.contact__list-item
             span.contact__list-span Skype:
             | exchange2018
-        h3.contact__subtitle Our office in Moscow
+        h2.contact__subtitle Our office in Moscow
         ul.contact__list
           li.contact__list-item
             span.contact__list-span Address:
@@ -46,7 +46,7 @@ block content
           li.contact__list-item
             span.contact__list-span Skype:
             | exchange2018
-        h3.contact__subtitle Our office in Kiev
+        h2.contact__subtitle Our office in Kiev
         ul.contact__list
           li.contact__list-item
             span.contact__list-span Address:
