@@ -6,6 +6,15 @@ include ../map/map
 include ../contact-from/contact-form
 include ../page-footer/page-footer
 
+block append meta
+  meta(name="keywords", content="Address of freelance-exchange, " +
+      "freelance-exchange in Moscow, freelance-exchange in Kiev")
+  meta(name="description", content="Find contacts of the " +
+      "exchange of freelancers in Moscow and Kiev")
+
+block title
+  title Contact us
+
 block content
   main.container.contact
     +subheading('contact us', 'h1')

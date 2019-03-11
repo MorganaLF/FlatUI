@@ -2,14 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FlatUI</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta name="keywords" content="start working, start working as a freelancer, register at the freelancer exchange">
+    <meta name="description" content="Registration and search for orders on the exchange of freelancers">
+    <title>Get started</title>
     <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://morganalf.github.io/FlatUI/dist/styles.css" rel="stylesheet"></head>
   <body>
     <div class="page-menu__container">
-      <div class="page-menu">
+      <nav class="page-menu">
         <ul class="menu">
           <li class="menu__item">
             <a class="button button_bg_secondary" href="index.html"><i class="fas fa-home"></i> home</a>
@@ -32,14 +34,14 @@
             <a class="button button_bg_secondary" href="contact.html"><i class="fas fa-map-marker-alt"></i> contact us</a>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
     <div class="mobile-menu">
       <div class="mobile-menu__button"><i class="fas fa-bars"></i></div>
     </div>
     <div class="body-wrapper">
-      <div class="container get-started__container">
-        <h2 class="subheading">how to start?</h2>
+      <main class="container get-started__container">
+        <h1 class="subheading">how to start?</h1>
         <div class="stage__container">
           <ul class="stage">
             <li class="stage__item">1</li>
@@ -51,12 +53,16 @@
             <li class="stage__item stage__item_inactive">4</li>
           </ul>
           <div class="stage__content">
-            <div class="stage__content-item">
+            <section class="stage__content-item">
               <div class="get-started__content-item">
-                <h3 class="get-started__content-title">Step 1: Choose optimal tariff plan</h3>
+                <h2 class="get-started__content-title">Step 1: Choose optimal tariff plan</h2>
                 <p class="get-started__content-paragraph">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, impedit, quidem. Id laudantium molestias optio placeat praesentium quasi sed vero!
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, impedit, quidem. Id laudantium molestias optio placeat praesentium quasi sed vero!
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Facere, impedit, quidem. Id laudantium molestias optio placeat
+                  praesentium quasi sed vero!
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Facere, impedit, quidem. Id laudantium molestias optio placeat
+                  praesentium quasi sed vero!
                 </p>
                 <div class="index-tariff-plan__container">
                   <div class="index-tariff-plan">
@@ -65,38 +71,25 @@
                       <li class="index-tariff-plan__list-item">
                         <p class="index-tariff-plan__text">Unlimited applications</p>
                         <label class="toggle" for="tariff-plan-1">
-                          <input class="toggle__input" type="checkbox" id="tariff-plan-1" disabled>
-                          <div class="toggle__switch">
-                            <div class="toggle__switch--text">on</div>
-                            <div class="toggle__switch--round"></div>
-                            <div class="toggle__switch--text">off</div>
-                          </div>
+                          <input class="toggle__input" type="checkbox" id="tariff-plan-1" disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                         </label>
                       </li>
                       <li class="index-tariff-plan__list-item">
                         <p class="index-tariff-plan__text">Unlimited categories</p>
                         <label class="toggle" for="tariff-plan-2">
-                          <input class="toggle__input" type="checkbox" id="tariff-plan-2" disabled>
-                          <div class="toggle__switch">
-                            <div class="toggle__switch--text">on</div>
-                            <div class="toggle__switch--round"></div>
-                            <div class="toggle__switch--text">off</div>
-                          </div>
+                          <input class="toggle__input" type="checkbox" id="tariff-plan-2" disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                         </label>
                       </li>
                       <li class="index-tariff-plan__list-item">
                         <p class="index-tariff-plan__text">Commission from the order</p>
                         <label class="toggle" for="tariff-plan-3">
-                          <input class="toggle__input" type="checkbox" id="tariff-plan-3" checked disabled>
-                          <div class="toggle__switch">
-                            <div class="toggle__switch--text">on</div>
-                            <div class="toggle__switch--round"></div>
-                            <div class="toggle__switch--text">off</div>
-                          </div>
+                          <input class="toggle__input" type="checkbox" id="tariff-plan-3" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                         </label>
                       </li>
                     </ul>
-                    <button class="button button_bg_primary">choose</button>
+                    <div class="index-tariff-plan__button-container">
+                      <button class="button button_bg_primary">choose</button>
+                    </div>
                   </div>
                   <div class="index-tariff-plan">
                     <h3 class="index-tariff-plan__title">Premium</h3>
@@ -104,38 +97,25 @@
                       <li class="index-tariff-plan__list-item">
                         <p class="index-tariff-plan__text">Unlimited applications</p>
                         <label class="toggle" for="tariff-plan-4">
-                          <input class="toggle__input" type="checkbox" id="tariff-plan-4" checked disabled>
-                          <div class="toggle__switch">
-                            <div class="toggle__switch--text">on</div>
-                            <div class="toggle__switch--round"></div>
-                            <div class="toggle__switch--text">off</div>
-                          </div>
+                          <input class="toggle__input" type="checkbox" id="tariff-plan-4" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                         </label>
                       </li>
                       <li class="index-tariff-plan__list-item">
                         <p class="index-tariff-plan__text">Unlimited categories</p>
                         <label class="toggle" for="tariff-plan-5">
-                          <input class="toggle__input" type="checkbox" id="tariff-plan-5" checked disabled>
-                          <div class="toggle__switch">
-                            <div class="toggle__switch--text">on</div>
-                            <div class="toggle__switch--round"></div>
-                            <div class="toggle__switch--text">off</div>
-                          </div>
+                          <input class="toggle__input" type="checkbox" id="tariff-plan-5" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                         </label>
                       </li>
                       <li class="index-tariff-plan__list-item">
                         <p class="index-tariff-plan__text">Commission from the order</p>
                         <label class="toggle" for="tariff-plan-6">
-                          <input class="toggle__input" type="checkbox" id="tariff-plan-6" disabled>
-                          <div class="toggle__switch">
-                            <div class="toggle__switch--text">on</div>
-                            <div class="toggle__switch--round"></div>
-                            <div class="toggle__switch--text">off</div>
-                          </div>
+                          <input class="toggle__input" type="checkbox" id="tariff-plan-6" disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                         </label>
                       </li>
                     </ul>
-                    <button class="button button_bg_primary">choose</button>
+                    <div class="index-tariff-plan__button-container">
+                      <button class="button button_bg_primary">choose</button>
+                    </div>
                   </div>
                   <div class="index-tariff-plan">
                     <h3 class="index-tariff-plan__title">Standard</h3>
@@ -143,53 +123,56 @@
                       <li class="index-tariff-plan__list-item">
                         <p class="index-tariff-plan__text">Unlimited applications</p>
                         <label class="toggle" for="tariff-plan-7">
-                          <input class="toggle__input" type="checkbox" id="tariff-plan-7" disabled>
-                          <div class="toggle__switch">
-                            <div class="toggle__switch--text">on</div>
-                            <div class="toggle__switch--round"></div>
-                            <div class="toggle__switch--text">off</div>
-                          </div>
+                          <input class="toggle__input" type="checkbox" id="tariff-plan-7" disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                         </label>
                       </li>
                       <li class="index-tariff-plan__list-item">
                         <p class="index-tariff-plan__text">Unlimited categories</p>
                         <label class="toggle" for="tariff-plan-8">
-                          <input class="toggle__input" type="checkbox" id="tariff-plan-8" checked disabled>
-                          <div class="toggle__switch">
-                            <div class="toggle__switch--text">on</div>
-                            <div class="toggle__switch--round"></div>
-                            <div class="toggle__switch--text">off</div>
-                          </div>
+                          <input class="toggle__input" type="checkbox" id="tariff-plan-8" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                         </label>
                       </li>
                       <li class="index-tariff-plan__list-item">
                         <p class="index-tariff-plan__text">Commission from the order</p>
                         <label class="toggle" for="tariff-plan-9">
-                          <input class="toggle__input" type="checkbox" id="tariff-plan-9" checked disabled>
-                          <div class="toggle__switch">
-                            <div class="toggle__switch--text">on</div>
-                            <div class="toggle__switch--round"></div>
-                            <div class="toggle__switch--text">off</div>
-                          </div>
+                          <input class="toggle__input" type="checkbox" id="tariff-plan-9" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                         </label>
                       </li>
                     </ul>
-                    <button class="button button_bg_primary">choose</button>
+                    <div class="index-tariff-plan__button-container">
+                      <button class="button button_bg_primary">choose</button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="stage__content-item">
+            </section>
+            <section class="stage__content-item">
               <div class="get-started__content-item">
-                <h3 class="get-started__content-title">Step 2: Register an account</h3>
+                <h2 class="get-started__content-title">Step 2: Register an account</h2>
                 <div class="get-started-registration">
                   <div class="get-started-registration__col">
-                    <p class="get-started__content-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae est fugiat labore libero natus odit quia quos, rem, repudiandae, soluta vero.</p>
+                    <p class="get-started__content-paragraph">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Asperiores beatae est fugiat labore libero natus odit quia quos,
+                      rem, repudiandae, soluta vero.
+                    </p>
                     <h3 class="get-started__content-subtitle">Registering an account you accept these rules:</h3>
                     <ol class="get-started__list">
-                      <li class="get-started__list-item">Accusamus nemo reprehenderit sint sunt, temporibus voluptatibus! Ab asperiores eligendi, omnis rerum ut vero voluptatibus.</li>
-                      <li class="get-started__list-item">Accusantium assumenda cumque eaque illum impedit natus optio provident quaerat quos veritatis.</li>
-                      <li class="get-started__list-item">A blanditiis consequuntur dicta ducimus, enim eos, esse et ex exercitationem explicabo facere facilis, harum hic illum incidunt inventore ipsam magnam maiores natus pariatur quas quia quidem quos sapiente sed sequi sunt temporibus tenetur vel vitae!</li>
+                      <li class="get-started__list-item">
+                        Accusamus nemo reprehenderit sint sunt, temporibus voluptatibus!
+                        Ab asperiores eligendi, omnis rerum ut vero voluptatibus.
+                      </li>
+                      <li class="get-started__list-item">
+                        Accusantium assumenda cumque eaque illum impedit natus optio
+                        provident quaerat quos veritatis.
+                      </li>
+                      <li class="get-started__list-item">
+                        A blanditiis consequuntur dicta ducimus, enim eos,
+                        esse et ex exercitationem explicabo facere facilis,
+                        harum hic illum incidunt inventore ipsam magnam maiores
+                        natus pariatur quas quia quidem quos sapiente sed sequi
+                        sunt temporibus tenetur vel vitae!
+                      </li>
                       <li class="get-started__list-item">Aspernatur impedit tempora ut voluptatibus.</li>
                     </ol>
                   </div>
@@ -209,94 +192,110 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="stage__content-item">
+            </section>
+            <section class="stage__content-item">
               <div class="get-started__content-item">
-                <h3 class="get-started__content-title">Step 3: Watch the video about how our exchange works</h3>
-                <p class="get-started__content-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque commodi dignissimos ducimus, eum excepturi hic, necessitatibus odio perspiciatis quisquam sapiente sequi, tenetur. Beatae libero natus officiis omnis sequi voluptates.</p>
+                <h2 class="get-started__content-title">Step 3: Watch the video about how our exchange works</h2>
+                <p class="get-started__content-paragraph">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Aperiam atque commodi dignissimos ducimus, eum excepturi hic,
+                  necessitatibus odio perspiciatis quisquam sapiente sequi, tenetur.
+                  Beatae libero natus officiis omnis sequi voluptates.
+                </p>
                 <div class="get-started__flex-container">
                   <div class="get-started__col">
                     <div class="player__wrapper">
                       <video class="player" src="http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4" width="100%" preload="none"></video>
-                      <div class="player__header">
-                        <div class="player__title">About our awesome company</div>
-                        <div class="player__author">freelance exchange</div>
-                      </div>
+                      <header class="player__header">
+                        <h3 class="player__title">About our company</h3>
+                        <h4 class="player__author">freelance exchange</h4>
+                      </header>
                       <div class="player__footer">
-                        <div class="player__play-button"></div>
+                        <button class="player__play-button"></button>
                         <div class="player__progress">
                           <div class="player__progress--full"></div>
                         </div>
-                        <div class="player__full-button"></div>
+                        <button class="player__full-button"></button>
                       </div>
                     </div>
                   </div>
                   <div class="get-started__col">
                     <h3 class="get-started__content-subtitle">How we work?</h3>
                     <ol class="get-started__list">
-                      <li class="get-started__list-item">Accusamus nemo reprehenderit sint sunt, temporibus voluptatibus! Ab asperiores eligendi, omnis rerum ut vero voluptatibus.</li>
-                      <li class="get-started__list-item">Accusantium assumenda cumque eaque illum impedit natus optio provident quaerat quos veritatis.</li>
-                      <li class="get-started__list-item">A blanditiis consequuntur dicta ducimus, enim eos, esse et ex exercitationem explicabo facere facilis, harum hic illum incidunt inventore ipsam magnam maiores natus pariatur quas quia quidem quos sapiente sed sequi sunt temporibus tenetur vel vitae!</li>
+                      <li class="get-started__list-item">
+                        Accusamus nemo reprehenderit sint sunt,
+                        temporibus voluptatibus! Ab asperiores eligendi,
+                        omnis rerum ut vero voluptatibus.
+                      </li>
+                      <li class="get-started__list-item">
+                        Accusantium assumenda cumque eaque illum
+                        impedit natus optio provident quaerat quos veritatis.
+                      </li>
+                      <li class="get-started__list-item">
+                        A blanditiis consequuntur dicta ducimus, enim eos,
+                        esse et ex exercitationem explicabo facere facilis,
+                        harum hic illum incidunt inventore ipsam magnam
+                        maiores natus pariatur quas quia quidem quos sapiente
+                        sed sequi sunt temporibus tenetur vel vitae!
+                      </li>
                       <li class="get-started__list-item">Aspernatur impedit tempora ut voluptatibus.</li>
                     </ol>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="stage__content-item">
+            </section>
+            <section class="stage__content-item">
               <div class="get-started__content-item">
-                <h3 class="get-started__content-title">Step 4: Start working!</h3>
-                <h4 class="get-started__content-title_size_big">Just find orders!</h4>
+                <h2 class="get-started__content-title">Step 4: Start working!</h2>
+                <p class="get-started__content-title_size_big">Just find orders!</p>
                 <div class="get-started__button-container">
                   <button class="button button_size_big button_bg_primary">show new orders</button>
                 </div>
               </div>
-            </div>
+            </section>
           </div>
         </div>
-      </div>
+      </main>
       <div class="background-container">
         <footer class="page-footer">
           <div class="container page-footer__container">
-            <div class="page-footer__search-container">
+            <section class="page-footer__search-container">
               <h2 class="subheading">search on site</h2>
               <form class="search" action="" method="get">
                 <input class="search__input search__input_color_primary" type="search" name="search" placeholder="Search">
                 <input class="search__button" type="submit" value="">
               </form>
-            </div>
-            <div class="page-footer__menu-container">
+            </section>
+            <nav class="page-footer__menu-container">
               <ul class="page-footer__menu">
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Account</a></li>
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Get started</a></li>
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Freelancers</a></li>
               </ul>
-            </div>
-            <div class="page-footer__menu-container">
+            </nav>
+            <nav class="page-footer__menu-container">
               <ul class="page-footer__menu">
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">News and events</a></li>
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Sitemap</a></li>
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Rules</a></li>
               </ul>
-            </div>
-            <div class="page-footer__copyright">
+            </nav>
+            <section class="page-footer__copyright">
               <p>© Freelance Exchange 2018</p>
               <p>4743866@mail.ru</p>
-            </div>
+            </section>
           </div>
         </footer>
       </div>
     </div>
     <div class="page-messaging">
-      <div class="messaging">
-        <div class="messaging__header">
+      <section class="messaging">
+        <header class="messaging__header">
           <h3 class="messaging__title">Sarah Brown</h3>
-        </div>
+        </header>
         <div class="messaging__body">
-          <div class="messaging__icons">
-            <div class="messaging__icon messaging__icon_chat"></div>
-            <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div>
-            <div class="messaging__icon messaging__icon_camera"></div>
+          <div class="messaging__icons"><span class="messaging__icon messaging__icon_chat"></span>
+            <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div><span class="messaging__icon messaging__icon_camera"></span>
           </div>
           <div class="messaging__incoming">
             <p class="messaging__incoming-paragraph">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
@@ -306,7 +305,7 @@
             <button class="button button_bg_secondary-shadow">REPLY</button>
           </form>
         </div>
-      </div>
+      </section>
       <div class="page-messaging__button"><i class="far fa-comments"></i></div>
     </div>
   <script type="text/javascript" src="https://morganalf.github.io/FlatUI/dist/main.js"></script></body>

@@ -2,14 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FlatUI</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta name="keywords" content="Account, account settings, account statistic">
+    <meta name="description" content="Create and set up your account on our freelancers exchange">
+    <title>Account</title>
     <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://morganalf.github.io/FlatUI/dist/styles.css" rel="stylesheet"></head>
   <body>
     <div class="page-menu__container">
-      <div class="page-menu">
+      <nav class="page-menu">
         <ul class="menu">
           <li class="menu__item">
             <a class="button button_bg_secondary" href="index.html"><i class="fas fa-home"></i> home</a>
@@ -32,7 +34,7 @@
             <a class="button button_bg_secondary" href="contact.html"><i class="fas fa-map-marker-alt"></i> contact us</a>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
     <div class="mobile-menu">
       <div class="mobile-menu__button"><i class="fas fa-bars"></i></div>
@@ -41,59 +43,40 @@
       <div class="container">
         <main class="account">
           <div class="account__col">
-            <h2 class="subheading">your account</h2>
+            <div class="account__title">
+              <h1 class="subheading">your account</h1>
+            </div>
             <div class="user user_size_big">
               <div class="user__picture-container"><img class="user__picture" src="images/user-6.jpg"></div>
               <div class="user__info">
-                <div class="user__name">Peter Brown</div>
-                <div class="user__profession">DEVELOPER</div>
-                <div class="user__social-icons">
-                  <div class="user__social-icon user__social-icon_1"></div>
-                  <div class="user__social-icon user__social-icon_2"></div>
-                  <div class="user__social-icon user__social-icon_3"></div>
+                <p class="user__name">Peter Brown</p>
+                <p class="user__profession">DEVELOPER</p>
+                <div class="user__social-icons"><span class="user__social-icon user__social-icon_1"></span><span class="user__social-icon user__social-icon_2"></span><span class="user__social-icon user__social-icon_3"></span>
                 </div>
               </div>
             </div>
-            <h2 class="subheading">settings</h2>
+            <div class="account__title">
+              <h2 class="subheading">settings</h2>
+            </div>
             <ul class="account-settings">
               <li class="account-settings__item">Send e-mail
                 <label class="toggle" for="settings-1">
-                  <input class="toggle__input" type="checkbox" id="settings-1" checked>
-                  <div class="toggle__switch">
-                    <div class="toggle__switch--text">on</div>
-                    <div class="toggle__switch--round"></div>
-                    <div class="toggle__switch--text">off</div>
-                  </div>
+                  <input class="toggle__input" type="checkbox" id="settings-1" checked><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                 </label>
               </li>
               <li class="account-settings__item">Send sound
                 <label class="toggle" for="settings-2">
-                  <input class="toggle__input" type="checkbox" id="settings-2" checked>
-                  <div class="toggle__switch">
-                    <div class="toggle__switch--text">on</div>
-                    <div class="toggle__switch--round"></div>
-                    <div class="toggle__switch--text">off</div>
-                  </div>
+                  <input class="toggle__input" type="checkbox" id="settings-2" checked><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                 </label>
               </li>
               <li class="account-settings__item">Send e-mail
                 <label class="toggle">
-                  <input class="toggle__input" type="checkbox">
-                  <div class="toggle__switch">
-                    <div class="toggle__switch--text">on</div>
-                    <div class="toggle__switch--round"></div>
-                    <div class="toggle__switch--text">off</div>
-                  </div>
+                  <input class="toggle__input" type="checkbox"><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                 </label>
               </li>
               <li class="account-settings__item">Send sound
                 <label class="toggle">
-                  <input class="toggle__input" type="checkbox">
-                  <div class="toggle__switch">
-                    <div class="toggle__switch--text">on</div>
-                    <div class="toggle__switch--round"></div>
-                    <div class="toggle__switch--text">off</div>
-                  </div>
+                  <input class="toggle__input" type="checkbox"><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                 </label>
               </li>
               <li class="account-settings__item">Sound
@@ -114,7 +97,9 @@
             </ul>
           </div>
           <div class="account__col">
-            <h2 class="subheading">statistic</h2>
+            <div class="account__title">
+              <h2 class="subheading">statistic</h2>
+            </div>
             <div class="account-statistic">
               <div class="account-statistic__col">
                 <ul class="account-statistic__list">
@@ -128,7 +113,9 @@
                 <div class="pie-chart ct-chart ct-square" data-series="5, 15, 60, 20"></div>
               </div>
             </div>
-            <h2 class="subheading">deadlines statistic</h2>
+            <div class="account__title">
+              <h2 class="subheading">deadlines statistic</h2>
+            </div>
             <section class="account-deadlines">
               <div class="account-deadlines__col">
                 <h3 class="account-deadlines__title">Ahead of time</h3>
@@ -161,45 +148,43 @@
       <div class="background-container">
         <footer class="page-footer">
           <div class="container page-footer__container">
-            <div class="page-footer__search-container">
+            <section class="page-footer__search-container">
               <h2 class="subheading">search on site</h2>
               <form class="search" action="" method="get">
                 <input class="search__input search__input_color_primary" type="search" name="search" placeholder="Search">
                 <input class="search__button" type="submit" value="">
               </form>
-            </div>
-            <div class="page-footer__menu-container">
+            </section>
+            <nav class="page-footer__menu-container">
               <ul class="page-footer__menu">
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Account</a></li>
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Get started</a></li>
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Freelancers</a></li>
               </ul>
-            </div>
-            <div class="page-footer__menu-container">
+            </nav>
+            <nav class="page-footer__menu-container">
               <ul class="page-footer__menu">
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">News and events</a></li>
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Sitemap</a></li>
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Rules</a></li>
               </ul>
-            </div>
-            <div class="page-footer__copyright">
+            </nav>
+            <section class="page-footer__copyright">
               <p>© Freelance Exchange 2018</p>
               <p>4743866@mail.ru</p>
-            </div>
+            </section>
           </div>
         </footer>
       </div>
     </div>
     <div class="page-messaging">
-      <div class="messaging">
-        <div class="messaging__header">
+      <section class="messaging">
+        <header class="messaging__header">
           <h3 class="messaging__title">Sarah Brown</h3>
-        </div>
+        </header>
         <div class="messaging__body">
-          <div class="messaging__icons">
-            <div class="messaging__icon messaging__icon_chat"></div>
-            <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div>
-            <div class="messaging__icon messaging__icon_camera"></div>
+          <div class="messaging__icons"><span class="messaging__icon messaging__icon_chat"></span>
+            <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div><span class="messaging__icon messaging__icon_camera"></span>
           </div>
           <div class="messaging__incoming">
             <p class="messaging__incoming-paragraph">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
@@ -209,7 +194,7 @@
             <button class="button button_bg_secondary-shadow">REPLY</button>
           </form>
         </div>
-      </div>
+      </section>
       <div class="page-messaging__button"><i class="far fa-comments"></i></div>
     </div>
   <script type="text/javascript" src="https://morganalf.github.io/FlatUI/dist/main.js"></script></body>

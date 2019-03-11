@@ -12,6 +12,16 @@ include ../toggle/toggle
 include ../slider/slider
 include ../page-footer/page-footer
 
+block append meta
+  meta(name="keywords", content="Search freelancers, search " +
+      "best freelancers, find a developer, find a designer, find " +
+      "a seo copywriter")
+  meta(name="description", content="Search for the best developers, " +
+      "designers and copywriters throughout Russia at the best prices")
+
+block title
+  title Search freelancers
+
 block content
   .freelancers
     .container.freelancers__container

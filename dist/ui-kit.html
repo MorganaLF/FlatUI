@@ -9,10 +9,10 @@
   <link href="https://morganalf.github.io/FlatUI/dist/styles.css" rel="stylesheet"></head>
   <body>
     <div class="body-wrapper">
-      <div class="ui-kit">
+      <main class="ui-kit">
         <section class="ui-kit-standart-buttons">
           <div class="ui-kit-standart-buttons__title-container">
-            <h2 class="subheading">STANDARD BUTTONS</h2>
+            <h1 class="subheading">STANDARD BUTTONS</h1>
           </div>
           <div class="ui-kit-standart-buttons__buttons-container">
             <button class="button button_size_small button_bg_secondary">BUTTON</button>
@@ -46,7 +46,7 @@
             <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_right-secondary"></button>
           </div>
         </section>
-        <div class="ui-kit-percentages-and-charts">
+        <section class="ui-kit-percentages-and-charts">
           <div class="ui-kit-percentages-and-charts__title-container">
             <h2 class="subheading">PERCENTAGES / PIE CHART</h2>
           </div>
@@ -73,8 +73,8 @@
             </div>
             <div class="pie-chart ct-chart ct-square" data-series="30, 85, 100, 100"></div>
           </div>
-        </div>
-        <div class="ui-kit-sliders">
+        </section>
+        <section class="ui-kit-sliders">
           <div class="ui-kit-sliders__title-container">
             <h2 class="subheading">SLIDERS</h2>
           </div>
@@ -104,8 +104,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="ui-kit-stages">
+        </section>
+        <section class="ui-kit-stages">
           <div class="ui-kit-stages__title-container">
             <h2 class="subheading">STAGES</h2>
           </div>
@@ -122,7 +122,7 @@
               <li class="stage__item stage__item_inactive">5</li>
             </ul>
           </div>
-        </div>
+        </section>
         <section class="ui-kit-form-elements">
           <div class="ui-kit-form-elements__title-container">
             <h2 class="subheading">FORM ELEMENTS</h2>
@@ -145,34 +145,22 @@
             <div class="ui-kit-form-elements__col">
               <h2 class="subheading">TOGGLES</h2>
               <label class="toggle" for="toggle-1">
-                <input class="toggle__input" type="checkbox" id="toggle-1">
-                <div class="toggle__switch">
-                  <div class="toggle__switch--text">on</div>
-                  <div class="toggle__switch--round"></div>
-                  <div class="toggle__switch--text">off</div>
-                </div>
+                <input class="toggle__input" type="checkbox" id="toggle-1"><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
               </label>
               <label class="toggle" for="toggle-2">
-                <input class="toggle__input" type="checkbox" id="toggle-2" checked>
-                <div class="toggle__switch">
-                  <div class="toggle__switch--text">on</div>
-                  <div class="toggle__switch--round"></div>
-                  <div class="toggle__switch--text">off</div>
-                </div>
+                <input class="toggle__input" type="checkbox" id="toggle-2" checked><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
               </label>
               <h2 class="subheading">TICK BOXES</h2>
               <label class="tick-box">
-                <input class="tick-box__input" type="checkbox" checked>
-                <div class="tick-box__round"></div>
+                <input class="tick-box__input" type="checkbox" checked><span class="tick-box__round"></span>
               </label>
               <label class="tick-box">
-                <input class="tick-box__input" type="checkbox">
-                <div class="tick-box__round"></div>
+                <input class="tick-box__input" type="checkbox"><span class="tick-box__round"></span>
               </label>
             </div>
           </div>
         </section>
-        <div class="ui-kit-search-dropdown-user">
+        <section class="ui-kit-search-dropdown-user">
           <div class="ui-kit-search-dropdown-user__col">
             <h2 class="subheading">SEARCH / DROP DOWN</h2>
             <form class="search" action="" method="get">
@@ -197,30 +185,24 @@
             <div class="user">
               <div class="user__picture-container"><img class="user__picture" src="images/user-1.jpg"></div>
               <div class="user__info">
-                <div class="user__name">John Smith</div>
-                <div class="user__profession">UX DESIGNER</div>
-                <div class="user__social-icons">
-                  <div class="user__social-icon user__social-icon_1"></div>
-                  <div class="user__social-icon user__social-icon_2"></div>
-                  <div class="user__social-icon user__social-icon_3"></div>
+                <p class="user__name">John Smith</p>
+                <p class="user__profession">UX DESIGNER</p>
+                <div class="user__social-icons"><span class="user__social-icon user__social-icon_1"></span><span class="user__social-icon user__social-icon_2"></span><span class="user__social-icon user__social-icon_3"></span>
                 </div>
               </div>
             </div>
             <div class="user">
               <div class="user__picture-container"><img class="user__picture" src="images/user-2.jpg"></div>
               <div class="user__info user__info_bg_secondary">
-                <div class="user__name user__name_color_white">Sarah Brown</div>
-                <div class="user__profession user__profession_color_white">DEVELOPER</div>
-                <div class="user__social-icons">
-                  <div class="user__social-icon user__social-icon_1 user__social-icon_1-white"></div>
-                  <div class="user__social-icon user__social-icon_2 user__social-icon_2-white"></div>
-                  <div class="user__social-icon user__social-icon_3 user__social-icon_3-white"></div>
+                <p class="user__name user__name_color_white">Sarah Brown</p>
+                <p class="user__profession user__profession_color_white">DEVELOPER</p>
+                <div class="user__social-icons"><span class="user__social-icon user__social-icon_1 user__social-icon_1-white"></span><span class="user__social-icon user__social-icon_2 user__social-icon_2-white"></span><span class="user__social-icon user__social-icon_3 user__social-icon_3-white"></span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="ui-kit-news-and-events">
+        </section>
+        <section class="ui-kit-news-and-events">
           <div class="ui-kit-news-and-events__title-container">
             <h2 class="subheading">NEWS &amp; EVENTS</h2>
           </div>
@@ -247,16 +229,18 @@
               </article>
             </div>
           </div>
-        </div>
+        </section>
         <section class="ui-kit-location">
           <div class="ui-kit-location__title-container">
             <h2 class="subheading">LOCATION</h2>
           </div>
           <div class="map__container">
             <div class="map"></div>
-            <div class="map__footer">
-              <h3 class="map__title">Meet us!</h3>
-              <p class="map__adress"><span class="map__adress--span">1259  CALIFORNIA ST</span><span class="map__adress--span">San Francisco, CA</span></p>
+            <div class="map__footer"><span class="map__title">Meet us!</span>
+              <div class="map__adress">
+                <p class="map__adress--span">1259  CALIFORNIA ST</p>
+                <p class="map__adress--span">San Francisco, CA</p>
+              </div>
               <div class="map__buttons">
                 <button class="map__geolocation"></button>
                 <button class="map__add"></button>
@@ -264,7 +248,7 @@
             </div>
           </div>
         </section>
-        <div class="ui-kit-calendar-and-messaging">
+        <section class="ui-kit-calendar-and-messaging">
           <div class="ui-kit-calendar-and-messaging__col">
             <h2 class="subheading">CALENDAR</h2>
             <div class="calendar__container">
@@ -275,15 +259,13 @@
           </div>
           <div class="ui-kit-calendar-and-messaging__col">
             <h2 class="subheading">MESSAGING</h2>
-            <div class="messaging">
-              <div class="messaging__header">
+            <section class="messaging">
+              <header class="messaging__header">
                 <h3 class="messaging__title">Sarah Brown</h3>
-              </div>
+              </header>
               <div class="messaging__body">
-                <div class="messaging__icons">
-                  <div class="messaging__icon messaging__icon_chat"></div>
-                  <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div>
-                  <div class="messaging__icon messaging__icon_camera"></div>
+                <div class="messaging__icons"><span class="messaging__icon messaging__icon_chat"></span>
+                  <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div><span class="messaging__icon messaging__icon_camera"></span>
                 </div>
                 <div class="messaging__incoming">
                   <p class="messaging__incoming-paragraph">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
@@ -293,29 +275,29 @@
                   <button class="button button_bg_secondary-shadow">REPLY</button>
                 </form>
               </div>
-            </div>
+            </section>
           </div>
-        </div>
-        <div class="ui-kit-video">
+        </section>
+        <section class="ui-kit-video">
           <div class="ui-kit-video__title-container">
             <h2 class="subheading">VIDEO</h2>
           </div>
           <div class="player__wrapper">
             <video class="player" src="http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4" width="100%" preload="none"></video>
-            <div class="player__header">
-              <div class="player__title">New Zealand Landscapes Timelapse</div>
-              <div class="player__author">from Bevan Percival</div>
-            </div>
+            <header class="player__header">
+              <h3 class="player__title">New Zealand Landscapes Timelapse</h3>
+              <h4 class="player__author">from Bevan Percival</h4>
+            </header>
             <div class="player__footer">
-              <div class="player__play-button"></div>
+              <button class="player__play-button"></button>
               <div class="player__progress">
                 <div class="player__progress--full"></div>
               </div>
-              <div class="player__full-button"></div>
+              <button class="player__full-button"></button>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   <script type="text/javascript" src="https://morganalf.github.io/FlatUI/dist/main.js"></script></body>
 </html>

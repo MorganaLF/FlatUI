@@ -2,14 +2,16 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>FlatUI</title>
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta name="keywords" content="Search freelancers, search best freelancers, find a developer, find a designer, find a seo copywriter">
+    <meta name="description" content="Search for the best developers, designers and copywriters throughout Russia at the best prices">
+    <title>Search freelancers</title>
     <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://morganalf.github.io/FlatUI/dist/styles.css" rel="stylesheet"></head>
   <body>
     <div class="page-menu__container">
-      <div class="page-menu">
+      <nav class="page-menu">
         <ul class="menu">
           <li class="menu__item">
             <a class="button button_bg_secondary" href="index.html"><i class="fas fa-home"></i> home</a>
@@ -32,7 +34,7 @@
             <a class="button button_bg_secondary" href="contact.html"><i class="fas fa-map-marker-alt"></i> contact us</a>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
     <div class="mobile-menu">
       <div class="mobile-menu__button"><i class="fas fa-bars"></i></div>
@@ -40,16 +42,15 @@
     <div class="body-wrapper">
       <div class="freelancers">
         <div class="container freelancers__container">
-          <div class="freelancers__col">
+          <aside class="freelancers__col">
             <h2 class="subheading">search</h2>
             <form class="search" action="" method="get">
               <input class="search__input" type="search" name="search" placeholder="Search freelancers">
               <input class="search__button" type="submit" value="">
             </form>
             <h2 class="subheading">filter</h2>
-            <div class="freelancers__filter">
-              <div class="freelancers__filter-row">
-                <h3 class="freelancers__subtitle">Choose category</h3>
+            <section class="freelancers__filter">
+              <div class="freelancers__filter-row"><span class="freelancers__subtitle">Choose category</span>
                 <div class="dropdown__container">
                   <select class="dropdown" name="state" data-placeholder="Choose Category">
                     <option></option>
@@ -59,8 +60,7 @@
                   </select>
                 </div>
               </div>
-              <div class="freelancers__filter-row">
-                <h3 class="freelancers__subtitle">Min cost of work</h3>
+              <div class="freelancers__filter-row"><span class="freelancers__subtitle">Min cost of work</span>
                 <div class="slider__container">
                   <div class="slider" data-value="10">
                     <div class="custom-handle ui-slider-handle">
@@ -69,8 +69,7 @@
                   </div>
                 </div>
               </div>
-              <div class="freelancers__filter-row">
-                <h3 class="freelancers__subtitle">Max cost of work</h3>
+              <div class="freelancers__filter-row"><span class="freelancers__subtitle">Max cost of work</span>
                 <div class="slider__container">
                   <div class="slider" data-value="90">
                     <div class="custom-handle ui-slider-handle">
@@ -79,26 +78,24 @@
                   </div>
                 </div>
               </div>
-              <div class="freelancers__filter-row freelancers__filter-row_flex">
-                <h3 class="freelancers__subtitle">Show busy freelancers</h3>
+              <div class="freelancers__filter-row freelancers__filter-row_flex"><span class="freelancers__subtitle">Show busy freelancers</span>
                 <label class="tick-box">
-                  <input class="tick-box__input" type="checkbox" checked>
-                  <div class="tick-box__round"></div>
+                  <input class="tick-box__input" type="checkbox" checked><span class="tick-box__round"></span>
                 </label>
               </div>
-              <div class="freelancers__filter-row freelancers__filter-row_flex">
-                <h3 class="freelancers__subtitle">Show only best freelancers</h3>
+              <div class="freelancers__filter-row freelancers__filter-row_flex"><span class="freelancers__subtitle">Show only best freelancers</span>
                 <label class="tick-box">
-                  <input class="tick-box__input" type="checkbox">
-                  <div class="tick-box__round"></div>
+                  <input class="tick-box__input" type="checkbox"><span class="tick-box__round"></span>
                 </label>
               </div>
               <button class="button button_bg_primary">show results</button>
+            </section>
+          </aside>
+          <main class="freelancers__col">
+            <div class="freelancers__main-title">
+              <h1 class="subheading">search freelancers</h1>
             </div>
-          </div>
-          <div class="freelancers__col">
-            <h2 class="subheading">search freelancers</h2>
-            <div class="news-page__nav">
+            <nav class="news-page__nav">
               <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_left-secondary arrow-button_size_small"></button>
               <div class="news-page__nav-buttons">
                 <button class="button button_size_small button_bg_secondary">1</button>
@@ -108,144 +105,122 @@
                 <button class="button button_size_small button_bg_transparent-secondary">5</button>
               </div>
               <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_right-secondary arrow-button_size_small"></button>
-            </div>
-            <div class="freelancers__freelancer">
-              <div class="user">
-                <div class="user__picture-container"><img class="user__picture" src="images/user-1.jpg"></div>
-                <div class="user__info">
-                  <div class="user__name">John Smith</div>
-                  <div class="user__profession">UX DESIGNER</div>
-                  <div class="user__social-icons">
-                    <div class="user__social-icon user__social-icon_1"></div>
-                    <div class="user__social-icon user__social-icon_2"></div>
-                    <div class="user__social-icon user__social-icon_3"></div>
+            </nav>
+            <ul class="freelancers__list">
+              <li class="freelancers__freelancer">
+                <div class="user">
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-1.jpg"></div>
+                  <div class="user__info">
+                    <p class="user__name">John Smith</p>
+                    <p class="user__profession">UX DESIGNER</p>
+                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1"></span><span class="user__social-icon user__social-icon_2"></span><span class="user__social-icon user__social-icon_3"></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="freelancers__freelancer-footer"><span>Best freelancer!</span>
-                <button class="button button_bg_primary-shadow">hire</button>
-              </div>
-            </div>
-            <div class="freelancers__freelancer">
-              <div class="user">
-                <div class="user__picture-container"><img class="user__picture" src="images/user-2.jpg"></div>
-                <div class="user__info user__info_bg_secondary">
-                  <div class="user__name user__name_color_white">Sarah Brown</div>
-                  <div class="user__profession user__profession_color_white">DEVELOPER</div>
-                  <div class="user__social-icons">
-                    <div class="user__social-icon user__social-icon_1 user__social-icon_1-white"></div>
-                    <div class="user__social-icon user__social-icon_2 user__social-icon_2-white"></div>
-                    <div class="user__social-icon user__social-icon_3 user__social-icon_3-white"></div>
+                <div class="freelancers__freelancer-footer"><span>Best freelancer!</span>
+                  <button class="button button_bg_primary-shadow">hire</button>
+                </div>
+              </li>
+              <li class="freelancers__freelancer">
+                <div class="user">
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-2.jpg"></div>
+                  <div class="user__info user__info_bg_secondary">
+                    <p class="user__name user__name_color_white">Sarah Brown</p>
+                    <p class="user__profession user__profession_color_white">DEVELOPER</p>
+                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1 user__social-icon_1-white"></span><span class="user__social-icon user__social-icon_2 user__social-icon_2-white"></span><span class="user__social-icon user__social-icon_3 user__social-icon_3-white"></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="freelancers__freelancer-footer">
-                <button class="button button_bg_transparent-secondary">hire</button>
-              </div>
-            </div>
-            <div class="freelancers__freelancer">
-              <div class="user">
-                <div class="user__picture-container"><img class="user__picture" src="images/user-3.jpg"></div>
-                <div class="user__info user__info_bg_secondary">
-                  <div class="user__name user__name_color_white">Jane Taylor</div>
-                  <div class="user__profession user__profession_color_white">seo copywriter</div>
-                  <div class="user__social-icons">
-                    <div class="user__social-icon user__social-icon_1 user__social-icon_1-white"></div>
-                    <div class="user__social-icon user__social-icon_2 user__social-icon_2-white"></div>
-                    <div class="user__social-icon user__social-icon_3 user__social-icon_3-white"></div>
+                <div class="freelancers__freelancer-footer">
+                  <button class="button button_bg_transparent-secondary">hire</button>
+                </div>
+              </li>
+              <li class="freelancers__freelancer">
+                <div class="user">
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-3.jpg"></div>
+                  <div class="user__info user__info_bg_secondary">
+                    <p class="user__name user__name_color_white">Jane Taylor</p>
+                    <p class="user__profession user__profession_color_white">seo copywriter</p>
+                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1 user__social-icon_1-white"></span><span class="user__social-icon user__social-icon_2 user__social-icon_2-white"></span><span class="user__social-icon user__social-icon_3 user__social-icon_3-white"></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="freelancers__freelancer-footer">
-                <button class="button button_bg_transparent-secondary">hire</button>
-              </div>
-            </div>
-            <div class="freelancers__freelancer">
-              <div class="user">
-                <div class="user__picture-container"><img class="user__picture" src="images/user-4.jpg"></div>
-                <div class="user__info user__info_bg_secondary">
-                  <div class="user__name user__name_color_white">Grace Peters</div>
-                  <div class="user__profession user__profession_color_white">DEVELOPER</div>
-                  <div class="user__social-icons">
-                    <div class="user__social-icon user__social-icon_1 user__social-icon_1-white"></div>
-                    <div class="user__social-icon user__social-icon_2 user__social-icon_2-white"></div>
-                    <div class="user__social-icon user__social-icon_3 user__social-icon_3-white"></div>
+                <div class="freelancers__freelancer-footer">
+                  <button class="button button_bg_transparent-secondary">hire</button>
+                </div>
+              </li>
+              <li class="freelancers__freelancer">
+                <div class="user">
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-4.jpg"></div>
+                  <div class="user__info user__info_bg_secondary">
+                    <p class="user__name user__name_color_white">Grace Peters</p>
+                    <p class="user__profession user__profession_color_white">DEVELOPER</p>
+                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1 user__social-icon_1-white"></span><span class="user__social-icon user__social-icon_2 user__social-icon_2-white"></span><span class="user__social-icon user__social-icon_3 user__social-icon_3-white"></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="freelancers__freelancer-footer">
-                <button class="button button_bg_transparent-secondary">hire</button>
-              </div>
-            </div>
-            <div class="freelancers__freelancer">
-              <div class="user">
-                <div class="user__picture-container"><img class="user__picture" src="images/user-5.jpg"></div>
-                <div class="user__info">
-                  <div class="user__name">David Walton</div>
-                  <div class="user__profession">DEVELOPER</div>
-                  <div class="user__social-icons">
-                    <div class="user__social-icon user__social-icon_1"></div>
-                    <div class="user__social-icon user__social-icon_2"></div>
-                    <div class="user__social-icon user__social-icon_3"></div>
+                <div class="freelancers__freelancer-footer">
+                  <button class="button button_bg_transparent-secondary">hire</button>
+                </div>
+              </li>
+              <li class="freelancers__freelancer">
+                <div class="user">
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-5.jpg"></div>
+                  <div class="user__info">
+                    <p class="user__name">David Walton</p>
+                    <p class="user__profession">DEVELOPER</p>
+                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1"></span><span class="user__social-icon user__social-icon_2"></span><span class="user__social-icon user__social-icon_3"></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="freelancers__freelancer-footer"><span>Best freelancer!</span>
-                <button class="button button_bg_primary-shadow">hire</button>
-              </div>
-            </div>
-            <div class="freelancers__freelancer">
-              <div class="user">
-                <div class="user__picture-container"><img class="user__picture" src="images/user-6.jpg"></div>
-                <div class="user__info user__info_bg_secondary">
-                  <div class="user__name user__name_color_white">Peter Hoover</div>
-                  <div class="user__profession user__profession_color_white">DEVELOPER</div>
-                  <div class="user__social-icons">
-                    <div class="user__social-icon user__social-icon_1 user__social-icon_1-white"></div>
-                    <div class="user__social-icon user__social-icon_2 user__social-icon_2-white"></div>
-                    <div class="user__social-icon user__social-icon_3 user__social-icon_3-white"></div>
+                <div class="freelancers__freelancer-footer"><span>Best freelancer!</span>
+                  <button class="button button_bg_primary-shadow">hire</button>
+                </div>
+              </li>
+              <li class="freelancers__freelancer">
+                <div class="user">
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-6.jpg"></div>
+                  <div class="user__info user__info_bg_secondary">
+                    <p class="user__name user__name_color_white">Peter Hoover</p>
+                    <p class="user__profession user__profession_color_white">DEVELOPER</p>
+                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1 user__social-icon_1-white"></span><span class="user__social-icon user__social-icon_2 user__social-icon_2-white"></span><span class="user__social-icon user__social-icon_3 user__social-icon_3-white"></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="freelancers__freelancer-footer">
-                <button class="button button_bg_transparent-secondary">hire</button>
-              </div>
-            </div>
-            <div class="freelancers__freelancer">
-              <div class="user">
-                <div class="user__picture-container"><img class="user__picture" src="images/user-7.jpg"></div>
-                <div class="user__info user__info_bg_secondary">
-                  <div class="user__name user__name_color_white">George Dalton</div>
-                  <div class="user__profession user__profession_color_white">DESIGNER</div>
-                  <div class="user__social-icons">
-                    <div class="user__social-icon user__social-icon_1 user__social-icon_1-white"></div>
-                    <div class="user__social-icon user__social-icon_2 user__social-icon_2-white"></div>
-                    <div class="user__social-icon user__social-icon_3 user__social-icon_3-white"></div>
+                <div class="freelancers__freelancer-footer">
+                  <button class="button button_bg_transparent-secondary">hire</button>
+                </div>
+              </li>
+              <li class="freelancers__freelancer">
+                <div class="user">
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-7.jpg"></div>
+                  <div class="user__info user__info_bg_secondary">
+                    <p class="user__name user__name_color_white">George Dalton</p>
+                    <p class="user__profession user__profession_color_white">DESIGNER</p>
+                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1 user__social-icon_1-white"></span><span class="user__social-icon user__social-icon_2 user__social-icon_2-white"></span><span class="user__social-icon user__social-icon_3 user__social-icon_3-white"></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="freelancers__freelancer-footer">
-                <button class="button button_bg_transparent-secondary">hire</button>
-              </div>
-            </div>
-            <div class="freelancers__freelancer">
-              <div class="user">
-                <div class="user__picture-container"><img class="user__picture" src="images/user-8.jpg"></div>
-                <div class="user__info">
-                  <div class="user__name">Mary Charles</div>
-                  <div class="user__profession">seo copywriter</div>
-                  <div class="user__social-icons">
-                    <div class="user__social-icon user__social-icon_1"></div>
-                    <div class="user__social-icon user__social-icon_2"></div>
-                    <div class="user__social-icon user__social-icon_3"></div>
+                <div class="freelancers__freelancer-footer">
+                  <button class="button button_bg_transparent-secondary">hire</button>
+                </div>
+              </li>
+              <li class="freelancers__freelancer">
+                <div class="user">
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-8.jpg"></div>
+                  <div class="user__info">
+                    <p class="user__name">Mary Charles</p>
+                    <p class="user__profession">seo copywriter</p>
+                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1"></span><span class="user__social-icon user__social-icon_2"></span><span class="user__social-icon user__social-icon_3"></span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="freelancers__freelancer-footer"><span>Best freelancer!</span>
-                <button class="button button_bg_primary-shadow">hire</button>
-              </div>
-            </div>
-            <div class="news-page__nav">
+                <div class="freelancers__freelancer-footer"><span>Best freelancer!</span>
+                  <button class="button button_bg_primary-shadow">hire</button>
+                </div>
+              </li>
+            </ul>
+            <nav class="news-page__nav">
               <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_left-secondary arrow-button_size_small"></button>
               <div class="news-page__nav-buttons">
                 <button class="button button_size_small button_bg_secondary">1</button>
@@ -255,52 +230,50 @@
                 <button class="button button_size_small button_bg_transparent-secondary">5</button>
               </div>
               <button class="arrow-button arrow-button_bg_transparent-secondary arrow-button_arrow_right-secondary arrow-button_size_small"></button>
-            </div>
-          </div>
+            </nav>
+          </main>
         </div>
       </div>
       <div class="background-container">
         <footer class="page-footer">
           <div class="container page-footer__container">
-            <div class="page-footer__search-container">
+            <section class="page-footer__search-container">
               <h2 class="subheading">search on site</h2>
               <form class="search" action="" method="get">
                 <input class="search__input search__input_color_primary" type="search" name="search" placeholder="Search">
                 <input class="search__button" type="submit" value="">
               </form>
-            </div>
-            <div class="page-footer__menu-container">
+            </section>
+            <nav class="page-footer__menu-container">
               <ul class="page-footer__menu">
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Account</a></li>
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Get started</a></li>
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Freelancers</a></li>
               </ul>
-            </div>
-            <div class="page-footer__menu-container">
+            </nav>
+            <nav class="page-footer__menu-container">
               <ul class="page-footer__menu">
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">News and events</a></li>
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Sitemap</a></li>
                 <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Rules</a></li>
               </ul>
-            </div>
-            <div class="page-footer__copyright">
+            </nav>
+            <section class="page-footer__copyright">
               <p>© Freelance Exchange 2018</p>
               <p>4743866@mail.ru</p>
-            </div>
+            </section>
           </div>
         </footer>
       </div>
     </div>
     <div class="page-messaging">
-      <div class="messaging">
-        <div class="messaging__header">
+      <section class="messaging">
+        <header class="messaging__header">
           <h3 class="messaging__title">Sarah Brown</h3>
-        </div>
+        </header>
         <div class="messaging__body">
-          <div class="messaging__icons">
-            <div class="messaging__icon messaging__icon_chat"></div>
-            <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div>
-            <div class="messaging__icon messaging__icon_camera"></div>
+          <div class="messaging__icons"><span class="messaging__icon messaging__icon_chat"></span>
+            <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div><span class="messaging__icon messaging__icon_camera"></span>
           </div>
           <div class="messaging__incoming">
             <p class="messaging__incoming-paragraph">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
@@ -310,7 +283,7 @@
             <button class="button button_bg_secondary-shadow">REPLY</button>
           </form>
         </div>
-      </div>
+      </section>
       <div class="page-messaging__button"><i class="far fa-comments"></i></div>
     </div>
   <script type="text/javascript" src="https://morganalf.github.io/FlatUI/dist/main.js"></script></body>

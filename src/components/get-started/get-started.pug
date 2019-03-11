@@ -11,6 +11,15 @@ include ../get-started-registration/get-started-registration
 include ../player/player
 include ../page-footer/page-footer
 
+block append meta
+  meta(name="keywords", content="start working, start working as " +
+      "a freelancer, register at the freelancer exchange")
+  meta(name="description", content="Registration and search for " +
+      "orders on the exchange of freelancers")
+
+block title
+  title Get started
+
 block content
   main.container.get-started__container
     +subheading('how to start?', 'h1')
