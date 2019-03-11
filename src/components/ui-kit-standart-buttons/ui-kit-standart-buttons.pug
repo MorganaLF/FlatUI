@@ -5,17 +5,59 @@ mixin uiKitStandartButtons
     .ui-kit-standart-buttons__title-container
       +subheading("STANDARD BUTTONS", "h1")
     .ui-kit-standart-buttons__buttons-container
-      +button("BUTTON", "small", "secondary")
-      +button("BUTTON", "", "secondary")
-      +button("BUTTON", "", "primary")
-      +button("BUTTON", "small", "primary")
+      +button({
+        text: "BUTTON",
+        size: "small",
+        bg: "secondary"
+      })
+      +button({
+        text: "BUTTON",
+        bg: "secondary"
+      })
+      +button({
+        text: "BUTTON",
+        bg: "primary"
+      })
+      +button({
+        text: "BUTTON",
+        size: "small",
+        bg: "primary"
+      })
     .ui-kit-standart-buttons__buttons-container
-      +button("BUTTON", "small", "secondary-shadow")
-      +button("BUTTON", "", "secondary-shadow")
-      +button("BUTTON", "", "primary-shadow")
-      +button("BUTTON", "small", "primary-shadow")
+      +button({
+        text: "BUTTON",
+        size: "small",
+        bg: "secondary-shadow"
+      })
+      +button({
+        text: "BUTTON",
+        bg: "secondary-shadow"
+      })
+      +button({
+        text: "BUTTON",
+        bg: "primary-shadow"
+      })
+      +button({
+        text: "BUTTON",
+        size: "small",
+        bg: "primary-shadow"
+      })
     .ui-kit-standart-buttons__buttons-container
-      +button("BUTTON", "small", "transparent-secondary")
-      +button("BUTTON", "", "transparent-secondary")
-      +button("BUTTON", "", "transparent-primary")
-      +button("BUTTON", "small", "transparent-primary")
+      +button({
+        text: "BUTTON",
+        size: "small",
+        bg: "transparent-secondary"
+      })
+      +button({
+        text: "BUTTON",
+        bg: "transparent-secondary"
+      })
+      +button({
+        text: "BUTTON",
+        bg: "transparent-primary"
+      })
+      +button({
+        text: "BUTTON",
+        size: "small",
+        bg: "transparent-primary"
+      })

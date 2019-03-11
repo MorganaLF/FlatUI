@@ -11,6 +11,13 @@ mixin messaging
       .messaging__incoming
         p.messaging__incoming-paragraph
           | Hey! So are we cool to meet at the art gallery? Say 8pm
-      form.messaging__form
+      form.messaging__form(
+        action="mock-address/change-me",
+        method="post"
+      )
         textarea.messaging__textarea Yeah that sounds great. See you then.
-        +button("REPLY", "", "secondary-shadow")
+        +button({
+          text: "REPLY",
+          bg: "secondary-shadow",
+          type: "submit"
+        })

@@ -1,5 +1,7 @@
 mixin contact-form(textAlign, textarea=true)
   form.contact-form(
+      action="mock-address/change-me",
+      method="get",
       class=textAlign ? "contact-form_align_" + textAlign : ""
     )
     .contact-form__input-group
@@ -16,4 +18,8 @@ mixin contact-form(textAlign, textarea=true)
       textarea.contact-form__textarea(
           name="message", placeholder="Your Message"
         )
-    +button("SUBMIT", "", "secondary-shadow")
+    +button({
+      text: "SUBMIT",
+      bg: "secondary-shadow",
+      type: "submit"
+    })

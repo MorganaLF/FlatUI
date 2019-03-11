@@ -2,15 +2,18 @@ include ../toggle/toggle
 include ../slider/slider
 
 mixin accountSettings
-
-  ul.account-settings
-    li.account-settings__item Send e-mail
-      +toggle("settings-1", true)
-    li.account-settings__item Send sound
-      +toggle("settings-2", true)
-    li.account-settings__item Send e-mail
-      +toggle
-    li.account-settings__item Send sound
-      +toggle
-    li.account-settings__item Sound
-      +slider(false, true, "secondary", "70")
+  form.account-settings(
+    action="mock-address/change-me",
+    method="post"
+  )
+    ul.account-settings__list
+      li.account-settings__item Send e-mail
+        +toggle(true)
+      li.account-settings__item Send sound
+        +toggle(true)
+      li.account-settings__item Send e-mail
+        +toggle
+      li.account-settings__item Send sound
+        +toggle
+      li.account-settings__item Sound
+        +slider(false, true, "secondary", "70")

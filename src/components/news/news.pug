@@ -1,4 +1,4 @@
-include ../ui-kit-standart-buttons/ui-kit-standart-buttons
+include ../button/button
 
 mixin news(options)
   -var titleTag = options.titleTag || "h3"
@@ -19,4 +19,8 @@ mixin news(options)
         #{titleTag}.news__title.news__title_size_small= options.title
         p.news__description= options.description
         .news__button-container
-          +button("add to calendar", "small", "transparent-dark-secondary")
+          +button({
+            text: "add to calendar",
+            size: "small",
+            bg: "transparent-dark-secondary"
+          })

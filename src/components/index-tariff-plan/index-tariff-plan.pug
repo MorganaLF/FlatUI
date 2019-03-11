@@ -2,45 +2,66 @@ include ../toggle/toggle
 
 mixin indexTariffPlan
   .index-tariff-plan__container
-    .index-tariff-plan
+    form.index-tariff-plan(
+      action="mock-address/change-me",
+      method="post"
+    )
       h3.index-tariff-plan__title Lite
       ul.index-tariff-plan__list
         li.index-tariff-plan__list-item
           p.index-tariff-plan__text Unlimited applications
-          +toggle("tariff-plan-1", false, true)
+          +toggle(false, true)
         li.index-tariff-plan__list-item
           p.index-tariff-plan__text Unlimited categories
-          +toggle("tariff-plan-2", false, true)
+          +toggle(false, true)
         li.index-tariff-plan__list-item
           p.index-tariff-plan__text Commission from the order
-          +toggle("tariff-plan-3", true, true)
+          +toggle(true, true)
       .index-tariff-plan__button-container
-        +button("choose", "", "primary")
-    .index-tariff-plan
+        +button({
+          text: "choose",
+          bg: "primary",
+          type: "submit"
+        })
+    form.index-tariff-plan(
+      action="mock-address/change-me",
+      method="post"
+    )
       h3.index-tariff-plan__title Premium
       ul.index-tariff-plan__list
         li.index-tariff-plan__list-item
           p.index-tariff-plan__text Unlimited applications
-          +toggle("tariff-plan-4", true, true)
+          +toggle(true, true)
         li.index-tariff-plan__list-item
           p.index-tariff-plan__text Unlimited categories
-          +toggle("tariff-plan-5", true, true)
+          +toggle(true, true)
         li.index-tariff-plan__list-item
           p.index-tariff-plan__text Commission from the order
-          +toggle("tariff-plan-6", false, true)
+          +toggle(false, true)
       .index-tariff-plan__button-container
-        +button("choose", "", "primary")
-    .index-tariff-plan
+        +button({
+          text: "choose",
+          bg: "primary",
+          type: "submit"
+        })
+    form.index-tariff-plan(
+      action="mock-address/change-me",
+      method="post"
+    )
       h3.index-tariff-plan__title Standard
       ul.index-tariff-plan__list
         li.index-tariff-plan__list-item
           p.index-tariff-plan__text Unlimited applications
-          +toggle("tariff-plan-7", false, true)
+          +toggle(false, true)
         li.index-tariff-plan__list-item
           p.index-tariff-plan__text Unlimited categories
-          +toggle("tariff-plan-8", true, true)
+          +toggle(true, true)
         li.index-tariff-plan__list-item
           p.index-tariff-plan__text Commission from the order
-          +toggle("tariff-plan-9", true, true)
+          +toggle(true, true)
       .index-tariff-plan__button-container
-        +button("choose", "", "primary")
+        +button({
+          text: "choose",
+          bg: "primary",
+          type: "submit"
+        })

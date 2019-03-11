@@ -29,6 +29,10 @@ $(function() {
       setTimeout(function() { window.location.href = link; }, 650);
     }
 
+    if($(this).attr('type') === 'submit') {
+      let form = $(this).closest('form');
+      setTimeout(function() { form.submit() }, 650);
+    }
   }
 
   $('.button').each(function(){

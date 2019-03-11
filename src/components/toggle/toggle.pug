@@ -1,7 +1,7 @@
-mixin toggle(toggleId, isChecked, isDisabled)
-  label.toggle(for=toggleId)
+mixin toggle(isChecked, isDisabled)
+  label.toggle
     input.toggle__input(
-        type="checkbox", id=toggleId, checked=isChecked, disabled=isDisabled
+        type="checkbox", checked=isChecked, disabled=isDisabled
       )
     span.toggle__switch
       span.toggle__switch--text on
