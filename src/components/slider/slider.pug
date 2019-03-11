@@ -2,7 +2,7 @@ mixin slider(isTip, isScale, progressBg, value)
   .slider__container
     .slider(
         class=progressBg ?
-              'slider_is-progress slider_progress-bg_' + progressBg : ''
+              "slider_is-progress slider_progress-bg_" + progressBg : ""
         data-value=value ? value : 0
       )
       .custom-handle.ui-slider-handle

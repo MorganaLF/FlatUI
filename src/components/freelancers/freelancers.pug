@@ -26,85 +26,85 @@ block content
   .freelancers
     .container.freelancers__container
       aside.freelancers__col
-        +subheading('search')
-        +search('Search freelancers')
-        +subheading('filter')
+        +subheading("search")
+        +search("Search freelancers")
+        +subheading("filter")
         section.freelancers__filter
           .freelancers__filter-row
             span.freelancers__subtitle Choose category
             +dropdown({
-              'category-1': 'Web design',
-              'category-2': 'HTML',
-              'category-3': 'CMS'
+              "category-1": "Web design",
+              "category-2": "HTML",
+              "category-3": "CMS"
             },
-            'Choose Category')
+            "Choose Category")
           .freelancers__filter-row
             span.freelancers__subtitle Min cost of work
-            +slider(true, '', '', '10')
+            +slider(true, "", "", "10")
           .freelancers__filter-row
             span.freelancers__subtitle Max cost of work
-            +slider(true, '', '', '90')
+            +slider(true, "", "", "90")
           .freelancers__filter-row.freelancers__filter-row_flex
             span.freelancers__subtitle Show busy freelancers
             +tickBox(true)
           .freelancers__filter-row.freelancers__filter-row_flex
             span.freelancers__subtitle Show only best freelancers
             +tickBox
-          +button('show results', '', 'primary')
+          +button("show results", "", "primary")
       main.freelancers__col
         .freelancers__main-title
-          +subheading('search freelancers', 'h1')
+          +subheading("search freelancers", "h1")
         nav.news-page__nav
-          +arrowButton('transparent-secondary', 'left-secondary', false, 'small')
+          +arrowButton("transparent-secondary", "left-secondary", false, "small")
           .news-page__nav-buttons
-            +button('1', 'small', 'secondary')
-            +button('2', 'small', 'transparent-secondary')
-            +button('3', 'small', 'transparent-secondary')
-            +button('4', 'small', 'transparent-secondary')
-            +button('5', 'small', 'transparent-secondary')
-          +arrowButton('transparent-secondary', 'right-secondary', false, 'small')
+            +button("1", "small", "secondary")
+            +button("2", "small", "transparent-secondary")
+            +button("3", "small", "transparent-secondary")
+            +button("4", "small", "transparent-secondary")
+            +button("5", "small", "transparent-secondary")
+          +arrowButton("transparent-secondary", "right-secondary", false, "small")
         ul.freelancers__list
           li.freelancers__freelancer
-            +user('user-1', 'John Smith', 'UX DESIGNER')
+            +user("user-1", "John Smith", "UX DESIGNER")
             .freelancers__freelancer-footer
               span Best freelancer!
-              +button('hire', '', 'primary-shadow')
+              +button("hire", "", "primary-shadow")
           li.freelancers__freelancer
-            +user('user-2', 'Sarah Brown', 'DEVELOPER', 'secondary')
+            +user("user-2", "Sarah Brown", "DEVELOPER", "secondary")
             .freelancers__freelancer-footer
-              +button('hire', '', 'transparent-secondary')
+              +button("hire", "", "transparent-secondary")
           li.freelancers__freelancer
-            +user('user-3', 'Jane Taylor', 'seo copywriter', 'secondary')
+            +user("user-3", "Jane Taylor", "seo copywriter", "secondary")
             .freelancers__freelancer-footer
-              +button('hire', '', 'transparent-secondary')
+              +button("hire", "", "transparent-secondary")
           li.freelancers__freelancer
-            +user('user-4', 'Grace Peters', 'DEVELOPER', 'secondary')
+            +user("user-4", "Grace Peters", "DEVELOPER", "secondary")
             .freelancers__freelancer-footer
-              +button('hire', '', 'transparent-secondary')
+              +button("hire", "", "transparent-secondary")
           li.freelancers__freelancer
-            +user('user-5', 'David Walton', 'DEVELOPER')
-            .freelancers__freelancer-footer
-              span Best freelancer!
-              +button('hire', '', 'primary-shadow')
-          li.freelancers__freelancer
-            +user('user-6', 'Peter Hoover', 'DEVELOPER', 'secondary')
-            .freelancers__freelancer-footer
-              +button('hire', '', 'transparent-secondary')
-          li.freelancers__freelancer
-            +user('user-7', 'George Dalton', 'DESIGNER', 'secondary')
-            .freelancers__freelancer-footer
-              +button('hire', '', 'transparent-secondary')
-          li.freelancers__freelancer
-            +user('user-8', 'Mary Charles', 'seo copywriter')
+            +user("user-5", "David Walton", "DEVELOPER")
             .freelancers__freelancer-footer
               span Best freelancer!
-              +button('hire', '', 'primary-shadow')
+              +button("hire", "", "primary-shadow")
+          li.freelancers__freelancer
+            +user("user-6", "Peter Hoover", "DEVELOPER", "secondary")
+            .freelancers__freelancer-footer
+              +button("hire", "", "transparent-secondary")
+          li.freelancers__freelancer
+            +user("user-7", "George Dalton", "DESIGNER", "secondary")
+            .freelancers__freelancer-footer
+              +button("hire", "", "transparent-secondary")
+          li.freelancers__freelancer
+            +user("user-8", "Mary Charles", "seo copywriter")
+            .freelancers__freelancer-footer
+              span Best freelancer!
+              +button("hire", "", "primary-shadow")
         nav.news-page__nav
-          +arrowButton('transparent-secondary', 'left-secondary', false, 'small')
+          +arrowButton("transparent-secondary", "left-secondary", false, "small")
           .news-page__nav-buttons
-            +button('1', 'small', 'secondary')
-            +button('2', 'small', 'transparent-secondary')
-            +button('3', 'small', 'transparent-secondary')
-            +button('4', 'small', 'transparent-secondary')
-            +button('5', 'small', 'transparent-secondary')
-          +arrowButton('transparent-secondary', 'right-secondary', false, 'small')
+            +button("1", "small", "secondary")
+            +button("2", "small", "transparent-secondary")
+            +button("3", "small", "transparent-secondary")
+            +button("4", "small", "transparent-secondary")
+            +button("5", "small", "transparent-secondary")
+          +arrowButton("transparent-secondary", "right-secondary", false, "small")

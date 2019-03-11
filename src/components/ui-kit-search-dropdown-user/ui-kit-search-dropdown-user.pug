@@ -6,16 +6,16 @@ include ../user/user
 mixin uiKitSearchDropdownUser
   section.ui-kit-search-dropdown-user
     .ui-kit-search-dropdown-user__col
-      +subheading('SEARCH / DROP DOWN')
-      +search('Search')
-      +search('I’ve not found what I’m looking for...', 'primary')
+      +subheading("SEARCH / DROP DOWN")
+      +search("Search")
+      +search("I’ve not found what I’m looking for...", "primary")
       +dropdown({
-        '1': 'Option 1',
-        '2': 'Option 2',
-        '3': 'Option 3'
+        "1": "Option 1",
+        "2": "Option 2",
+        "3": "Option 3"
       },
-      'Choose An Option')
+      "Choose An Option")
     .ui-kit-search-dropdown-user__col
-      +subheading('USER PROFILE')
-      +user('user-1', 'John Smith', 'UX DESIGNER')
-      +user('user-2', 'Sarah Brown', 'DEVELOPER', 'secondary')
+      +subheading("USER PROFILE")
+      +user("user-1", "John Smith", "UX DESIGNER")
+      +user("user-2", "Sarah Brown", "DEVELOPER", "secondary")

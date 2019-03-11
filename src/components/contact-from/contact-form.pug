@@ -1,19 +1,19 @@
 mixin contact-form(textAlign, textarea=true)
   form.contact-form(
-      class=textAlign ? 'contact-form_align_' + textAlign : ''
+      class=textAlign ? "contact-form_align_" + textAlign : ""
     )
     .contact-form__input-group
       input.contact-form__input(
-          type='text', name='name', placeholder='Your Name'
+          type="text", name="name", placeholder="Your Name"
         )
       .contact-form__tip ERROR
     .contact-form__input-group
       input.contact-form__input(
-          type='email', name='email', placeholder='Your Email'
+          type="email", name="email", placeholder="Your Email"
         )
       .contact-form__tip.contact-form__tip_bg_secondary THANKS!
     if (textarea)
       textarea.contact-form__textarea(
-          name='message', placeholder='Your Message'
+          name="message", placeholder="Your Message"
         )
-    +button('SUBMIT', '', 'secondary-shadow')
+    +button("SUBMIT", "", "secondary-shadow")
