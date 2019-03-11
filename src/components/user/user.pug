@@ -1,4 +1,10 @@
 mixin user(imageSrc, name, profession, bgColor, size)
+  -
+    var links = [
+                "https://www.facebook.com/",
+                "https://twitter.com/",
+                "https://dribbble.com/"
+    ];
   .user(class=size ? "user_size_" + size : "")
     .user__picture-container
       img.user__picture(src="images/" + imageSrc + ".jpg" alt="User photo")
@@ -9,7 +15,10 @@ mixin user(imageSrc, name, profession, bgColor, size)
       )= profession
       .user__social-icons
         -for(var i = 1; i <= 3; i++)
-          span.user__social-icon(
+          a.user__social-icon(
+            href=links[i - 1]
+            target="_blank"
+            rel="noopener noreferrer"
             class=bgColor ?
                   "user__social-icon_" + i + " " +
                   "user__social-icon_" + i + "-white" :
