@@ -1,7 +1,7 @@
 mixin user(imageSrc, name, profession, bgColor, size)
   .user(class=size ? "user_size_" + size : "")
     .user__picture-container
-      img.user__picture(src="images/" + imageSrc + ".jpg")
+      img.user__picture(src="images/" + imageSrc + ".jpg" alt="User photo")
     .user__info(class=bgColor ? "user__info_bg_" + bgColor : "")
       p.user__name(class=bgColor ? "user__name_color_white" : "")= name
       p.user__profession(
