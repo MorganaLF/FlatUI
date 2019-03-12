@@ -1,9 +1,10 @@
-mixin search(placeholderText, searchBg)
+mixin search(placeholderText, searchBg, isAutofocus)
   form.search(action="mock-address/change-me", method="get")
     input.search__input(
         type="search",
         name="search",
         placeholder=placeholderText,
         class=searchBg ? "search__input_color_" + searchBg : ""
+        autofocus=isAutofocus
       )
     input.search__button(type="submit", value="")

@@ -1,4 +1,4 @@
-mixin contact-form(textAlign, textarea=true)
+mixin contact-form(textAlign, textarea=true, isAutofocus)
   form.contact-form(
       action="mock-address/change-me",
       method="get",
@@ -6,7 +6,7 @@ mixin contact-form(textAlign, textarea=true)
     )
     .contact-form__input-group
       input.contact-form__input(
-          type="text", name="name", placeholder="Your Name"
+          type="text", name="name", placeholder="Your Name", autofocus=isAutofocus
         )
       .contact-form__tip ERROR
     .contact-form__input-group
