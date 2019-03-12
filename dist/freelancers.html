@@ -28,7 +28,7 @@
             <a class="button button_bg_secondary" href="freelancers.html"><i class="fas fa-users"></i> freelancers</a>
           </li>
           <li class="menu__item">
-            <a class="button button_bg_secondary" href="index-news-page.html"><i class="far fa-file-alt"></i> news and events</a>
+            <a class="button button_bg_secondary" href="news.html"><i class="far fa-file-alt"></i> news and events</a>
           </li>
           <li class="menu__item">
             <a class="button button_bg_secondary" href="contact.html"><i class="fas fa-map-marker-alt"></i> contact us</a>
@@ -44,19 +44,19 @@
         <div class="container freelancers__container">
           <aside class="freelancers__col">
             <h2 class="subheading">search</h2>
-            <form class="search" action="" method="get">
-              <input class="search__input" type="search" name="search" placeholder="Search freelancers">
+            <form class="search" action="mock-address/change-me" method="get">
+              <input class="search__input" type="search" name="search" placeholder="Search freelancers" autofocus>
               <input class="search__button" type="submit" value="">
             </form>
             <h2 class="subheading">filter</h2>
-            <section class="freelancers__filter">
+            <form class="freelancers__filter" action="mock-address/change-me" method="get">
               <div class="freelancers__filter-row"><span class="freelancers__subtitle">Choose category</span>
                 <div class="dropdown__container">
                   <select class="dropdown" name="state" data-placeholder="Choose Category">
-                    <option></option>
-                    <option value="category-1">Web design</option>
-                    <option value="category-2">HTML</option>
-                    <option value="category-3">CMS</option>
+                    <option class="dropdown__option_hidden"></option>
+                    <option class="dropdown__option_hidden" value="category-1">Web design</option>
+                    <option class="dropdown__option_hidden" value="category-2">HTML</option>
+                    <option class="dropdown__option_hidden" value="category-3">CMS</option>
                   </select>
                 </div>
               </div>
@@ -88,8 +88,8 @@
                   <input class="tick-box__input" type="checkbox"><span class="tick-box__round"></span>
                 </label>
               </div>
-              <button class="button button_bg_primary">show results</button>
-            </section>
+              <button class="button button_bg_primary" type="submit">show results</button>
+            </form>
           </aside>
           <main class="freelancers__col">
             <div class="freelancers__main-title">
@@ -109,25 +109,25 @@
             <ul class="freelancers__list">
               <li class="freelancers__freelancer">
                 <div class="user">
-                  <div class="user__picture-container"><img class="user__picture" src="images/user-1.jpg"></div>
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-1.jpg" alt="User photo"></div>
                   <div class="user__info">
                     <p class="user__name">John Smith</p>
                     <p class="user__profession">UX DESIGNER</p>
-                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1"></span><span class="user__social-icon user__social-icon_2"></span><span class="user__social-icon user__social-icon_3"></span>
+                    <div class="user__social-icons"><a class="user__social-icon user__social-icon_1" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_2" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_3" href="https://dribbble.com/" target="_blank" rel="noopener noreferrer"></a>
                     </div>
                   </div>
                 </div>
-                <div class="freelancers__freelancer-footer"><span>Best freelancer!</span>
+                <div class="freelancers__freelancer-footer"><span class="freelancers__notification">Best freelancer!</span>
                   <button class="button button_bg_primary-shadow">hire</button>
                 </div>
               </li>
               <li class="freelancers__freelancer">
                 <div class="user">
-                  <div class="user__picture-container"><img class="user__picture" src="images/user-2.jpg"></div>
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-2.jpg" alt="User photo"></div>
                   <div class="user__info user__info_bg_secondary">
                     <p class="user__name user__name_color_white">Sarah Brown</p>
                     <p class="user__profession user__profession_color_white">DEVELOPER</p>
-                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1 user__social-icon_1-white"></span><span class="user__social-icon user__social-icon_2 user__social-icon_2-white"></span><span class="user__social-icon user__social-icon_3 user__social-icon_3-white"></span>
+                    <div class="user__social-icons"><a class="user__social-icon user__social-icon_1 user__social-icon_1-white" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_2 user__social-icon_2-white" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_3 user__social-icon_3-white" href="https://dribbble.com/" target="_blank" rel="noopener noreferrer"></a>
                     </div>
                   </div>
                 </div>
@@ -137,11 +137,11 @@
               </li>
               <li class="freelancers__freelancer">
                 <div class="user">
-                  <div class="user__picture-container"><img class="user__picture" src="images/user-3.jpg"></div>
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-3.jpg" alt="User photo"></div>
                   <div class="user__info user__info_bg_secondary">
                     <p class="user__name user__name_color_white">Jane Taylor</p>
                     <p class="user__profession user__profession_color_white">seo copywriter</p>
-                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1 user__social-icon_1-white"></span><span class="user__social-icon user__social-icon_2 user__social-icon_2-white"></span><span class="user__social-icon user__social-icon_3 user__social-icon_3-white"></span>
+                    <div class="user__social-icons"><a class="user__social-icon user__social-icon_1 user__social-icon_1-white" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_2 user__social-icon_2-white" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_3 user__social-icon_3-white" href="https://dribbble.com/" target="_blank" rel="noopener noreferrer"></a>
                     </div>
                   </div>
                 </div>
@@ -151,11 +151,11 @@
               </li>
               <li class="freelancers__freelancer">
                 <div class="user">
-                  <div class="user__picture-container"><img class="user__picture" src="images/user-4.jpg"></div>
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-4.jpg" alt="User photo"></div>
                   <div class="user__info user__info_bg_secondary">
                     <p class="user__name user__name_color_white">Grace Peters</p>
                     <p class="user__profession user__profession_color_white">DEVELOPER</p>
-                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1 user__social-icon_1-white"></span><span class="user__social-icon user__social-icon_2 user__social-icon_2-white"></span><span class="user__social-icon user__social-icon_3 user__social-icon_3-white"></span>
+                    <div class="user__social-icons"><a class="user__social-icon user__social-icon_1 user__social-icon_1-white" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_2 user__social-icon_2-white" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_3 user__social-icon_3-white" href="https://dribbble.com/" target="_blank" rel="noopener noreferrer"></a>
                     </div>
                   </div>
                 </div>
@@ -165,25 +165,25 @@
               </li>
               <li class="freelancers__freelancer">
                 <div class="user">
-                  <div class="user__picture-container"><img class="user__picture" src="images/user-5.jpg"></div>
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-5.jpg" alt="User photo"></div>
                   <div class="user__info">
                     <p class="user__name">David Walton</p>
                     <p class="user__profession">DEVELOPER</p>
-                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1"></span><span class="user__social-icon user__social-icon_2"></span><span class="user__social-icon user__social-icon_3"></span>
+                    <div class="user__social-icons"><a class="user__social-icon user__social-icon_1" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_2" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_3" href="https://dribbble.com/" target="_blank" rel="noopener noreferrer"></a>
                     </div>
                   </div>
                 </div>
-                <div class="freelancers__freelancer-footer"><span>Best freelancer!</span>
+                <div class="freelancers__freelancer-footer"><span class="freelancers__notification">Best freelancer!</span>
                   <button class="button button_bg_primary-shadow">hire</button>
                 </div>
               </li>
               <li class="freelancers__freelancer">
                 <div class="user">
-                  <div class="user__picture-container"><img class="user__picture" src="images/user-6.jpg"></div>
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-6.jpg" alt="User photo"></div>
                   <div class="user__info user__info_bg_secondary">
                     <p class="user__name user__name_color_white">Peter Hoover</p>
                     <p class="user__profession user__profession_color_white">DEVELOPER</p>
-                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1 user__social-icon_1-white"></span><span class="user__social-icon user__social-icon_2 user__social-icon_2-white"></span><span class="user__social-icon user__social-icon_3 user__social-icon_3-white"></span>
+                    <div class="user__social-icons"><a class="user__social-icon user__social-icon_1 user__social-icon_1-white" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_2 user__social-icon_2-white" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_3 user__social-icon_3-white" href="https://dribbble.com/" target="_blank" rel="noopener noreferrer"></a>
                     </div>
                   </div>
                 </div>
@@ -193,11 +193,11 @@
               </li>
               <li class="freelancers__freelancer">
                 <div class="user">
-                  <div class="user__picture-container"><img class="user__picture" src="images/user-7.jpg"></div>
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-7.jpg" alt="User photo"></div>
                   <div class="user__info user__info_bg_secondary">
                     <p class="user__name user__name_color_white">George Dalton</p>
                     <p class="user__profession user__profession_color_white">DESIGNER</p>
-                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1 user__social-icon_1-white"></span><span class="user__social-icon user__social-icon_2 user__social-icon_2-white"></span><span class="user__social-icon user__social-icon_3 user__social-icon_3-white"></span>
+                    <div class="user__social-icons"><a class="user__social-icon user__social-icon_1 user__social-icon_1-white" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_2 user__social-icon_2-white" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_3 user__social-icon_3-white" href="https://dribbble.com/" target="_blank" rel="noopener noreferrer"></a>
                     </div>
                   </div>
                 </div>
@@ -207,15 +207,15 @@
               </li>
               <li class="freelancers__freelancer">
                 <div class="user">
-                  <div class="user__picture-container"><img class="user__picture" src="images/user-8.jpg"></div>
+                  <div class="user__picture-container"><img class="user__picture" src="images/user-8.jpg" alt="User photo"></div>
                   <div class="user__info">
                     <p class="user__name">Mary Charles</p>
                     <p class="user__profession">seo copywriter</p>
-                    <div class="user__social-icons"><span class="user__social-icon user__social-icon_1"></span><span class="user__social-icon user__social-icon_2"></span><span class="user__social-icon user__social-icon_3"></span>
+                    <div class="user__social-icons"><a class="user__social-icon user__social-icon_1" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_2" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_3" href="https://dribbble.com/" target="_blank" rel="noopener noreferrer"></a>
                     </div>
                   </div>
                 </div>
-                <div class="freelancers__freelancer-footer"><span>Best freelancer!</span>
+                <div class="freelancers__freelancer-footer"><span class="freelancers__notification">Best freelancer!</span>
                   <button class="button button_bg_primary-shadow">hire</button>
                 </div>
               </li>
@@ -239,28 +239,27 @@
           <div class="container page-footer__container">
             <section class="page-footer__search-container">
               <h2 class="subheading">search on site</h2>
-              <form class="search" action="" method="get">
+              <form class="search" action="mock-address/change-me" method="get">
                 <input class="search__input search__input_color_primary" type="search" name="search" placeholder="Search">
                 <input class="search__button" type="submit" value="">
               </form>
             </section>
             <nav class="page-footer__menu-container">
               <ul class="page-footer__menu">
-                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Account</a></li>
-                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Get started</a></li>
-                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Freelancers</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="account.html">Account</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="get-started.html">Get started</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="freelancers.html">Freelancers</a></li>
               </ul>
             </nav>
             <nav class="page-footer__menu-container">
               <ul class="page-footer__menu">
-                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">News and events</a></li>
-                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Sitemap</a></li>
-                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Rules</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="news.html">News and events</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="mock-address/change-me">Sitemap</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="mock-address/change-me">Rules</a></li>
               </ul>
             </nav>
             <section class="page-footer__copyright">
-              <p>© Freelance Exchange 2018</p>
-              <p>4743866@mail.ru</p>
+              <p class="page-footer__copyright-text">© Freelance Exchange 2018</p><a class="page-footer__copyright-link" href="mailto: 4743866@mail.ru">4743866@mail.ru</a>
             </section>
           </div>
         </footer>
@@ -273,14 +272,14 @@
         </header>
         <div class="messaging__body">
           <div class="messaging__icons"><span class="messaging__icon messaging__icon_chat"></span>
-            <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div><span class="messaging__icon messaging__icon_camera"></span>
+            <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg" alt="Photo"></div><span class="messaging__icon messaging__icon_camera"></span>
           </div>
           <div class="messaging__incoming">
             <p class="messaging__incoming-paragraph">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
           </div>
-          <form>
+          <form class="messaging__form" action="mock-address/change-me" method="post">
             <textarea class="messaging__textarea">Yeah that sounds great. See you then.</textarea>
-            <button class="button button_bg_secondary-shadow">REPLY</button>
+            <button class="button button_bg_secondary-shadow" type="submit">REPLY</button>
           </form>
         </div>
       </section>

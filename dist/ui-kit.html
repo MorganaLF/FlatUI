@@ -129,7 +129,7 @@
           </div>
           <div class="ui-kit-form-elements__container">
             <div class="ui-kit-form-elements__col">
-              <form class="contact-form">
+              <form class="contact-form" action="mock-address/change-me" method="get">
                 <div class="contact-form__input-group">
                   <input class="contact-form__input" type="text" name="name" placeholder="Your Name">
                   <div class="contact-form__tip">ERROR</div>
@@ -139,16 +139,16 @@
                   <div class="contact-form__tip contact-form__tip_bg_secondary">THANKS!</div>
                 </div>
                 <textarea class="contact-form__textarea" name="message" placeholder="Your Message"></textarea>
-                <button class="button button_bg_secondary-shadow">SUBMIT</button>
+                <button class="button button_bg_secondary-shadow" type="submit">SUBMIT</button>
               </form>
             </div>
             <div class="ui-kit-form-elements__col">
               <h2 class="subheading">TOGGLES</h2>
-              <label class="toggle" for="toggle-1">
-                <input class="toggle__input" type="checkbox" id="toggle-1"><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
+              <label class="toggle">
+                <input class="toggle__input" type="checkbox"><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
               </label>
-              <label class="toggle" for="toggle-2">
-                <input class="toggle__input" type="checkbox" id="toggle-2" checked><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
+              <label class="toggle">
+                <input class="toggle__input" type="checkbox" checked><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
               </label>
               <h2 class="subheading">TICK BOXES</h2>
               <label class="tick-box">
@@ -163,40 +163,40 @@
         <section class="ui-kit-search-dropdown-user">
           <div class="ui-kit-search-dropdown-user__col">
             <h2 class="subheading">SEARCH / DROP DOWN</h2>
-            <form class="search" action="" method="get">
+            <form class="search" action="mock-address/change-me" method="get">
               <input class="search__input" type="search" name="search" placeholder="Search">
               <input class="search__button" type="submit" value="">
             </form>
-            <form class="search" action="" method="get">
+            <form class="search" action="mock-address/change-me" method="get">
               <input class="search__input search__input_color_primary" type="search" name="search" placeholder="I’ve not found what I’m looking for...">
               <input class="search__button" type="submit" value="">
             </form>
             <div class="dropdown__container">
               <select class="dropdown" name="state" data-placeholder="Choose An Option">
-                <option></option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+                <option class="dropdown__option_hidden"></option>
+                <option class="dropdown__option_hidden" value="1">Option 1</option>
+                <option class="dropdown__option_hidden" value="2">Option 2</option>
+                <option class="dropdown__option_hidden" value="3">Option 3</option>
               </select>
             </div>
           </div>
           <div class="ui-kit-search-dropdown-user__col">
             <h2 class="subheading">USER PROFILE</h2>
             <div class="user">
-              <div class="user__picture-container"><img class="user__picture" src="images/user-1.jpg"></div>
+              <div class="user__picture-container"><img class="user__picture" src="images/user-1.jpg" alt="User photo"></div>
               <div class="user__info">
                 <p class="user__name">John Smith</p>
                 <p class="user__profession">UX DESIGNER</p>
-                <div class="user__social-icons"><span class="user__social-icon user__social-icon_1"></span><span class="user__social-icon user__social-icon_2"></span><span class="user__social-icon user__social-icon_3"></span>
+                <div class="user__social-icons"><a class="user__social-icon user__social-icon_1" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_2" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_3" href="https://dribbble.com/" target="_blank" rel="noopener noreferrer"></a>
                 </div>
               </div>
             </div>
             <div class="user">
-              <div class="user__picture-container"><img class="user__picture" src="images/user-2.jpg"></div>
+              <div class="user__picture-container"><img class="user__picture" src="images/user-2.jpg" alt="User photo"></div>
               <div class="user__info user__info_bg_secondary">
                 <p class="user__name user__name_color_white">Sarah Brown</p>
                 <p class="user__profession user__profession_color_white">DEVELOPER</p>
-                <div class="user__social-icons"><span class="user__social-icon user__social-icon_1 user__social-icon_1-white"></span><span class="user__social-icon user__social-icon_2 user__social-icon_2-white"></span><span class="user__social-icon user__social-icon_3 user__social-icon_3-white"></span>
+                <div class="user__social-icons"><a class="user__social-icon user__social-icon_1 user__social-icon_1-white" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_2 user__social-icon_2-white" href="https://twitter.com/" target="_blank" rel="noopener noreferrer"></a><a class="user__social-icon user__social-icon_3 user__social-icon_3-white" href="https://dribbble.com/" target="_blank" rel="noopener noreferrer"></a>
                 </div>
               </div>
             </div>
@@ -265,14 +265,14 @@
               </header>
               <div class="messaging__body">
                 <div class="messaging__icons"><span class="messaging__icon messaging__icon_chat"></span>
-                  <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div><span class="messaging__icon messaging__icon_camera"></span>
+                  <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg" alt="Photo"></div><span class="messaging__icon messaging__icon_camera"></span>
                 </div>
                 <div class="messaging__incoming">
                   <p class="messaging__incoming-paragraph">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
                 </div>
-                <form>
+                <form class="messaging__form" action="mock-address/change-me" method="post">
                   <textarea class="messaging__textarea">Yeah that sounds great. See you then.</textarea>
-                  <button class="button button_bg_secondary-shadow">REPLY</button>
+                  <button class="button button_bg_secondary-shadow" type="submit">REPLY</button>
                 </form>
               </div>
             </section>

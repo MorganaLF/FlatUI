@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="keywords" content="freelance-exchange, online job, remote fob">
+    <meta name="description" content="Remote job search for freelancer, developer, designer, copywriter">
     <title>Freelance-exchange</title>
     <script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
@@ -28,7 +28,7 @@
             <a class="button button_bg_secondary" href="freelancers.html"><i class="fas fa-users"></i> freelancers</a>
           </li>
           <li class="menu__item">
-            <a class="button button_bg_secondary" href="index-news-page.html"><i class="far fa-file-alt"></i> news and events</a>
+            <a class="button button_bg_secondary" href="news.html"><i class="far fa-file-alt"></i> news and events</a>
           </li>
           <li class="menu__item">
             <a class="button button_bg_secondary" href="contact.html"><i class="fas fa-map-marker-alt"></i> contact us</a>
@@ -44,8 +44,8 @@
         <h1 class="page-header__title">Welcome to our awesome freelance-exchange!</h1>
         <div class="page-header__search-container">
           <p class="page-header__search-title">Find new orders!</p>
-          <form class="search" action="" method="get">
-            <input class="search__input" type="search" name="search" placeholder="search orders...">
+          <form class="search" action="mock-address/change-me" method="get">
+            <input class="search__input" type="search" name="search" placeholder="search orders..." autofocus>
             <input class="search__button" type="submit" value="">
           </form>
         </div>
@@ -53,84 +53,84 @@
       <div class="container">
         <h2 class="subheading">choose your tariff plan</h2>
         <div class="index-tariff-plan__container">
-          <div class="index-tariff-plan">
+          <form class="index-tariff-plan" action="mock-address/change-me" method="post">
             <h3 class="index-tariff-plan__title">Lite</h3>
             <ul class="index-tariff-plan__list">
               <li class="index-tariff-plan__list-item">
                 <p class="index-tariff-plan__text">Unlimited applications</p>
-                <label class="toggle" for="tariff-plan-1">
-                  <input class="toggle__input" type="checkbox" id="tariff-plan-1" disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox" disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                 </label>
               </li>
               <li class="index-tariff-plan__list-item">
                 <p class="index-tariff-plan__text">Unlimited categories</p>
-                <label class="toggle" for="tariff-plan-2">
-                  <input class="toggle__input" type="checkbox" id="tariff-plan-2" disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox" disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                 </label>
               </li>
               <li class="index-tariff-plan__list-item">
                 <p class="index-tariff-plan__text">Commission from the order</p>
-                <label class="toggle" for="tariff-plan-3">
-                  <input class="toggle__input" type="checkbox" id="tariff-plan-3" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                 </label>
               </li>
             </ul>
             <div class="index-tariff-plan__button-container">
-              <button class="button button_bg_primary">choose</button>
+              <button class="button button_bg_primary" type="submit">choose</button>
             </div>
-          </div>
-          <div class="index-tariff-plan">
+          </form>
+          <form class="index-tariff-plan" action="mock-address/change-me" method="post">
             <h3 class="index-tariff-plan__title">Premium</h3>
             <ul class="index-tariff-plan__list">
               <li class="index-tariff-plan__list-item">
                 <p class="index-tariff-plan__text">Unlimited applications</p>
-                <label class="toggle" for="tariff-plan-4">
-                  <input class="toggle__input" type="checkbox" id="tariff-plan-4" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                 </label>
               </li>
               <li class="index-tariff-plan__list-item">
                 <p class="index-tariff-plan__text">Unlimited categories</p>
-                <label class="toggle" for="tariff-plan-5">
-                  <input class="toggle__input" type="checkbox" id="tariff-plan-5" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                 </label>
               </li>
               <li class="index-tariff-plan__list-item">
                 <p class="index-tariff-plan__text">Commission from the order</p>
-                <label class="toggle" for="tariff-plan-6">
-                  <input class="toggle__input" type="checkbox" id="tariff-plan-6" disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox" disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                 </label>
               </li>
             </ul>
             <div class="index-tariff-plan__button-container">
-              <button class="button button_bg_primary">choose</button>
+              <button class="button button_bg_primary" type="submit">choose</button>
             </div>
-          </div>
-          <div class="index-tariff-plan">
+          </form>
+          <form class="index-tariff-plan" action="mock-address/change-me" method="post">
             <h3 class="index-tariff-plan__title">Standard</h3>
             <ul class="index-tariff-plan__list">
               <li class="index-tariff-plan__list-item">
                 <p class="index-tariff-plan__text">Unlimited applications</p>
-                <label class="toggle" for="tariff-plan-7">
-                  <input class="toggle__input" type="checkbox" id="tariff-plan-7" disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox" disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                 </label>
               </li>
               <li class="index-tariff-plan__list-item">
                 <p class="index-tariff-plan__text">Unlimited categories</p>
-                <label class="toggle" for="tariff-plan-8">
-                  <input class="toggle__input" type="checkbox" id="tariff-plan-8" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                 </label>
               </li>
               <li class="index-tariff-plan__list-item">
                 <p class="index-tariff-plan__text">Commission from the order</p>
-                <label class="toggle" for="tariff-plan-9">
-                  <input class="toggle__input" type="checkbox" id="tariff-plan-9" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
+                <label class="toggle">
+                  <input class="toggle__input" type="checkbox" checked disabled><span class="toggle__switch"><span class="toggle__switch--text">on</span><span class="toggle__switch--round"></span><span class="toggle__switch--text">off</span></span>
                 </label>
               </li>
             </ul>
             <div class="index-tariff-plan__button-container">
-              <button class="button button_bg_primary">choose</button>
+              <button class="button button_bg_primary" type="submit">choose</button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
       <div class="background-container">
@@ -218,28 +218,27 @@
           <div class="container page-footer__container">
             <section class="page-footer__search-container">
               <h2 class="subheading">search on site</h2>
-              <form class="search" action="" method="get">
+              <form class="search" action="mock-address/change-me" method="get">
                 <input class="search__input search__input_color_primary" type="search" name="search" placeholder="Search">
                 <input class="search__button" type="submit" value="">
               </form>
             </section>
             <nav class="page-footer__menu-container">
               <ul class="page-footer__menu">
-                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Account</a></li>
-                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Get started</a></li>
-                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Freelancers</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="account.html">Account</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="get-started.html">Get started</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="freelancers.html">Freelancers</a></li>
               </ul>
             </nav>
             <nav class="page-footer__menu-container">
               <ul class="page-footer__menu">
-                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">News and events</a></li>
-                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Sitemap</a></li>
-                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="#">Rules</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="news.html">News and events</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="mock-address/change-me">Sitemap</a></li>
+                <li class="page-footer__menu-item"><a class="page-footer__menu-link" href="mock-address/change-me">Rules</a></li>
               </ul>
             </nav>
             <section class="page-footer__copyright">
-              <p>© Freelance Exchange 2018</p>
-              <p>4743866@mail.ru</p>
+              <p class="page-footer__copyright-text">© Freelance Exchange 2018</p><a class="page-footer__copyright-link" href="mailto: 4743866@mail.ru">4743866@mail.ru</a>
             </section>
           </div>
         </footer>
@@ -252,14 +251,14 @@
         </header>
         <div class="messaging__body">
           <div class="messaging__icons"><span class="messaging__icon messaging__icon_chat"></span>
-            <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg"></div><span class="messaging__icon messaging__icon_camera"></span>
+            <div class="messaging__photo"><img class="messaging__photo-img" src="images/photo.jpg" alt="Photo"></div><span class="messaging__icon messaging__icon_camera"></span>
           </div>
           <div class="messaging__incoming">
             <p class="messaging__incoming-paragraph">Hey! So are we cool to meet at the art gallery? Say 8pm</p>
           </div>
-          <form>
+          <form class="messaging__form" action="mock-address/change-me" method="post">
             <textarea class="messaging__textarea">Yeah that sounds great. See you then.</textarea>
-            <button class="button button_bg_secondary-shadow">REPLY</button>
+            <button class="button button_bg_secondary-shadow" type="submit">REPLY</button>
           </form>
         </div>
       </section>
