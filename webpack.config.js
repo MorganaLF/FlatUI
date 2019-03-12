@@ -2,7 +2,6 @@ let path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin =require('copy-webpack-plugin');
-const DelWebpackPlugin = require('del-webpack-plugin');
 
 let conf = {
   entry: './src/index.js',
@@ -13,12 +12,6 @@ let conf = {
     }
   },
   plugins: [
-    new DelWebpackPlugin({
-      include: ['dist/**/*'],
-      info: false,
-      keepGeneratedAssets: true,
-      allowExternal: false
-    }),
     new HtmlWebpackPlugin({
       filename: 'ui-kit.html',
       template: path.resolve(__dirname, './src/components/ui-kit/ui-kit.pug')
