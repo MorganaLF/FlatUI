@@ -7,13 +7,22 @@ mixin accountSettings
     method="post"
   )
     ul.account-settings__list
-      li.account-settings__item Send e-mail
-        +toggle(true)
-      li.account-settings__item Send sound
-        +toggle(true)
-      li.account-settings__item Send e-mail
-        +toggle
-      li.account-settings__item Send sound
-        +toggle
-      li.account-settings__item Sound
+      li.account-settings__item
+        p.account-settings__text Send e-mail
+        .account-settings__toggle-container
+          +toggle(true)
+      li.account-settings__item
+        p.account-settings__text Send sound notifications
+        .account-settings__toggle-container
+          +toggle(true)
+      li.account-settings__item
+        p.account-settings__text Enable newsletter
+        .account-settings__toggle-container
+          +toggle
+      li.account-settings__item
+        p.account-settings__text Enable private messages
+        .account-settings__toggle-container
+          +toggle
+      li.account-settings__item
+        p.account-settings__text Sound
         +slider(false, true, "secondary", "70")
