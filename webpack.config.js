@@ -47,12 +47,12 @@ let conf = {
         to: './fonts'
       },
       {
-        from: './src/**/*.jpg',
+        from: './src/components/**/*.jpg',
         to: './images',
         flatten: true
       },
       {
-        from: './src/**/*.png',
+        from: './src/components/**/*.png',
         to: './images',
         flatten: true
       },
@@ -64,6 +64,21 @@ let conf = {
       {
         from: './src/plugins/**/*.svg',
         to: './images',
+        flatten: true
+      },
+      {
+        from: './src/plugins/**/*.jpg',
+        to: './images',
+        flatten: true
+      },
+      {
+        from: './src/plugins/**/*.png',
+        to: './images',
+        flatten: true
+      },
+      {
+        from: './src/favicons/**/*.*',
+        to: './',
         flatten: true
       }
     ]),
