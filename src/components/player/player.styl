@@ -10,7 +10,7 @@
     position relative
     width 100%
     padding-bottom 56.25%
-    border-radius 3px
+    border-radius rem(3px)
     background url("images/video.jpg") no-repeat center
     background-size cover
     overflow hidden
@@ -19,29 +19,29 @@
     top 0
     left 0
     width 100%
-    padding 26px 39px
+    padding rem(26px) rem(39px)
     text-align left
     color #ffffff
     +xxs()
-      padding 20px
+      padding rem(20px)
   &__title
-    margin-bottom 5px
-    font-size 36px
+    margin-bottom rem(5px)
+    font-size rem(36px)
     font-weight 300
     line-height 1
-    letter-spacing -1.08px
+    letter-spacing rem(-1.08px)
     +xs()
-      font-size 25px
+      font-size rem(25px)
     +xxs()
-      font-size 20px
+      font-size rem(20px)
       line-height 1
   &__author
-    font-size 12.5px
+    font-size rem(12.5px)
     font-weight 900
     text-transform uppercase
-    letter-spacing 0.63px
+    letter-spacing rem(0.63px)
     +xs()
-      font-size 10px
+      font-size rem(10px)
   &__footer
     position absolute
     bottom 0
@@ -52,14 +52,14 @@
     background-color rgba(0, 0, 0, 0.29)
   &__progress
     width 100%
-    height 5px
-    border-radius 3px
+    height rem(5px)
+    border-radius rem(3px)
     background-color light-grey
     cursor pointer
     &--full
       width 0
       height 100%
-      border-radius 3px
+      border-radius rem(3px)
       background-color primary-color
   &__play-button
     flex-shrink 0
@@ -75,9 +75,9 @@
       background-image url("images/pause.svg");
   &__full-button
     flex-shrink 0
-    width 48px
-    height 48px
-    margin-left 22px
+    width rem(48px)
+    height rem(48px)
+    margin-left rem(22px)
     border 0
     background primary-color url("images/fullscreen.svg") no-repeat center center
     background-size 47%
@@ -86,5 +86,5 @@
     &_opened
       background-image url("images/exit-fullscreen.svg")
     +xxs()
-      width 35px
-      height 35px
+      width rem(35px)
+      height rem(35px)

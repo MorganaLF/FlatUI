@@ -1,7 +1,7 @@
 .news-page
   display flex
   flex-wrap wrap
-  padding 80px 10px
+  padding rem(80px) rem(10px)
   &__col
     &_size
       &_8
@@ -18,12 +18,12 @@
           margin 0 auto
         .news
           width 47%
-          margin 0 1.5% 20px
+          margin 0 1.5% rem(20px)
           +sm()
             width 100%
             margin-right 0
       &_4
-        padding 121px 5% 0 0
+        padding rem(121px) 5% 0 0 // ???
         width 30%
         +md()
           width 25%
@@ -39,7 +39,7 @@
         .subheading
           padding 0
         .search
-          margin-bottom 40px
+          margin-bottom rem(40px)
   &__nav
     display flex
     justify-content space-between
@@ -48,4 +48,4 @@
   &__nav-buttons
     display flex
     .button
-      margin 0 2px
+      margin 0 rem(2px)

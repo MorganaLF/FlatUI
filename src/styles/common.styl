@@ -25,10 +25,10 @@ button
   max-width 1200px
   margin 0 auto
   .subheading
-    padding 40px 10px
+    padding rem(40px) rem(10px)
 
 .background-container
-  padding 0 10px
+  padding 0 rem(10px)
   background #212121
   .subheading
     color rgba(255, 255, 255, 0.5)
@@ -36,7 +36,8 @@ button
 .body-wrapper
   position relative
   z-index 1
-  box-shadow -4px 0px 18px 0px rgba(0,0,0,0.67)
+  min-width 320px
+  box-shadow rem(-4px) 0 rem(18px) 0 rgba(0, 0, 0, 0.67)
   transition all 0.5s ease-in-out
   background #ffffff
   &_opened
@@ -45,5 +46,5 @@ button
 .far
 .fas
   display inline-block
-  width 10px
-  margin-right 10px
+  width rem(10px)
+  margin-right rem(10px)

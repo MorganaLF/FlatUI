@@ -7,10 +7,10 @@
   &__container
     overflow hidden
   &__line
-    top calc(50% - 2.5px)
+    top "calc(50% - %s)" % rem(2.5px)
     left 0
     width 100%
-    border-bottom 5px solid primary-color
+    border-bottom rem(5px) solid primary-color
     transition all 0.3s ease-in-out
     &_inactive
       border-bottom-color light-grey

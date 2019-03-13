@@ -1,24 +1,24 @@
 .index-tariff-plan
   display flex
   flex-direction column
-  width calc(28% - 40px)
-  padding 20px
-  margin 20px
-  border 1px solid light-grey-text
-  border-radius 3px
+  width "calc(28% - %s)" % rem(40px)
+  padding rem(20px)
+  margin rem(20px)
+  border rem(1px) solid light-grey-text
+  border-radius rem(3px)
   text-align center
   +md()
-    width calc(50% - 40px)
-    padding 10px
+    width "calc(50% - %s)" % rem(40px)
+    padding rem(10px)
     margin 1%
   +sm()
-    margin 10px
+    margin rem(10px)
   +xs()
-    width calc(100% - 40px)
+    width "calc(100% - %s)" % rem(40px)
     max-width 350px
   &:nth-child(2)
     transform scale(1.2)
-    box-shadow 2px 11px 51px 0 rgba(0, 0, 0, 0.5)
+    box-shadow rem(2px) rem(11px) rem(51px) 0 rgba(0, 0, 0, 0.5)
     +md()
       transform scale(1)
       box-shadow none
@@ -26,26 +26,26 @@
     display flex
     justify-content center
     align-items stretch
-    padding-bottom 60px
+    padding-bottom rem(60px)
     +sm()
       flex-wrap wrap
       align-items center
   &__title
-    margin-bottom 10px
-    font-size 20px
+    margin-bottom rem(10px)
+    font-size rem(20px)
   &__list
-    margin-bottom 20px
+    margin-bottom rem(20px)
     list-style-type none
     &-item
       display flex
       justify-content space-between
       align-items center
-      margin-bottom 10px
+      margin-bottom rem(10px)
       .toggle
         flex-shrink 0
-        margin-left 10px
+        margin-left rem(10px)
   &__text
-    padding-right 10px
+    padding-right rem(10px)
     text-align left
   &__button-container
     margin-top auto
