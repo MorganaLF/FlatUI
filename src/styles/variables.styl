@@ -34,34 +34,34 @@ rem(size)
 /* Media mixin */
 
 md()
-  @media screen and (max-width: $md)
+  @media screen and (max-width $md)
     {block}
 
 sm()
-  @media screen and (max-width: $sm)
+  @media screen and (max-width $sm)
     {block}
 
 xs()
-  @media screen and (max-width: $xs)
+  @media screen and (max-width $xs)
     {block}
 
 xxs()
-  @media screen and (max-width: $xxs)
+  @media screen and (max-width $xxs)
     {block}
 
 /* Font-Face */
 
 fontUrl(file)
-  return 'fonts/' + file
+  return "fonts/" + file
 
 fontFace(family, style, weight, file)
   @font-face
     font-family family
     font-style style
     font-weight weight
-    src url(fontUrl(file + '.svg')) format('svg'),
-        url(fontUrl(file + '.woff')) format('woff'),
-        url(fontUrl(file + '.ttf')) format('ttf')
+    src url(fontUrl(file + ".svg")) format("svg"),
+        url(fontUrl(file + ".woff")) format("woff"),
+        url(fontUrl(file + ".ttf")) format("ttf")
 
 /* Placeholder */
 
@@ -88,36 +88,36 @@ placeholder-focus()
 /* input */
 
 input()
-  padding: 6px 12px
-  border: none
+  padding 6px 12px
+  border none
   background-color light-grey
   font-size 14px
-  font-family: Source Sans Pro
-  font-weight: 400
+  font-family Source Sans Pro
+  font-weight 400
   letter-spacing 0.14px
-  border-radius: 3px
-  text-overflow: ellipsis
+  border-radius 3px
+  text-overflow ellipsis
   +placeholder()
     color dark-grey-text
     transition color 0.3s ease
   +placeholder-focus()
-    color: transparent
+    color transparent
 
 /* Adaptive height */
 
 square()
-  overflow: hidden
+  overflow hidden
   &:before
-    content ''
-    padding-top: 100%
-    float: left
+    content ""
+    padding-top 100%
+    float left
 
 rectangle(percent)
-  overflow: hidden
+  overflow hidden
   &:before
-    content ''
-    padding-top: '%s%' % percent
-    float: left
+    content ""
+    padding-top "%s%" % percent
+    float left
 
 // Break-word
 
@@ -133,12 +133,12 @@ remove-clear-button()
   input[type="text"]::-ms-reveal
   input[type="search"]::-ms-clear
   input[type="search"]::-ms-reveal
-    display: none
-    width : 0
-    height: 0
+    display none
+    width  0
+    height 0
   input[type="search"]::-webkit-search-decoration
   input[type="search"]::-webkit-search-cancel-button
   input[type="search"]::-webkit-search-results-button
   input[type="search"]::-webkit-search-results-decoration
-    display: none
+    display none
 

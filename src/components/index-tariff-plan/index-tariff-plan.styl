@@ -1,51 +1,51 @@
 .index-tariff-plan
-  display: flex
-  flex-direction: column
+  display flex
+  flex-direction column
   width calc(28% - 40px)
-  padding: 20px
-  margin: 20px
-  border: 1px solid light-grey-text
-  border-radius: 3px
-  text-align: center
+  padding 20px
+  margin 20px
+  border 1px solid light-grey-text
+  border-radius 3px
+  text-align center
   +md()
     width calc(50% - 40px)
-    padding: 10px
-    margin: 1%
+    padding 10px
+    margin 1%
   +sm()
-    margin: 10px
+    margin 10px
   +xs()
     width calc(100% - 40px)
-    max-width: 350px
+    max-width 350px
   &:nth-child(2)
     transform scale(1.2)
-    box-shadow: 2px 11px 51px 0 rgba(0,0,0,0.5)
+    box-shadow 2px 11px 51px 0 rgba(0, 0, 0, 0.5)
     +md()
       transform scale(1)
-      box-shadow: none
+      box-shadow none
   &__container
-    display: flex
-    justify-content: center
-    align-items: stretch
-    padding-bottom: 60px
+    display flex
+    justify-content center
+    align-items stretch
+    padding-bottom 60px
     +sm()
-      flex-wrap: wrap
-      align-items: center
+      flex-wrap wrap
+      align-items center
   &__title
-    margin-bottom: 10px
-    font-size: 20px
+    margin-bottom 10px
+    font-size 20px
   &__list
-    margin-bottom: 20px
-    list-style-type: none
+    margin-bottom 20px
+    list-style-type none
     &-item
-      display: flex
-      justify-content: space-between
-      align-items: center
-      margin-bottom: 10px
+      display flex
+      justify-content space-between
+      align-items center
+      margin-bottom 10px
       .toggle
-        flex-shrink: 0
-        margin-left: 10px
+        flex-shrink 0
+        margin-left 10px
   &__text
-    padding-right: 10px
-    text-align: left
+    padding-right 10px
+    text-align left
   &__button-container
-    margin-top: auto
+    margin-top auto

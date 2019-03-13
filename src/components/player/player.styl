@@ -1,90 +1,90 @@
 .player
-  position: absolute
-  width: 100%
-  height: 100%
-  top: 0
-  right: 0
-  bottom: 0
-  left: 0
+  position absolute
+  width 100%
+  height 100%
+  top 0
+  right 0
+  bottom 0
+  left 0
   &__wrapper
-    position: relative
-    width: 100%
-    padding-bottom: 56.25%
-    border-radius: 3px
-    background: url("images/video.jpg") no-repeat center
-    background-size: cover
-    overflow: hidden
+    position relative
+    width 100%
+    padding-bottom 56.25%
+    border-radius 3px
+    background url("images/video.jpg") no-repeat center
+    background-size cover
+    overflow hidden
   &__header
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    padding: 26px 39px
-    text-align: left
+    position absolute
+    top 0
+    left 0
+    width 100%
+    padding 26px 39px
+    text-align left
     color #ffffff
     +xxs()
-      padding: 20px
+      padding 20px
   &__title
-    margin-bottom: 5px
+    margin-bottom 5px
     font-size 36px
     font-weight 300
-    line-height: 1
+    line-height 1
     letter-spacing -1.08px
     +xs()
-      font-size: 25px
+      font-size 25px
     +xxs()
-      font-size: 20px
-      line-height: 1
+      font-size 20px
+      line-height 1
   &__author
     font-size 12.5px
-    font-weight: 900
+    font-weight 900
     text-transform uppercase
     letter-spacing 0.63px
     +xs()
-      font-size: 10px
+      font-size 10px
   &__footer
-    position: absolute
-    bottom: 0
-    left: 0
-    display: flex
+    position absolute
+    bottom 0
+    left 0
+    display flex
     align-items center
-    width: 100%
+    width 100%
     background-color rgba(0, 0, 0, 0.29)
   &__progress
-    width: 100%
-    height: 5px
-    border-radius: 3px
+    width 100%
+    height 5px
+    border-radius 3px
     background-color light-grey
-    cursor: pointer
+    cursor pointer
     &--full
-      width: 0
-      height: 100%
-      border-radius: 3px
+      width 0
+      height 100%
+      border-radius 3px
       background-color primary-color
   &__play-button
-    flex-shrink: 0
+    flex-shrink 0
     width rem(10px)
     height rem(13px)
-    margin: 0 rem(19px) 0 rem(21px)
+    margin 0 rem(19px) 0 rem(21px)
     border 0
-    background: url("images/play-icon.svg") no-repeat center center;
-    background-size: rem(10px) rem(13px)
+    background url("images/play-icon.svg") no-repeat center center;
+    background-size rem(10px) rem(13px)
     transition all 0.3s ease
-    cursor: pointer
+    cursor pointer
     &_playing
-      background-image: url("images/pause.svg");
+      background-image url("images/pause.svg");
   &__full-button
-    flex-shrink: 0
+    flex-shrink 0
     width 48px
     height 48px
-    margin-left: 22px
+    margin-left 22px
     border 0
     background primary-color url("images/fullscreen.svg") no-repeat center center
-    background-size: 47%
+    background-size 47%
     transition all 0.3s ease
-    cursor: pointer
+    cursor pointer
     &_opened
-      background-image: url("images/exit-fullscreen.svg")
+      background-image url("images/exit-fullscreen.svg")
     +xxs()
-      width: 35px
-      height: 35px
+      width 35px
+      height 35px

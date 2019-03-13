@@ -1,12 +1,12 @@
 .map
-  width: 100%
-  border-radius: 3px 3px 0 0
+  width 100%
+  border-radius 3px 3px 0 0
   rectangle(34)
   &__footer
-    display: flex
+    display flex
     align-items center
-    padding: rem(12px) rem(23px) rem(18px) rem(29px)
-    border-radius: 0 0 3px 3px
+    padding rem(12px) rem(23px) rem(18px) rem(29px)
+    border-radius 0 0 3px 3px
     color #ffffff
     background-color primary-color
   &__title
@@ -14,54 +14,54 @@
     font-size rem(30px)
     font-weight 300
   &__adress
-    min-width: 0
-    margin: rem(7px) 0 0 1.5%
+    min-width 0
+    margin rem(7px) 0 0 1.5%
     &--span
-      display: block
-      margin: 0 rem(15px) rem(2px)
+      display block
+      margin 0 rem(15px) rem(2px)
       font-size rem(13px)
-      font-weight: 900
+      font-weight 900
       letter-spacing rem(0.63px)
       text-transform uppercase
-      text-align: left
+      text-align left
       break-word()
   &__buttons
-    display: flex
-    align-items: center
-    margin: rem(8px) 0 0 auto
+    display flex
+    align-items center
+    margin rem(8px) 0 0 auto
   &__geolocation
-    flex-shrink: 0
-    border: none
+    flex-shrink 0
+    border none
     width rem(27px)
     height rem(26px)
-    margin: 0 rem(16px) 0 0
-    background: url('images/location.svg') no-repeat center center
-    background-size: contain
+    margin 0 rem(16px) 0 0
+    background url("images/location.svg") no-repeat center center
+    background-size contain
   &__add
-    flex-shrink: 0
-    border: none
+    flex-shrink 0
+    border none
     width rem(27px)
     height rem(26px)
-    background: url('images/white-map-marker.svg') no-repeat center center
-    background-size: contain
+    background url("images/white-map-marker.svg") no-repeat center center
+    background-size contain
   +xs()
     &:before
-      padding-top: 60%
+      padding-top 60%
     &__geolocation
-      margin-right: rem(7px)
+      margin-right rem(7px)
   +xxs()
     &:before
-      padding-top: 100%
+      padding-top 100%
     &__footer
-      flex-wrap: wrap
-      justify-content: space-between
+      flex-wrap wrap
+      justify-content space-between
     &__adress
-      order: 3
-      width: 100%
-      margin-left: 0
-      text-align: left
+      order 3
+      width 100%
+      margin-left 0
+      text-align left
       &--span
-        display: inline
-        margin: 0
+        display inline
+        margin 0
     &__geolocation
-      margin-right: rem(5px)
+      margin-right rem(5px)

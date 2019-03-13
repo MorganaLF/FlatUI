@@ -1,49 +1,49 @@
-fontFace('Lato', 'normal', 900, 'Lato-Black')
-fontFace('Lato', 'normal', 700, 'Lato-Bold')
-fontFace('Lato', 'normal', 400, 'Lato-Regular')
-fontFace('Lato', 'normal', 300, 'Lato-Light')
-fontFace('Source Sans Pro', 'normal', 400, 'SourceSansPro-Regular')
-fontFace('Source Sans Pro', 'normal', 300, 'SourceSansPro-Light')
+fontFace("Lato", "normal", 900, "Lato-Black")
+fontFace("Lato", "normal", 700, "Lato-Bold")
+fontFace("Lato", "normal", 400, "Lato-Regular")
+fontFace("Lato", "normal", 300, "Lato-Light")
+fontFace("Source Sans Pro", "normal", 400, "SourceSansPro-Regular")
+fontFace("Source Sans Pro", "normal", 300, "SourceSansPro-Light")
 
 html
-  font-size: root-font-size
-  font-family: 'Lato'
+  font-size root-font-size
+  font-family "Lato"
 
 *
-  margin: 0
-  padding: 0
-  box-sizing: border-box
+  margin 0
+  padding 0
+  box-sizing border-box
   outline none
   //transition all 0.3s ease
 
 remove-clear-button()
 
 button
-  cursor: pointer
+  cursor pointer
 
 .container
-  max-width: 1200px
-  margin: 0 auto
+  max-width 1200px
+  margin 0 auto
   .subheading
-    padding: 40px 10px
+    padding 40px 10px
 
 .background-container
-  padding: 0 10px
-  background: #212121
+  padding 0 10px
+  background #212121
   .subheading
-    color: rgba(255, 255, 255, 0.5)
+    color rgba(255, 255, 255, 0.5)
 
 .body-wrapper
-  position: relative
-  z-index: 1
-  box-shadow: -4px 0px 18px 0px rgba(0,0,0,0.67)
+  position relative
+  z-index 1
+  box-shadow -4px 0px 18px 0px rgba(0,0,0,0.67)
   transition all 0.5s ease-in-out
-  background: #ffffff
+  background #ffffff
   &_opened
     transform translateX(250px) /* Баг при ресайзе окна исправить */
 
 .far
 .fas
-  display: inline-block
-  width: 10px
-  margin-right: 10px
+  display inline-block
+  width 10px
+  margin-right 10px

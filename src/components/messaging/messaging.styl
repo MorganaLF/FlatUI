@@ -1,86 +1,86 @@
 .messaging
-  border-radius: 3px
-  overflow: hidden
+  border-radius 3px
+  overflow hidden
   background-color #f2f2f2
   break-word()
   &__header
-    padding: rem(20px) rem(20px) rem(25px)
+    padding rem(20px) rem(20px) rem(25px)
     background-color secondary-color
-    border-bottom: 34px solid darker-secondary-color
+    border-bottom 34px solid darker-secondary-color
   &__title
     font-family Source Sans Pro
     font-size rem(34px)
-    font-weight: 300
-    text-align: center
+    font-weight 300
+    text-align center
     letter-spacing rem(-1.02px)
     color #ffffff
   &__body
-    padding: 0 rem(22px) rem(26px)
+    padding 0 rem(22px) rem(26px)
   &__photo
     width rem(94px)
     height rem(94px)
-    border-radius: 50%
-    border: 5px solid light-grey
-    overflow: hidden
+    border-radius 50%
+    border 5px solid light-grey
+    overflow hidden
     &-img
-      width: 100%
+      width 100%
   &__icons
-    display: flex
-    justify-content: space-between
-    align-items: flex-end
-    margin: rem(-49px) 0 rem(15px)
-    padding: 0 rem(6px)
+    display flex
+    justify-content space-between
+    align-items flex-end
+    margin rem(-49px) 0 rem(15px)
+    padding 0 rem(6px)
   &__icon
-    display: inline-block
-    background-repeat: no-repeat
-    background-position: center center
-    background-size: 100%
-    cursor: pointer
+    display inline-block
+    background-repeat no-repeat
+    background-position center center
+    background-size 100%
+    cursor pointer
     &_chat
-      flex-shrink: 0
+      flex-shrink 0
       width rem(21px)
       height rem(22px)
-      margin-bottom: rem(2px)
-      background-image: url('images/chat-icon.svg')
+      margin-bottom rem(2px)
+      background-image url("images/chat-icon.svg")
     &_camera
-      flex-shrink: 0
+      flex-shrink 0
       width rem(25px)
       height rem(20px)
-      margin-bottom: rem(6px)
-      background-image: url('images/camera-icon.svg')
+      margin-bottom rem(6px)
+      background-image url("images/camera-icon.svg")
   &__incoming
-    position: relative
-    margin-bottom: rem(18px)
-    padding: rem(16px) rem(20px) rem(22px)
-    border-radius: 5px
+    position relative
+    margin-bottom rem(18px)
+    padding rem(16px) rem(20px) rem(22px)
+    border-radius 5px
     background-color #ffffff
     &:after
-      position: absolute
-      top: rem(-5px)
-      left: 'calc(50% - %s)' % rem(8px)
-      content: ''
-      width: rem(10px)
-      height: rem(10px)
+      position absolute
+      top rem(-5px)
+      left "calc(50% - %s)" % rem(8px)
+      content ""
+      width rem(10px)
+      height rem(10px)
       transform rotate(45deg)
       background-color #ffffff
     &-paragraph
       font-size rem(13px)
-      font-weight: 700
+      font-weight 700
       letter-spacing rem(0.63px)
-      line-height: 1.2
-      text-align: left
+      line-height 1.2
+      text-align left
       color #868686
   &__textarea
-    width: 100%
+    width 100%
     height rem(88px)
-    margin-bottom: rem(11px)
-    padding: rem(16px) rem(20px)
-    border-radius: 3px
+    margin-bottom rem(11px)
+    padding rem(16px) rem(20px)
+    border-radius 3px
     border 3px solid #ffffff
     font-size rem(13px)
-    font-weight: 700
+    font-weight 700
     letter-spacing rem(0.63px)
     background-color light-grey
     color #777777
   .button
-    width: 100%
+    width 100%

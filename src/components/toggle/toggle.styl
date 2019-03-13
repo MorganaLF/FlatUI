@@ -1,48 +1,48 @@
 .toggle
-  position: relative
-  display: inline-block
+  position relative
+  display inline-block
   width rem(60px)
   height rem(24px)
-  border-radius: rem(34px)
-  overflow: hidden
+  border-radius rem(34px)
+  overflow hidden
   &__input
-    position: absolute
-    top: 0
-    opacity: 0
-    width: 0
-    height: 0
+    position absolute
+    top 0
+    opacity 0
+    width 0
+    height 0
     &:checked + .toggle__switch
       background-color secondary-color
     &:checked + .toggle__switch
-      margin-left: -1px
+      margin-left -1px
   &__switch
-    display: inline-block
-    vertical-align: middle
-    width: rem(101px)
-    height: 100%
+    display inline-block
+    vertical-align middle
+    width rem(101px)
+    height 100%
 
-    cursor: pointer
-    top: 0
+    cursor pointer
+    top 0
     background-color light-grey
-    margin-left: rem(-35px)
-    transition: .4s
+    margin-left rem(-35px)
+    transition .4s
   &__switch
     &--round
-      display: inline-block
-      vertical-align: middle
-      height: rem(18px)
-      width: rem(18px)
-      border-radius: 50%
-      background-color: white
-      transition: .4s
+      display inline-block
+      vertical-align middle
+      height rem(18px)
+      width rem(18px)
+      border-radius 50%
+      background-color white
+      transition .4s
     &--text
-      display: inline-block
-      vertical-align: middle
-      padding: rem(5px) rem(7px)
+      display inline-block
+      vertical-align middle
+      padding rem(5px) rem(7px)
       font-size rem(12px)
-      font-weight: 900
+      font-weight 900
       letter-spacing rem(0.6px)
       text-transform uppercase
       color #ffffff
       &:last-child
-        padding: rem(5px) rem(9px) rem(5px) rem(5px)
+        padding rem(5px) rem(9px) rem(5px) rem(5px)

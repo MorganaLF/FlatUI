@@ -1,42 +1,42 @@
 .stage
-  display: flex
-  justify-content: space-between
+  display flex
+  justify-content space-between
   align-items center
-  list-style-type: none
-  text-align: center
+  list-style-type none
+  text-align center
   &__container
-    overflow: hidden
+    overflow hidden
   &__line
-    top: calc(50% - 2.5px)
-    left: 0
-    width: 100%
-    border-bottom: 5px solid primary-color
+    top calc(50% - 2.5px)
+    left 0
+    width 100%
+    border-bottom 5px solid primary-color
     transition all 0.3s ease-in-out
     &_inactive
       border-bottom-color light-grey
   &__item
     flex-shrink 0
-    width: rem(29px)
-    height: rem(29px)
-    border-radius: 50%
-    padding-top: rem(6px)
+    width rem(29px)
+    height rem(29px)
+    border-radius 50%
+    padding-top rem(6px)
     background-color primary-color
     font-size rem(14px)
-    font-weight: 900
+    font-weight 900
     color #fff
-    cursor: pointer
+    cursor pointer
     transition all 0.3s ease-in-out
     &_inactive
       background-color light-grey
       color dark-grey-text
     +xxs()
-      width: rem(25px)
-      height: rem(25px)
-      padding-top: rem(6px)
+      width rem(25px)
+      height rem(25px)
+      padding-top rem(6px)
       font-size rem(11px)
   &__content
-    display: flex
-    align-items: flex-start
+    display flex
+    align-items flex-start
     transition all 1s ease-in-out
     &-item
-      width: 100%
+      width 100%

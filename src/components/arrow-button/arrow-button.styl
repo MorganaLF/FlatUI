@@ -1,38 +1,38 @@
 .arrow-button
-  width: rem(50px)
-  border: none
-  border-radius: 50%
-  background: url('images/arrow-left.svg') no-repeat left 42% center
-  background-size: 35%
+  width rem(50px)
+  border none
+  border-radius 50%
+  background url("images/arrow-left.svg") no-repeat left 42% center
+  background-size 35%
   transition background 0.3s ease
   square()
   &_size_small
-    width: rem(35px)
+    width rem(35px)
   &_bg
     &_transparent-secondary
       border 3px solid secondary-color
-      background-color: none
+      background-color none
       &:hover
-        background-color: secondary-color
+        background-color secondary-color
       &.arrow-button_arrow_left-secondary:hover,
       &.arrow-button_arrow_left-secondary:disabled
-        background-image: url('images/arrow-white-left.svg')
+        background-image url("images/arrow-white-left.svg")
       &.arrow-button_arrow_right-secondary:hover,
       &.arrow-button_arrow_right-secondary:disabled
-        background-image: url('images/arrow-white-right.svg')
-    //&_disabled
-    //  background-color light-grey
-    //&_secondary
-    //  background-color secondary-color
+        background-image url("images/arrow-white-right.svg")
+  //&_disabled
+  //  background-color light-grey
+  //&_secondary
+  //  background-color secondary-color
   &_arrow
     //&_left-white
-    //  background-image: url('images/arrow-white-left.svg')
+    //  background-image url("images/arrow-white-left.svg")
     //&_right-white
-    //  background-image: url('images/arrow-white-right.svg')
+    //  background-image url("images/arrow-white-right.svg")
     &_left-secondary
-      background-image: url('images/arrow-left.svg')
+      background-image url("images/arrow-left.svg")
     &_right-secondary
-      background-image: url('images/arrow-right.svg')
+      background-image url("images/arrow-right.svg")
       background-position right 43% center
   &:disabled
     border-color light-grey
