@@ -80,6 +80,11 @@ let conf = {
         from: './src/favicons/**/*.*',
         to: './',
         flatten: true
+      },
+      {
+        from: './node_modules/@fortawesome/fontawesome-free/webfonts',
+        to: './webfonts',
+        flatten: true
       }
     ]),
     require('autoprefixer'),
