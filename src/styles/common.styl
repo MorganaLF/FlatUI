@@ -34,14 +34,23 @@ button
     color rgba(255, 255, 255, 0.5)
 
 .body-wrapper
+  display flex
+  flex-direction column
+  min-height 100vh
   position relative
   z-index 1
   min-width 320px
   box-shadow rem(-4px) 0 rem(18px) 0 rgba(0, 0, 0, 0.67)
   transition all 0.5s ease-in-out
-  background #ffffff
   &_opened
     transform translateX(250px) /* Баг при ресайзе окна исправить */
+
+.body-content
+  flex-grow 1
+  background #ffffff
+
+.footer-container
+  flex-grow 0
 
 .far
 .fas
