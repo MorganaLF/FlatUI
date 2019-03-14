@@ -6,14 +6,6 @@
   text-align center
   &__container
     overflow hidden
-  &__line
-    top "calc(50% - %s)" % rem(2.5px)
-    left 0
-    width 100%
-    border-bottom rem(5px) solid primary-color
-    transition all 0.3s ease-in-out
-    &_inactive
-      border-bottom-color light-grey
   &__item
     flex-shrink 0
     width rem(29px)
@@ -34,6 +26,14 @@
       height rem(25px)
       padding-top rem(6px)
       font-size rem(11px)
+  &__line
+    top "calc(50% - %s)" % rem(2.5px)
+    left 0
+    width 100%
+    border-bottom rem(5px) solid primary-color
+    transition all 0.3s ease-in-out
+    &_inactive
+      border-bottom-color light-grey
   &__content
     display flex
     align-items flex-start

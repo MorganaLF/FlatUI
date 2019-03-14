@@ -16,9 +16,9 @@
     padding 0
     border none
     font-family Lato
-  .ui-datepicker-calendar
-    width 100%
-    margin 0
+  .ui-helper-clearfix:before
+  .ui-helper-clearfix:after
+    display none
   .ui-datepicker-header
     display flex
     justify-content space-between
@@ -27,21 +27,6 @@
     border none
     border-radius 0
     background-color darker-primary-color
-  .ui-datepicker-title
-    order 1
-    width 70%
-    margin 0
-    padding 0
-    font-size rem(24px)
-    font-weight 300
-    line-height 1em
-    color #ffffff
-    white-space nowrap
-  .ui-datepicker-year
-    display none
-  .ui-helper-clearfix:before
-  .ui-helper-clearfix:after
-    display none
   .ui-datepicker-prev
   .ui-datepicker-next
     position static
@@ -72,6 +57,21 @@
       position static
       background url("images/calendar-arrow-left.svg") no-repeat center center
       background-size 37%
+  .ui-datepicker-title
+    order 1
+    width 70%
+    margin 0
+    padding 0
+    font-size rem(24px)
+    font-weight 300
+    line-height 1em
+    color #ffffff
+    white-space nowrap
+  .ui-datepicker-year
+    display none
+  .ui-datepicker-calendar
+    width 100%
+    margin 0
   thead
     border-radius 0
     font-size rem(9px)
@@ -94,7 +94,6 @@
       background-color lightness(primary-color, 75%)
       .ui-state-default
         color #ffffff
-
   .ui-state-default
     height 100%
     padding 18% 0 0
