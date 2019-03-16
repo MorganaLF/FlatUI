@@ -1,8 +1,10 @@
-import $ from 'jquery'
+import $ from 'jquery';
+
+let pieChart;
 
 $('.ct-chart').each(function(){
 
-  new Chartist.Pie(this,
+  pieChart = new Chartist.Pie(this,
       {
         series: $(this).data('series').split(', ')
       },
@@ -43,3 +45,38 @@ $('.ct-chart').each(function(){
     }
   })*/;
 });
+
+let changeStrokeWidth = function () {
+  $('.ct-slice-donut').css('strokeWidth', '18%');
+};
+
+$(function() {
+  changeStrokeWidth();
+});
+
+$(window).on('resize', function () {
+
+  $('.ct-chart').each(function(){
+
+    pieChart = new Chartist.Pie(this,
+        {
+          series: $(this).data('series').split(', ')
+        },
+        {
+          donut: true,
+          showLabel: false,
+          chartPadding: -22,
+          fullWidth: true
+        }
+    );
+  });
+
+  $(function() {
+    changeStrokeWidth();
+  });
+
+});
+
+
+
+
