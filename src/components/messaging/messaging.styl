@@ -56,12 +56,13 @@
     background-color #ffffff
     &:after
       position absolute
-      top rem(-5px)
-      left "calc(50% - %s)" % rem(8px)
+      top 0
+      left 50%
       content ""
+      display inline-block
       width rem(10px)
       height rem(10px)
-      transform rotate(45deg)
+      transform translate(-50%, -50%) rotate(45deg)
       background-color #ffffff
     &-paragraph
       font-size rem(13px)

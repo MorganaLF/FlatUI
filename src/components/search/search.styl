@@ -1,21 +1,16 @@
 .search
-  position relative
+  display flex
   border-radius rem(3px)
   overflow hidden
   &__input
-    width 100%
+    flex-grow 1
     input()
-    padding rem(6px) rem(25px) rem(6px) rem(12px)
     &_color_primary
       color #ffffff
       background-color primary-color
       +placeholder()
         color #ffffff
   &__button
-    position absolute
-    top 0
-    right 0
-    bottom 0
     width rem(33px)
     border none
     background primary-color url("images/search.svg") no-repeat center

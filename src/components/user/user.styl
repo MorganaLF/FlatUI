@@ -49,11 +49,11 @@
     &:after
       content ""
       position absolute
-      top "calc(50% - %s)" % rem(4px)
-      left rem(-5px)
+      top 50%
+      left 0
       width rem(10px)
       height rem(10px)
-      transform rotate(45deg)
+      transform translate(-50%, -50%) rotate(45deg)
       background-color light-grey
     &_bg_secondary
       background-color secondary-color

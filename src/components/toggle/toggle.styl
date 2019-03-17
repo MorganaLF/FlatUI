@@ -1,16 +1,11 @@
 .toggle
-  position relative
   display inline-block
   width rem(60px)
   height rem(24px)
   border-radius rem(34px)
   overflow hidden
   &__input
-    position absolute
-    top 0
-    opacity 0
-    width 0
-    height 0
+    display: none
     &:checked + .toggle__switch
       background-color secondary-color
     &:checked + .toggle__switch
@@ -20,7 +15,6 @@
     vertical-align middle
     width rem(101px)
     height 100%
-
     cursor pointer
     top 0
     background-color light-grey
