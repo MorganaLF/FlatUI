@@ -4,12 +4,13 @@
   height rem(24px)
   border-radius rem(34px)
   overflow hidden
+  text-align: center
   &__input
     display: none
     &:checked + .toggle__switch
       background-color secondary-color
     &:checked + .toggle__switch
-      margin-left -1px //???
+      transform translate(0, 0)
   &__switch
     display inline-block
     vertical-align middle
@@ -18,7 +19,7 @@
     cursor pointer
     top 0
     background-color light-grey
-    margin-left rem(-35px)
+    transform translate(rem(-35.5px), 0)
     transition .4s
   &__switch
     &--text

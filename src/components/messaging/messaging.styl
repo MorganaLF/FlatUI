@@ -4,9 +4,18 @@
   background-color #f2f2f2
   break-word()
   &__header
-    padding rem(20px) rem(20px) rem(25px)
+    position relative
+    padding 7% rem(20px) 20%
     background-color secondary-color
-    border-bottom 34px solid darker-secondary-color
+    &:after
+      content: ""
+      display inline-block
+      position absolute
+      bottom 0
+      left 0
+      width 100%
+      padding-top 12%
+      background darker-secondary-color
   &__title
     font-family Source Sans Pro
     font-size rem(34px)
@@ -15,13 +24,18 @@
     letter-spacing rem(-1.02px)
     color #ffffff
   &__body
-    padding 0 rem(22px) rem(26px)
+    position relative
+    padding 21% rem(22px) rem(26px)
   &__icons
+    position absolute
+    top 0
+    left 0
     display flex
     justify-content space-between
     align-items flex-end
-    margin rem(-49px) 0 rem(15px)
-    padding 0 rem(6px)
+    width 100%
+    padding 0 rem(28px)
+    transform translate(0, -50%)
   &__icon
     display inline-block
     background-repeat no-repeat
@@ -41,11 +55,10 @@
       margin-bottom rem(6px)
       background-image url("images/camera-icon.svg")
   &__photo
-    width rem(94px) //???
-    height rem(94px)
+    width 40%
     border-radius 50%
     border rem(5px) solid light-grey
-    overflow hidden
+    square()
     &-img
       width 100%
   &__incoming
