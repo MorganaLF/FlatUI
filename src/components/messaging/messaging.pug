@@ -1,12 +1,11 @@
-mixin messaging
+mixin messaging(imageSrc)
   section.messaging
     header.messaging__header
       h3.messaging__title Sarah Brown
     .messaging__body
       .messaging__icons
         span.messaging__icon.messaging__icon_chat
-        .messaging__photo
-          img.messaging__photo-img(src="images/photo.jpg" alt="Photo")
+        .messaging__photo(style="background-image: url(\"images/" + imageSrc + ".jpg\")")
         span.messaging__icon.messaging__icon_camera
       .messaging__incoming
         p.messaging__incoming-paragraph
