@@ -11,7 +11,6 @@
     width rem(29px)
     height rem(29px)
     border-radius 50%
-    padding-top rem(6px)
     background-color primary-color
     font-size rem(14px)
     font-weight 900
@@ -24,11 +23,12 @@
     +xxs()
       width rem(25px)
       height rem(25px)
-      padding-top rem(6px)
       font-size rem(11px)
+    &-text
+      display inline-block
+      margin-top 50%
+      transform translate(0, -50%)
   &__line
-    top "calc(50% - %s)" % rem(2.5px)
-    left 0
     width 100%
     border-bottom rem(5px) solid primary-color
     transition all 0.3s ease-in-out

@@ -8,12 +8,14 @@ mixin contact-form(textAlign, textarea=true, isAutofocus)
       input.contact-form__input(
           type="text", name="name", placeholder="Your Name", autofocus=isAutofocus
         )
-      .contact-form__tip ERROR
+      .contact-form__tip
+        span.contact-form__tip-text ERROR
     .contact-form__input-group
       input.contact-form__input(
           type="email", name="email", placeholder="Your Email"
         )
-      .contact-form__tip.contact-form__tip_bg_secondary THANKS!
+      .contact-form__tip.contact-form__tip_bg_secondary
+        span.contact-form__tip-text THANKS!
     if (textarea)
       textarea.contact-form__textarea(
           name="message", placeholder="Your Message"

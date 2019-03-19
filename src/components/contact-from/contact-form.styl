@@ -16,16 +16,10 @@
     flex-shrink 0
     width rem(72px)
     margin-left rem(7px)
-    padding rem(8px) rem(8px)
+    padding rem(4px) rem(8px)
     border-radius rem(5px)
-    font-weight 400
-    font-size rem(10px)
     text-align center
-    letter-spacing rem(0.5px)
-    text-transform uppercase
-    color #fff
     background primary-color
-    break-word()
     &:after
       content ""
       position absolute
@@ -40,6 +34,13 @@
       background secondary-color
       &:after
         background secondary-color
+    &-text
+      font-size rem(10px)
+      font-weight 400
+      letter-spacing rem(0.5px)
+      text-transform uppercase
+      color #fff
+      break-word()
   &__textarea
     width 100%
     min-height rem(88px)
