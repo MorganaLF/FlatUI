@@ -1,7 +1,7 @@
 .messaging
   border-radius rem(3px)
-  overflow hidden
   background-color #f2f2f2
+  overflow hidden
   break-word()
   &__header
     position relative
@@ -38,18 +38,17 @@
     transform translate(0, -50%)
   &__icon
     display inline-block
+    flex-shrink 0
     background-repeat no-repeat
     background-position center center
     background-size 100%
     cursor pointer
     &_chat
-      flex-shrink 0
       width rem(21px)
       height rem(22px)
       margin-bottom rem(2px)
       background-image url("images/chat-icon.svg")
     &_camera
-      flex-shrink 0
       width rem(25px)
       height rem(20px)
       margin-bottom rem(6px)
@@ -82,7 +81,6 @@
       font-weight 700
       letter-spacing rem(0.63px)
       line-height 1.2
-      text-align left
       color #868686
   &__textarea
     width 100%

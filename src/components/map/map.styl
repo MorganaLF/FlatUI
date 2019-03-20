@@ -1,12 +1,12 @@
 .map
-  width 100%
-  border-radius rem(3px) rem(3px) 0 0
   rectangle(34)
+  &__container
+    border-radius rem(3px)
+    overflow hidden
   &__footer
     display flex
     align-items center
     padding rem(12px) rem(23px) rem(18px) rem(29px)
-    border-radius 0 0 rem(3px) rem(3px)
     color #ffffff
     background-color primary-color
   &__title
@@ -22,7 +22,6 @@
       font-size rem(13px)
       letter-spacing rem(0.63px)
       text-transform uppercase
-      text-align left
       break-word()
   &__buttons
     display flex
@@ -58,7 +57,6 @@
       order 3
       width 100%
       margin-left 0
-      text-align left
       &--span
         display inline
         margin 0

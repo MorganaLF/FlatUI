@@ -25,7 +25,8 @@ block content
         +search("Search...", false, true)
         +calendar
       main.news-page__col.news-page__col_size_8
-        +subheading("news", "h1")
+        .news-page__title
+          +subheading("news", "h1")
         +news({
           image: "news-3",
           title: "Top 5 professions in freelance",
@@ -92,7 +93,8 @@ block content
               bg: "transparent-secondary"
             })
           +arrowButton("transparent-secondary", "right-secondary", false, "small")
-        +subheading("upcoming events")
+        .news-page__title
+          +subheading("upcoming events")
         +news({
           image: "news-6",
           title: "javascript webinar",
