@@ -33,15 +33,24 @@
     width rem(27px)
     height rem(26px)
     margin 0 rem(16px) 0 0
-    background url("images/location.svg") no-repeat center center
-    background-size contain
+    background transparent
+    &:hover svg
+    &:focus svg
+      opacity 0.8
+    svg
+      transition all 0.3s ease
   &__add
     flex-shrink 0
     border none
     width rem(27px)
     height rem(24px)
-    background url("images/white-map-marker.svg") no-repeat center center
-    background-size contain
+    background transparent
+    &:hover svg
+    &:focus svg
+      opacity 0.5
+    svg
+      height 100%
+      transition all 0.3s ease
   +xs()
     &:before
       padding-top 60%

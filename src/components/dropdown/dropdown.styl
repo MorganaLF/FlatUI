@@ -2,10 +2,23 @@
   width 100%
   font-family Source Sans Pro
   &__container
+    .select2-container
+      background-color light-grey
+    .select2-container--open
+      background-color secondary-color
+      .select2-selection--single
+        .select2-selection__rendered
+          color #ffffff
     .select2-selection--single
       input()
       padding rem(6px) rem(25px) rem(6px) rem(12px)
       border-radius rem(3px)
+      background-color transparent
+      &:focus
+        background secondary-color
+      &:focus .select2-selection__rendered
+      &:focus .select2-selection__placeholder
+        color #ffffff
       .select2-selection__rendered
         color dark-grey-text
         line-height 1.2

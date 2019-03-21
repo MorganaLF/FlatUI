@@ -12,9 +12,18 @@
     border 0
     cursor pointer
     transform translate(0, -50%)
+    transition background 0.3s ease
+    &:hover
+    &:focus
+    &:hover .slider__tip
+    &:focus .slider__tip
+      background darker-primary-color
   &_progress-bg_secondary .ui-slider-range
   &_progress-bg_secondary .ui-slider-handle
     background secondary-color
+    &:hover
+    &:focus
+      background darker-secondary-color
   &__tip
     position absolute
     top rem(-8px)
@@ -30,6 +39,7 @@
     color #fff
     background primary-color
     cursor pointer
+    transition background 0.3s ease
     &:after
       content ""
       position absolute

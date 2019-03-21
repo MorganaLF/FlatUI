@@ -1,3 +1,5 @@
+include svgIcon
+
 mixin user(imageSrc, name, profession, bgColor, size)
   -
     var links = [
@@ -5,6 +7,7 @@ mixin user(imageSrc, name, profession, bgColor, size)
                 "https://twitter.com/",
                 "https://dribbble.com/"
     ];
+
   .user(class=size ? "user_size_" + size : "")
     .user__picture(style="background-image: url(\"images/" + imageSrc + ".jpg\")")
     .user__info(class=bgColor ? "user__info_bg_" + bgColor : "")
@@ -18,8 +21,6 @@ mixin user(imageSrc, name, profession, bgColor, size)
             href=links[i - 1]
             target="_blank"
             rel="noopener noreferrer"
-            class=bgColor ?
-                  "user__social-icon_" + i + " " +
-                  "user__social-icon_" + i + "-white" :
-                  "user__social-icon_" + i
+            class=bgColor ? "user__social-icon_white" : ""
             )
+            +svgIcon(i)

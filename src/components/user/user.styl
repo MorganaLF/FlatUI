@@ -80,26 +80,28 @@
     max-width rem(94px)
     margin 0 auto
   &__social-icon
+    width rem(21px)
+    height rem(21px)
     background-size 100%
     background-repeat no-repeat
     background-position center
-    &_1
-      width rem(10px)
-      height rem(21px)
-      background-image url("images/facebook-f-brands.svg")
-      &-white
-        background-image url("images/facebook-f-brands-white.svg")
-    &_2
-      width rem(25px)
-      height rem(20px)
-      background-image url("images/twitter-brands.svg")
-      &-white
-        background-image url("images/twitter-brands-white.svg")
-    &_3
-      width rem(21px)
-      height rem(21px)
-      background-image url("images/dribbble-brands.svg")
-      &-white
-        background-image url("images/dribbble-brands-white.svg")
+    &:hover svg path
+    &:focus svg path
+      opacity 0.5
+    &_white svg path
+      fill #ffffff
+    svg
+      height 100%
+    svg path
+      transition all 0.3s ease
+    //&_1
+    //
+    //  &-white
+    //&_2
+    //
+    //  &-white
+    //&_3
+    //
+    //  &-white
 
 
