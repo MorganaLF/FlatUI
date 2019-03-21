@@ -8,14 +8,20 @@
   .button
     margin-top rem(18px)
     padding rem(5px) rem(12px)
+    +xs()
+      margin rem(18px) 0 0 0
   &_bg_secondary
     background-color secondary-color
     .news__text-block
       padding-left rem(15px)
       padding-top rem(13px)
       padding-bottom rem(25px)
+      +xxs()
+        padding rem(12px) rem(12px) rem(26px)
     .news__description
       margin-left rem(4px)
+      +xxs()
+        margin-left 0
   &__picture
     flex-shrink 0
     width 33.5%
@@ -24,6 +30,8 @@
   &__text-block
     min-width 0
     padding rem(22px) rem(22px) rem(36px) rem(22px)
+    +xxs()
+      padding rem(12px) rem(12px) rem(26px)
   &__title
     margin-bottom rem(14px)
     font-size rem(28px)
@@ -37,6 +45,8 @@
       line-height 1.2
       text-transform uppercase
       letter-spacing rem(0.63px)
+      +xxs()
+        margin-left 0
   &__date
     display inline-block
     margin-bottom rem(16px)
@@ -64,9 +74,3 @@
     line-height 1.2
   &__button-container
     text-align center
-  +xs()
-    .button
-      margin rem(18px) 0 0 0
-  +xxs()
-    &__text-block
-      padding rem(12px) rem(12px) rem(26px) rem(12px)
