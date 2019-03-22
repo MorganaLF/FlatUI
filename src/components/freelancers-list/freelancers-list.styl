@@ -1,0 +1,37 @@
+.freelancers-list
+  display flex
+  flex-wrap wrap
+  list-style-type none
+  +xs()
+    flex-direction column
+    align-items center
+  &__item
+    display flex
+    flex-direction column
+    align-items stretch
+    width 29%
+    margin 0 2.166666666666667% rem(60px)
+    padding-bottom rem(10px)
+    border-bottom rem(1px) solid light-grey-text
+    +md()
+      width 42%
+      margin 0 4% rem(60px)
+    +sm()
+      width 38%
+      margin 0 6% rem(60px)
+    +xs()
+      width 100%
+      max-width 300px
+      margin 0 0 rem(60px)
+    &-footer
+      display flex
+      justify-content space-between
+      align-items center
+      margin-top auto
+    .button
+      margin-left auto
+  &__notification
+    margin-right rem(10px)
+    color primary-color
+  .user
+    margin 0 0 rem(10px)

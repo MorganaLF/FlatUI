@@ -1,0 +1,34 @@
+extends ../../templates/template
+
+include ../../components/subheading/subheading
+include ../../components/search/search
+include ../../components/filter/filter
+include ../../components/page-nav/page-nav
+include ../../components/freelancers-list/freelancers-list
+
+block append meta
+  meta(name="keywords", content="Search freelancers, search " +
+      "best freelancers, find a developer, find a designer, find " +
+      "a seo copywriter")
+  meta(name="description", content="Search for the best developers, " +
+      "designers and copywriters throughout Russia at the best prices")
+
+block title
+  title Search freelancers
+
+block content
+  .freelancers
+    .container.freelancers__container
+      aside.freelancers__col
+        +subheading("search")
+        +search("Search freelancers", false, true)
+        +subheading("filter")
+        +filter
+      main.freelancers__col
+        .freelancers__main-title
+          +subheading("search freelancers", "h1")
+        .freelancers__page-nav-container
+          +page-nav
+        +freelancers-list
+        .freelancers__page-nav-container
+          +page-nav

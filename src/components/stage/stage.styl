@@ -1,11 +1,11 @@
 .stage
-  display flex
-  justify-content space-between
-  align-items center
-  list-style-type none
-  text-align center
-  &__container
-    overflow hidden
+  overflow hidden
+  &__list
+    display flex
+    justify-content space-between
+    align-items center
+    list-style-type none
+    text-align center
   &__item
     flex-shrink 0
     width rem(29px)
@@ -38,5 +38,5 @@
     display flex
     align-items flex-start
     transition all 1s ease-in-out
-    &-item
+    &>*
       width 100%

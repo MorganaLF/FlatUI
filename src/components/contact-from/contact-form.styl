@@ -1,7 +1,4 @@
 .contact-form
-  text-align right
-  &_align_left
-    text-align left
   &__input-group
     display flex
     margin-bottom rem(12px)
@@ -24,7 +21,6 @@
     padding rem(4px) rem(8px)
     border-radius rem(5px)
     text-align center
-    background primary-color
     &:after
       content ""
       position absolute
@@ -33,12 +29,13 @@
       width rem(5px)
       height rem(5px)
       display inline-block
-      background primary-color
       transform  translate(-50%, -50%) rotate(45deg)
-    &_bg_secondary
+    &_with-error
+    &_with-error:after
+      background primary-color
+    &_with-success
+    &_with-success:after
       background secondary-color
-      &:after
-        background secondary-color
     &-text
       font-size rem(10px)
       letter-spacing rem(0.5px)
@@ -50,3 +47,7 @@
     min-height rem(88px)
     margin-bottom rem(7px)
     padding rem(10px) rem(12px)
+  &__left-button-container
+    text-align left
+  &__button-container
+    text-align right

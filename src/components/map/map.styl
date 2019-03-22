@@ -1,14 +1,14 @@
 .map
-  rectangle(34)
-  +xs()
-    &:before
-      padding-top 60%
-  +xxs()
-    &:before
-      padding-top 100%
-  &__container
-    border-radius rem(3px)
-    overflow hidden
+  border-radius rem(3px)
+  overflow hidden
+  &__body
+    rectangle(34)
+    +xs()
+      &:before
+        padding-top 60%
+    +xxs()
+      &:before
+        padding-top 100%
   &__footer
     display flex
     align-items center
@@ -29,44 +29,38 @@
       order 3
       width 100%
       margin-left 0
-    &-text
-      margin 0 rem(15px) rem(2px)
-      font-size rem(13px)
-      letter-spacing rem(0.63px)
-      text-transform uppercase
-      break-word()
-      +xxs()
-        display inline
-        margin 0
+  &__text
+    margin 0 rem(15px) rem(2px)
+    font-size rem(13px)
+    letter-spacing rem(0.63px)
+    text-transform uppercase
+    break-word()
+    +xxs()
+      display inline
+      margin 0
   &__buttons
     display flex
     align-items center
     margin rem(8px) 0 0 auto
-  &__geolocation
+  &__button
     flex-shrink 0
     border none
-    width rem(27px)
-    height rem(26px)
-    margin 0 rem(16px) 0 0
     background transparent
-    +xs()
-      margin-right rem(7px)
-    +xxs()
-      margin-right rem(5px)
     &:hover svg
     &:focus svg
       opacity 0.8
     svg
       transition all 0.3s ease
-  &__add
-    flex-shrink 0
-    border none
+  &__geolocation-button
+    width rem(27px)
+    height rem(26px)
+    margin 0 rem(16px) 0 0
+    +xs()
+      margin-right rem(7px)
+    +xxs()
+      margin-right rem(5px)
+  &__add-button
     width rem(27px)
     height rem(24px)
-    background transparent
-    &:hover svg
-    &:focus svg
-      opacity 0.5
     svg
       height 100%
-      transition all 0.3s ease

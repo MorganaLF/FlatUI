@@ -6,8 +6,8 @@ $( function() {
     let video = $(this)[0];
     let playButton = $(video).closest('.player__wrapper').find('.player__play-button');
     let fullButton = $(video).closest('.player__wrapper').find('.player__full-button');
-    let progressLine = $(video).closest('.player__wrapper').find('.player__progress');
-    let fullProgressLine = $(video).closest('.player__wrapper').find('.player__progress--full');
+    let progressLine = $(video).closest('.player__wrapper').find('.player__progress-container');
+    let fullProgressLine = $(video).closest('.player__wrapper').find('.player__progress');
     let durarion;
     let time_update_interval;
 

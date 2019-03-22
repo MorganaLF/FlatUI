@@ -13,11 +13,57 @@
   overflow hidden
   user-select none
   cursor pointer
-  &__ripple-parent
-    display inline-block
-    position relative
-    overflow hidden
-  &__shadow
+  transition background 0.3s ease
+  border-bottom-width 3px
+  &_small
+    padding rem(6px) rem(17px)
+    font-size rem(10px)
+    border-bottom-width 2px
+  &_big
+    padding rem(12px) rem(34px)
+    font-size rem(20px)
+    +xs()
+      font-size rem(16px)
+  &_primary
+  &_primary-with-shadow
+    background-color primary-color
+    &:hover
+    &:focus
+      background-color dark-primary-color
+  &_primary-with-shadow
+    border-bottom-color dark-primary-color
+    border-bottom-style solid
+  &_secondary
+  &_secondary-with-shadow
+    background-color secondary-color
+    &:hover
+    &:focus
+      background-color dark-secondary-color
+  &_secondary-with-shadow
+    border-bottom-color dark-secondary-color
+    border-bottom-style solid
+  &_transparent-primary
+    background #fff
+    color primary-color
+    box-shadow inset 0 0 0 rem(1px) primary-color
+    border-bottom-color primary-color
+    border-bottom-style solid
+    &:hover
+    &:focus
+      background-color lighten(primary-color, 80%)
+  &_transparent-secondary
+  &_transparent-dark-secondary
+    background #fff
+    color secondary-color
+    box-shadow inset 0 0 0 rem(1px) secondary-color
+    border-bottom-color secondary-color
+    border-bottom-style solid
+    &:hover
+    &:focus
+      background-color lighten(secondary-color, 80%)
+  &_transparent-dark-secondary
+    border-bottom-color dark-secondary-color
+  &__ripple
     z-index 99999
     display block
     position absolute
@@ -26,84 +72,6 @@
     transform scale(0)
     &_animated
       animation shadow 0.65s ease-in-out
-  &_size_small
-    padding rem(6px) rem(17px)
-    font-size rem(10px)
-  &_size_big
-    padding rem(12px) rem(34px)
-    font-size rem(20px)
-    +xs()
-      font-size rem(16px)
-  &_bg
-    &_primary
-      background-color primary-color
-      transition background 0.3s ease
-      &:hover
-      &:focus
-        background-color dark-primary-color
-    &_primary-shadow
-      background-color primary-color
-      border-bottom rem(3px) solid dark-primary-color
-      transition background 0.3s ease
-      &:hover
-      &:focus
-        background-color dark-primary-color
-      &.button_size_small
-        border-bottom rem(2px) solid dark-primary-color
-    &_secondary
-      background-color secondary-color
-      transition background 0.3s ease
-      &:hover
-      &:focus
-        background-color dark-secondary-color
-    &_secondary-shadow
-      background-color secondary-color
-      border-bottom rem(3px) solid dark-secondary-color
-      transition background 0.3s ease
-      &:hover
-      &:focus
-        background-color dark-secondary-color
-      &.button_size_small
-        border-bottom rem(2px) solid dark-secondary-color
-    &_transparent-primary
-      padding rem(9px) rem(32px) rem(8px)
-      background #fff
-      color primary-color
-      border rem(1px) solid primary-color
-      border-bottom rem(4px) solid primary-color
-      transition background 0.3s ease
-      &:hover
-      &:focus
-        background-color lighten(primary-color, 80%)
-      &.button_size_small
-        padding rem(5px) rem(16px) rem(4px)
-        border-bottom rem(3px) solid primary-color
-    &_transparent-secondary
-      padding rem(9px) rem(32px) rem(8px)
-      background #fff
-      color secondary-color
-      border rem(1px) solid secondary-color
-      border-bottom rem(4px) solid secondary-color
-      transition background 0.3s ease
-      &:hover
-      &:focus
-        background-color lighten(secondary-color, 80%)
-      &.button_size_small
-        padding rem(5px) rem(16px) rem(4px)
-        border-bottom rem(3px) solid secondary-color
-    &_transparent-dark-secondary
-      padding rem(9px) rem(32px) rem(8px)
-      background #fff
-      color secondary-color
-      border rem(1px) solid secondary-color
-      border-bottom rem(4px) solid dark-secondary-color
-      transition background 0.3s ease
-      &:hover
-      &:focus
-        background-color lighten(secondary-color, 80%)
-      &.button_size_small
-        padding rem(5px) rem(16px) rem(4px)
-        border-bottom rem(3px) solid dark-secondary-color
 
 @keyframes shadow {
   100% {

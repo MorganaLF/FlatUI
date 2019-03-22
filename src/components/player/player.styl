@@ -59,17 +59,17 @@
     cursor pointer
     &_playing
       background-image url("images/pause.svg")
-  &__progress
+  &__progress-container
     width 100%
     height rem(5px)
     border-radius rem(3px)
     background-color light-grey
     cursor pointer
-    &--full
-      width 0
-      height 100%
-      border-radius rem(3px)
-      background-color primary-color
+  &__progress
+    width 0
+    height 100%
+    border-radius rem(3px)
+    background-color primary-color
   &__full-button
     flex-shrink 0
     width rem(48px)

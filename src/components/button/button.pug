@@ -2,8 +2,8 @@ mixin button(options)
   -var tag = options.tag || "button";
 
   #{tag}.button(
-    class=options.size ? "button_size_" + options.size : ""
-    class=options.bg ? "button_bg_" + options.bg : ""
+    class=options.size ? "button_" + options.size : ""
+    class=options.bg ? "button_" + options.bg : ""
     href=options.href ? options.href : false
     type=options.type ? options.type : false
   )!= options.text

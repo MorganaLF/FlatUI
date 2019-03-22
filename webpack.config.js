@@ -14,11 +14,11 @@ let conf = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'ui-kit.html',
-      template: path.resolve(__dirname, './src/components/ui-kit/ui-kit.pug')
+      template: path.resolve(__dirname, './src/pages/ui-kit/ui-kit.pug')
     }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: path.resolve(__dirname, './src/components/index/index.pug')
+      template: path.resolve(__dirname, './src/pages/index/index.pug')
     }),
     new HtmlWebpackPlugin({
       filename: 'account.html',
@@ -26,11 +26,11 @@ let conf = {
     }),
     new HtmlWebpackPlugin({
       filename: 'news.html',
-      template: path.resolve(__dirname, './src/components/news-page/news-page.pug')
+      template: path.resolve(__dirname, './src/pages/news-page/news-page.pug')
     }),
     new HtmlWebpackPlugin({
       filename: 'get-started.html',
-      template: path.resolve(__dirname, './src/components/get-started/get-started.pug')
+      template: path.resolve(__dirname, './src/pages/get-started/get-started.pug')
     }),
     new HtmlWebpackPlugin({
       filename: 'contact.html',
@@ -38,7 +38,7 @@ let conf = {
     }),
     new HtmlWebpackPlugin({
       filename: 'freelancers.html',
-      template: path.resolve(__dirname, './src/components/freelancers/freelancers.pug')
+      template: path.resolve(__dirname, './src/pages/freelancers/freelancers.pug')
     }),
     new ExtractTextPlugin('styles.css'),
     new CopyWebpackPlugin([
@@ -73,6 +73,11 @@ let conf = {
       },
       {
         from: './src/plugins/**/*.png',
+        to: './images',
+        flatten: true
+      },
+      {
+        from: './src/pages/**/*.jpg',
         to: './images',
         flatten: true
       },

@@ -1,0 +1,33 @@
+include ../arrow-button/arrow-button
+include ../button/button
+
+mixin page-nav
+  nav.page-nav
+    +arrowButton("transparent", "left", false, "small")
+    .page-nav__buttons
+      +button({
+        text: "1",
+        size: "small",
+        bg: "secondary"
+      })
+      +button({
+        text: "2",
+        size: "small",
+        bg: "transparent-secondary"
+      })
+      +button({
+        text: "3",
+        size: "small",
+        bg: "transparent-secondary"
+      })
+      +button({
+        text: "4",
+        size: "small",
+        bg: "transparent-secondary"
+      })
+      +button({
+        text: "5",
+        size: "small",
+        bg: "transparent-secondary"
+      })
+    +arrowButton("transparent", "right", false, "small")

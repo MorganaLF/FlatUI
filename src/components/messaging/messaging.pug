@@ -4,9 +4,9 @@ mixin messaging(imageSrc)
       h3.messaging__title Sarah Brown
     .messaging__body
       .messaging__icons
-        span.messaging__icon.messaging__icon_chat
+        span.messaging__icon.messaging__icon_with-chat
         .messaging__photo(style="background-image: url(\"images/" + imageSrc + ".jpg\")")
-        span.messaging__icon.messaging__icon_camera
+        span.messaging__icon.messaging__icon_with-camera
       .messaging__incoming
         p.messaging__incoming-paragraph
           | Hey! So are we cool to meet at the art gallery? Say 8pm
@@ -17,6 +17,6 @@ mixin messaging(imageSrc)
         textarea.messaging__textarea Yeah that sounds great. See you then.
         +button({
           text: "Reply",
-          bg: "secondary-shadow",
+          bg: "secondary-with-shadow",
           type: "submit"
         })

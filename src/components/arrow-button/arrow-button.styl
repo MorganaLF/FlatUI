@@ -1,42 +1,31 @@
 .arrow-button
+  position relative
   width rem(50px)
   border none
   border-radius 50%
-  background url("images/arrow-left.svg") no-repeat left 42% center
-  background-size 35%
   transition background 0.3s ease
   square()
-  &_size_small
+  &_small
     width rem(35px)
-  &_bg
-    &_transparent-secondary
-      border rem(3px) solid secondary-color
-      background-color none
-      &:hover
-      &:focus
-        background-color secondary-color
-      &.arrow-button_arrow_left-secondary:hover
-      &.arrow-button_arrow_left-secondary:focus
-      &.arrow-button_arrow_left-secondary:disabled
-        background-image url("images/arrow-white-left.svg")
-      &.arrow-button_arrow_right-secondary:hover
-      &.arrow-button_arrow_right-secondary:focus
-      &.arrow-button_arrow_right-secondary:disabled
-        background-image url("images/arrow-white-right.svg")
-  //&_disabled
-  //  background-color light-grey
-  //&_secondary
-  //  background-color secondary-color
-  &_arrow
-    //&_left-white
-    //  background-image url("images/arrow-white-left.svg")
-    //&_right-white
-    //  background-image url("images/arrow-white-right.svg")
-    &_left-secondary
-      background-image url("images/arrow-left.svg")
-    &_right-secondary
-      background-image url("images/arrow-right.svg")
-      background-position right 43% center
+  &_transparent
+    border rem(3px) solid secondary-color
+    background-color transparent
+    &:hover
+    &:focus
+      background-color secondary-color
+    &:hover svg use
+    &:focus svg use
+    &:disabled svg use
+      fill #ffffff
+    svg
+      position absolute
+      top 50%
+      left 50%
+      width 52%
+      height 52%
+      transform translate(-50%, -50%)
+    svg use
+      transition all 0.3s ease
   &:disabled
     border-color light-grey
     background-color light-grey

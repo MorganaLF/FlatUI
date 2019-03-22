@@ -1,13 +1,12 @@
 extends ../../templates/template
 
-include ../page-menu/page-menu
-include ../page-footer/page-footer
-include ../subheading/subheading
-include ../news/news
-include ../calendar/calendar
-include ../search/search
-include ../arrow-button/arrow-button
-include ../button/button
+include ../../components/page-menu/page-menu
+include ../../components/page-footer/page-footer
+include ../../components/subheading/subheading
+include ../../components/news/news
+include ../../components/calendar/calendar
+include ../../components/search/search
+include ../../components/page-nav/page-nav
 
 block append meta
   meta(name="keywords", content="news, events, freelance news, freelance events")
@@ -20,11 +19,11 @@ block title
 block content
   .container
     .news-page
-      aside.news-page__col.news-page__col_size_4
+      aside.news-page__col.news-page__col_4-size
         +subheading("search news")
         +search("Search...", false, true)
         +calendar
-      main.news-page__col.news-page__col_size_8
+      main.news-page__col.news-page__col_8-size
         .news-page__title
           +subheading("news", "h1")
         +news({
@@ -64,35 +63,7 @@ block content
               "elit. Sed condimentum aliquet venenatis. Etiam a nisi " +
               "nunc, a tincidunt eros."
         })
-        nav.news-page__nav
-          +arrowButton("transparent-secondary", "left-secondary", false, "small")
-          .news-page__nav-buttons
-            +button({
-              text: "1",
-              size: "small",
-              bg: "secondary"
-            })
-            +button({
-              text: "2",
-              size: "small",
-              bg: "transparent-secondary"
-            })
-            +button({
-              text: "3",
-              size: "small",
-              bg: "transparent-secondary"
-            })
-            +button({
-              text: "4",
-              size: "small",
-              bg: "transparent-secondary"
-            })
-            +button({
-              text: "5",
-              size: "small",
-              bg: "transparent-secondary"
-            })
-          +arrowButton("transparent-secondary", "right-secondary", false, "small")
+        +page-nav
         .news-page__title
           +subheading("upcoming events")
         +news({
@@ -123,32 +94,4 @@ block content
           description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
           isEvent: true
         })
-        nav.news-page__nav
-          +arrowButton("transparent-secondary", "left-secondary", false, "small")
-          .news-page__nav-buttons
-            +button({
-              text: "1",
-              size: "small",
-              bg: "secondary"
-            })
-            +button({
-              text: "2",
-              size: "small",
-              bg: "transparent-secondary"
-            })
-            +button({
-              text: "3",
-              size: "small",
-              bg: "transparent-secondary"
-            })
-            +button({
-              text: "4",
-              size: "small",
-              bg: "transparent-secondary"
-            })
-            +button({
-              text: "5",
-              size: "small",
-              bg: "transparent-secondary"
-            })
-          +arrowButton("transparent-secondary", "right-secondary", false, "small")
+        +page-nav

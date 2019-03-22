@@ -7,11 +7,11 @@ $(function() {
 
     let ink, d, x, y;
 
-    if ($(this).find(".button__shadow").length === 0)
-      $(this).prepend("<span class='button__shadow'></span>");
+    if ($(this).find(".button__ripple").length === 0)
+      $(this).prepend("<span class='button__ripple'></span>");
 
-    ink = $(this).find(".button__shadow");
-    ink.removeClass("button__shadow_animated");
+    ink = $(this).find(".button__ripple");
+    ink.removeClass("button__ripple_animated");
 
     if(!ink.height() && !ink.width())
     {
@@ -22,7 +22,7 @@ $(function() {
     x = e.pageX - $(this).offset().left - ink.width()/2;
     y = e.pageY - $(this).offset().top - ink.height()/2;
 
-    ink.css({top: y+'px', left: x+'px'}).addClass("button__shadow_animated");
+    ink.css({top: y+'px', left: x+'px'}).addClass("button__ripple_animated");
 
     if ($(this).attr('href')) {
       let link = $(this).attr('href');

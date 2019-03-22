@@ -18,14 +18,14 @@ block title
 block content
   .container
     main.account
-      .account__col
+      .account__col.account__col_left
         .account__title-container
           +subheading("your account", "h1")
         +user("user-6", "Peter Brown", "developer", "", "big")
         .account__title-container
           +subheading("settings")
         +accountSettings
-      .account__col
+      .account__col.account__col_right
         .account__title-container
           +subheading("statistic")
         +accountStatistic

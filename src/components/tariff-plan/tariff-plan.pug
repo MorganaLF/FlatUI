@@ -1,0 +1,68 @@
+include ../toggle/toggle
+include ../button/button
+
+mixin tariff-plan
+  .tariff-plan__container
+    form.tariff-plan(
+      action="mock-address/change-me",
+      method="post"
+    )
+      h3.tariff-plan__title Lite
+      ul.tariff-plan__list
+        li.tariff-plan__list-item
+          p.tariff-plan__text Unlimited applications
+          +toggle(false, true)
+        li.tariff-plan__list-item
+          p.tariff-plan__text Unlimited categories
+          +toggle(false, true)
+        li.tariff-plan__list-item
+          p.tariff-plan__text Commission from the order
+          +toggle(true, true)
+      .tariff-plan__button-container
+        +button({
+          text: "choose",
+          bg: "primary",
+          type: "submit"
+        })
+    form.tariff-plan(
+      action="mock-address/change-me",
+      method="post"
+    )
+      h3.tariff-plan__title Premium
+      ul.tariff-plan__list
+        li.tariff-plan__list-item
+          p.tariff-plan__text Unlimited applications
+          +toggle(true, true)
+        li.tariff-plan__list-item
+          p.tariff-plan__text Unlimited categories
+          +toggle(true, true)
+        li.tariff-plan__list-item
+          p.tariff-plan__text Commission from the order
+          +toggle(false, true)
+      .tariff-plan__button-container
+        +button({
+          text: "choose",
+          bg: "primary",
+          type: "submit"
+        })
+    form.tariff-plan(
+      action="mock-address/change-me",
+      method="post"
+    )
+      h3.tariff-plan__title Standard
+      ul.tariff-plan__list
+        li.tariff-plan__list-item
+          p.tariff-plan__text Unlimited applications
+          +toggle(false, true)
+        li.tariff-plan__list-item
+          p.tariff-plan__text Unlimited categories
+          +toggle(true, true)
+        li.tariff-plan__list-item
+          p.tariff-plan__text Commission from the order
+          +toggle(true, true)
+      .tariff-plan__button-container
+        +button({
+          text: "choose",
+          bg: "primary",
+          type: "submit"
+        })

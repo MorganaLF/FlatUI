@@ -10,13 +10,13 @@ mixin news(options)
         span.news__date= options.date
         p.news__description= options.description
   else
-    article.news.news_bg_secondary
+    article.news.news_with-event
       .news__picture(style="background-image: url(\"images/" + options.image + ".jpg\")")
       .news__text-block
-        span.news__date.news__date_size_big
+        span.news__date.news__date_big
           span.news__day= options.date[0] + " "
           span.news__month= options.date[1]
-        #{titleTag}.news__title.news__title_size_small= options.title
+        #{titleTag}.news__title.news__title_small= options.title
         p.news__description= options.description
         .news__button-container
           +button({

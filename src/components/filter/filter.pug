@@ -1,0 +1,35 @@
+include ../../components/dropdown/dropdown
+include ../../components/slider/slider
+include ../../components/tick-box/tick-box
+include ../../components/button/button
+
+mixin filter
+  form.filter(
+  action="mock-address/change-me",
+  method="get"
+  )
+    .filter__row
+      span.filter__subtitle Choose category
+      +dropdown({
+        "category-1": "Web design",
+        "category-2": "HTML",
+        "category-3": "CMS"
+      },
+      "Choose Category")
+    .filter__row
+      span.filter__subtitle Min cost of work
+      +slider(true, "", "", "10")
+    .filter__row
+      span.filter__subtitle Max cost of work
+      +slider(true, "", "", "90")
+    .filter__row.filter__row_with-flex
+      span.filter__subtitle Show busy freelancers
+      +tickBox(true)
+    .filter__row.filter__row_with-flex
+      span.filter__subtitle Show only best freelancers
+      +tickBox
+    +button({
+      text: "show results",
+      bg: "primary",
+      type: "submit"
+    })

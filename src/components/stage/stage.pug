@@ -1,6 +1,6 @@
 mixin stage(length, fullLength, isContent)
-  .stage__container
-    ul.stage
+  .stage
+    ul.stage__list
       -for (var i = 1; i <= length; i++)
       if i < fullLength
         li.stage__item

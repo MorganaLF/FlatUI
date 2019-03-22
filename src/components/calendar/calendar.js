@@ -4,7 +4,7 @@ $( function() {
 
   /* Инициализация */
 
-  $( ".calendar" ).each(function () {
+  $( ".calendar__body" ).each(function () {
     let calendar = $(this);
 
     calendar.datepicker({
@@ -20,25 +20,25 @@ $( function() {
     /* Вывод числа в шапке */
 
     let currentDate = $(calendar).datepicker( "getDate" ).getDate();
-    $(calendar).closest('.calendar__container').find( ".calendar__header" ).text(currentDate);
+    $(calendar).closest('.calendar').find( ".calendar__header" ).text(currentDate);
 
     /* Адаптивный шрифт */
 
     let width = $(calendar).find( ".ui-widget.ui-widget-content" ).width();
-    $(calendar).closest('.calendar__container').find( ".calendar__header" ).css('font-size', width / 3.5);
+    $(calendar).closest('.calendar').find( ".calendar__header" ).css('font-size', width / 3.5);
     $(calendar).find( ".ui-datepicker .ui-datepicker-title" ).css('font-size', width / 11.6);
     $(calendar).find( ".ui-datepicker-calendar thead" ).css('font-size', width / 31.1);
-    $(calendar).closest('.calendar__container').find( ".calendar__footer" ).css('font-size', width / 21.5);
+    $(calendar).closest('.calendar').find( ".calendar__footer" ).css('font-size', width / 21.5);
     $(calendar).find( ".ui-datepicker td span, .ui-datepicker td a" ).css('font-size', width / 14.5);
 
     /* Адаптивный шрифт при ресайзе окна */
 
     $( window ).resize(function() {
       width = $(calendar).find( ".ui-widget.ui-widget-content" ).width();
-      $(calendar).closest('.calendar__container').find( ".calendar__header" ).css('font-size', width / 3.5);
+      $(calendar).closest('.calendar').find( ".calendar__header" ).css('font-size', width / 3.5);
       $(calendar).find( ".ui-datepicker .ui-datepicker-title" ).css('font-size', width / 11.6);
       $(calendar).find( ".ui-datepicker-calendar thead" ).css('font-size', width / 31.1);
-      $(calendar).closest('.calendar__container').find( ".calendar__footer" ).css('font-size', width / 21.5);
+      $(calendar).closest('.calendar').find( ".calendar__footer" ).css('font-size', width / 21.5);
       $(calendar).find( ".ui-datepicker td span, .ui-datepicker td a" ).css('font-size', width / 14.5);
     });
 

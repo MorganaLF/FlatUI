@@ -17,7 +17,7 @@ $( function() {
     })
   });
 
-  $( ".slider_is-progress" ).slider({
+  $( ".slider_with-progress" ).slider({
     range: "min"
   });
 

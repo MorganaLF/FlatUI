@@ -1,27 +1,30 @@
-mixin contact-form(textAlign, textarea=true, isAutofocus)
+mixin contact-form(buttonAlign, textarea=true, isAutofocus)
   form.contact-form(
       action="mock-address/change-me",
-      method="get",
-      class=textAlign ? "contact-form_align_" + textAlign : ""
+      method="get"
     )
     .contact-form__input-group
       input.contact-form__input(
           type="text", name="name", placeholder="Your Name", autofocus=isAutofocus
         )
-      .contact-form__tip
+      .contact-form__tip.contact-form__tip_with-error
         span.contact-form__tip-text ERROR
     .contact-form__input-group
       input.contact-form__input(
           type="email", name="email", placeholder="Your Email"
         )
-      .contact-form__tip.contact-form__tip_bg_secondary
+      .contact-form__tip.contact-form__tip_with-success
         span.contact-form__tip-text THANKS!
     if (textarea)
       textarea.contact-form__textarea(
           name="message", placeholder="Your Message"
         )
-    +button({
-      text: "submit",
-      bg: "secondary-shadow",
-      type: "submit"
-    })
+    div(
+        class= buttonAlign === "left"
+        ? "contact-form__left-button-container"
+        : "contact-form__button-container")
+      +button({
+        text: "submit",
+        bg: "secondary-with-shadow",
+        type: "submit"
+      })

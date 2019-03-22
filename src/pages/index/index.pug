@@ -1,0 +1,93 @@
+extends ../../templates/template
+
+include ../../components/page-header/page-header
+include ../../components/subheading/subheading
+include ../../components/player/player
+include ../../components/tariff-plan/tariff-plan
+include ../../components/news/news
+
+block append meta
+  meta(name="keywords", content="freelance-exchange, online job, remote fob")
+  meta(name="description", content="Remote job search for freelancer, " +
+      "developer, designer, copywriter")
+
+block title
+  title Freelance-exchange
+
+block content
+  +pageHeader
+  .container
+    +subheading("choose your tariff plan")
+    +tariff-plan
+  .background-container
+    .container.index__about
+      +subheading("how it works?")
+      +player(
+      "http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4",
+      "About our awesome company",
+      "freelance exchange"
+      )
+  .container
+    section.index__news
+      +subheading("latest news")
+      .index__news-container
+        .index__news-col
+          +news({
+            image: "news-3",
+            title: "Top 5 professions in freelance",
+            date: "24  november  2018",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing " +
+                "elit. Sed condimentum aliquet venenatis. Etiam a nisi " +
+                "nunc, a tincidunt eros."
+          })
+        .index__news-col
+          +news({
+            image: "news-7",
+            title: "How to prepare for an interview",
+            date: "23  november  2018",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing " +
+                "elit. Sed condimentum aliquet venenatis. Etiam a nisi " +
+                "nunc, a tincidunt eros."
+          })
+        .index__news-col
+          +news({
+            image: "news-4",
+            title: "Work without leaving home",
+            date: "22  november  2018",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing " +
+                "elit. Sed condimentum aliquet venenatis. Etiam a nisi " +
+                "nunc, a tincidunt eros."
+          })
+        .index__news-col
+          +news({
+            image: "news-5",
+            title: "What the designer should know",
+            date: "21  november  2018",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing " +
+                "elit. Sed condimentum aliquet venenatis. Etiam a nisi " +
+                "nunc, a tincidunt eros."
+          })
+        .index__news-col
+          +news({
+            image: "news-2",
+            title: "It’s all going downhill",
+            date: "19  november  2018",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing " +
+                "elit. Sed condimentum aliquet venenatis. Etiam a nisi " +
+                "nunc, a tincidunt eros."
+          })
+        .index__news-col
+          +news({
+            image: "news-6",
+            title: "How to become freelancer",
+            date: "20  november  2018",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing " +
+                "elit. Sed condimentum aliquet venenatis. Etiam a nisi " +
+                "nunc, a tincidunt eros."
+          })
+
+
+
+
+
+

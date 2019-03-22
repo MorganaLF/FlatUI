@@ -1,7 +1,9 @@
+include arrow-svg-icon
+
 mixin arrowButton(bg, direction, isDisabled, size)
   button.arrow-button(
-    class=bg ? "arrow-button_bg_" + bg : ""
-    class=direction ? "arrow-button_arrow_" + direction : ""
-    class=size ? "arrow-button_size_" + size : ""
+    class=bg ? "arrow-button_" + bg : ""
+    class=size ? "arrow-button_" + size : ""
     disabled=isDisabled
   )
+    +arrowSvgIcon(direction)

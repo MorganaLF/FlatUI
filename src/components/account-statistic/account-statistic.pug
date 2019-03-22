@@ -6,19 +6,19 @@ mixin accountStatistic
       ul.account-statistic__list
         li(
             class="account-statistic__list-item " +
-                  "account-statistic__list-item_color_grey"
+                  "account-statistic__list-item_grey"
           ) html - 5%
         li(
             class="account-statistic__list-item " +
-                  "account-statistic__list-item_color_red"
+                  "account-statistic__list-item_red"
           ) php - 15%
         li(
             class="account-statistic__list-item " +
-                  "account-statistic__list-item_color_green"
+                  "account-statistic__list-item_green"
           ) css - 60%
         li(
             class="account-statistic__list-item " +
-                  "account-statistic__list-item_color_light-grey"
+                  "account-statistic__list-item_light-grey"
           ) javascript - 20%
     .account-statistic__col
       +pieChart("5, 15, 60, 20")

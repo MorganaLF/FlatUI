@@ -6,7 +6,7 @@
     flex-wrap wrap
     margin 0 auto
   &__col
-    &:first-child
+    &_big
       width 70%
       padding-right 5%
       +sm()
@@ -14,7 +14,7 @@
         max-width 600px
         margin 0 auto
         padding-right 0
-    &:last-child
+    &_small
       width 30%
       +sm()
         width 100%
@@ -23,7 +23,7 @@
   &__subtitle
     margin rem(10px) 0 rem(20px)
     font-size rem(22px)
-  .map__container
+  &__map-container
     margin-bottom rem(40px)
   &__list
     margin-bottom rem(40px)
@@ -32,7 +32,7 @@
     &-item
       margin-bottom rem(5px)
       break-word()
-  &__list-span
+  &__list-title
     display inline-block
     margin-right rem(10px)
     font-weight 900

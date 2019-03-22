@@ -8,7 +8,7 @@
   &__content-title
     margin-bottom rem(10px)
     font-size rem(20px)
-    &_size_big
+    &_big
       padding rem(80px) 0 rem(30px)
       font-size rem(45px)
       font-weight 700
@@ -41,6 +41,22 @@
   &__content-subtitle
     font-size rem(18px)
     margin-bottom rem(20px)
+  &__registration
+    display flex
+    flex-wrap wrap
+    padding-bottom rem(60px)
+    &-col
+      width 50%
+      +xs()
+        width 100%
+      &:first-child
+        padding-right 5%
+        +xs()
+          padding-right 0
+      &:last-child
+        padding-left 5%
+        +xs()
+          padding-left 0
   &__list
     padding-left rem(20px)
   &__list-item
