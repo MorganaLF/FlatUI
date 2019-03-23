@@ -22,7 +22,7 @@ let conf = {
     }),
     new HtmlWebpackPlugin({
       filename: 'account.html',
-      template: path.resolve(__dirname, './src/components/account/account.pug')
+      template: path.resolve(__dirname, './src/pages/account/account.pug')
     }),
     new HtmlWebpackPlugin({
       filename: 'news.html',
@@ -34,7 +34,7 @@ let conf = {
     }),
     new HtmlWebpackPlugin({
       filename: 'contact.html',
-      template: path.resolve(__dirname, './src/components/contact/contact.pug')
+      template: path.resolve(__dirname, './src/pages/contact/contact.pug')
     }),
     new HtmlWebpackPlugin({
       filename: 'freelancers.html',

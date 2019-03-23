@@ -1,0 +1,25 @@
+include ../pie-chart/pie-chart
+
+mixin accountStatistic
+  .statistic
+    .statistic__col
+      ul.statistic__list
+        li(
+            class="statistic__list-item " +
+                  "statistic__list-item_grey"
+          ) html - 5%
+        li(
+            class="statistic__list-item " +
+                  "statistic__list-item_red"
+          ) php - 15%
+        li(
+            class="statistic__list-item " +
+                  "statistic__list-item_green"
+          ) css - 60%
+        li(
+            class="statistic__list-item " +
+                  "statistic__list-item_light-grey"
+          ) javascript - 20%
+    .statistic__col
+      +pieChart("5, 15, 60, 20")
+

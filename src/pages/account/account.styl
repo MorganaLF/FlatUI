@@ -1,0 +1,39 @@
+.account
+  display flex
+  flex-wrap wrap
+  padding rem(80px) rem(10px)
+  &__col
+    width 50%
+    +sm()
+      width 100%
+    &_left
+      padding-right 5%
+      +sm()
+        padding-right 0
+    &_right
+      padding-left 5%
+      +sm()
+        padding-left 0
+  &__title-container
+    margin 0.83em 0
+  &__deadlines
+    display flex
+    flex-wrap wrap
+    &-col
+      display flex
+      flex-direction column
+      justify-content space-between
+      width 33.33333333333333%
+      padding 0 5%
+      +xxs()
+        width 70%
+        margin 0 auto rem(60px)
+        padding 0
+        &:last-child
+          margin-bottom 0
+    &-title
+      margin-bottom rem(30px)
+      font-size rem(18px)
+      text-align center
+      +xxs()
+        margin-bottom rem(50px)

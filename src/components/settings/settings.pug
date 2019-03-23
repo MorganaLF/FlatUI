@@ -1,0 +1,28 @@
+include ../toggle/toggle
+include ../slider/slider
+
+mixin settings
+  form.settings(
+    action="mock-address/change-me",
+    method="post"
+  )
+    ul.settings__list
+      li.settings__item
+        p.settings__text Send e-mail
+        .settings__toggle-container
+          +toggle(true)
+      li.settings__item
+        p.settings__text Send sound notifications
+        .settings__toggle-container
+          +toggle(true)
+      li.settings__item
+        p.settings__text Enable newsletter
+        .settings__toggle-container
+          +toggle
+      li.settings__item
+        p.settings__text Enable private messages
+        .settings__toggle-container
+          +toggle
+      li.settings__item
+        p.settings__text Sound
+        +slider(false, true, "secondary", "70")

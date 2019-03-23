@@ -1,11 +1,10 @@
 extends ../../templates/template
 
-include ../subheading/subheading
-include ../user/user
-include ../account-settings/account-settings
-include ../account-statistic/account-statistic
-include ../account-deadlines/account-deadlines
-include ../page-footer/page-footer
+include ../../components/subheading/subheading
+include ../../components/user/user
+include ../../components/settings/settings
+include ../../components/statistic/statistic
+include ../../components/percentage/percentage
 
 block append meta
   meta(name="keywords", content="Account, account settings, account statistic")
@@ -24,13 +23,22 @@ block content
         +user("user-6", "Peter Brown", "developer", "", "big")
         .account__title-container
           +subheading("settings")
-        +accountSettings
+        +settings
       .account__col.account__col_right
         .account__title-container
           +subheading("statistic")
         +accountStatistic
         .account__title-container
           +subheading("deadlines statistic")
-        +accountDeadlines
+        section.account__deadlines
+          .account__deadlines-col
+            h3.account__deadlines-title Ahead of time
+            +percentage(30)
+          .account__deadlines-col
+            h3.account__deadlines-title On time
+            +percentage(70)
+          .account__deadlines-col
+            h3.account__deadlines-title Expired
+            +percentage(0)
 
 
