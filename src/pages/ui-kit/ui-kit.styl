@@ -2,3 +2,194 @@
   max-width 616px
   margin 0 auto
   padding rem(60px) rem(10px)
+  &__standart-buttons-title-container
+    margin-bottom rem(60px)
+  &__standart-buttons-container
+    display flex
+    flex-wrap wrap
+    justify-content center
+    align-items flex-end
+    +xs()
+      max-width 380px
+      margin 0 auto
+      &:nth-child(1)
+        .button
+          &:nth-child(4)
+            order 2
+          &:nth-child(2)
+            order 3
+          &:nth-child(5)
+            order 4
+      .button
+        &:nth-child(1)
+          order 2
+        &:nth-child(4)
+          order 3
+    +xxs()
+      max-width 200px
+    &:nth-child(4) .button
+      margin-bottom 0
+      +xs()
+        margin-bottom rem(19px)
+    .button
+      margin 0 rem(12px) rem(19px)
+  &__arrow-buttons-title-container
+    margin rem(43px) 0 rem(25px)
+  &__arrow-buttons-container
+    display flex
+    flex-wrap wrap
+    justify-content center
+    +xxs()
+      max-width 310px
+      margin 0 auto
+    .arrow-button
+      margin 0 2%
+      +xxs()
+        margin 0 2% rem(15px)
+        &:nth-child(3)
+          order 5
+        &:nth-child(4)
+          order 6
+  &__percentages-title-container
+    margin rem(34px) 0 rem(15px)
+  &__percentages-container
+    display flex
+    flex-wrap wrap
+    justify-content space-between
+    margin 0 rem(7px)
+    +xs()
+      justify-content center
+    .percentage
+      width 16.32%
+      +xs()
+        width 27%
+        margin rem(20px) 3%
+      +xxs()
+        width 60%
+        margin rem(20px) 0
+    .pie-chart
+      flex-shrink 0
+      width 16.32%
+      +xs()
+        width 27%
+        margin rem(20px) 3%
+      +xxs()
+        width 60%
+        margin rem(20px) 0
+  &__sliders-title-container
+    margin rem(24px) 0 rem(36px)
+  &__sliders-container
+    display flex
+    flex-wrap wrap
+    padding 0 rem(10px)
+  &__sliders-col
+    width 50%
+    flex-shrink 0
+    &:first-child
+      padding-right 6%
+    &:last-child
+      padding-left 6%
+    +xs()
+      width 100%
+      &:first-child
+        margin-bottom rem(40px)
+        padding-right 0
+      &:last-child
+        padding-left 0
+  &__stages-title-container
+    margin rem(27px) 0 rem(16px)
+  &__form-elements-title-container
+    margin rem(42px) 0 rem(39px)
+  &__form-elements-container
+    display flex
+    flex-wrap wrap
+    text-align center
+  &__form-elements-col
+    flex-shrink 0
+    width 50%
+    .subheading
+      margin 0 0 rem(34px)
+      line-height 0.8
+      &:nth-child(4)
+        margin rem(38px) 0 rem(35px)
+    &:first-child
+      padding-right 1.68%
+    &:last-child
+      padding-left 1.68%
+      .toggle
+        margin 0 2.05%
+      .tick-box
+        margin 0 3.5%
+    +xxs()
+      width 100%
+      &:first-child
+      &:last-child
+        padding 0
+      .contact-form
+        margin-bottom rem(39px)
+  &__search
+    display flex
+    flex-wrap wrap
+    &-col
+      flex-shrink 0
+      width 50%
+      &:first-child
+        padding-right 1.68%
+        .subheading
+          margin rem(54px) 0 rem(10px)
+      &:last-child
+        padding-left 1.68%
+        .subheading
+          margin rem(54px) 0 rem(18px)
+      .search
+        margin-bottom rem(16px)
+      .user
+        margin-left 6.5%
+        margin-bottom rem(28px)
+      +xs()
+        width 100%
+        &:first-child,
+        &:last-child
+          padding 0
+  &__news-title-container
+    margin rem(58px) 0 rem(23px)
+  &__news-container
+    display flex
+    flex-wrap wrap
+  &__news-col
+    flex-shrink 0
+    width 50%
+    &:first-child
+      padding-right 1.75%
+    &:last-child
+      padding-left 1.75%
+    +xs()
+      width 100%
+      &:first-child
+        margin-bottom rem(40px)
+      &:first-child
+      &:last-child
+        padding 0
+  &__location-title-container
+    margin rem(37px) 0 rem(20px)
+  &__calendar
+    display flex
+    flex-wrap wrap
+    &-col
+      width 50%
+      flex-shrink 0
+      &:first-child
+        padding-right rem(18px)
+      &:last-child
+        padding-left rem(8px)
+      +xs()
+        width 100%
+        max-width 400px
+        margin 0 auto
+        &:first-child
+        &:last-child
+          padding 0
+    .subheading
+      margin rem(41px) 0 rem(14px)
+  &__video-title-container
+    margin rem(42px) 0 rem(13px)

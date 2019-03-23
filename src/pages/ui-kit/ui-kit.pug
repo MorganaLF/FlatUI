@@ -1,15 +1,21 @@
 include ../../components/subheading/subheading
-include ../../components/ui-kit-standart-buttons/ui-kit-standart-buttons
-include ../../components/ui-kit-arrow-buttons/ui-kit-arrow-buttons
-include ../../components/ui-kit-percentages-and-charts/ui-kit-percentages-and-charts
-include ../../components/ui-kit-sliders/ui-kit-sliders
-include ../../components/ui-kit-stages/ui-kit-stages
-include ../../components/ui-kit-form-elements/ui-kit-form-elements
-include ../../components/ui-kit-search-dropdown-user/ui-kit-search-dropdown-user
-include ../../components/ui-kit-news-and-events/ui-kit-news-and-events
-include ../../components/ui-kit-location/ui-kit-location
-include ../../components/ui-kit-calendar-and-messaging/ui-kit-calendar-and-messaging
-include ../../components/ui-kit-video/ui-kit-video
+include ../../components/button/button
+include ../../components/arrow-button/arrow-button
+include ../../components/percentage/percentage
+include ../../components/pie-chart/pie-chart
+include ../../components/slider/slider
+include ../../components/stage/stage
+include ../../components/contact-from/contact-form
+include ../../components/toggle/toggle
+include ../../components/tick-box/tick-box
+include ../../components/search/search
+include ../../components/dropdown/dropdown
+include ../../components/user/user
+include ../../components/news/news
+include ../../components/map/map
+include ../../components/calendar/calendar
+include ../../components/messaging/messaging
+include ../../components/player/player
 
 doctype html
 html
@@ -29,15 +35,163 @@ html
   body
     .body-wrapper
       main.ui-kit
-        +uiKitStandartButtons
-        +uiKitArrowButtons
-        +uiKitPercentagesAndCharts
-        +uiKitSliders
-        +uiKitStages
-        +uiKitFormElements
-        +uiKitSearchDropdownUser
-        +uiKitNewsAndEvents
-        +uiKitLocation
-        +uiKitCalendarAndMessaging
-        +uiKitVideo
+        section.ui-kit__standart-buttons
+          .ui-kit__standart-buttons-title-container
+            +subheading("standard buttons", "h1")
+          .ui-kit__standart-buttons-container
+            +button({
+              text: "button",
+              size: "small",
+              bg: "secondary"
+            })
+            +button({
+              text: "button",
+              bg: "secondary"
+            })
+            +button({
+              text: "button",
+              bg: "primary"
+            })
+            +button({
+              text: "button",
+              size: "small",
+              bg: "primary"
+            })
+          .ui-kit__standart-buttons-container
+            +button({
+              text: "button",
+              size: "small",
+              bg: "secondary-with-shadow"
+            })
+            +button({
+              text: "button",
+              bg: "secondary-with-shadow"
+            })
+            +button({
+              text: "button",
+              bg: "primary-with-shadow"
+            })
+            +button({
+              text: "button",
+              size: "small",
+              bg: "primary-with-shadow"
+            })
+          .ui-kit__standart-buttons-container
+            +button({
+              text: "button",
+              size: "small",
+              bg: "transparent-secondary"
+            })
+            +button({
+              text: "button",
+              bg: "transparent-secondary"
+            })
+            +button({
+              text: "button",
+              bg: "transparent-primary"
+            })
+            +button({
+              text: "button",
+              size: "small",
+              bg: "transparent-primary"
+            })
+        section.ui-kit__arrow-buttons
+          .ui-kit__arrow-buttons-title-container
+            +subheading("arrow buttons")
+          .ui-kit__arrow-buttons-container
+            +arrowButton("transparent", "left")
+            +arrowButton("transparent", "right")
+            +arrowButton("transparent", "left", true)
+            +arrowButton("transparent", "right", true)
+            +arrowButton("transparent", "left")
+            +arrowButton("transparent", "right")
+        section.ui-kit__percentages
+          .ui-kit__percentages-title-container
+            +subheading("percentages / pie chart")
+          .ui-kit__percentages-container
+            +percentage(0)
+            +percentage(38)
+            +percentage(62)
+            +percentage(89)
+            +pieChart("30, 85, 100, 100")
+        section.ui-kit__sliders
+          .ui-kit__sliders-title-container
+            +subheading("sliders")
+          .ui-kit__sliders-container
+            .ui-kit__sliders-col
+              +slider(true)
+            .ui-kit__sliders-col
+              +slider(false, true, "secondary")
+        section.ui-kit__stages
+          .ui-kit__stages-title-container
+            +subheading("stages")
+          +stage(5, 3)
+        section.ui-kit__form-elements
+          .ui-kit__form-elements-title-container
+            +subheading("form elements")
+          .ui-kit__form-elements-container
+            .ui-kit__form-elements-col
+              +contact-form
+            .ui-kit__form-elements-col
+              +subheading("toggles")
+              +toggle
+              +toggle(true)
+              +subheading("tick boxes")
+              +tickBox(true)
+              +tickBox
+        section.ui-kit__search
+          .ui-kit__search-col
+            +subheading("search / drop down")
+            +search("Search")
+            +search("I’ve not found what I’m looking for...", "primary")
+            +dropdown({
+              "1": "Option 1",
+              "2": "Option 2",
+              "3": "Option 3"
+            },
+            "Choose An Option")
+          .ui-kit__search-col
+            +subheading("user profile")
+            +user("user-1", "John Smith", "ux designer")
+            +user("user-2", "Sarah Brown", "developer", "secondary")
+        section.ui-kit__news
+          .ui-kit__news-title-container
+            +subheading("news & events")
+          .ui-kit__news-container
+            .ui-kit__news-col
+              +news({
+                image: "news-1",
+                title: "It’s all going downhill",
+                date: "24  august  2013",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing " +
+                    "elit. Sed condimentum aliquet venenatis. Etiam a nisi " +
+                    "nunc, a tincidunt eros."
+              })
+            .ui-kit__news-col
+              +news({
+                image: "news-2",
+                title: "this is the title",
+                date: ["24", "Aug"],
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                isEvent: true
+              })
+        section.ui-kit__location
+          .ui-kit__location-title-container
+            +subheading("location")
+          +map
+        section.ui-kit__calendar
+          .ui-kit__calendar-col
+            +subheading("calendar")
+            +calendar
+          .ui-kit__calendar-col
+            +subheading("messaging")
+            +messaging("photo")
+        section.ui-kit__video
+          .ui-kit__video-title-container
+            +subheading("video")
+          +player(
+          "http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4",
+          "New Zealand Landscapes Timelapse",
+          "from Bevan Percival"
+          )
 
