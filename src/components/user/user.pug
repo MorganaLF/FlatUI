@@ -8,12 +8,12 @@ mixin user(imageSrc, name, profession, bgColor, size)
                 "https://dribbble.com/"
     ];
 
-  .user(class=size ? "user_size_" + size : "")
+  .user(class=size ? "user_" + size : "")
     .user__picture(style="background-image: url(\"images/" + imageSrc + ".jpg\")")
-    .user__info(class=bgColor ? "user__info_bg_" + bgColor : "")
-      p.user__name(class=bgColor ? "user__name_color_white" : "")= name
+    .user__info(class=bgColor ? "user__info_" + bgColor : "")
+      p.user__name(class=bgColor ? "user__name_white" : "")= name
       p.user__profession(
-        class=bgColor ? "user__profession_color_white" : ""
+        class=bgColor ? "user__profession_white" : ""
       )= profession
       .user__social-icons
         -for(var i = 1; i <= 3; i++)
