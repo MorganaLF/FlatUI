@@ -6,6 +6,10 @@ $('.stage__list').each(function () {
   let currentIndex;
 
   $(stage).closest('.stage').find('.stage__content').eq(0).css('width', containerWidth * $('.stage__item').length + 'px')
+  let contentHeight = $('.stage__item').closest('.stage').find('.stage__content>*').eq(0).outerHeight();
+  $('.stage__item').closest('.stage').find('.stage__content').eq(0).css('height', contentHeight);
+
+
 
   $(window).resize(function () {
     let containerWidth = $(stage).width();
@@ -37,7 +41,7 @@ $('.stage__list').each(function () {
 
     $(window).resize(function () {
       let containerWidth = $(stage).width();
-      let contentHeight = $(stageItem).closest('.stage').find('.stage__content>*').eq(currentIndex).height();
+      let contentHeight = $(stageItem).closest('.stage').find('.stage__content>*').eq(currentIndex).outerHeight();
       $(stageItem).closest('.stage').find('.stage__content').eq(0).css('height', contentHeight);
       $(stageItem).closest('.stage').find('.stage__content').eq(0).css('transform', 'translateX(-' + containerWidth * currentIndex + 'px)');
       $(stageItem).on('click', function(){
