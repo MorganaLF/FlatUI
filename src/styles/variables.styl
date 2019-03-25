@@ -1,4 +1,4 @@
-/* Colors */
+// Colors
 
 secondary-color = #4eb7a8
 dark-grey-text = #888888
@@ -14,24 +14,24 @@ dark-grey = #4f4f4f
 primary-color = #e75735
 grey = #747474
 
-/* Font-size */
+// Font-size
 root-font-size = 14px
 
-/* Media */
+// Media
 
 $md = 1024px
 $sm = 800px
 $xs = 620px
 $xxs = 420px
 
-/* Mixins */
+// Mixins
 
-/* Px to Rem */
+// Px to Rem
 
 rem(size)
   return 1rem * size / root-font-size
 
-/* Media mixin */
+// Media mixin
 
 md()
   @media screen and (max-width $md)
@@ -49,7 +49,7 @@ xxs()
   @media screen and (max-width $xxs)
     {block}
 
-/* Font-Face */
+// Font-Face
 
 fontUrl(file)
   return "fonts/" + file
@@ -63,7 +63,7 @@ fontFace(family, style, weight, file)
         url(fontUrl(file + ".woff")) format("woff"),
         url(fontUrl(file + ".ttf")) format("ttf")
 
-/* Placeholder */
+// Placeholder
 
 placeholder()
   &::-webkit-input-placeholder
@@ -85,7 +85,7 @@ placeholder-focus()
   &:focus:-ms-input-placeholder
     {block}
 
-/* input */
+// input
 
 input()
   padding rem(5px) rem(12px)
@@ -101,7 +101,7 @@ input()
   +placeholder-focus()
     color transparent
 
-/* Adaptive height */
+// Adaptive height
 
 square()
   overflow hidden
