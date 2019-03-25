@@ -2,6 +2,7 @@ include ../messaging/messaging
 
 mixin pageMessaging
   .page-messaging
-    +messaging("photo")
+    .page-messaging__container
+      +messaging("photo")
     .page-messaging__button
       i(class="far fa-comments")

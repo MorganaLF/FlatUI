@@ -1,9 +1,10 @@
 include ../search/search
 mixin pageFooter
   footer.page-footer
-    .container.page-footer__container
+    .page-footer__container
       section.page-footer__search-container
-        +subheading("search on site")
+        .page-footer__subheading-container
+          +subheading("search on site")
         +search("Search", "primary")
       nav.page-footer__menu-container
         ul.page-footer__menu

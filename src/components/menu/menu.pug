@@ -4,9 +4,12 @@ mixin menu(items)
   ul.menu
     each item in items
       li.menu__item
-        +button({
-          text: item[0],
-          bg: "secondary",
-          tag: "a",
-          href: item[1] + ".html"
-        })
+        .menu__button-container
+          +button({
+            text: item[0],
+            bg: "secondary",
+            length: "short",
+            isFluid: true,
+            tag: "a",
+            href: item[1] + ".html"
+          })

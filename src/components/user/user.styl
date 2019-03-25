@@ -7,27 +7,6 @@
   &_big
     max-width 450px
     margin 0 auto
-    .user__info
-      padding rem(15px) rem(10px) rem(21px)
-    .user__name
-      font-size rem(27px)
-      margin-bottom rem(5px)
-    .user__profession
-      font-size rem(17px)
-      margin-bottom rem(18px)
-    .user__social-icons
-      max-width 141px
-    .user__social-icon
-      display inline-block
-      &_1
-        width rem(15px)
-        height rem(32px)
-      &_2
-        width rem(38px)
-        height rem(32px)
-      &_3
-        width rem(32px)
-        height rem(32px)
   &__picture
     flex-shrink 0
     width calc(34%)
@@ -62,6 +41,9 @@
     font-size rem(18px)
     color primary-color
     break-word()
+    &_big
+      font-size rem(27px)
+      margin-bottom rem(5px)
     &_white
       color #ffffff
   &__profession
@@ -72,6 +54,9 @@
     letter-spacing rem(0.55px)
     color dark-grey
     break-word()
+    &_big
+      font-size rem(17px)
+      margin-bottom rem(18px)
     &_white
       color #ffffff
   &__social-icons
@@ -79,6 +64,8 @@
     justify-content space-between
     max-width rem(94px)
     margin 0 auto
+    &_big
+      max-width 141px
   &__social-icon
     width rem(21px)
     height rem(21px)
@@ -88,6 +75,9 @@
     &:hover svg path
     &:focus svg path
       opacity 0.5
+    &_big
+      //width rem(38px)
+      height rem(32px)
     &_white svg path
       fill #ffffff
     svg

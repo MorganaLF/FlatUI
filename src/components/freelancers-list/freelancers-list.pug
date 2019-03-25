@@ -4,61 +4,77 @@ include ../button/button
 mixin freelancers-list
   ul.freelancers-list
     li.freelancers-list__item
-      +user("user-1", "John Smith", "ux designer")
+      .freelancers-list__user-container
+        +user("user-1", "John Smith", "ux designer")
       .freelancers-list__item-footer
         span.freelancers-list__notification Best freelancer!
-        +button({
-          text: "hire",
-          bg: "primary-with-shadow"
-        })
+        .freelancers-list__button-container
+          +button({
+            text: "hire",
+            bg: "primary-with-shadow"
+          })
     li.freelancers-list__item
-      +user("user-2", "Sarah Brown", "developer", "secondary")
+      .freelancers-list__user-container
+        +user("user-2", "Sarah Brown", "developer", "secondary")
       .freelancers-list__item-footer
-        +button({
-          text: "hire",
-          bg: "transparent-secondary"
-        })
+        .freelancers-list__button-container
+          +button({
+            text: "hire",
+            bg: "transparent-secondary"
+          })
     li.freelancers-list__item
-      +user("user-3", "Jane Taylor", "seo copywriter", "secondary")
+      .freelancers-list__user-container
+        +user("user-3", "Jane Taylor", "seo copywriter", "secondary")
       .freelancers-list__item-footer
-        +button({
-          text: "hire",
-          bg: "transparent-secondary"
-        })
+        .freelancers-list__button-container
+          +button({
+            text: "hire",
+            bg: "transparent-secondary"
+          })
     li.freelancers-list__item
-      +user("user-4", "Grace Peters", "developer", "secondary")
+      .freelancers-list__user-container
+        +user("user-4", "Grace Peters", "developer", "secondary")
       .freelancers-list__item-footer
-        +button({
-          text: "hire",
-          bg: "transparent-secondary"
-        })
+        .freelancers-list__button-container
+          +button({
+            text: "hire",
+            bg: "transparent-secondary"
+          })
     li.freelancers-list__item
-      +user("user-5", "David Walton", "developer")
-      .freelancers-list__item-footer
-        span.freelancers-list__notification Best freelancer!
-        +button({
-          text: "hire",
-          bg: "primary-with-shadow"
-        })
-    li.freelancers-list__item
-      +user("user-6", "Peter Hoover", "developer", "secondary")
-      .freelancers-list__item-footer
-        +button({
-          text: "hire",
-          bg: "transparent-secondary"
-        })
-    li.freelancers-list__item
-      +user("user-7", "George Dalton", "designer", "secondary")
-      .freelancers-list__item-footer
-        +button({
-          text: "hire",
-          bg: "transparent-secondary"
-        })
-    li.freelancers-list__item
-      +user("user-8", "Mary Charles", "seo copywriter")
+      .freelancers-list__user-container
+        +user("user-5", "David Walton", "developer")
       .freelancers-list__item-footer
         span.freelancers-list__notification Best freelancer!
-        +button({
-          text: "hire",
-          bg: "primary-with-shadow"
-        })
+        .freelancers-list__button-container
+          +button({
+            text: "hire",
+            bg: "primary-with-shadow"
+          })
+    li.freelancers-list__item
+      .freelancers-list__user-container
+        +user("user-6", "Peter Hoover", "developer", "secondary")
+      .freelancers-list__item-footer
+        .freelancers-list__button-container
+          +button({
+            text: "hire",
+            bg: "transparent-secondary"
+          })
+    li.freelancers-list__item
+      .freelancers-list__user-container
+        +user("user-7", "George Dalton", "designer", "secondary")
+      .freelancers-list__item-footer
+        .freelancers-list__button-container
+          +button({
+            text: "hire",
+            bg: "transparent-secondary"
+          })
+    li.freelancers-list__item
+      .freelancers-list__user-container
+        +user("user-8", "Mary Charles", "seo copywriter")
+      .freelancers-list__item-footer
+        span.freelancers-list__notification Best freelancer!
+        .freelancers-list__button-container
+          +button({
+            text: "hire",
+            bg: "primary-with-shadow"
+          })

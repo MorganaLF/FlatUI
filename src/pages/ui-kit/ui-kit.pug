@@ -39,81 +39,104 @@ html
           .ui-kit__standart-buttons-title-container
             +subheading("standard buttons", "h1")
           .ui-kit__standart-buttons-container
-            +button({
-              text: "button",
-              size: "small",
-              bg: "secondary"
-            })
-            +button({
-              text: "button",
-              bg: "secondary"
-            })
-            +button({
-              text: "button",
-              bg: "primary"
-            })
-            +button({
-              text: "button",
-              size: "small",
-              bg: "primary"
-            })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                size: "small",
+                bg: "secondary"
+              })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                bg: "secondary"
+              })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                bg: "primary"
+              })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                size: "small",
+                bg: "primary"
+              })
           .ui-kit__standart-buttons-container
-            +button({
-              text: "button",
-              size: "small",
-              bg: "secondary-with-shadow"
-            })
-            +button({
-              text: "button",
-              bg: "secondary-with-shadow"
-            })
-            +button({
-              text: "button",
-              bg: "primary-with-shadow"
-            })
-            +button({
-              text: "button",
-              size: "small",
-              bg: "primary-with-shadow"
-            })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                size: "small",
+                bg: "secondary-with-shadow"
+              })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                bg: "secondary-with-shadow"
+              })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                bg: "primary-with-shadow"
+              })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                size: "small",
+                bg: "primary-with-shadow"
+              })
           .ui-kit__standart-buttons-container
-            +button({
-              text: "button",
-              size: "small",
-              bg: "transparent-secondary"
-            })
-            +button({
-              text: "button",
-              bg: "transparent-secondary"
-            })
-            +button({
-              text: "button",
-              bg: "transparent-primary"
-            })
-            +button({
-              text: "button",
-              size: "small",
-              bg: "transparent-primary"
-            })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                size: "small",
+                bg: "transparent-secondary"
+              })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                bg: "transparent-secondary"
+              })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                bg: "transparent-primary"
+              })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                size: "small",
+                bg: "transparent-primary"
+              })
         section.ui-kit__arrow-buttons
           .ui-kit__arrow-buttons-title-container
             +subheading("arrow buttons")
           .ui-kit__arrow-buttons-container
-            +arrowButton("transparent", "left")
-            +arrowButton("transparent", "right")
-            +arrowButton("transparent", "left", true)
-            +arrowButton("transparent", "right", true)
-            +arrowButton("transparent", "left")
-            +arrowButton("transparent", "right")
+            .ui-kit__arrow-button-container
+              +arrowButton("transparent", "left")
+            .ui-kit__arrow-button-container
+              +arrowButton("transparent", "right")
+            .ui-kit__arrow-button-container
+              +arrowButton("transparent", "left", true)
+            .ui-kit__arrow-button-container
+              +arrowButton("transparent", "right", true)
+            .ui-kit__arrow-button-container
+              +arrowButton("transparent", "left")
+            .ui-kit__arrow-button-container
+              +arrowButton("transparent", "right")
         section.ui-kit__percentages
           .ui-kit__percentages-title-container
             +subheading("percentages / pie chart")
           .ui-kit__percentages-container
-            +percentage(0)
-            +percentage(38)
-            +percentage(62)
-            +percentage(89)
-            +pieChart("30, 85, 100, 100")
+            .ui-kit__percentage-container
+              +percentage(0)
+            .ui-kit__percentage-container
+              +percentage(38)
+            .ui-kit__percentage-container
+              +percentage(62)
+            .ui-kit__percentage-container
+              +percentage(89)
+            .ui-kit__percentage-container
+              +pieChart("30, 85, 100, 100")
         section.ui-kit__sliders
           .ui-kit__sliders-title-container
             +subheading("sliders")
@@ -133,17 +156,26 @@ html
             .ui-kit__form-elements-col
               +contact-form
             .ui-kit__form-elements-col
-              +subheading("toggles")
-              +toggle
-              +toggle(true)
-              +subheading("tick boxes")
-              +tickBox(true)
-              +tickBox
+              .ui-kit__form-elements-subtitle-container
+                +subheading("toggles")
+              .ui-kit__toggle-container
+                +toggle
+              .ui-kit__toggle-container
+                +toggle(true)
+              .ui-kit__form-elements-subtitle-container
+                +subheading("tick boxes")
+              .ui-kit__tick-box-container
+                +tickBox(true)
+              .ui-kit__tick-box-container
+                +tickBox
         section.ui-kit__search
           .ui-kit__search-col
-            +subheading("search / drop down")
-            +search("Search")
-            +search("I’ve not found what I’m looking for...", "primary")
+            .ui-kit__search-title-container
+              +subheading("search / drop down")
+            .ui-kit__search-container
+              +search("Search")
+            .ui-kit__search-container
+              +search("I’ve not found what I’m looking for...", "primary")
             +dropdown({
               "1": "Option 1",
               "2": "Option 2",
@@ -151,9 +183,12 @@ html
             },
             "Choose An Option")
           .ui-kit__search-col
-            +subheading("user profile")
-            +user("user-1", "John Smith", "ux designer")
-            +user("user-2", "Sarah Brown", "developer", "secondary")
+            .ui-kit__search-title-container
+              +subheading("user profile")
+            .ui-kit__user-container
+              +user("user-1", "John Smith", "ux designer")
+            .ui-kit__user-container
+              +user("user-2", "Sarah Brown", "developer", "secondary")
         section.ui-kit__news
           .ui-kit__news-title-container
             +subheading("news & events")
@@ -181,10 +216,12 @@ html
           +map
         section.ui-kit__calendar
           .ui-kit__calendar-col
-            +subheading("calendar")
+            .ui-kit__calendar-title-container
+              +subheading("calendar")
             +calendar
           .ui-kit__calendar-col
-            +subheading("messaging")
+            .ui-kit__calendar-title-container
+              +subheading("messaging")
             +messaging("photo")
         section.ui-kit__video
           .ui-kit__video-title-container

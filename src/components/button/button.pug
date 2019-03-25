@@ -4,6 +4,8 @@ mixin button(options)
   #{tag}.button(
     class=options.size ? "button_" + options.size : ""
     class=options.bg ? "button_" + options.bg : ""
+    class=options.length ? "button_" + options.length : ""
+    class=options.isFluid ? "button_fluid" : ""
     href=options.href ? options.href : false
     type=options.type ? options.type : false
   )!= options.text

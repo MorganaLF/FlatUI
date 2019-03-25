@@ -18,11 +18,13 @@ block title
 
 block content
   .freelancers
-    .container.freelancers__container
+    .freelancers__container
       aside.freelancers__col
-        +subheading("search")
+        .freelancers__subheading-container
+          +subheading("search")
         +search("Search freelancers", false, true)
-        +subheading("filter")
+        .freelancers__subheading-container
+          +subheading("filter")
         +filter
       main.freelancers__col
         .freelancers__main-title

@@ -53,13 +53,16 @@ mixin tariff-plan
       ul.tariff-plan__list
         li.tariff-plan__list-item
           p.tariff-plan__text Unlimited applications
-          +toggle(false, true)
+          .tariff-plan__toggle-container
+            +toggle(false, true)
         li.tariff-plan__list-item
           p.tariff-plan__text Unlimited categories
-          +toggle(true, true)
+          .tariff-plan__toggle-container
+            +toggle(true, true)
         li.tariff-plan__list-item
           p.tariff-plan__text Commission from the order
-          +toggle(true, true)
+          .tariff-plan__toggle-container
+            +toggle(true, true)
       .tariff-plan__button-container
         +button({
           text: "choose",

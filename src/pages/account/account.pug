@@ -15,30 +15,29 @@ block title
   title Account
 
 block content
-  .container
-    main.account
-      .account__col.account__col_left
-        .account__title-container
-          +subheading("your account", "h1")
-        +user("user-6", "Peter Brown", "developer", "", "big")
-        .account__title-container
-          +subheading("settings")
-        +settings
-      .account__col.account__col_right
-        .account__title-container
-          +subheading("statistic")
-        +accountStatistic
-        .account__title-container
-          +subheading("deadlines statistic")
-        section.account__deadlines
-          .account__deadlines-col
-            h3.account__deadlines-title Ahead of time
-            +percentage(30)
-          .account__deadlines-col
-            h3.account__deadlines-title On time
-            +percentage(70)
-          .account__deadlines-col
-            h3.account__deadlines-title Expired
-            +percentage(0)
+  main.account
+    .account__col.account__col_left
+      .account__title-container
+        +subheading("your account", "h1")
+      +user("user-6", "Peter Brown", "developer", "", "big")
+      .account__title-container
+        +subheading("settings")
+      +settings
+    .account__col.account__col_right
+      .account__title-container
+        +subheading("statistic")
+      +accountStatistic
+      .account__title-container
+        +subheading("deadlines statistic")
+      section.account__deadlines
+        .account__deadlines-col
+          h3.account__deadlines-title Ahead of time
+          +percentage(30)
+        .account__deadlines-col
+          h3.account__deadlines-title On time
+          +percentage(70)
+        .account__deadlines-col
+          h3.account__deadlines-title Expired
+          +percentage(0)
 
 

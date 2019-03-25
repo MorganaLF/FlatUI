@@ -1,18 +1,21 @@
 .page-footer
-  padding rem(40px) 0
+  flex-grow 0
+  padding rem(40px) rem(10px)
   font-size rem(18px)
   color rgba(255, 255, 255, 0.4)
-  .subheading
-    margin-bottom rem(10px)
-    padding 0
+  background #212121
   &__container
     display flex
     flex-wrap wrap
     justify-content space-between
+    max-width 1200px
+    margin 0 auto
   &__search-container
     margin 0 rem(10px)
     +sm()
       display none
+  &__subheading-container
+    margin-bottom rem(10px)
   &__menu
     margin 0 rem(20px)
     list-style-type none

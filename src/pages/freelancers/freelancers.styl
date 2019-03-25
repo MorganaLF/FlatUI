@@ -3,6 +3,8 @@
   &__container
     display flex
     flex-wrap wrap
+    max-width 1200px
+    margin 0 auto
   &__col
     &:first-child
       width 25%
@@ -13,21 +15,17 @@
         max-width 450px
         margin 0 auto
         padding-right 0
-      .subheading
-        padding-bottom rem(20px)
-      .slider
-        margin rem(30px) 0 rem(40px)
-      .button
-        width 100%
     &:last-child
       width 75%
       padding-left 3%
       +sm()
         width 100%
         padding-left 0
+  &__subheading-container
+    margin rem(40px) 0 rem(20px)
   &__main-title
     width 100%
-    margin 0.83em 0
+    margin rem(40px) 0
   &__page-nav-container
     padding rem(10px) 0 0
     border-top rem(1px) solid light-grey-text

@@ -16,20 +16,23 @@ block title
 
 block content
   +pageHeader
-  .container
-    +subheading("choose your tariff plan")
+  .index__container
+    .index__subheading-container
+      +subheading("choose your tariff plan")
     +tariff-plan
-  .background-container
-    .container.index__about
-      +subheading("how it works?")
+  .index__fluid-container
+    .index__about-container
+      .index__subheading-container
+        +subheading("how it works?", "h2", "light")
       +player(
       "http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4",
       "About our awesome company",
       "freelance exchange"
       )
-  .container
+  .index__container
     section.index__news
-      +subheading("latest news")
+      .index__subheading-container
+        +subheading("latest news")
       .index__news-container
         .index__news-col
           +news({

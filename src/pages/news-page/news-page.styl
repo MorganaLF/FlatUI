@@ -1,6 +1,8 @@
 .news-page
   display flex
   flex-wrap wrap
+  max-width 1200px
+  margin 0 auto
   padding rem(80px) rem(10px)
   &__col
     &_4-size
@@ -17,10 +19,6 @@
         max-width 450px
         margin 0 auto
         padding-right 0
-      .subheading
-        padding 0
-      .search
-        margin-bottom rem(40px)
     &_8-size
       display flex
       flex-wrap wrap
@@ -33,11 +31,18 @@
         width 100%
         max-width 450px
         margin 0 auto
-      .news
-        width 47%
-        margin 0 1.5% rem(20px)
-        +sm()
-          width 100%
-          margin-right 0
+  &__subheading-container
+    padding rem(10px) 0
+  &__search-container
+    margin-bottom rem(40px)
   &__title
     width 100%
+    padding rem(40px) 0
+  &__news-container
+    width 47%
+    margin 0 1.5% rem(20px)
+    .news
+      height 100%
+    +sm()
+      width 100%
+      margin-right 0
