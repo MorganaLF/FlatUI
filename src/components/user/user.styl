@@ -20,7 +20,7 @@
     position relative
     width "calc(64% - %s)" % rem(7px)
     margin 0 0 0 rem(7px)
-    padding rem(10px) rem(10px) rem(14px)
+    padding rem(10px) rem(10px) rem(12px)
     border-radius 10px
     background-color light-grey
     &:after
@@ -62,27 +62,36 @@
   &__social-icons
     display flex
     justify-content space-between
-    max-width rem(94px)
-    margin 0 auto
-    &_big
-      max-width 141px
+    align-items center
+    //max-width rem(94px)
+    //margin 0 auto
+    padding 0 15%
+    //&_big
+    //  max-width 141px
   &__social-icon
     width rem(21px)
     height rem(21px)
     background-size 100%
     background-repeat no-repeat
     background-position center
+    &:nth-child(2)
+      width rem(25px)
+      height rem(25px)
     &:hover svg path
     &:focus svg path
       opacity 0.5
     &_big
-      //width rem(38px)
+      width rem(32px)
       height rem(32px)
+      &:nth-child(2)
+        width rem(38px)
+        height rem(38px)
     &_white svg path
       fill #ffffff
     svg
       height 100%
     svg path
+      height 100%
       transition all 0.3s ease
     //&_1
     //

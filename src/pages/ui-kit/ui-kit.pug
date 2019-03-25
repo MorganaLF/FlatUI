@@ -142,9 +142,9 @@ html
             +subheading("sliders")
           .ui-kit__sliders-container
             .ui-kit__sliders-col
-              +slider(true)
+              +slider(true, false, false, "36")
             .ui-kit__sliders-col
-              +slider(false, true, "secondary")
+              +slider(false, true, "secondary", "71")
         section.ui-kit__stages
           .ui-kit__stages-title-container
             +subheading("stages")
@@ -154,7 +154,8 @@ html
             +subheading("form elements")
           .ui-kit__form-elements-container
             .ui-kit__form-elements-col
-              +contact-form
+              .ui-kit__form-container
+                +contact-form
             .ui-kit__form-elements-col
               .ui-kit__form-elements-subtitle-container
                 +subheading("toggles")

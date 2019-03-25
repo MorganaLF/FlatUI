@@ -2,6 +2,8 @@
   width 100%
   font-family "Source Sans Pro", "Arial", sans-serif
   &__container
+    border-radius rem(3px)
+    overflow hidden
     .select2-container
       background-color light-grey
     .select2-container--open
@@ -11,8 +13,7 @@
           color #ffffff
     .select2-selection--single
       input()
-      padding rem(6px) rem(25px) rem(6px) rem(12px)
-      border-radius rem(3px)
+      padding rem(4px) rem(25px) rem(6px) rem(12px)
       background-color transparent
       &:focus
         background secondary-color

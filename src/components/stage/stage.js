@@ -30,7 +30,7 @@ $('.stage__list').each(function () {
       for (let i = index; i < $('.stage__item').length; i++) {
         $(stageItem).closest('.stage').find('.stage__line').eq(i).addClass('stage__line_inactive')
       }
-      let contentHeight = $(stageItem).closest('.stage').find('.stage__content>*').eq(index).height();
+      let contentHeight = $(stageItem).closest('.stage').find('.stage__content>*').eq(index).outerHeight();
       $(stageItem).closest('.stage').find('.stage__content').eq(0).css('transform', 'translateX(-' + containerWidth * index + 'px)');
       $(stageItem).closest('.stage').find('.stage__content').eq(0).css('height', contentHeight)
     });
