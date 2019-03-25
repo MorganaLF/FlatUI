@@ -5,7 +5,9 @@ mixin messaging(imageSrc)
     .messaging__body
       .messaging__icons
         span.messaging__icon.messaging__icon_with-chat
-        .messaging__photo(style="background-image: url(\"images/" + imageSrc + ".jpg\")")
+        .messaging__photo(
+          style="background-image: url(\"images/" + imageSrc + ".jpg\")"
+          )
         span.messaging__icon.messaging__icon_with-camera
       .messaging__incoming
         p.messaging__incoming-paragraph

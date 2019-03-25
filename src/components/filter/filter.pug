@@ -5,8 +5,8 @@ include ../../components/button/button
 
 mixin filter
   form.filter(
-  action="mock-address/change-me",
-  method="get"
+    action="mock-address/change-me",
+    method="get"
   )
     .filter__row
       span.filter__subtitle Choose category
@@ -27,11 +27,11 @@ mixin filter
     .filter__row.filter__row_with-flex
       span.filter__subtitle Show busy freelancers
       .filter__tick-box-container
-        +tickBox(true)
+        +tick-box(true)
     .filter__row.filter__row_with-flex
       span.filter__subtitle Show only best freelancers
       .filter__tick-box-container
-        +tickBox
+        +tick-box
     +button({
       text: "show results",
       bg: "primary",

@@ -1,4 +1,4 @@
-include svgIcon
+include user-svg-icon
 
 mixin user(imageSrc, name, profession, bgColor, size)
   -
@@ -9,7 +9,9 @@ mixin user(imageSrc, name, profession, bgColor, size)
     ];
 
   .user(class=size ? "user_" + size : "")
-    .user__picture(style="background-image: url(\"images/" + imageSrc + ".jpg\")")
+    .user__picture(
+      style="background-image: url(\"images/" + imageSrc + ".jpg\")"
+      )
     .user__info(class=bgColor ? "user__info_" + bgColor : "")
       p.user__name(
         class=bgColor ? "user__name_white" : ""
@@ -27,5 +29,5 @@ mixin user(imageSrc, name, profession, bgColor, size)
             rel="noopener noreferrer"
             class=bgColor ? "user__social-icon_white" : ""
             class=size ? "user__social-icon_" + size : ""
-            )
-            +svgIcon(i)
+          )
+            +user-svg-icon(i)

@@ -7,7 +7,10 @@ mixin contact-form(buttonAlign, textarea=true, isAutofocus)
     )
     .contact-form__input-group
       input.contact-form__input(
-          type="text", name="name", placeholder="Your Name", autofocus=isAutofocus
+          type="text",
+          name="name",
+          placeholder="Your Name",
+          autofocus=isAutofocus
         )
       .contact-form__tip.contact-form__tip_with-error
         span.contact-form__tip-text ERROR

@@ -3,7 +3,7 @@ include ../button/button
 
 mixin page-nav
   nav.page-nav
-    +arrowButton("transparent", "left", false, "small")
+    +arrow-button("transparent", "left", false, "small")
     .page-nav__buttons
       .page-nav__button-container
         +button({
@@ -35,4 +35,4 @@ mixin page-nav
           size: "small",
           bg: "transparent-secondary"
         })
-    +arrowButton("transparent", "right", false, "small")
+    +arrow-button("transparent", "right", false, "small")

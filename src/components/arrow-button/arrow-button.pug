@@ -1,10 +1,10 @@
 include arrow-svg-icon
 
-mixin arrowButton(bg, direction, isDisabled, size)
+mixin arrow-button(bg, direction, isDisabled, size)
   button.arrow-button(
     class="arrow-button_" + direction
     class=bg ? "arrow-button_" + bg : ""
     class=size ? "arrow-button_" + size : ""
     disabled=isDisabled
   )
-    +arrowSvgIcon(direction)
+    +arrow-svg-icon(direction)
