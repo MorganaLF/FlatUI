@@ -1,13 +1,12 @@
 .pie-chart
-  width 100%
-  height 100%
-  border-radius 50%
-  overflow hidden
-  .ct-series-a .ct-slice-donut
-    stroke grey
-  .ct-series-b .ct-slice-donut
-    stroke primary-color
-  .ct-series-c .ct-slice-donut
-    stroke secondary-color
-  .ct-series-d .ct-slice-donut
-    stroke light-grey
+  square()
+  &__svg
+    width 100%
+    height 100%
+    transform rotate(-90deg)
+    transform-origin center center
+  &__bar
+    stroke transparent
+    stroke-width 18%
+    stroke-dashoffset 0
+    transition stroke-dashoffset 2s ease

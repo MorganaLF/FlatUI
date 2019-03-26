@@ -14,13 +14,23 @@ $( window ).resize(function() {
 
 $('.percentage').each(function(){
   let val = $(this).find('.percentage__value').html();
-  let circle = $(this).find('.percentage__bar');
+  let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+
+  $(circle).attr({
+    'class': 'percentage__bar',
+    'r': '47',
+    'cx': '50',
+    'cy': '50',
+    'fill': 'transparent'
+  });
+
+  $(this).find('.percentage__svg').prepend(circle);
 
   if (isNaN(val)) {
     val = 100;
   }
-  else{
-    let r = circle.attr('r');
+
+    let r = $(circle).attr('r');
     let c = Math.PI*(r*2);
 
     if (val < 0) { val = 0;}
@@ -28,9 +38,26 @@ $('.percentage').each(function(){
 
     let pct = ((100-val)/100)*c;
 
-    circle.css({ strokeDasharray: c});
-    circle.css({ strokeDashoffset: pct});
+  $(circle).css({ strokeDashoffset: c});
 
-  }
+  let valueEl = $(this).find('.percentage__value');
+
+  valueEl.prop('Counter',0).animate({
+    Counter: valueEl.text()
+  }, {
+    duration: 2000,
+    easing: 'swing',
+    step: function (now) {
+      valueEl.text(Math.ceil(now));
+    }
+  });
+
+    setTimeout(function () {
+      $(circle).css({ strokeDasharray: c});
+      $(circle).css({ strokeDashoffset: pct});
+      $(circle).css('stroke', '#e75735');
+    }, 10)
+
+
 });
 
