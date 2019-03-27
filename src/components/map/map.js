@@ -1,18 +1,13 @@
 import $ from 'jquery'
+import GoogleMapsLoader from 'google-maps'
+GoogleMapsLoader.KEY = 'AIzaSyB3R36qjSlfYo06Y6XZ6Htu6r0ivjSmcOg';
+GoogleMapsLoader.VERSION = '3.36';
 
-
-/* Подключение скрипта после main.js */
-
-if ($('.map__body').length > 0) {
-  $('body').append('<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3R36qjSlfYo06Y6XZ6Htu6r0ivjSmcOg&callback=initMap" async defer>');
-}
-
-/* Инициализация карты */
-
-$('.map__body').each(function () {
+GoogleMapsLoader.load(function(google) {
+  $('.map__body').each(function () {
   let mapSelector = $(this);
 
-  function initMap () {
+
     let currentLocation = null;
     let addButton = $(mapSelector).closest('.map').find('.map__add-button');
     let geolocationButton = $(mapSelector).closest('.map').find('.map__geolocation-button');
@@ -95,8 +90,5 @@ $('.map__body').each(function () {
       placeMarker(currentLocation);
     });
 
-  }
-
-  global.initMap = initMap;
 });
-
+});
