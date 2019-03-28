@@ -1,7 +1,7 @@
 mixin button(options)
   -var tag = options.tag || "button";
 
-  #{tag}.button(
+  #{tag}.button.js-button(
     class=options.size ? "button_" + options.size : ""
     class=options.bg ? "button_" + options.bg : ""
     class=options.length ? "button_" + options.length : ""

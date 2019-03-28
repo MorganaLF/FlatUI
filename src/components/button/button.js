@@ -1,60 +1,74 @@
 import $ from 'jquery';
 
 class Button {
-  constructor(element) {
-    this.element = element;
+  constructor(element, elementIndex) {
+    this.$element = element;
+    this.elementIndex = elementIndex;
+    this.$currentElement = null;
+    this.$ripple = null;
+    this.eventName = null;
+    this.init();
   }
 
-  createRipple(e, $this) {
-    if ($this.find('.button__ripple').length === 0) {
-      $this.prepend("<span class='button__ripple'></span>");
-    }
-
-    const ripple = $this.find('.button__ripple');
-    ripple.removeClass('button__ripple_animated');
-
-    if (!ripple.height() && !ripple.width()) {
-      const rippleDiameter = Math.max($this.outerWidth(), $this.outerHeight());
-      ripple.css({ height: rippleDiameter, width: rippleDiameter });
-    }
-
-    const rippleXCoord = e.pageX - $this.offset().left - ripple.width() / 2;
-    const rippleYCoord = e.pageY - $this.offset().top - ripple.height() / 2;
-
-    ripple
-      .css({ top: `${rippleYCoord}px`, left: `${rippleXCoord}px` })
-      .addClass('button__ripple_animated');
+  init() {
+    this.eventName = `button-${this.elementIndex}`;
+    this.$element.on(`click.${this.eventName}`, this._addRipple.bind(this));
   }
 
-  restoreDefault($this) {
-    if ($this.attr('href')) {
-      const link = $this.attr('href');
-      setTimeout(() => {
-        window.location.href = link;
-      }, 650);
-    }
+  _addRipple(event) {
+    event.preventDefault();
 
-    if ($this.attr('type') === 'submit') {
-      const form = $this.closest('form');
-      setTimeout(() => {
-        form.submit();
-      }, 650);
+    this.$currentElement = $(event.target.closest('.js-button'));
+    this._createRippleElement(this.$currentElement);
+
+    this.$ripple.removeClass('button__ripple_animated');
+
+    const { xCoordinate, yCoordinate } = this._getRippleCoordinates(event.pageX, event.pageY);
+
+    this.$ripple
+      .css({ top: `${yCoordinate}px`, left: `${xCoordinate}px` })
+      .addClass('button__ripple_animated')
+      .on(`animationend.${this.eventName}`, this._restoreDefault.bind(this));
+  }
+
+  _createRippleElement() {
+    if (this.$ripple === null) {
+      this.$ripple = $('<span class="button__ripple"></span>');
+      this._setRippleSize(this.$currentElement, this.$ripple);
+      this.$currentElement.prepend(this.$ripple);
     }
   }
 
-  callListeners(e) {
-    e.preventDefault();
+  _restoreDefault() {
+    if (this.$currentElement.attr('href').length > 0) {
+      window.location.href = this.$currentElement.attr('href');
+    }
 
-    const $this = $(e.target);
-
-    this.createRipple(e, $this);
-    this.restoreDefault($this);
+    if (this.$currentElement.attr('type') === 'submit') {
+      const $form = this.$currentElement.closest('form');
+      $form.submit();
+    }
   }
 
-  addListener() {
-    this.element.on('click', this.callListeners.bind(this));
+  _getRippleCoordinates(pageX, pageY) {
+    return {
+      xCoordinate: pageX - this.$currentElement.offset().left - this.$ripple.width() / 2,
+      yCoordinate: pageY - this.$currentElement.offset().top - this.$ripple.height() / 2,
+    };
+  }
+
+  _setRippleSize() {
+    const rippleDiameter = Math.max(
+      this.$currentElement.outerWidth(),
+      this.$currentElement.outerHeight(),
+    );
+
+    this.$ripple.css({ height: rippleDiameter, width: rippleDiameter });
   }
 }
 
-const button = new Button($('.button'));
-button.addListener();
+function createButtonInstance(index) {
+  new Button($(this), index);
+}
+
+$('.js-button').each(createButtonInstance);

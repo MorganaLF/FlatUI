@@ -12,6 +12,8 @@ module.exports = {
     "sourceType": "module"
   },
   "rules": {
+    "no-new": 0,
+    "no-underscore-dangle": 0
   },
   "extends": "airbnb"
 };
