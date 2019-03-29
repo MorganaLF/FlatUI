@@ -1,25 +1,39 @@
-import $ from 'jquery'
+import $ from 'jquery';
 
-$(document).ready(function() {
-  $('.dropdown').each(function () {
-    let dropdown = $(this);
+class Dropdown {
+  constructor(element, elementIndex) {
+    this.$element = element;
+    this.elementIndex = elementIndex;
+    this.init();
+  }
 
-    $(dropdown).select2({
+  init() {
+    this._initSelectPlugin();
+    this._addEventListeners();
+  }
+
+  _initSelectPlugin() {
+    this.$element.select2({
       minimumResultsForSearch: Infinity,
       dropdownCssClass: 'dropdown__option',
-      placeholder: $(dropdown).data('placeholder')
+      placeholder: this.$element.data('placeholder'),
     });
+  }
 
-    /* Реинициализация для адаптивности */
+  _addEventListeners() {
+    const $window = $(window);
+    $window.on(`resize.dropdownResize${this.elementIndex}`, this._resizeDropdown.bind(this));
+  }
 
-    $( window ).resize(function() {
-      $(dropdown).select2('destroy')
-          .select2({
-            minimumResultsForSearch: Infinity,
-            dropdownCssClass: 'dropdown__option',
-            placeholder: $(dropdown).data('placeholder')
-          });
-    });
-  });
-});
+  _resizeDropdown() {
+    this.$element.select2('destroy');
+    this._initSelectPlugin();
+  }
+}
 
+function createDropdownInstance(index) {
+  new Dropdown($(this), index);
+}
+
+const $dropdown = $('.js-dropdown');
+$dropdown.each(createDropdownInstance);
