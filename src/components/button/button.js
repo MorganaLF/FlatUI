@@ -6,13 +6,11 @@ class Button {
     this.elementIndex = elementIndex;
     this.$currentElement = null;
     this.$ripple = null;
-    this.eventName = null;
     this.init();
   }
 
   init() {
-    this.eventName = `button-${this.elementIndex}`;
-    this.$element.on(`click.${this.eventName}`, this._addRipple.bind(this));
+    this.$element.on(`click.addRipple${this.elementIndex}`, this._addRipple.bind(this));
   }
 
   _addRipple(event) {
@@ -28,7 +26,7 @@ class Button {
     this.$ripple
       .css({ top: `${yCoordinate}px`, left: `${xCoordinate}px` })
       .addClass('button__ripple_animated')
-      .on(`animationend.${this.eventName}`, this._restoreDefault.bind(this));
+      .on(`animationend.restoreDefault${this.elementIndex}`, this._restoreDefault.bind(this));
   }
 
   _createRippleElement() {
@@ -71,4 +69,5 @@ function createButtonInstance(index) {
   new Button($(this), index);
 }
 
-$('.js-button').each(createButtonInstance);
+const $button = $('.js-button');
+$button.each(createButtonInstance);
