@@ -40,7 +40,7 @@ class Button {
   }
 
   _restoreDefault() {
-    if (this.$currentElement.attr('href').length > 0) {
+    if (this.$currentElement.attr('href') !== undefined) {
       window.location.href = this.$currentElement.attr('href');
     }
 
