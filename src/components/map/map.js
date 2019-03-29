@@ -1,94 +1,123 @@
-import $ from 'jquery'
-import GoogleMapsLoader from 'google-maps'
-GoogleMapsLoader.KEY = 'AIzaSyB3R36qjSlfYo06Y6XZ6Htu6r0ivjSmcOg';
-GoogleMapsLoader.VERSION = '3.36';
+import $ from 'jquery';
+import GoogleMapsLoader from 'google-maps';
 
-GoogleMapsLoader.load(function(google) {
-  $('.map__body').each(function () {
-  let mapSelector = $(this);
+class Map {
+  constructor(element, elementIndex) {
+    this.$element = element;
+    this.elementIndex = elementIndex;
+    this.google = null;
+    this.map = null;
+    this.markers = [];
+    this.currentLocation = null;
+    this.init();
+  }
 
+  init() {
+    this._createGoogleMap();
+    this._addEventListeners();
+  }
 
-    let currentLocation = null;
-    let addButton = $(mapSelector).closest('.map').find('.map__add-button');
-    let geolocationButton = $(mapSelector).closest('.map').find('.map__geolocation-button');
-    let markers = [];
-    let pos = {lat: 37.791337, lng: -122.415077};
-    let opt = {
-      center: pos,
-      zoom: 15
-    };
+  _createGoogleMap() {
+    GoogleMapsLoader.KEY = 'AIzaSyB3R36qjSlfYo06Y6XZ6Htu6r0ivjSmcOg';
+    GoogleMapsLoader.VERSION = '3.36';
 
-    let map = new google.maps.Map($(mapSelector)[0], opt); /* Исправить? */
+    GoogleMapsLoader.load((google) => {
+      this.google = google;
+      const position = { lat: 37.791337, lng: -122.415077 };
 
-    let infoWindow = new google.maps.InfoWindow;
+      const options = {
+        center: position,
+        zoom: 15,
+      };
 
-    /* Определение местоположения пользователя */
+      const mapSelector = this.$element[0];
+      this.map = new google.maps.Map(mapSelector, options);
+      this._createMarker(position);
 
-    function setGeolocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-          var pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          };
+      google.maps.event.addListener(
+        this.map,
+        'click',
+        this._setCurrentLocaton.bind(this),
+      );
+    });
+  }
 
-          infoWindow.setPosition(pos);
-          infoWindow.setContent('Location found.');
-          infoWindow.open(map);
-          map.setCenter(pos);
-        }, function() {
-          handleLocationError(true, infoWindow, map.getCenter());
-        });
-      } else {
-        handleLocationError(false, infoWindow, map.getCenter());
-      }
-    }
+  _addEventListeners() {
+    const $mapContainer = this.$element.closest('.js-map');
+    const $addButton = $mapContainer.find('.js-map__add-button');
 
-    geolocationButton.on('click', setGeolocation);
+    $addButton.on(
+      `click.mapPlaceMarker${this.elementIndex}`,
+      this._placeMarker.bind(this),
+    );
 
-    function handleLocationError(browserHasGeolocation, infoWindow, pos) {
-      infoWindow.setPosition(pos);
-      infoWindow.setContent(browserHasGeolocation ?
-          'Error: The Geolocation service failed.' :
-          'Error: Your browser doesn\'t support geolocation.');
-      infoWindow.open(map);
-    }
+    const $geolocationButton = $mapContainer.find('.js-map__geolocation-button');
 
-    /* Определение координат в месте клика */
+    $geolocationButton.on(
+      `click.mapDefineGeolocation${this.elementIndex}`,
+      this._defineGeolocation.bind(this),
+    );
+  }
 
-    function saveCoordinates(location){
-      currentLocation = location;
-    }
+  _setCurrentLocaton(event) {
+    this.currentLocation = event.latLng;
+  }
 
-    /* Добавление нового маркера */
+  _createMarker(position) {
+    return new this.google.maps.Marker({
+      position,
+      map: this.map,
+      icon: 'images/map-marker.png',
+    });
+  }
 
-    function placeMarker(location){
-      let newMarker = new google.maps.Marker({
-        map: map,
-        position: location,
-        icon: 'images/map-marker.png'
+  _placeMarker() {
+    const newMarker = this._createMarker(this.currentLocation);
+    newMarker.addListener('dblclick', this._deleteMarker);
+    this.markers.push(newMarker);
+  }
+
+  _deleteMarker() {
+    this.setMap(null);
+  }
+
+  _defineGeolocation() {
+    const infoWindow = new this.google.maps.InfoWindow();
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const geolocationPosition = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        };
+
+        infoWindow.setPosition(geolocationPosition);
+        infoWindow.setContent('Location found.');
+        infoWindow.open(this.map);
+        this.map.setCenter(geolocationPosition);
+      }, () => {
+        this._handleLocationError(true, infoWindow, this.map.getCenter());
       });
-      newMarker.addListener('dblclick', function(event) {
-
-        this.setMap(null);
-
-      });
-      markers.push(newMarker);
+    } else {
+      this._handleLocationError(false, infoWindow, this.map.getCenter());
     }
+  }
 
-    let marker = new google.maps.Marker({
-      map: map,
-      position: pos,
-      icon: 'images/map-marker.png'
-    });
+  _handleLocationError(browserHasGeolocation, infoWindow, position) {
+    infoWindow.setPosition(position);
 
-    google.maps.event.addListener(map, 'click', function(event) {
-      saveCoordinates(event.latLng);
-    });
+    const errorText = browserHasGeolocation
+      ? 'Error: The Geolocation service failed.'
+      : 'Error: Your browser doesn\'t support geolocation.';
 
-    addButton.on('click', function(event){
-      placeMarker(currentLocation);
-    });
+    infoWindow.setContent(errorText);
+    infoWindow.open(this.map);
+  }
+}
 
-});
-});
+function createMapInstance(index) {
+  new Map($(this), index);
+}
+
+const $map = $('.js-map__body');
+$map.each(createMapInstance);

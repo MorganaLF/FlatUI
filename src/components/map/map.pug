@@ -1,13 +1,13 @@
 mixin map
-  .map
-    .map__body
+  .map.js-map
+    .map__body.js-map__body
     .map__footer
       span.map__title Meet us!
       .map__adress
         p.map__text 1259  California St
         p.map__text San Francisco, CA
       .map__buttons
-        button.map__button.map__geolocation-button
+        button.map__button.map__geolocation-button.js-map__geolocation-button
           include location.svg
-        button.map__button.map__add-button
+        button.map__button.map__add-button.js-map__add-button
           include white-map-marker.svg
