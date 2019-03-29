@@ -25,19 +25,19 @@ class Calendar {
 
   _addEventListeners() {
     const $window = $(window);
-    $window.on(`resize.resizeFont${this.elementIndex}`, this._setResponsiveFontSize.bind(this));
+    $window.on(`resize.calendarResizeFont${this.elementIndex}`, this._setResponsiveFontSize.bind(this));
 
     const $arrowButton = this.$element.find('.ui-corner-all');
 
     $arrowButton
-      .on(`click.resizeFont${this.elementIndex}`, this._setResponsiveFontSize.bind(this))
-      .on(`click.cutSpaces${this.elementIndex}`, this._cutTitleSpaces.bind(this));
+      .on(`click.calendarResizeFont${this.elementIndex}`, this._setResponsiveFontSize.bind(this))
+      .on(`click.calendarCutSpaces${this.elementIndex}`, this._cutTitleSpaces.bind(this));
 
     const $dayButton = this.$element.find('td[data-event="click"]');
 
     $dayButton
-      .on(`click.resizeFont${this.elementIndex}`, this._setResponsiveFontSize.bind(this))
-      .on(`click.cutSpaces${this.elementIndex}`, this._cutTitleSpaces.bind(this));
+      .on(`click.calendarResizeFont${this.elementIndex}`, this._setResponsiveFontSize.bind(this))
+      .on(`click.calendarCutSpaces${this.elementIndex}`, this._cutTitleSpaces.bind(this));
   }
 
   _displayCurrentDay() {
@@ -53,7 +53,7 @@ class Calendar {
     $title.html(str);
 
     const $dayButton = this.$element.find('td[data-event="click"]');
-    $dayButton.on(`click.cutSpaces${this.elementIndex}`, this._cutTitleSpaces.bind(this));
+    $dayButton.on(`click.calendarCutSpaces${this.elementIndex}`, this._cutTitleSpaces.bind(this));
   }
 
   _setResponsiveFontSize() {
@@ -75,7 +75,7 @@ class Calendar {
     $dayLink.css('font-size', width / 14.5);
 
     const $dayButton = this.$element.find('td[data-event="click"]');
-    $dayButton.on(`click.resizeFont${this.elementIndex}`, this._setResponsiveFontSize.bind(this));
+    $dayButton.on(`click.calendarResizeFont${this.elementIndex}`, this._setResponsiveFontSize.bind(this));
   }
 }
 

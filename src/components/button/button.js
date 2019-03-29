@@ -10,7 +10,7 @@ class Button {
   }
 
   init() {
-    this.$element.on(`click.addRipple${this.elementIndex}`, this._addRipple.bind(this));
+    this.$element.on(`click.buttonAddRipple${this.elementIndex}`, this._addRipple.bind(this));
   }
 
   _addRipple(event) {
@@ -26,7 +26,7 @@ class Button {
     this.$ripple
       .css({ top: `${yCoordinate}px`, left: `${xCoordinate}px` })
       .addClass('button__ripple_animated')
-      .on(`animationend.restoreDefault${this.elementIndex}`, this._restoreDefault.bind(this));
+      .on(`animationend.buttonRestoreDefault${this.elementIndex}`, this._restoreDefault.bind(this));
   }
 
   _createRippleElement() {
