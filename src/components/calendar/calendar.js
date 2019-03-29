@@ -1,118 +1,142 @@
-import $ from 'jquery'
+import $ from 'jquery';
 
-$( function() {
 
-  /* Инициализация */
+class Calendar {
+  constructor(element, elementIndex) {
+    this.$element = element;
+    this.elementIndex = elementIndex;
+    this.$currentElement = null;
+    this.$elementParent = null;
+    this.eventName = null;
+    this.init();
+  }
 
-  $( ".calendar__body" ).each(function () {
-    let calendar = $(this);
+  init() {
+    this.initDatepickerPlugin();
+    this.displayCurrentDay();
+    this.cutTitleSpaces();
+    this.setResponsiveFontSize();
+    this.addEventListeners();
+  }
 
-    calendar.datepicker({
+  initDatepickerPlugin() {
+    this.$element.datepicker({
       firstDay: 0,
-      dayNamesMin: [ "mon", "tue", "wed", "thu", "fri", "sat", "sun" ],
+      dayNamesMin: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+    });
+  }
+
+  addEventListeners() {
+    $(window).resize(() => {
+      this.setResponsiveFontSize();
     });
 
-    /* Вырезание пробела в шапке календаря */
+    const $arrowButton = this.$element.find('.ui-corner-all');
 
-    let str = $(calendar).find('.ui-datepicker-title').html().replace(/&nbsp;/g, '');
-    $(calendar).find('.ui-datepicker-title').html(str);
+    $arrowButton
+      .on('click', this.setResponsiveFontSize.bind(this))
+      .on('click', this.cutTitleSpaces.bind(this));
 
-    /* Вывод числа в шапке */
+    const $dayButton = this.$element.find('td[data-event="click"]');
 
-    let currentDate = $(calendar).datepicker( "getDate" ).getDate();
-    $(calendar).closest('.calendar').find( ".calendar__header" ).text(currentDate);
+    $dayButton
+      .on('click', this.setResponsiveFontSize.bind(this))
+      .on('click', this.cutTitleSpaces.bind(this));
+  }
 
-    /* Адаптивный шрифт */
+  displayCurrentDay() {
+    this.$elementParent = this.$element.closest('.calendar');
+    const currentDate = this.$element.datepicker('getDate').getDate();
+    const $calendarHeader = this.$elementParent.find('.calendar__header');
+    $calendarHeader.text(currentDate);
+  }
 
-    let width = $(calendar).find( ".ui-widget.ui-widget-content" ).width();
-    $(calendar).closest('.calendar').find( ".calendar__header" ).css('font-size', width / 3.5);
-    $(calendar).find( ".ui-datepicker .ui-datepicker-title" ).css('font-size', width / 11.6);
-    $(calendar).find( ".ui-datepicker-calendar thead" ).css('font-size', width / 31.1);
-    $(calendar).closest('.calendar').find( ".calendar__footer" ).css('font-size', width / 21.5);
-    $(calendar).find( ".ui-datepicker td span, .ui-datepicker td a" ).css('font-size', width / 14.5);
+  cutTitleSpaces() {
+    const $dayButton = this.$element.find('td[data-event="click"]');
+    $dayButton.on('click', this.cutTitleSpaces.bind(this));
 
-    /* Адаптивный шрифт при ресайзе окна */
+    const $title = this.$element.find('.ui-datepicker-title');
+    const str = $title.html().replace(/&nbsp;/g, '');
+    $title.html(str);
+  }
 
-    $( window ).resize(function() {
-      width = $(calendar).find( ".ui-widget.ui-widget-content" ).width();
-      $(calendar).closest('.calendar').find( ".calendar__header" ).css('font-size', width / 3.5);
-      $(calendar).find( ".ui-datepicker .ui-datepicker-title" ).css('font-size', width / 11.6);
-      $(calendar).find( ".ui-datepicker-calendar thead" ).css('font-size', width / 31.1);
-      $(calendar).closest('.calendar').find( ".calendar__footer" ).css('font-size', width / 21.5);
-      $(calendar).find( ".ui-datepicker td span, .ui-datepicker td a" ).css('font-size', width / 14.5);
-    });
+  setResponsiveFontSize() {
+    const width = this.$element.width();
 
-    /* Расширение функции плагина, установка размера шрифта при перерисовке */
+    const $header = this.$elementParent.find('.calendar__header');
+    $header.css('font-size', width / 3.5);
 
-    function datepicker_handleMouseover() {
-      if ( !$.datepicker._isDisabledDatepicker( datepicker_instActive.inline ? datepicker_instActive.dpDiv.parent()[ 0 ] : datepicker_instActive.input[ 0 ] ) ) {
-        $( this ).parents( ".ui-datepicker-calendar" ).find( "a" ).removeClass( "ui-state-hover" );
-        $( this ).addClass( "ui-state-hover" );
-        if ( this.className.indexOf( "ui-datepicker-prev" ) !== -1 ) {
-          $( this ).addClass( "ui-datepicker-prev-hover" );
-        }
-        if ( this.className.indexOf( "ui-datepicker-next" ) !== -1 ) {
-          $( this ).addClass( "ui-datepicker-next-hover" );
-        }
-      }
-    }
+    const $title = this.$element.find('.ui-datepicker-title');
+    $title.css('font-size', width / 11.6);
 
-    var datepicker_instActive;
-    $.datepicker._updateDatepicker = function( inst ) {
-      this.maxRows = 4; //Reset the max number of rows being displayed (see #7043)
-      datepicker_instActive = inst; // for delegate hover events
-      inst.dpDiv.empty().append( this._generateHTML( inst ) );
-      this._attachHandlers( inst );
+    const $tableHead = this.$element.find('thead');
+    $tableHead.css('font-size', width / 31.1);
 
-      var origyearshtml,
-          numMonths = this._getNumberOfMonths( inst ),
-          cols = numMonths[ 1 ],
-          width = 17,
-          activeCell = inst.dpDiv.find( "." + this._dayOverClass + " a" );
+    const $footer = this.$elementParent.find('.calendar__footer');
+    $footer.css('font-size', width / 21.5);
 
-      if ( activeCell.length > 0 ) {
-        datepicker_handleMouseover.apply( activeCell.get( 0 ) );
-      }
+    const $dayLink = this.$element.find('.ui-state-default');
+    $dayLink.css('font-size', width / 14.5);
 
-      inst.dpDiv.removeClass( "ui-datepicker-multi-2 ui-datepicker-multi-3 ui-datepicker-multi-4" ).width( "" );
-      if ( cols > 1 ) {
-        inst.dpDiv.addClass( "ui-datepicker-multi-" + cols ).css( "width", ( width * cols ) + "em" );
-      }
-      inst.dpDiv[ ( numMonths[ 0 ] !== 1 || numMonths[ 1 ] !== 1 ? "add" : "remove" ) +
-      "Class" ]( "ui-datepicker-multi" );
-      inst.dpDiv[ ( this._get( inst, "isRTL" ) ? "add" : "remove" ) +
-      "Class" ]( "ui-datepicker-rtl" );
+    const $dayButton = this.$element.find('td[data-event="click"]');
+    $dayButton.on('click', this.setResponsiveFontSize.bind(this));
+  }
+}
 
-      if ( inst === $.datepicker._curInst && $.datepicker._datepickerShowing && $.datepicker._shouldFocusInput( inst ) ) {
-        inst.input.trigger( "focus" );
-      }
+function createCalendarInstance(index) {
+  new Calendar($(this), index);
+}
 
-      // Deffered render of the years select (to avoid flashes on Firefox)
-      if ( inst.yearshtml ) {
-        origyearshtml = inst.yearshtml;
-        setTimeout( function() {
+$('.calendar__body').each(createCalendarInstance);
 
-          //assure that inst.yearshtml didn't change.
-          if ( origyearshtml === inst.yearshtml && inst.yearshtml ) {
-            inst.dpDiv.find( "select.ui-datepicker-year:first" ).replaceWith( inst.yearshtml );
-          }
-          origyearshtml = inst.yearshtml = null;
-        }, 0 );
-      }
+/* Инициализация */
 
-      let str = $(calendar).find('.ui-datepicker-title').html().replace(/&nbsp;/g, '');
-      $(calendar).find('.ui-datepicker-title').html(str);
-
-      let curWidth = $(calendar).find( ".ui-widget.ui-widget-content" ).width();
-      $(calendar).find( ".ui-datepicker .ui-datepicker-title" ).css('font-size', curWidth / 11.6);
-      $(calendar).find( ".ui-datepicker-calendar thead" ).css('font-size', curWidth / 31.1);
-      $(calendar).find( ".ui-datepicker td span, .ui-datepicker td a" ).css('font-size', curWidth / 14.5);
-
-    }
-
-  });
-
-
-
-} );
-
+// $('.calendar__body').each(function () {
+//   const calendar = $(this);
+//
+//   calendar.datepicker({
+//     firstDay: 0,
+//     dayNamesMin: ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
+//   });
+//
+//   /* Вывод числа в шапке */
+//
+//   function cutTitleSpaces() {
+//     $(calendar).find('td[data-event="click"]').on('click', cutTitleSpaces);
+//     const str = $(calendar).find('.ui-datepicker-title').html().replace(/&nbsp;/g, '');
+//     $(calendar).find('.ui-datepicker-title').html(str);
+//   }
+//
+//   cutTitleSpaces();
+//
+//   const currentDate = $(calendar).datepicker('getDate').getDate();
+//   $(calendar).closest('.calendar').find('.calendar__header').text(currentDate);
+//
+//   /* Адаптивный шрифт */
+//   let width;
+//   function setResponsiveFontSize() {
+//     width = $(calendar).find('.ui-widget.ui-widget-content').width();
+//     $(calendar).closest('.calendar').find('.calendar__header').css('font-size', width / 3.5);
+//     $(calendar).find('.ui-datepicker .ui-datepicker-title').css('font-size', width / 11.6);
+//     $(calendar).find('.ui-datepicker-calendar thead').css('font-size', width / 31.1);
+//     $(calendar).closest('.calendar').find('.calendar__footer').css('font-size', width / 21.5);
+//     $(calendar).find('.ui-datepicker td span, .ui-datepicker td a').css('font-size', width / 14.5);
+//     $(calendar).find('td[data-event="click"]').on('click', setResponsiveFontSize);
+//   }
+//
+//   setResponsiveFontSize();
+//
+//   /* Адаптивный шрифт при ресайзе окна */
+//
+//   $(window).resize(() => {
+//     setResponsiveFontSize();
+//   });
+//
+//   /* Расширение функции плагина, установка размера шрифта при перерисовке */
+//
+//   $(calendar).find('.ui-corner-all').on('click', setResponsiveFontSize);
+//   $(calendar).find('.ui-corner-all').on('click', cutTitleSpaces);
+//
+//   $(calendar).find('td[data-event="click"]').on('click', setResponsiveFontSize);
+//   $(calendar).find('td[data-event="click"]').on('click', cutTitleSpaces);
+// });
