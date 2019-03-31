@@ -13,7 +13,12 @@ class PageMessaging {
   }
 
   toggleMessagingWindow() {
-    this.isMessagingOpened ? this.hideMessagingWindow() : this.showMessagingWindow();
+    if (this.isMessagingOpened) {
+      this.hideMessagingWindow();
+    } else {
+      this.showMessagingWindow();
+    }
+
     this.isMessagingOpened = !this.isMessagingOpened;
   }
 
