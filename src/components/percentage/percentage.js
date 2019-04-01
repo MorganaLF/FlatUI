@@ -4,20 +4,23 @@ class Percentage {
   constructor(element, elementIndex) {
     this.$element = element;
     this.elementIndex = elementIndex;
-    this.$valueElement = null;
-    this.scale = null;
+    this.$valueContainer = null;
     this.value = 0;
     this.circumference = 0;
+    this.type = 'percentage';
+    this.series = [];
     this.init();
   }
 
   init() {
-    this._setValue();
-    this._setResponsiveFontSize();
-    this._drawScale();
-    this._animateValue();
-    this._animateScale();
-    this._addEventListeners();
+    this.type = this.$element.data('type');
+
+    if (this.type === 'percentage') {
+      this._drawPercentage();
+      this._addEventListeners();
+    } else {
+      this._drawPieChart();
+    }
   }
 
   _addEventListeners() {
@@ -30,9 +33,9 @@ class Percentage {
   }
 
   _setValue() {
-    this.$valueElement = this.$element.find('.js-percentage__value');
+    this.$valueContainer = this.$element.find('.js-chart__value');
 
-    this.value = this.$valueElement.html();
+    this.value = this.$valueContainer.html();
 
     const isPositiveValue = (this.value >= 0) && !Number.isNaN(this.value);
     if (!isPositiveValue) { this.value = 0; }
@@ -42,31 +45,66 @@ class Percentage {
   }
 
   _setResponsiveFontSize() {
-    this.$valueElement.css('font-size', `${this.$element.width() / 100 * 42}px`);
+    this.$valueContainer.css('font-size', `${this.$element.width() / 100 * 42}px`);
   }
 
-  _drawScale() {
-    this.scale = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+  _drawPercentage() {
+    this._setValue();
+    this._setResponsiveFontSize();
 
-    $(this.scale).attr({
-      class: 'percentage__bar',
-      r: '47',
+    const $scale = this._drawScale('47');
+    this._animateScale($scale, 0, 'primary');
+
+    this._animateValue();
+  }
+
+  _drawPieChart() {
+    this.series = this.$element.data('series').split(', ');
+    const colorModifiers = ['dark-grey', 'primary', 'secondary', 'light-grey'];
+
+    this.series.forEach((val, index) => {
+      this.value = val;
+      let offset = 0;
+
+      if (index === 0) {
+        offset = 0;
+      } else {
+        offset = this.series.slice(0, index).reduce((sum, current) => {
+          return Number(sum) + Number(current);
+        });
+      }
+
+      const $scale = this._drawScale('40', 'wide');
+      this._animateScale($scale, offset, colorModifiers[index]);
+    });
+  }
+
+  _drawScale(radius, sizeModifier) {
+    const scale = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+
+    const scaleClass = sizeModifier
+      ? `chart__bar chart__bar_${sizeModifier}`
+      : 'chart__bar';
+
+    $(scale).attr({
+      class: scaleClass,
+      r: radius,
       cx: '50',
       cy: '50',
       fill: 'transparent',
     });
 
-    const $svg = this.$element.find('.js-percentage__svg');
-    $svg.prepend(this.scale);
+    const $svg = this.$element.find('.js-chart__svg');
+    $svg.prepend(scale);
 
-    const radius = $(this.scale).attr('r');
     this.circumference = Math.PI * (radius * 2);
+    $(scale).css({ strokeDashoffset: this.circumference });
 
-    $(this.scale).css({ strokeDashoffset: this.circumference });
+    return $(scale);
   }
 
   _animateValue() {
-    const $valueEl = this.$valueElement;
+    const $valueEl = this.$valueContainer;
 
     $valueEl
       .prop('Counter', 0)
@@ -81,16 +119,16 @@ class Percentage {
       });
   }
 
-  _animateScale() {
-    const scaleOffset = (100 - this.value) / 100 * this.circumference;
+  _animateScale($scale, offset, colorModifier) {
+    const scaleOffset = (100 - this.value - offset) / 100 * this.circumference;
 
     setTimeout(() => {
-      $(this.scale)
+      $scale
         .css({
           strokeDasharray: this.circumference,
           strokeDashoffset: scaleOffset,
         })
-        .addClass('percentage__bar_primary');
+        .addClass(`chart__bar_${colorModifier}`);
     }, 10);
   }
 }
@@ -99,5 +137,5 @@ function createPercentageInstance(index) {
   new Percentage($(this), index);
 }
 
-const $percentage = $('.js-percentage');
+const $percentage = $('.js-chart');
 $percentage.each(createPercentageInstance);
