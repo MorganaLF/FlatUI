@@ -1,0 +1,5 @@
+mixin chart(options)
+  .chart.js-chart(data-series=options.series data-type=options.type)
+    if(options.type === "percentage")
+      span.chart__value.js-chart__value= options.value
+    svg(class="chart__svg js-chart__svg" viewBox="0 0 100 100")

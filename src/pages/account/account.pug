@@ -4,7 +4,7 @@ include ../../components/subheading/subheading
 include ../../components/user/user
 include ../../components/settings/settings
 include ../../components/statistic/statistic
-include ../../components/percentage/percentage
+include ../../components/chart/chart
 
 block append meta
   meta(name="keywords", content="Account, account settings, account statistic")
@@ -32,12 +32,12 @@ block content
       section.account__deadlines
         .account__deadlines-col
           h3.account__deadlines-title Ahead of time
-          +percentage(30)
+          +chart({type: "percentage", value: 30})
         .account__deadlines-col
           h3.account__deadlines-title On time
-          +percentage(70)
+          +chart({type: "percentage", value: 70})
         .account__deadlines-col
           h3.account__deadlines-title Expired
-          +percentage(0)
+          +chart({type: "percentage", value: 0})
 
 

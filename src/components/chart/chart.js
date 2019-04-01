@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-class Percentage {
+class Chart {
   constructor(element, elementIndex) {
     this.$element = element;
     this.elementIndex = elementIndex;
@@ -134,8 +134,8 @@ class Percentage {
 }
 
 function createPercentageInstance(index) {
-  new Percentage($(this), index);
+  new Chart($(this), index);
 }
 
-const $percentage = $('.js-chart');
-$percentage.each(createPercentageInstance);
+const $chart = $('.js-chart');
+$chart.each(createPercentageInstance);
