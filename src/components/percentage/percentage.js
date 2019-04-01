@@ -1,63 +1,103 @@
 import $ from 'jquery';
 
-/* Адаптивный шрифт */
-
-setTimeout(() => {
-  $('.percentage__value').css('font-size', $('.percentage').width() / 100 * 42 + 'px');
-}, 4);
-
-$( window ).resize(function() {
-  $('.percentage__value').css('font-size', $('.percentage').width() / 100 * 42 + 'px');
-});
-
-/* Создание шкалы */
-
-$('.percentage').each(function(){
-  let val = $(this).find('.percentage__value').html();
-  let circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-
-  $(circle).attr({
-    'class': 'percentage__bar',
-    'r': '47',
-    'cx': '50',
-    'cy': '50',
-    'fill': 'transparent'
-  });
-
-  $(this).find('.percentage__svg').prepend(circle);
-
-  if (isNaN(val)) {
-    val = 100;
+class Percentage {
+  constructor(element, elementIndex) {
+    this.$element = element;
+    this.elementIndex = elementIndex;
+    this.$valueElement = null;
+    this.scale = null;
+    this.value = 0;
+    this.circumference = 0;
+    this.init();
   }
 
-    let r = $(circle).attr('r');
-    let c = Math.PI*(r*2);
+  init() {
+    this._setValue();
+    this._setResponsiveFontSize();
+    this._drawScale();
+    this._animateValue();
+    this._animateScale();
+    this._addEventListeners();
+  }
 
-    if (val < 0) { val = 0;}
-    if (val > 100) { val = 100;}
+  _addEventListeners() {
+    const $window = $(window);
 
-    let pct = ((100-val)/100)*c;
+    $window.on(
+      `resize.percentageSetFont${this.elementIndex}`,
+      this._setResponsiveFontSize.bind(this),
+    );
+  }
 
-  $(circle).css({ strokeDashoffset: c});
+  _setValue() {
+    this.$valueElement = this.$element.find('.js-percentage__value');
 
-  let valueEl = $(this).find('.percentage__value');
+    this.value = this.$valueElement.html();
 
-  valueEl.prop('Counter',0).animate({
-    Counter: valueEl.text()
-  }, {
-    duration: 2000,
-    easing: 'swing',
-    step: function (now) {
-      valueEl.text(Math.ceil(now));
-    }
-  });
+    const isPositiveValue = (this.value >= 0) && !Number.isNaN(this.value);
+    if (!isPositiveValue) { this.value = 0; }
 
-    setTimeout(function () {
-      $(circle).css({ strokeDasharray: c});
-      $(circle).css({ strokeDashoffset: pct});
-      $(circle).css('stroke', '#e75735');
-    }, 10)
+    const isAllowableValue = this.value <= 100;
+    if (!isAllowableValue) { this.value = 100; }
+  }
 
+  _setResponsiveFontSize() {
+    this.$valueElement.css('font-size', `${this.$element.width() / 100 * 42}px`);
+  }
 
-});
+  _drawScale() {
+    this.scale = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
 
+    $(this.scale).attr({
+      class: 'percentage__bar',
+      r: '47',
+      cx: '50',
+      cy: '50',
+      fill: 'transparent',
+    });
+
+    const $svg = this.$element.find('.js-percentage__svg');
+    $svg.prepend(this.scale);
+
+    const radius = $(this.scale).attr('r');
+    this.circumference = Math.PI * (radius * 2);
+
+    $(this.scale).css({ strokeDashoffset: this.circumference });
+  }
+
+  _animateValue() {
+    const $valueEl = this.$valueElement;
+
+    $valueEl
+      .prop('Counter', 0)
+      .animate({
+        Counter: $valueEl.text(),
+      }, {
+        duration: 2000,
+        easing: 'swing',
+        step(now) {
+          $valueEl.text(Math.ceil(now));
+        },
+      });
+  }
+
+  _animateScale() {
+    const scaleOffset = (100 - this.value) / 100 * this.circumference;
+
+    setTimeout(() => {
+      $(this.scale)
+        .css({
+          strokeDasharray: this.circumference,
+          strokeDashoffset: scaleOffset,
+        })
+        .addClass('percentage__bar_primary');
+    }, 10);
+  }
+}
+
+function createPercentageInstance(index) {
+  new Percentage($(this), index);
+}
+
+const $percentage = $('.js-percentage');
+$percentage.each(createPercentageInstance);
