@@ -1,13 +1,13 @@
 mixin slider(isTip, isScale, progressBg, value)
   .slider__container
-    .slider(
+    .slider.js-slider(
         class=progressBg ?
               "slider_with-progress slider_" + progressBg : ""
         data-value=value ? value : 0
       )
       .custom-handle.ui-slider-handle
         if isTip
-          .slider__tip
+          .slider__tip.js-slider__tip
     if isScale
       ul.slider__scale
         li.slider__scale-item 0

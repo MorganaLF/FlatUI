@@ -1,24 +1,45 @@
-import $ from 'jquery'
+import $ from 'jquery';
 
-$( function() {
+class Slider {
+  constructor(element) {
+    this.$element = element;
+    this.init();
+  }
 
-  $( ".slider" ).each(function(){
-    $(this).slider({
-      value: $(this).data('value')
+  init() {
+    let options = {
+      value: this.$element.data('value'),
+    };
+
+    if (this.$element.hasClass('slider_with-progress')) {
+      options = {
+        ...options,
+        range: 'min',
+      };
+    }
+
+    this.$element.slider(options);
+
+    this._displaySliderValue();
+  }
+
+  _displaySliderValue() {
+    const $tip = this.$element.find('.js-slider__tip');
+
+    $tip.text(this.$element.slider('value'));
+
+    this.$element.slider({
+      slide(event, ui) {
+        $tip.text(ui.value);
+      },
     });
-  });
+  }
+}
 
-  $( ".slider__tip" ).each(function() {
-    $(this).text($(this).closest('.slider').slider( "value" ));
-    $(this).closest('.slider').slider({
-      slide: function( event, ui ) {
-        $(this).find(".slider__tip").text( ui.value );
-        }
-    })
-  });
+$(() => {
+  const $slider = $('.js-slider');
 
-  $( ".slider_with-progress" ).slider({
-    range: "min"
+  $slider.each((index, item) => {
+    new Slider($(item));
   });
-
-} );
+});
