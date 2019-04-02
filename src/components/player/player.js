@@ -1,104 +1,95 @@
-import $ from 'jquery'
+import $ from 'jquery';
 
-$( function() {
+class Player {
+  constructor(element, elementIndex) {
+    this.$element = element;
+    this.playerNode = null;
+    this.elementIndex = elementIndex;
+    this.$playerContainer = null;
+    this.$playButton = null;
+    this.$fullScreenButton = null;
+    this.$progressLineContainer = null;
+    this.$progressLine = null;
+    this.isFullScreen = false;
+    this.init();
+  }
 
-  $('.player').each(function () {
-    let video = $(this)[0];
-    let playButton = $(video).closest('.player__wrapper').find('.player__play-button');
-    let fullButton = $(video).closest('.player__wrapper').find('.player__full-button');
-    let progressLine = $(video).closest('.player__wrapper').find('.player__progress-container');
-    let fullProgressLine = $(video).closest('.player__wrapper').find('.player__progress');
-    let durarion;
-    let time_update_interval;
+  init() {
+    this._findElements();
+    this._addEventListeners();
+  }
 
-    /* Воспроизведение видео */
+  playVideo() {
+    let updateInterval;
 
-    function playVideo () {
-      if (video.paused) {
-        $(playButton).addClass('player__play-button_playing');
-        video.play();
-        time_update_interval = setInterval(function () {
-          updateProgressBar();
-        }, 1000);
-      } else {
-        $(playButton).removeClass('player__play-button_playing');
-        video.pause();
-        clearInterval(time_update_interval);
-      }
+    if (this.playerNode.paused) {
+      this.$playButton.addClass('player__play-button_playing');
+      this.playerNode.play();
+      updateInterval = setInterval(this._updateProgressBar.bind(this), 1000);
+    } else {
+      this.$playButton.removeClass('player__play-button_playing');
+      this.playerNode.pause();
+      clearInterval(updateInterval);
     }
-    $(video).click(playVideo);
-    playButton.click(playVideo);
+  }
 
-    /* Развернуть на весь экран */
-    let isFull = false;
+  rewindVideo(event) {
+    const progressLineWidth = this.$progressLineContainer.width();
+    const cursorXCoordinate = event.pageX - this.$progressLineContainer.offset().left;
 
-    function playFullscreen (){
+    this.playerNode.currentTime = this.playerNode.duration
+      * (cursorXCoordinate / progressLineWidth);
 
-      let doc = $(video).closest('.player__wrapper')[0]; /* Исправить? */
+    this._updateProgressBar.bind(this);
+  }
 
-      if (!isFull) {
-        $(fullButton).addClass('player__full-button_opened');
-        if (doc.requestFullscreen) {
-          doc.requestFullscreen();
-        }
-        else if (doc.mozRequestFullScreen) {
-          doc.mozRequestFullScreen();
-        }
-        else if (doc.webkitRequestFullScreen) {
-          doc.webkitRequestFullScreen();
-        }
-        else if (doc.msRequestFullscreen) {
-          doc.msRequestFullscreen();
-        }
-      } else {
-        $(fullButton).removeClass('player__full-button_opened');
-
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        }
-        else if (document.mozCancelFullScreen) {
-          document.mozCancelFullScreen();
-        }
-        else if (document.webkitCancelFullScreen) {
-          document.webkitCancelFullScreen();
-        }
-        else if (document.msExitFullscreen) {
-          document.msExitFullscreen();
-        }
-      }
-
-      isFull = !isFull;
+  playInFullScreen() {
+    if (!this.isFullScreen) {
+      this.$fullScreenButton.addClass('player__full-button_opened');
+      this.$playerContainer[0].requestFullscreen();
+    } else {
+      this.$fullScreenButton.removeClass('player__full-button_opened');
+      document.exitFullscreen();
     }
 
-    $(fullButton).click(playFullscreen);
+    this.isFullScreen = !this.isFullScreen;
+  }
 
+  _findElements() {
+    this.playerNode = this.$element[0];
+    this.$playerContainer = this.$element.closest('.js-player__wrapper');
+    this.$playButton = this.$playerContainer.find('.js-player__play-button');
+    this.$fullScreenButton = this.$playerContainer.find('.js-player__full-button');
+    this.$progressLineContainer = this.$playerContainer.find('.js-player__progress-container');
+    this.$progressLine = this.$playerContainer.find('.js-player__progress');
+  }
 
-    /* Линия прогресса */
-    function progress (event) {
+  _addEventListeners() {
+    this.$element
+      .on(`click.playerPlayVideo${this.elementIndex}`, this.playVideo.bind(this));
 
-      let line_width = $(progressLine).width();
-      // положение элемента
-      let elem_left = $(progressLine).offset().left;
-      // положение курсора внутри элемента
-      let Xinner = event.pageX - elem_left;
-      let newTime = video.duration * (Xinner / line_width);
-      // Skip ui-kit-video to new time.
-      video.currentTime = newTime;
-      updateProgressBar();
-    }
+    this.$playButton
+      .on(`click.playerPlayVideo${this.elementIndex}`, this.playVideo.bind(this));
 
-    // Обновляем прогресс
-    function updateProgressBar(){
-      let line_width = $(progressLine).width();
-      let persent = (video.currentTime / video.duration);
-      $(fullProgressLine).css('width', persent * line_width + 'px');
-    }
+    this.$fullScreenButton
+      .on(`click.playerFullScreen${this.elementIndex}`, this.playInFullScreen.bind(this));
 
-    $(progressLine).on('click', progress);
+    this.$progressLineContainer
+      .on(`click.playerRewindVideo${this.elementIndex}`, this.rewindVideo.bind(this));
+  }
 
+  _updateProgressBar() {
+    const progressLineWidth = this.$progressLineContainer.width();
+    const passedTimeInPercent = (this.playerNode.currentTime / this.playerNode.duration);
+
+    this.$progressLine.css('width', `${passedTimeInPercent * progressLineWidth}px`);
+  }
+}
+
+$(() => {
+  const $player = $('.js-player');
+
+  $player.each((index, item) => {
+    new Player($(item), index);
   });
-
-
 });
-
-
