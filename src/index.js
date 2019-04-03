@@ -1,13 +1,5 @@
-import './styles/main.styl';
-import './components/button/button';
-import './plugins/jQuery-UI/jquery-ui.min';
-import './components/chart/chart';
-import './components/slider/slider';
-import '../node_modules/select2/dist/js/select2.full.min';
-import './components/dropdown/dropdown';
-import './components/map/map';
-import './components/calendar/calendar';
-import './components/player/player';
-import './components/stage/stage';
-import './components/mobile-menu/mobile-menu';
-import './components/page-messaging/page-messaging';
+function requireAll(r) {
+  return r.keys().map(r);
+}
+
+requireAll(require.context('./', true, /\.js|styl$/));
