@@ -69,9 +69,7 @@ class Chart {
       if (index === 0) {
         offset = 0;
       } else {
-        offset = this.series.slice(0, index).reduce((sum, current) => {
-          return Number(sum) + Number(current);
-        });
+        offset = this.series.slice(0, index).reduce((sum, current) => Number(sum) + Number(current));
       }
 
       const $scale = this._drawScale('40', 'wide');
@@ -133,9 +131,10 @@ class Chart {
   }
 }
 
-function createPercentageInstance(index) {
-  new Chart($(this), index);
-}
+$(() => {
+  const $chart = $('.js-chart');
 
-const $chart = $('.js-chart');
-$chart.each(createPercentageInstance);
+  $chart.each((index, item) => {
+    new Chart($(item), index);
+  });
+});

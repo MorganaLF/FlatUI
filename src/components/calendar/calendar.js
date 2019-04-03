@@ -79,9 +79,10 @@ class Calendar {
   }
 }
 
-function createCalendarInstance(index) {
-  new Calendar($(this), index);
-}
+$(() => {
+  const $calendar = $('.js-calendar__body');
 
-const $calendar = $('.js-calendar__body');
-$calendar.each(createCalendarInstance);
+  $calendar.each((index, item) => {
+    new Calendar($(item), index);
+  });
+});

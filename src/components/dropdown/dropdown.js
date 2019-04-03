@@ -31,9 +31,10 @@ class Dropdown {
   }
 }
 
-function createDropdownInstance(index) {
-  new Dropdown($(this), index);
-}
+$(() => {
+  const $dropdown = $('.js-dropdown');
 
-const $dropdown = $('.js-dropdown');
-$dropdown.each(createDropdownInstance);
+  $dropdown.each((index, item) => {
+    new Dropdown($(item), index);
+  });
+});

@@ -35,9 +35,9 @@ class MobileMenu {
   }
 }
 
-function createMobileMenuInstance(index) {
-  new MobileMenu($(this), index);
-}
-
-const $mobileMenuButton = $('.js-mobile-menu__button');
-$mobileMenuButton.each(createMobileMenuInstance);
+$(() => {
+  const $mobileMenuButton = $('.js-mobile-menu__button');
+  $mobileMenuButton.each((index, item) => {
+    new MobileMenu($(item), index);
+  });
+});

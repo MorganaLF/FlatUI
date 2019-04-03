@@ -65,9 +65,10 @@ class Button {
   }
 }
 
-function createButtonInstance(index) {
-  new Button($(this), index);
-}
+$(() => {
+  const $button = $('.js-button');
 
-const $button = $('.js-button');
-$button.each(createButtonInstance);
+  $button.each((index, item) => {
+    new Button($(item), index);
+  });
+});

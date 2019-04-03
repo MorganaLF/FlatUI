@@ -1,11 +1,12 @@
 .page-messaging
+  display flex
+  flex-direction column
   z-index 999999999999
   max-width 300px
   position fixed
   right 0
   bottom 0
   margin rem(5px)
-  text-align right
   &__container
     display none
     &_closed
@@ -15,6 +16,7 @@
     &_opened-active
       animation showMessaging 0.3s ease
   &__button
+    align-self flex-end
     display inline-block
     width rem(50px)
     height rem(50px)

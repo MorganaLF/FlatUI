@@ -115,9 +115,10 @@ class Map {
   }
 }
 
-function createMapInstance(index) {
-  new Map($(this), index);
-}
+$(() => {
+  const $map = $('.js-map__body');
 
-const $map = $('.js-map__body');
-$map.each(createMapInstance);
+  $map.each((index, item) => {
+    new Map($(item), index);
+  });
+});

@@ -65,9 +65,9 @@ class PageMessaging {
   }
 }
 
-function createPageMessagingInstance(index) {
-  new PageMessaging($(this), index);
-}
-
-const $pageMessagingButton = $('.js-page-messaging__button');
-$pageMessagingButton.each(createPageMessagingInstance);
+$(() => {
+  const $pageMessagingButton = $('.js-page-messaging__button');
+  $pageMessagingButton.each((index, item) => {
+    new PageMessaging($(item), index);
+  });
+});
