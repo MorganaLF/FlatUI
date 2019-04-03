@@ -6,21 +6,26 @@
   font-size rem(18px)
   color rgba(255, 255, 255, 0.4)
   background #212121
+
   &__container
     display flex
     flex-wrap wrap
     justify-content space-between
     max-width 1200px
     margin 0 auto
+
   &__search-container
     margin 0 rem(10px)
     +sm()
       display none
+
   &__subheading-container
     margin-bottom rem(10px)
+
   &__menu
     margin 0 rem(20px)
     list-style-type none
+
     &-container
       +xs()
         padding-bottom rem(20px)
@@ -28,23 +33,28 @@
         width 100%
         &:nth-child(2)
           padding-bottom 0
+
     &-link
       display inline-block
       margin-bottom rem(10px)
       color rgba(255, 255, 255, 0.4)
       transition all 0.3s ease
+
       &:hover
       &:focus
         color #ffffff
+
   &__copyright
     margin 0 rem(20px)
     align-self flex-end
     font-size rem(14px)
     +sm()
       align-self flex-start
+
     &-link
       color rgba(255, 255, 255, 0.4)
       text-decoration none
+
       &:hover
       &:focus
         text-decoration underline

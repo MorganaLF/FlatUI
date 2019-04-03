@@ -9,14 +9,19 @@
   right 0
   bottom 0
   margin rem(5px)
+
   &__container
     display none
+
     &_closed
       animation hideMessaging 0.3s ease
+
     &_opened
       visibility hidden
+
     &_opened-active
       animation showMessaging 0.3s ease
+
   &__button
     align-self flex-end
     display inline-block
@@ -30,31 +35,29 @@
     background secondary-color
     cursor pointer
     transition all 0.3s ease
+
     &:hover
       background #00796B
+
   .far
   .fas
     margin 50% 0 0
     transform translate(0, -50%)
 
-@keyframes showMessaging {
-  from{
+@keyframes showMessaging
+  from
     transform scale(0)
     opacity 0
-  }
-  to{
-    transform scale(1)
-    opacity 1
-  }
-}
 
-@keyframes hideMessaging {
-  from{
+  to
     transform scale(1)
     opacity 1
-  }
-  to{
+
+@keyframes hideMessaging
+  from
+    transform scale(1)
+    opacity 1
+
+  to
     transform scale(0)
     opacity 0
-  }
-}

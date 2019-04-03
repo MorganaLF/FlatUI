@@ -2,12 +2,14 @@
 
 .stage
   overflow hidden
+
   &__list
     display flex
     justify-content space-between
     align-items center
     list-style-type none
     text-align center
+
   &__item
     flex-shrink 0
     width rem(29px)
@@ -22,22 +24,28 @@
       width rem(25px)
       height rem(25px)
       font-size rem(11px)
+
     &_inactive
       background-color light-grey
       color dark-grey-text
+
     &-text
       display inline-block
       margin-top 50%
       transform translate(0, -50%)
+
   &__line
     width 100%
     border-bottom rem(5px) solid primary-color
     transition all 0.3s ease-in-out
+
     &_inactive
       border-bottom-color light-grey
+
   &__content
     display flex
     align-items flex-start
     transition all 1s ease-in-out
+
     &>*
       width 100%

@@ -4,8 +4,10 @@
 .calendar
   border-radius rem(3px)
   overflow hidden
+
   &__body
     background-color #f2f2f2
+
   &__header
     padding rem(10px) rem(10px) rem(8px)
     font-size rem(80px)
@@ -14,14 +16,17 @@
     text-align center
     color #ffffff
     background-color primary-color
+
   .ui-datepicker
     width 100%
     padding 0
     border none
     font-family "Lato", "Arial", sans-serif
+
   .ui-helper-clearfix:before
   .ui-helper-clearfix:after
     display none
+
   .ui-datepicker-header
     display flex
     justify-content space-between
@@ -30,36 +35,44 @@
     border none
     border-radius 0
     background-color darker-primary-color
+
   .ui-datepicker-prev
   .ui-datepicker-next
     position static
     cursor pointer
     width 10%
+
   .ui-datepicker-prev
     margin rem(2px) 0 0 rem(9px)
+
   .ui-datepicker-next
     order 2
     margin rem(2px) rem(9px) 0 0
+
   .ui-datepicker-prev-hover
   .ui-datepicker-next-hover
     background none
     border none
     position static
+
   .ui-icon
     display inline-block
     width 100%
     height 100%
     background none
+
     &.ui-icon-circle-triangle-e
       margin 0
       position static
       background url("images/calendar-arrow-right.svg") no-repeat center center
       background-size 37%
+
     &.ui-icon-circle-triangle-w
       margin 0
       position static
       background url("images/calendar-arrow-left.svg") no-repeat center center
       background-size 37%
+
   .ui-datepicker-title
     order 1
     width 70%
@@ -70,11 +83,14 @@
     line-height 1em
     color #ffffff
     white-space nowrap
+
   .ui-datepicker-year
     display none
+
   .ui-datepicker-calendar
     width 100%
     margin 0
+
   thead
     border-radius 0
     font-size rem(9px)
@@ -82,9 +98,11 @@
     letter-spacing rem(0.45px)
     background-color primary-color
     color #ffffff
+
   th
     padding rem(10px) 0 rem(8px)
     font-weight 400
+
   td
     width 14.28571428571429%
     background-color #f2f2f2
@@ -92,11 +110,14 @@
     text-align center
     cursor pointer
     square()
+
     &:hover
     &:focus-within
       background-color lightness(primary-color, 75%)
+
       .ui-state-default
         color #ffffff
+
   .ui-state-default
     display: inline-block
     width 100%
@@ -108,23 +129,31 @@
     font-size rem(20px)
     background none
     color #868686
+
     &.ui-state-highlight
       color #ffffff
+
   .ui-state-disabled
     opacity 1
     color #ffffff
+
   .ui-state-active
     color #ffffff
+
   .ui-datepicker-current-day
     background-color lightness(primary-color, 75%)
     color #ffffff
+
   .ui-datepicker-today
     color #ffffff
     background-color primary-color
+
     &:hover
       background-color primary-color
+
     .ui-state-active
       color #ffffff
+
   &__footer
     padding rem(17px) rem(20px)
     font-size rem(13px)

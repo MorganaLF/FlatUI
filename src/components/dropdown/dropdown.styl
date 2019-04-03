@@ -4,31 +4,41 @@
 .dropdown
   width 100%
   font-family "Source Sans Pro", "Arial", sans-serif
+
   &__container
     border-radius rem(3px)
     overflow hidden
+
     .select2-container
       background-color light-grey
+
     .select2-container--open
       background-color secondary-color
+
       .select2-selection--single
         .select2-selection__rendered
           color #ffffff
+
     .select2-selection--single
       input()
       padding rem(4px) rem(25px) rem(6px) rem(12px)
       background-color transparent
+
       &:focus
         background secondary-color
+
       &:focus .select2-selection__rendered
       &:focus .select2-selection__placeholder
         color #ffffff
+
       .select2-selection__rendered
         color dark-grey-text
         line-height 1.2
         padding-left 0
+
       .select2-selection__placeholder
         line-height 1
+
       .select2-selection__arrow
         top 0
         right 0
@@ -38,8 +48,10 @@
         border-radius 0 rem(3px) rem(3px) 0
         background secondary-color url("images/dropdown-arrow.svg") no-repeat center
         background-size 45%
+
         b
           display none
+
   &__option
     padding rem(6px) 0
     border none

@@ -5,8 +5,10 @@
   align-items center
   max-width 300px
   text-align center
+
   &_big
     max-width 450px
+
   &__picture
     flex-shrink 0
     width calc(34%)
@@ -16,6 +18,7 @@
     background-position top center
     background-size cover
     square()
+
   &__info
     position relative
     width "calc(64% - %s)" % rem(7px)
@@ -23,6 +26,7 @@
     padding rem(10px) rem(10px) rem(12px)
     border-radius 10px
     background-color light-grey
+
     &:after
       content ""
       position absolute
@@ -32,20 +36,26 @@
       height rem(9px)
       transform translate(-50%, -50%) rotate(45deg)
       background-color light-grey
+
     &_secondary
       background-color secondary-color
+
       &:after
         background-color secondary-color
+
   &__name
     margin-bottom rem(3px)
     font-size rem(18px)
     color primary-color
     break-word()
+
     &_big
       font-size rem(27px)
       margin-bottom rem(5px)
+
     &_white
       color #ffffff
+
   &__profession
     margin-bottom rem(12px)
     font-size rem(11px)
@@ -54,53 +64,50 @@
     letter-spacing rem(0.55px)
     color dark-grey
     break-word()
+
     &_big
       font-size rem(17px)
       margin-bottom rem(18px)
+
     &_white
       color #ffffff
+
   &__social-icons
     display flex
     justify-content space-between
     align-items center
-    //max-width rem(94px)
-    //margin 0 auto
     padding 0 15%
-    //&_big
-    //  max-width 141px
+
   &__social-icon
     width rem(21px)
     height rem(21px)
     background-size 100%
     background-repeat no-repeat
     background-position center
+
     &:nth-child(2)
       width rem(25px)
       height rem(25px)
+
     &:hover svg path
     &:focus svg path
       opacity 0.5
+
     &_big
       width rem(32px)
       height rem(32px)
+
       &:nth-child(2)
         width rem(38px)
         height rem(38px)
+
     &_white svg path
       fill #ffffff
+
     svg
       height 100%
+
     svg path
       height 100%
       transition all 0.3s ease
-    //&_1
-    //
-    //  &-white
-    //&_2
-    //
-    //  &-white
-    //&_3
-    //
-    //  &-white
-
 

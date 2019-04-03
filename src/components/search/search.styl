@@ -4,26 +4,32 @@
   display flex
   border-radius rem(3px)
   overflow hidden
+
   &__input
     flex-grow 1
     transition all 0.3s ease
     input()
+
     &:hover
     &:focus
       border 1px solid primary-color
+
     &_primary
       color #ffffff
       background-color primary-color
       +placeholder()
         color #ffffff
+
       &:hover
       &:focus
         background-color dark-primary-color
+
   &__button
     width rem(33px)
     border 0
     background primary-color url("images/search.svg") no-repeat center
     background-size 42%
     cursor pointer
+
     &:focus
       background-color dark-primary-color

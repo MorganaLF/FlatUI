@@ -4,6 +4,7 @@
   position relative
   text-align center
   square()
+
   &__value
     display inline-block
     margin-top 50%
@@ -11,6 +12,7 @@
     font-weight 300
     color grey-text
     transform translate(0, -50%)
+
   &__svg
     position absolute
     top 0
@@ -21,18 +23,24 @@
     height 100%
     transform rotate(-90deg)
     transform-origin center center
+
   &__bar
     stroke transparent
     stroke-width 5%
     stroke-dashoffset 0
     transition stroke-dashoffset 2s ease
+
     &_wide
       stroke-width 18%
+
     &_primary
       stroke #e75735
+
     &_secondary
       stroke #4eb7a8
+
     &_light-grey
       stroke #e5e5e5
+
     &_dark-grey
       stroke #747474

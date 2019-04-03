@@ -7,12 +7,16 @@
   border-radius rem(34px)
   overflow hidden
   text-align: center
+
   &__input
     display: none
+
     &:checked + .toggle__switch
       background-color secondary-color
+
     &:checked + .toggle__switch
       transform translate(0, 0)
+
   &__switch
     display inline-block
     width rem(101px)
@@ -22,7 +26,9 @@
     background-color light-grey
     transform translate(rem(-35.5px), 0)
     transition .4s
+
   &__switch
+
     &-text
       display inline-block
       vertical-align middle
@@ -31,8 +37,10 @@
       letter-spacing rem(0.6px)
       text-transform uppercase
       color #ffffff
+
       &:last-child
         padding rem(5px) rem(9px) rem(5px) rem(5px)
+
     &-round
       display inline-block
       vertical-align middle

@@ -3,10 +3,13 @@
 .mobile-menu
   display none
   transition all 0.5s ease-in-out
+
   &_opened
     transform translateX(250px)
+
   &__button
     cursor pointer
+
   +md()
     z-index 9999
     display block

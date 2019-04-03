@@ -18,12 +18,14 @@
   +xs()
     width "calc(100% - %s)" % rem(40px)
     max-width 350px
+
   &:nth-child(2)
     transform scale(1.2)
     box-shadow rem(2px) rem(11px) rem(51px) 0 rgba(0, 0, 0, 0.5)
     +md()
       transform scale(1)
       box-shadow none
+
   &__container
     display flex
     justify-content center
@@ -32,9 +34,11 @@
     +sm()
       flex-wrap wrap
       align-items center
+
   &__title
     margin-bottom rem(10px)
     font-size rem(20px)
+
   &__list
     margin-bottom rem(20px)
     list-style-type none
@@ -43,12 +47,15 @@
       justify-content space-between
       align-items center
       margin-bottom rem(10px)
+
   &__text
     padding-right rem(10px)
     text-align left
+
   &__toggle-container
     flex-shrink 0
     margin-left rem(10px)
     font-size 0
+
   &__button-container
     margin-top auto

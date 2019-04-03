@@ -1,10 +1,12 @@
 @import "../../styles/variables.styl"
 
 .slider
+
   &.ui-slider
     height rem(5px)
     background-color light-grey
     border 0
+
   .ui-slider-handle
     top 50%
     width rem(20px)
@@ -15,17 +17,21 @@
     cursor pointer
     transform translate(0, -50%)
     transition background 0.3s ease
+
     &:hover
     &:focus
     &:hover .slider__tip
     &:focus .slider__tip
       background darker-primary-color
+
   &_secondary .ui-slider-range
   &_secondary .ui-slider-handle
     background secondary-color
+
     &:hover
     &:focus
       background darker-secondary-color
+
   &__tip
     position absolute
     top rem(-8px)
@@ -41,6 +47,7 @@
     background primary-color
     cursor pointer
     transition background 0.3s ease
+
     &:after
       content ""
       position absolute
@@ -50,6 +57,7 @@
       height rem(7px)
       background primary-color
       transform translate(-50%, 50%) rotate(45deg)
+
   &__scale
     display flex
     justify-content space-between
@@ -58,6 +66,7 @@
     font-size rem(11px)
     letter-spacing rem(0.55px)
     color light-grey-text
+
     &-item
       width rem(20px)
 

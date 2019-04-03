@@ -4,13 +4,17 @@
   max-width 900px
   margin 0 auto
   padding rem(80px) rem(10px)
+
   &__title-container
     margin rem(40px) 0
+
   &__container
     display flex
     flex-wrap wrap
     margin 0 auto
+
   &__col
+
     &_big
       width 70%
       padding-right 5%
@@ -19,32 +23,40 @@
         max-width 600px
         margin 0 auto
         padding-right 0
+
     &_small
       width 30%
       +sm()
         width 100%
         max-width 600px
         margin 0 auto
+
   &__subtitle
     margin rem(10px) 0 rem(20px)
     font-size rem(22px)
+
   &__map-container
     margin-bottom rem(40px)
+
   &__list
     margin-bottom rem(40px)
     list-style-type none
     font-size rem(18px)
+
     &-item
       margin-bottom rem(5px)
       break-word()
+
   &__list-title
     display inline-block
     margin-right rem(10px)
     font-weight 900
+
   &__list-link
     color dark-secondary-color
     text-decoration none
     transition 0.2s ease
+
     &:hover
       color #000000
 
