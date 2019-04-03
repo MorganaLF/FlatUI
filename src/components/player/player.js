@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class Player {
   constructor(element, elementIndex) {
     this.$element = element;

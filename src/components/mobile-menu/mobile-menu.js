@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class MobileMenu {
   constructor(element, elementIndex) {
     this.$element = element;

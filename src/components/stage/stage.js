@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class Stage {
   constructor(element, elementIndex) {
     this.$stage = element;

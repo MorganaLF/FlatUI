@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class Calendar {
   constructor(element, elementIndex) {
     this.$element = element;

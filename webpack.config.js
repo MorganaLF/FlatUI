@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -83,6 +84,10 @@ module.exports = (env, options) => {
       ],
     },
     plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+      }),
       new HtmlWebpackPlugin({
         filename: 'account.html',
         template: path.resolve(__dirname, './src/pages/account/account.pug'),

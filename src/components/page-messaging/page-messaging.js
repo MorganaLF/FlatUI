@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class PageMessaging {
   constructor(element, elementIndex) {
     this.$element = element;

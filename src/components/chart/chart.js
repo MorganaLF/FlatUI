@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class Chart {
   constructor(element, elementIndex) {
     this.$element = element;

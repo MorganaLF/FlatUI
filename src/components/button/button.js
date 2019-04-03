@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 class Button {
   constructor(element, elementIndex) {
     this.$element = element;
