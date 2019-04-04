@@ -35,95 +35,103 @@ html
       main.ui-kit
         section.ui-kit__standart-buttons
           .ui-kit__standart-buttons-title-container
-            +subheading("standard buttons", "h1")
+            +subheading({title: "standard buttons", tag: "h1"})
           .ui-kit__standart-buttons-container
             .ui-kit__button-container
               +button({
                 text: "button",
                 size: "small",
-                bg: "secondary"
+                background: "secondary"
               })
             .ui-kit__button-container
               +button({
                 text: "button",
-                bg: "secondary"
+                background: "secondary"
               })
             .ui-kit__button-container
               +button({
                 text: "button",
-                bg: "primary"
-              })
-            .ui-kit__button-container
-              +button({
-                text: "button",
-                size: "small",
-                bg: "primary"
-              })
-          .ui-kit__standart-buttons-container
-            .ui-kit__button-container
-              +button({
-                text: "button",
-                size: "small",
-                bg: "secondary-with-shadow"
-              })
-            .ui-kit__button-container
-              +button({
-                text: "button",
-                bg: "secondary-with-shadow"
-              })
-            .ui-kit__button-container
-              +button({
-                text: "button",
-                bg: "primary-with-shadow"
+                background: "primary"
               })
             .ui-kit__button-container
               +button({
                 text: "button",
                 size: "small",
-                bg: "primary-with-shadow"
+                background: "primary"
               })
           .ui-kit__standart-buttons-container
             .ui-kit__button-container
               +button({
                 text: "button",
                 size: "small",
-                bg: "transparent-secondary"
+                background: "secondary-with-shadow"
               })
             .ui-kit__button-container
               +button({
                 text: "button",
-                bg: "transparent-secondary"
+                background: "secondary-with-shadow"
               })
             .ui-kit__button-container
               +button({
                 text: "button",
-                bg: "transparent-primary"
+                background: "primary-with-shadow"
               })
             .ui-kit__button-container
               +button({
                 text: "button",
                 size: "small",
-                bg: "transparent-primary"
+                background: "primary-with-shadow"
+              })
+          .ui-kit__standart-buttons-container
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                size: "small",
+                background: "transparent-secondary"
+              })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                background: "transparent-secondary"
+              })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                background: "transparent-primary"
+              })
+            .ui-kit__button-container
+              +button({
+                text: "button",
+                size: "small",
+                background: "transparent-primary"
               })
         section.ui-kit__arrow-buttons
           .ui-kit__arrow-buttons-title-container
-            +subheading("arrow buttons")
+            +subheading({title: "arrow buttons"})
           .ui-kit__arrow-buttons-container
             .ui-kit__arrow-button-container
-              +arrow-button("transparent", "left")
+              +arrow-button({background: "transparent", direction: "left"})
             .ui-kit__arrow-button-container
-              +arrow-button("transparent", "right")
+              +arrow-button({background: "transparent", direction: "right"})
             .ui-kit__arrow-button-container
-              +arrow-button("transparent", "left", true)
+              +arrow-button({
+                background: "transparent",
+                direction: "left",
+                isDisabled: true
+              })
             .ui-kit__arrow-button-container
-              +arrow-button("transparent", "right", true)
+              +arrow-button({
+                background: "transparent",
+                direction: "right",
+                isDisabled: true
+              })
             .ui-kit__arrow-button-container
-              +arrow-button("transparent", "left")
+              +arrow-button({background: "transparent", direction: "left"})
             .ui-kit__arrow-button-container
-              +arrow-button("transparent", "right")
+              +arrow-button({background: "transparent", direction: "right"})
         section.ui-kit__percentages
           .ui-kit__percentages-title-container
-            +subheading("percentages / pie chart")
+            +subheading({title: "percentages / pie chart"})
           .ui-kit__percentages-container
             .ui-kit__percentage-container
               +chart({type: "percentage", value: 0})
@@ -137,32 +145,32 @@ html
               +chart({type: "pie-chart", series: "10, 27, 30, 33"})
         section.ui-kit__sliders
           .ui-kit__sliders-title-container
-            +subheading("sliders")
+            +subheading({title: "sliders"})
           .ui-kit__sliders-container
             .ui-kit__sliders-col
-              +slider(true, false, false, "36")
+              +slider({isTip: true, value: "36"})
             .ui-kit__sliders-col
-              +slider(false, true, "secondary", "71")
+              +slider({isScale: true, progressBackground: "secondary", value: "71"})
         section.ui-kit__stages
           .ui-kit__stages-title-container
-            +subheading("stages")
-          +stage(5, 3)
+            +subheading({title: "stages"})
+          +stage({length: 5, fullLength: 3})
         section.ui-kit__form-elements
           .ui-kit__form-elements-title-container
-            +subheading("form elements")
+            +subheading({title: "form elements"})
           .ui-kit__form-elements-container
             .ui-kit__form-elements-col
               .ui-kit__form-container
                 +contact-form
             .ui-kit__form-elements-col
               .ui-kit__form-elements-subtitle-container
-                +subheading("toggles")
+                +subheading({title: "toggles"})
               .ui-kit__toggle-container
                 +toggle
               .ui-kit__toggle-container
-                +toggle(true)
+                +toggle({isChecked: true})
               .ui-kit__form-elements-subtitle-container
-                +subheading("tick boxes")
+                +subheading({title: "tick boxes"})
               .ui-kit__tick-box-container
                 +tick-box(true)
               .ui-kit__tick-box-container
@@ -170,11 +178,14 @@ html
         section.ui-kit__search
           .ui-kit__search-col
             .ui-kit__search-title-container
-              +subheading("search / drop down")
+              +subheading({title: "search / drop down"})
             .ui-kit__search-container
-              +search("Search")
+              +search({placeholderText: "Search"})
             .ui-kit__search-container
-              +search("I’ve not found what I’m looking for...", "primary")
+              +search({
+                placeholderText: "I’ve not found what I’m looking for...",
+                searchBackground: "primary"
+              })
             +dropdown({
               "1": "Option 1",
               "2": "Option 2",
@@ -183,14 +194,19 @@ html
             "Choose An Option")
           .ui-kit__search-col
             .ui-kit__search-title-container
-              +subheading("user profile")
+              +subheading({title: "user profile"})
             .ui-kit__user-container
-              +user("user-1", "John Smith", "ux designer")
+              +user({imageSrc: "user-1", name: "John Smith", profession: "ux designer"})
             .ui-kit__user-container
-              +user("user-2", "Sarah Brown", "developer", "secondary")
+              +user({
+                imageSrc: "user-2",
+                name: "Sarah Brown",
+                profession: "developer",
+                backgroundColor: "secondary"
+              })
         section.ui-kit__news
           .ui-kit__news-title-container
-            +subheading("news & events")
+            +subheading({title: "news & events"})
           .ui-kit__news-container
             .ui-kit__news-col
               +news({
@@ -211,22 +227,22 @@ html
               })
         section.ui-kit__location
           .ui-kit__location-title-container
-            +subheading("location")
+            +subheading({title: "location"})
           +map
         section.ui-kit__calendar
           .ui-kit__calendar-col
             .ui-kit__calendar-title-container
-              +subheading("calendar")
+              +subheading({title: "calendar"})
             +calendar
           .ui-kit__calendar-col
             .ui-kit__calendar-title-container
-              +subheading("messaging")
-            +messaging("photo")
+              +subheading({title: "messaging"})
+            +messaging
         section.ui-kit__video
           .ui-kit__video-title-container
-            +subheading("video")
-          +player(
-            "http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4",
-            "New Zealand Landscapes Timelapse",
-            "from Bevan Percival"
-          )
+            +subheading({title: "video"})
+          +player({
+            src: "http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4",
+            title: "New Zealand Landscapes Timelapse",
+            author: "from Bevan Percival"
+          })

@@ -10,11 +10,11 @@ mixin settings
       li.settings__item
         p.settings__text Send e-mail
         .settings__toggle-container
-          +toggle(true)
+          +toggle({isChecked: true})
       li.settings__item
         p.settings__text Send sound notifications
         .settings__toggle-container
-          +toggle(true)
+          +toggle({isChecked: true})
       li.settings__item
         p.settings__text Enable newsletter
         .settings__toggle-container
@@ -26,4 +26,4 @@ mixin settings
       li.settings__item
         p.settings__text Sound
         .settings__slider-container
-          +slider(false, true, "secondary", "60")
+          +slider({progressBackground: "secondary", value: "60"})

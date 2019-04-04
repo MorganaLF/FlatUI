@@ -1,4 +1,4 @@
-mixin toggle(isChecked, isDisabled)
+mixin toggle({isChecked, isDisabled} = {})
   label.toggle
     input.toggle__input(
         type="checkbox", checked=isChecked, disabled=isDisabled

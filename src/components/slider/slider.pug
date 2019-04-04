@@ -1,8 +1,8 @@
-mixin slider(isTip, isScale, progressBg, value)
+mixin slider({isTip, isScale, progressBackground, value})
   .slider__container
     .slider.js-slider(
-        class=progressBg ?
-              "slider_with-progress slider_" + progressBg : ""
+        class=progressBackground ?
+              "slider_with-progress slider_" + progressBackground : ""
         data-value=value ? value : 0
       )
       .custom-handle.ui-slider-handle

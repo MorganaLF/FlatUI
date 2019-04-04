@@ -21,14 +21,14 @@ block content
     .freelancers__container
       aside.freelancers__col
         .freelancers__subheading-container
-          +subheading("search")
-        +search("Search freelancers", false, true)
+          +subheading({title: "search"})
+        +search({placeholderText: "Search freelancers", isAutofocus: true})
         .freelancers__subheading-container
-          +subheading("filter")
+          +subheading({title: "filter"})
         +filter
       main.freelancers__col
         .freelancers__main-title
-          +subheading("search freelancers", "h1")
+          +subheading({title: "search freelancers", tag: "h1"})
         .freelancers__page-nav-container
           +page-nav
         +freelancers-list

@@ -1,7 +1,7 @@
-mixin stage(length, fullLength, isContent)
+mixin stage({length, fullLength, isContent})
   .stage.js-stage
     ul.stage__list
-      -for (var i = 1; i <= length; i++)
+      -for (let i = 1; i <= length; i++)
       if i < fullLength
         li.stage__item.js-stage__item
           span.stage__item-text= i

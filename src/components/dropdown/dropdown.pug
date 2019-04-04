@@ -2,5 +2,5 @@ mixin dropdown(options, placeholder)
   .dropdown__container
     select.dropdown.js-dropdown(name="state", data-placeholder=placeholder)
       option.dropdown__option_hidden
-      each val, index in options
-        option.dropdown__option_hidden(value=index)= val
+      each text, value in options
+        option.dropdown__option_hidden(value=value)= text

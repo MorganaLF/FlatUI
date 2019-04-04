@@ -19,8 +19,8 @@ block title
 block content
   main.get-started
     .get-started__title-container
-      +subheading("how to start?", "h1")
-    +stage(4, 1, true)
+      +subheading({title: "how to start?", tag: "h1"})
+    +stage({length: 4, fullLength: 1, isContent: true})
       section.get-started__content-item
         h2.get-started__content-title Step 1: Choose optimal tariff plan
         p.get-started__content-paragraph.
@@ -58,7 +58,7 @@ block content
                 Aspernatur impedit tempora ut voluptatibus.
           .get-started__registration-col
             h3.get-started__content-subtitle Enter your personal info
-            +contact-form("left", false)
+            +contact-form({buttonAlign: "left", textarea: false})
       section.get-started__content-item
         h2.get-started__content-title.
           Step 3: Watch the video about how our exchange works
@@ -69,11 +69,11 @@ block content
           Beatae libero natus officiis omnis sequi voluptates.
         .get-started__flex-container
           .get-started__col
-            +player(
-              "http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4",
-              "About our company",
-              "freelance exchange"
-            )
+            +player({
+              src: "http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4",
+              title: "About our company",
+              author: "freelance exchange"
+            })
           .get-started__col
             h3.get-started__content-subtitle How we work?
             ol.get-started__list

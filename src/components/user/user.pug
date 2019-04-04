@@ -1,6 +1,6 @@
 include user-svg-icon
 
-mixin user(imageSrc, name, profession, bgColor, size)
+mixin user({imageSrc, name, profession, backgroundColor, size})
   -
     var links = [
                 "https://www.facebook.com/",
@@ -12,22 +12,22 @@ mixin user(imageSrc, name, profession, bgColor, size)
     .user__picture(
       style="background-image: url(\"images/" + imageSrc + ".jpg\")"
       )
-    .user__info(class=bgColor ? "user__info_" + bgColor : "")
+    .user__info(class=backgroundColor ? "user__info_" + backgroundColor : "")
       p.user__name(
-        class=bgColor ? "user__name_white" : ""
+        class=backgroundColor ? "user__name_white" : ""
         class=size ? "user__name_" + size : ""
         )= name
       p.user__profession(
-        class=bgColor ? "user__profession_white" : ""
+        class=backgroundColor ? "user__profession_white" : ""
         class=size ? "user__profession_" + size : ""
       )= profession
       .user__social-icons(class=size ? "user__social-icons_" + size : "")
-        -for(var i = 1; i <= 3; i++)
+        -for(let i = 1; i <= 3; i++)
           a.user__social-icon(
             href=links[i - 1]
             target="_blank"
             rel="noopener noreferrer"
-            class=bgColor ? "user__social-icon_white" : ""
+            class=backgroundColor ? "user__social-icon_white" : ""
             class=size ? "user__social-icon_" + size : ""
           )
             +user-svg-icon(i)

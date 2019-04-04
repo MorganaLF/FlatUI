@@ -18,14 +18,14 @@ block title
 block content
   main.contact
     .contact__title-container
-      +subheading("contact us", "h1")
+      +subheading({title: "contact us", tag: "h1"})
     .contact__container
       .contact__col.contact__col_big
         .contact__map-container
           +map
         h2.contact__subtitle.
           Contact us through this form, we will answer!
-        +contact-form(false, true, true)
+        +contact-form({isAutofocus: true})
       .contact__col.contact__col_small
         h2.contact__subtitle How contact us
         ul.contact__list

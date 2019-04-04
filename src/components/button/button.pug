@@ -1,11 +1,9 @@
-mixin button(options)
-  -var tag = options.tag || "button";
-
+mixin button({tag = "button", size, background, length, isFluid, href, type, text})
   #{tag}.button.js-button(
-    class=options.size ? "button_" + options.size : ""
-    class=options.bg ? "button_" + options.bg : ""
-    class=options.length ? "button_" + options.length : ""
-    class=options.isFluid ? "button_fluid" : ""
-    href=options.href ? options.href : false
-    type=options.type ? options.type : false
-  )!= options.text
+    class=size ? "button_" + size : ""
+    class=background ? "button_" + background : ""
+    class=length ? "button_" + length : ""
+    class=isFluid ? "button_fluid" : ""
+    href=href ? href : false
+    type=type ? type : false
+  )!= text

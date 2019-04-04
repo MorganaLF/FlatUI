@@ -19,11 +19,11 @@ mixin filter
     .filter__row
       span.filter__subtitle Min cost of work
       .filter__slider-container
-        +slider(true, "", "", "10")
+        +slider({isTip: true, value: "10"})
     .filter__row
       span.filter__subtitle Max cost of work
       .filter__slider-container
-        +slider(true, "", "", "90")
+        +slider({isTip: true, value: "90"})
     .filter__row.filter__row_with-flex
       span.filter__subtitle Show busy freelancers
       .filter__tick-box-container
@@ -34,7 +34,7 @@ mixin filter
         +tick-box
     +button({
       text: "show results",
-      bg: "primary",
+      background: "primary",
       isFluid: true,
       type: "submit"
     })

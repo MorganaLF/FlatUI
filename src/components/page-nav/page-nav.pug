@@ -3,36 +3,36 @@ include ../button/button
 
 mixin page-nav
   nav.page-nav
-    +arrow-button("transparent", "left", false, "small")
+    +arrow-button({background: "transparent", direction: "left", size: "small"})
     .page-nav__buttons
       .page-nav__button-container
         +button({
           text: "1",
           size: "small",
-          bg: "secondary"
+          background: "secondary"
         })
       .page-nav__button-container
         +button({
           text: "2",
           size: "small",
-          bg: "transparent-secondary"
+          background: "transparent-secondary"
         })
       .page-nav__button-container
         +button({
           text: "3",
           size: "small",
-          bg: "transparent-secondary"
+          background: "transparent-secondary"
         })
       .page-nav__button-container
         +button({
           text: "4",
           size: "small",
-          bg: "transparent-secondary"
+          background: "transparent-secondary"
         })
       .page-nav__button-container
         +button({
           text: "5",
           size: "small",
-          bg: "transparent-secondary"
+          background: "transparent-secondary"
         })
-    +arrow-button("transparent", "right", false, "small")
+    +arrow-button({background: "transparent", direction: "right", size: "small"})

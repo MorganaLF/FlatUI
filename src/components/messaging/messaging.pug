@@ -1,7 +1,7 @@
-mixin messaging(imageSrc)
+mixin messaging({name = "Sarah Brown", imageSrc = "photo"} = {})
   section.messaging
     header.messaging__header
-      h3.messaging__title Sarah Brown
+      h3.messaging__title= name
     .messaging__body
       .messaging__icons
         span.messaging__icon.messaging__icon_with-chat
@@ -19,7 +19,7 @@ mixin messaging(imageSrc)
         textarea.messaging__textarea Yeah that sounds great. See you then.
         +button({
           text: "Reply",
-          bg: "secondary-with-shadow",
+          background: "secondary-with-shadow",
           isFluid: true,
           type: "submit"
         })

@@ -1,2 +1,2 @@
-mixin subheading(title, tag="h2", color)
+mixin subheading({title, tag="h2", color})
   #{tag}.subheading(class=color ? "subheading_" + color : "")= title

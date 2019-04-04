@@ -168,8 +168,6 @@ module.exports = (env, options) => {
           flatten: true,
         },
       ]),
-      require('autoprefixer'),
-      // require('cssnano')
     ],
   };
 };

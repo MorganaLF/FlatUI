@@ -1,6 +1,6 @@
 include ../button/button
 
-mixin contact-form(buttonAlign, textarea=true, isAutofocus)
+mixin contact-form({buttonAlign, textarea="true", isAutofocus} = {})
   form.contact-form(
       action="mock-address/change-me",
       method="get"
@@ -30,6 +30,6 @@ mixin contact-form(buttonAlign, textarea=true, isAutofocus)
         : "contact-form__button-container")
       +button({
         text: "submit",
-        bg: "secondary-with-shadow",
+        background: "secondary-with-shadow",
         type: "submit"
       })
