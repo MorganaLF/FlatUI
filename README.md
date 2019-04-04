@@ -7,7 +7,7 @@
 - JQuery UI: https://api.jqueryui.com/
 - Select2: https://github.com/select2/select2
 
-##Clone repository
+## Clone repository
 ``` 
 git clone https://github.com/MorganaLF/FlatUI.git
 ```
