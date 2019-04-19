@@ -1,4 +1,4 @@
-mixin button({tag = "button", size, background, length, isFluid, href, type, text})
+mixin button({tag = "button", size, background = "primary", length, isFluid, href, type, text})
   #{tag}.button.js-button(
     class=size ? `button_${size}` : ""
     class=background ? `button_${background}` : ""
