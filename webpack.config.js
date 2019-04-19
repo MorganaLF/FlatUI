@@ -162,11 +162,6 @@ module.exports = (env, options) => {
           to: './',
           flatten: true,
         },
-        {
-          from: './node_modules/@fortawesome/fontawesome-free/webfonts',
-          to: './webfonts',
-          flatten: true,
-        },
       ]),
     ],
   };
