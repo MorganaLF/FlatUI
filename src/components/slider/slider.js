@@ -7,6 +7,8 @@ class Slider {
   init() {
     let options = {
       value: this.$element.data('value'),
+      min: this.$element.data('min'),
+      max: this.$element.data('max'),
     };
 
     if (this.$element.hasClass('slider_with-progress')) {
