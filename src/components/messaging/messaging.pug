@@ -1,4 +1,8 @@
-mixin messaging({name = "Sarah Brown", imageSrc = "photo"} = {})
+-
+  let incoming = "Hey! So are we cool to meet at the art gallery? Say 8pm";
+  let message = "Yeah that sounds great. See you then.";
+
+mixin messaging({name = "Sarah Brown", imageSrc = "photo", incomingText = incoming, messageText = message} = {})
   section.messaging
     header.messaging__header
       h3.messaging__title= name
@@ -6,17 +10,16 @@ mixin messaging({name = "Sarah Brown", imageSrc = "photo"} = {})
       .messaging__icons
         span.messaging__icon.messaging__icon_with-chat
         .messaging__photo(
-          style="background-image: url(\"images/" + imageSrc + ".jpg\")"
+          style=`background-image: url("images/${imageSrc}.jpg")`
           )
         span.messaging__icon.messaging__icon_with-camera
       .messaging__incoming
-        p.messaging__incoming-paragraph
-          | Hey! So are we cool to meet at the art gallery? Say 8pm
+        p.messaging__incoming-paragraph= incomingText
       form.messaging__form(
         action="mock-address/change-me",
         method="post"
       )
-        textarea.messaging__textarea Yeah that sounds great. See you then.
+        textarea.messaging__textarea= messageText
         +button({
           text: "Reply",
           background: "secondary-with-shadow",

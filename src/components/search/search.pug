@@ -4,7 +4,7 @@ mixin search({placeholderText, searchBackground, isAutofocus})
         type="search",
         name="search",
         placeholder=placeholderText,
-        class=searchBackground ? "search__input_" + searchBackground : ""
+        class=searchBackground ? `search__input_${searchBackground}` : ""
         autofocus=isAutofocus
       )
     input.search__button(type="submit", value="")

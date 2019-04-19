@@ -2,7 +2,7 @@ mixin slider({isTip, isScale, progressBackground, value})
   .slider__container
     .slider.js-slider(
         class=progressBackground ?
-              "slider_with-progress slider_" + progressBackground : ""
+              `slider_with-progress slider_${progressBackground}` : ""
         data-value=value ? value : 0
       )
       .custom-handle.ui-slider-handle

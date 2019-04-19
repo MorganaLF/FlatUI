@@ -1,8 +1,8 @@
 mixin button({tag = "button", size, background, length, isFluid, href, type, text})
   #{tag}.button.js-button(
-    class=size ? "button_" + size : ""
-    class=background ? "button_" + background : ""
-    class=length ? "button_" + length : ""
+    class=size ? `button_${size}` : ""
+    class=background ? `button_${background}` : ""
+    class=length ? `button_${length}` : ""
     class=isFluid ? "button_fluid" : ""
     href=href ? href : false
     type=type ? type : false

@@ -2,9 +2,9 @@ include arrow-svg-icon
 
 mixin arrow-button({background, direction, isDisabled, size})
   button.arrow-button(
-    class="arrow-button_" + direction
-    class=background ? "arrow-button_" + background : ""
-    class=size ? "arrow-button_" + size : ""
+    class=`arrow-button_${direction}`
+    class=background ? `arrow-button_${background}` : ""
+    class=size ? `arrow-button_${size}` : ""
     disabled=isDisabled
   )
     +arrow-svg-icon(direction)

@@ -4,7 +4,7 @@ mixin news({titleTag = "h3", isEvent, image, title, date, description})
   if(!isEvent)
     article.news
       .news__picture(
-        style="background-image: url(\"images/" + image + ".jpg\")"
+        style=`background-image: url("images/${image}.jpg")`
         )
       .news__text-block
         #{titleTag}.news__title= title
@@ -13,11 +13,11 @@ mixin news({titleTag = "h3", isEvent, image, title, date, description})
   else
     article.news.news_with-event
       .news__picture(
-        style="background-image: url(\"images/" + image + ".jpg\")"
+        style=`background-image: url("images/${image}.jpg")`
         )
       .news__text-block
         span.news__date.news__date_big
-          span.news__day= date[0] + " "
+          span.news__day= `${date[0]} `
           span.news__month= date[1]
         #{titleTag}.news__title.news__title_small= title
         p.news__description= description
