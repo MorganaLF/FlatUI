@@ -9,6 +9,7 @@ class Slider {
       value: this.$element.data('value'),
       min: this.$element.data('min'),
       max: this.$element.data('max'),
+      step: this.$element.data('step'),
     };
 
     if (this.$element.hasClass('slider_with-progress')) {

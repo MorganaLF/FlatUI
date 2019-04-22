@@ -62,14 +62,19 @@
   &__scale
     display flex
     justify-content space-between
-    margin-top rem(10px)
+    margin rem(10px) 0 rem(11px)
     list-style-type none
     font-size rem(11px)
     letter-spacing rem(0.55px)
     color light-grey-text
 
     &-item
-      width rem(20px)
+      position relative
+      width 0
+
+      &-text
+        position absolute
+        transform translate(-50%, 0)
 
 
 
