@@ -6,7 +6,7 @@
   overflow hidden
 
   &__body
-    background-color #f2f2f2
+    background-color grey-background-color
 
   &__header
     padding rem(10px) rem(10px) rem(8px)
@@ -14,7 +14,7 @@
     font-weight 300
     letter-spacing rem(-3.2px)
     text-align center
-    color #ffffff
+    color white
     background-color primary-color
 
   .ui-datepicker
@@ -81,7 +81,7 @@
     font-size rem(24px)
     font-weight 300
     line-height 1em
-    color #ffffff
+    color white
     white-space nowrap
 
   .ui-datepicker-year
@@ -97,7 +97,7 @@
     text-transform uppercase
     letter-spacing rem(0.45px)
     background-color primary-color
-    color #ffffff
+    color white
 
   th
     padding rem(10px) 0 rem(8px)
@@ -105,8 +105,8 @@
 
   td
     width 14.28571428571429%
-    background-color #f2f2f2
-    border rem(1px) solid #fff
+    background-color calendar-background
+    border rem(1px) solid white
     text-align center
     cursor pointer
     square()
@@ -117,7 +117,7 @@
         background-color lightness(primary-color, 75%)
 
         .ui-state-default
-          color #ffffff
+          color white
 
   .ui-state-default
     display: inline-block
@@ -129,18 +129,18 @@
     font-family "Source Sans Pro"
     font-size rem(20px)
     background none
-    color #868686
+    color darker-grey-text
 
   .ui-state-disabled
     opacity 1
-    color #ffffff
+    color white
 
   .ui-state-active
-    color #ffffff
+    color white
 
   .ui-datepicker-current-day
     background-color primary-color
-    color #ffffff
+    color white
 
   &__footer
     padding rem(17px) rem(20px)
@@ -148,6 +148,6 @@
     font-weight 600
     text-transform uppercase
     letter-spacing rem(0.65px)
-    color #868686
+    color calendar-dark-background
     background-color light-grey
     cursor pointer
