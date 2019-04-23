@@ -29,13 +29,28 @@ class Calendar {
 
     $arrowButton
       .on(`click.calendarResizeFont${this.elementIndex}`, this._setResponsiveFontSize.bind(this))
-      .on(`click.calendarCutSpaces${this.elementIndex}`, this._cutTitleSpaces.bind(this));
+      .on(`click.calendarCutSpaces${this.elementIndex}`, this._cutTitleSpaces.bind(this))
+      .on(`click.calendarDisplayDay${this.elementIndex}`, this._displayCurrentDay.bind(this));
 
     const $dayButton = this.$element.find('td[data-event="click"]');
 
     $dayButton
       .on(`click.calendarResizeFont${this.elementIndex}`, this._setResponsiveFontSize.bind(this))
-      .on(`click.calendarCutSpaces${this.elementIndex}`, this._cutTitleSpaces.bind(this));
+      .on(`click.calendarCutSpaces${this.elementIndex}`, this._cutTitleSpaces.bind(this))
+      .on(`click.calendarDisplayDay${this.elementIndex}`, this._displayCurrentDay.bind(this));
+
+    const $footer = this.$elementParent.find('.js-calendar__footer');
+
+    $footer
+      .on(`click.calendarSetToday${this.elementIndex}`, this._setToday.bind(this));
+  }
+
+  _setToday() {
+    const todayDate = new Date();
+    this.$element.datepicker('setDate', todayDate);
+    this._displayCurrentDay();
+    this._setResponsiveFontSize();
+    this._cutTitleSpaces();
   }
 
   _displayCurrentDay() {
@@ -43,6 +58,11 @@ class Calendar {
     const currentDay = this.$element.datepicker('getDate').getDate();
     const $calendarHeader = this.$elementParent.find('.js-calendar__header');
     $calendarHeader.text(currentDay);
+
+    const $dayButton = this.$element.find('td[data-event="click"]');
+
+    $dayButton
+      .on(`click.calendarDisplayDay${this.elementIndex}`, this._displayCurrentDay.bind(this));
   }
 
   _cutTitleSpaces() {

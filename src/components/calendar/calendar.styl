@@ -111,12 +111,13 @@
     cursor pointer
     square()
 
-    &:hover
-    &:focus-within
-      background-color lightness(primary-color, 75%)
+    &:not(.ui-datepicker-current-day)
+      &:hover
+      &:focus-within
+        background-color lightness(primary-color, 75%)
 
-      .ui-state-default
-        color #ffffff
+        .ui-state-default
+          color #ffffff
 
   .ui-state-default
     display: inline-block
@@ -130,9 +131,6 @@
     background none
     color #868686
 
-    &.ui-state-highlight
-      color #ffffff
-
   .ui-state-disabled
     opacity 1
     color #ffffff
@@ -141,18 +139,8 @@
     color #ffffff
 
   .ui-datepicker-current-day
-    background-color lightness(primary-color, 75%)
-    color #ffffff
-
-  .ui-datepicker-today
-    color #ffffff
     background-color primary-color
-
-    &:hover
-      background-color primary-color
-
-    .ui-state-active
-      color #ffffff
+    color #ffffff
 
   &__footer
     padding rem(17px) rem(20px)
@@ -162,3 +150,4 @@
     letter-spacing rem(0.65px)
     color #868686
     background-color light-grey
+    cursor pointer
