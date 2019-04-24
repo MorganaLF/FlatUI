@@ -52,7 +52,7 @@ module.exports = (env, options) => {
                         require('autoprefixer'),
                         require('cssnano'),
                         require('postcss-pxtorem')({
-                          rootValue: 16,
+                          rootValue: 14,
                           unitPrecision: 5,
                           propList: ['*', '!max-width', '!min-width'],
                           selectorBlackList: ['html'],
