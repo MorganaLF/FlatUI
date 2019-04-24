@@ -15,7 +15,7 @@
   overflow hidden
   user-select none
   cursor pointer
-  transition background 0.3s ease
+  transition background 0.3s ease, color 0.3s ease
   border-bottom-width 3px
 
   &_xsmall
@@ -75,7 +75,12 @@
 
     &:hover
     &:focus
-      background-color lighten(primary-color, 80%)
+      background-color primary-color
+      border-bottom-color dark-primary-color
+      color white
+
+    &:focus
+      border-bottom-width 0
 
   &_transparent-secondary
   &_transparent-dark-secondary
@@ -87,7 +92,12 @@
 
     &:hover
     &:focus
-      background-color lighten(secondary-color, 80%)
+      background-color secondary-color
+      border-bottom-color dark-secondary-color
+      color white
+
+    &:focus
+      border-bottom-width 0
 
   &_transparent-dark-secondary
     border-bottom-color dark-secondary-color
