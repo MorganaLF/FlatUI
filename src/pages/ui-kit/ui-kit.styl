@@ -18,7 +18,7 @@
       margin 0 auto
 
       &:nth-child(1)
-        .ui-kit__button-container
+        ^[0]__button-container
 
           &:nth-child(4)
             order 2
@@ -32,7 +32,7 @@
     +xxs()
       max-width 200px
 
-    &:nth-child(4) .ui-kit__button-container
+    &:nth-child(4) ^[0]__button-container
       margin-bottom 0
       +xs()
         margin-bottom 19px
@@ -179,7 +179,7 @@
       &:last-child
         padding-left 1.68%
 
-        .ui-kit__search-title-container
+        & ^[0]__search-title-container
           margin-bottom 18px
 
       +xs()

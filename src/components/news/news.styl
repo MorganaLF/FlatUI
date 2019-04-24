@@ -11,21 +11,17 @@
   &_with-event
     background-color secondary-color
 
-    .news__text-block
+    & ^[0]__text-block
       padding-left 15px
       padding-top 13px
       padding-bottom 25px
       +xxs()
         padding 12px 12px 26px
 
-    .news__description
+    & ^[0]__description
       margin-left 4px
       +xxs()
         margin-left 0
-
-    +xs()
-      .news__button-container
-        text-align left
 
   &__picture
     flex-shrink 0
@@ -89,3 +85,6 @@
   &__button-container
     text-align center
     margin-top 18px
+
+    +xs()
+      text-align left
