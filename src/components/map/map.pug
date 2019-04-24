@@ -7,7 +7,7 @@ mixin map({state, city})
         p.map__text= state
         p.map__text= city
       .map__buttons
-        button.map__button.map__geolocation-button.js-map__geolocation-button
+        button.map__button.map__button_with-geolocation.js-map__button_with-geolocation
           include location.svg
-        button.map__button.map__add-button.js-map__add-button
+        button.map__button.map__button_with-marker.js-map__button_with-marker
           include white-map-marker.svg

@@ -43,14 +43,14 @@ class Map {
 
   _addEventListeners() {
     const $mapContainer = this.$element.closest('.js-map');
-    const $addButton = $mapContainer.find('.js-map__add-button');
+    const $addButton = $mapContainer.find('.js-map__button_with-marker');
 
     $addButton.on(
       `click.mapPlaceMarker${this.elementIndex}`,
       this._placeMarker.bind(this),
     );
 
-    const $geolocationButton = $mapContainer.find('.js-map__geolocation-button');
+    const $geolocationButton = $mapContainer.find('.js-map__button_with-geolocation');
 
     $geolocationButton.on(
       `click.mapDefineGeolocation${this.elementIndex}`,
