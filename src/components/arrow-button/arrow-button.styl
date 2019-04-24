@@ -16,11 +16,12 @@
     background-color transparent
 
     &:hover
-    &:focus
       background-color secondary-color
 
+    &:focus
+      border-color darken(secondary-color, 15%)
+
     &:hover svg use
-    &:focus svg use
     &:disabled svg use
       fill white
 

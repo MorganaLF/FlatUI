@@ -74,13 +74,16 @@
     border-bottom-style solid
 
     &:hover
-    &:focus
+    &:active
       background-color primary-color
       border-bottom-color dark-primary-color
       color white
 
-    &:focus
+    &:active
       border-bottom-width 0
+
+    &:focus
+      border-color darken(primary-color, 30%)
 
   &_transparent-secondary
   &_transparent-dark-secondary
@@ -91,16 +94,26 @@
     border-bottom-style solid
 
     &:hover
-    &:focus
+    &:active
       background-color secondary-color
       border-bottom-color dark-secondary-color
       color white
 
-    &:focus
+    &:active
       border-bottom-width 0
+
+    &:focus
+      border-color darken(secondary-color, 30%)
 
   &_transparent-dark-secondary
     border-bottom-color dark-secondary-color
+
+    &:hover
+      color secondary-color
+      background-color lighten(secondary-color, 80%)
+
+    &:active
+      border-bottom-width 2px
 
   &__ripple
     z-index 99999
