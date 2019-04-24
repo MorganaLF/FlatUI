@@ -1,19 +1,18 @@
 mixin slider({isTip, isScale, progressBackground, step, currentValue = 0, minValue = 0, maxValue = 100})
-  .slider__container
-    .slider.js-slider(
-        class=progressBackground ? `slider_with-progress slider_${progressBackground}` : ""
-        data-value=currentValue
-        data-min=minValue
-        data-max=maxValue
-        data-step=step
-      )
-      .custom-handle.ui-slider-handle
-        if isTip
-          .slider__tip.js-slider__tip
-    if isScale
-      ul.slider__scale
-        - for (let i = 0; i <= maxValue; i += +step)
-          li.slider__scale-item
-            span.slider__scale-item-text= i
+  .slider.js-slider(
+    class=progressBackground ? `slider_with-progress slider_${progressBackground}` : ""
+    data-value=currentValue
+    data-min=minValue
+    data-max=maxValue
+    data-step=step
+  )
+    .custom-handle.ui-slider-handle
+      if isTip
+        .slider__tip.js-slider__tip
+  if isScale
+    ul.slider__scale
+      - for (let i = 0; i <= maxValue; i += +step)
+        li.slider__scale-item
+          span.slider__scale-item-text= i
 
 
