@@ -1,21 +1,21 @@
 @import "../../styles/variables.styl"
 
 .player
-  position absolute
-  width 100%
-  height 100%
-  top 0
-  right 0
-  bottom 0
-  left 0
+  position relative
+  padding-bottom 56.25%
+  border-radius 3px
+  background url("images/video.jpg") no-repeat center
+  background-size cover
+  overflow hidden
 
-  &__wrapper
-    position relative
-    padding-bottom 56.25%
-    border-radius 3px
-    background url("images/video.jpg") no-repeat center
-    background-size cover
-    overflow hidden
+  &__video
+    position absolute
+    width 100%
+    height 100%
+    top 0
+    right 0
+    bottom 0
+    left 0
 
   &__header
     position absolute

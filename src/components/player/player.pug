@@ -1,6 +1,6 @@
 mixin player({src, title, author})
-  .player__wrapper.js-player__wrapper
-    video.player.js-player(src=src, width="100%", preload="none" )
+  .player.js-player
+    video.player__video.js-player__video(src=src, width="100%", preload="none" )
     header.player__header
       h3.player__title= title
       h4.player__author= author

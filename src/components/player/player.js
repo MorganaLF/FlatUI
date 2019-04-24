@@ -55,7 +55,7 @@ class Player {
 
   _findElements() {
     this.playerNode = this.$element[0];
-    this.$playerContainer = this.$element.closest('.js-player__wrapper');
+    this.$playerContainer = this.$element.closest('.js-player');
     this.$playButton = this.$playerContainer.find('.js-player__play-button');
     this.$fullScreenButton = this.$playerContainer.find('.js-player__full-button');
     this.$progressLineContainer = this.$playerContainer.find('.js-player__progress-container');
@@ -85,7 +85,7 @@ class Player {
 }
 
 $(() => {
-  const $player = $('.js-player');
+  const $player = $('.js-player__video');
 
   $player.each((index, item) => {
     new Player($(item), index);
