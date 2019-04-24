@@ -9,12 +9,15 @@
   border 1px solid light-grey-text
   border-radius 3px
   text-align center
+
   +md()
     width calc(50% - 40px)
     padding 10px
     margin 1%
+
   +sm()
     margin 10px
+
   +xs()
     width calc(100% - 40px)
     max-width 350px
@@ -22,6 +25,7 @@
   &:nth-child(2)
     transform scale(1.2)
     box-shadow 2px 11px 51px 0 rgba(black, 0.5)
+
     +md()
       transform scale(1)
       box-shadow none
@@ -31,6 +35,7 @@
     justify-content center
     align-items stretch
     padding-bottom 60px
+
     +sm()
       flex-wrap wrap
       align-items center
@@ -42,6 +47,7 @@
   &__list
     margin-bottom 20px
     list-style-type none
+
     &-item
       display flex
       justify-content space-between

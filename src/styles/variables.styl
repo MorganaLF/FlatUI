@@ -101,9 +101,11 @@ input()
   font-family "Source Sans Pro", "Arial", sans-serif
   letter-spacing 0.14px
   text-overflow ellipsis
+
   +placeholder()
     color dark-grey-text
     transition color 0.3s ease
+
   +placeholder-focus()
     color transparent
 
@@ -111,6 +113,7 @@ input()
 
 square()
   overflow hidden
+
   &:before
     content ""
     padding-top 100%
@@ -118,6 +121,7 @@ square()
 
 rectangle(percent)
   overflow hidden
+
   &:before
     content ""
     padding-top "%s%" % percent
