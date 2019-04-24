@@ -1,16 +1,7 @@
 include ../button/button
 
 mixin news({titleTag = "h3", isEvent, image, title, date, description})
-  if(!isEvent)
-    article.news
-      .news__picture(
-        style=`background-image: url("images/${image}.jpg")`
-        )
-      .news__text-block
-        #{titleTag}.news__title= title
-        span.news__date= date
-        p.news__description= description
-  else
+  if(isEvent)
     article.news.news_with-event
       .news__picture(
         style=`background-image: url("images/${image}.jpg")`
@@ -27,3 +18,12 @@ mixin news({titleTag = "h3", isEvent, image, title, date, description})
             size: "xsmall",
             background: "transparent-dark-secondary"
           })
+  else
+    article.news
+      .news__picture(
+      style=`background-image: url("images/${image}.jpg")`
+      )
+      .news__text-block
+        #{titleTag}.news__title= title
+        span.news__date= date
+        p.news__description= description
