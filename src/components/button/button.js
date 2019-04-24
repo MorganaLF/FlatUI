@@ -3,7 +3,6 @@ class Button {
     this.$element = element;
     this.elementIndex = elementIndex;
     this.$currentElement = null;
-    this.$ripple = null;
     this.init();
   }
 
@@ -15,25 +14,27 @@ class Button {
     event.preventDefault();
 
     this.$currentElement = $(event.target.closest('.js-button'));
-    this._createRippleElement(this.$currentElement);
+    const $ripple = this._createRippleElement();
 
-    this.$ripple.removeClass('button__ripple_animated');
+    const { xCoordinate, yCoordinate } = this._getRippleCoordinates(
+      $ripple,
+      event.pageX,
+      event.pageY,
+    );
 
-    const { xCoordinate, yCoordinate } = this._getRippleCoordinates(event.pageX, event.pageY);
-
-    this.$ripple
+    $ripple
       .css({ top: `${yCoordinate}px`, left: `${xCoordinate}px` })
       .addClass('button__ripple_animated')
       .on(`animationend.buttonRestoreDefault${this.elementIndex}`, this._restoreDefault.bind(this))
-      .on(`animationend.buttonRemoveFocus${this.elementIndex}`, this._removeFocus.bind(this));
+      .on(`animationend.buttonRemoveRipple${this.elementIndex}`, this._removeRipple.bind(this, $ripple));
   }
 
   _createRippleElement() {
-    if (this.$ripple === null) {
-      this.$ripple = $('<span class="button__ripple"></span>');
-      this._setRippleSize(this.$currentElement, this.$ripple);
-      this.$currentElement.prepend(this.$ripple);
-    }
+    const $ripple = $('<span class="button__ripple"></span>');
+    this._setRippleSize($ripple);
+    this.$currentElement.append($ripple);
+
+    return $ripple;
   }
 
   _restoreDefault() {
@@ -47,24 +48,24 @@ class Button {
     }
   }
 
-  _removeFocus() {
-    this.$element.blur();
+  _removeRipple($ripple) {
+    this.$element.find($ripple).eq(0).remove();
   }
 
-  _getRippleCoordinates(pageX, pageY) {
+  _getRippleCoordinates($ripple, pageX, pageY) {
     return {
-      xCoordinate: pageX - this.$currentElement.offset().left - this.$ripple.width() / 2,
-      yCoordinate: pageY - this.$currentElement.offset().top - this.$ripple.height() / 2,
+      xCoordinate: pageX - this.$currentElement.offset().left - $ripple.width() / 2,
+      yCoordinate: pageY - this.$currentElement.offset().top - $ripple.height() / 2,
     };
   }
 
-  _setRippleSize() {
+  _setRippleSize($ripple) {
     const rippleDiameter = Math.max(
       this.$currentElement.outerWidth(),
       this.$currentElement.outerHeight(),
     );
 
-    this.$ripple.css({ height: rippleDiameter, width: rippleDiameter });
+    $ripple.css({ height: rippleDiameter, width: rippleDiameter });
   }
 }
 
