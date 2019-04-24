@@ -1,6 +1,6 @@
 mixin dropdown(options, placeholder)
-  .dropdown__container
-    select.dropdown.js-dropdown(name="state", data-placeholder=placeholder)
-      option.dropdown__option_hidden
+  .dropdown
+    select.dropdown__select.js-dropdown__select(name="state", data-placeholder=placeholder)
+      option.dropdown__native-option
       each text, value in options
-        option.dropdown__option_hidden(value=value)= text
+        option.dropdown__native-option(value=value)= text
