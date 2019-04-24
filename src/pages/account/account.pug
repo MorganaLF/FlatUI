@@ -19,12 +19,13 @@ block content
     .account__col.account__col_left
       .account__title-container
         +subheading({title: "your account", tag: "h1"})
-      +user({
-        imageSrc: "user-6",
-        name: "Peter Brown",
-        profession: "developer",
-        size: "big"
-      })
+      .account__user-container
+        +user({
+          imageSrc: "user-6",
+          name: "Peter Brown",
+          profession: "developer",
+          size: "big"
+        })
       .account__title-container
         +subheading({title: "settings"})
       +settings

@@ -1,9 +1,10 @@
-mixin button({tag = "button", size, background = "primary", length, isFluid, href, type, text})
+mixin button({tag = "button", size, background = "primary", length, isFluid, isVerticallyStretched, href, type, text})
   #{tag}.button.js-button(
     class=size ? `button_${size}` : ""
     class=background ? `button_${background}` : ""
     class=length ? `button_${length}` : ""
     class=isFluid ? "button_fluid" : ""
+    class=isVerticallyStretched ? "button_vertically-stretched" : ""
     href=href ? href : false
     type=type ? type : false
   )!= text

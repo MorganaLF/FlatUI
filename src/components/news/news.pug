@@ -1,8 +1,10 @@
 include ../button/button
 
-mixin news({titleTag = "h3", isEvent, image, title, date, description})
+mixin news({titleTag = "h3", isEvent, image, title, date, description, isVerticallyStretched})
   if(isEvent)
-    article.news.news_with-event
+    article.news.news_with-event(
+      class=isVerticallyStretched ? "news_vertically-stretched" : ""
+    )
       .news__picture(
         style=`background-image: url("images/${image}.jpg")`
         )
@@ -19,7 +21,9 @@ mixin news({titleTag = "h3", isEvent, image, title, date, description})
             background: "transparent-dark-secondary"
           })
   else
-    article.news
+    article.news(
+      class=isVerticallyStretched ? "news_vertically-stretched" : ""
+    )
       .news__picture(
       style=`background-image: url("images/${image}.jpg")`
       )
