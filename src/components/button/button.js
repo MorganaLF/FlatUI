@@ -24,7 +24,8 @@ class Button {
     this.$ripple
       .css({ top: `${yCoordinate}px`, left: `${xCoordinate}px` })
       .addClass('button__ripple_animated')
-      .on(`animationend.buttonRestoreDefault${this.elementIndex}`, this._restoreDefault.bind(this));
+      .on(`animationend.buttonRestoreDefault${this.elementIndex}`, this._restoreDefault.bind(this))
+      .on(`animationend.buttonRemoveFocus${this.elementIndex}`, this._removeFocus.bind(this));
   }
 
   _createRippleElement() {
@@ -44,6 +45,10 @@ class Button {
       const $form = this.$currentElement.closest('form');
       $form.submit();
     }
+  }
+
+  _removeFocus() {
+    this.$element.blur();
   }
 
   _getRippleCoordinates(pageX, pageY) {
