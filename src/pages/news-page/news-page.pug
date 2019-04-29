@@ -16,13 +16,13 @@ block title
 
 block content
   .news-page
-    aside.news-page__col.news-page__col_4-size
+    aside.news-page__aside-column
       .news-page__subheading-container
         +subheading({title: "search news"})
       .news-page__search-container
         +search({placeholderText: "Search...", isAutofocus: true})
       +calendar
-    main.news-page__col.news-page__col_8-size
+    main.news-page__main-column
       .news-page__title
         +subheading({title: "news", tag: "h1"})
       .news-page__news-container

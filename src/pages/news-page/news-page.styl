@@ -7,41 +7,39 @@
   margin 0 auto
   padding 80px 10px
 
-  &__col
+  &__aside-column
+    padding 121px 5% 0 0
+    width 30%
 
-    &_4-size
-      padding 121px 5% 0 0
+    +md()
+      width 25%
+      padding-right 1.5%
+
+    +sm()
       width 30%
 
-      +md()
-        width 25%
-        padding-right 1.5%
+    +xs()
+      order 2
+      width 100%
+      max-width 450px
+      margin 0 auto
+      padding-right 0
 
-      +sm()
-        width 30%
+  &__main-column
+    display flex
+    flex-wrap wrap
+    width 70%
 
-      +xs()
-        order 2
-        width 100%
-        max-width 450px
-        margin 0 auto
-        padding-right 0
+    +md()
+      width 75%
 
-    &_8-size
-      display flex
-      flex-wrap wrap
+    +sm()
       width 70%
 
-      +md()
-        width 75%
-
-      +sm()
-        width 70%
-
-      +xs()
-        width 100%
-        max-width 450px
-        margin 0 auto
+    +xs()
+      width 100%
+      max-width 450px
+      margin 0 auto
 
   &__subheading-container
     margin 10px 0
