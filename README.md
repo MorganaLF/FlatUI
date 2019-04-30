@@ -1,6 +1,6 @@
 # FlatUI
-- Site on GitHubPages: https://morganalf.github.io/FlatUI/dist/
-- UI-Kit on GitHubPages: https://morganalf.github.io/FlatUI/dist/ui-kit.html
+- Site on GitHubPages: https://morganalf.github.io/FlatUI/
+- UI-Kit on GitHubPages: https://morganalf.github.io/FlatUI/ui-kit.html
 
 ## This site use
 - Normalize-stylus: https://www.npmjs.com/package/normalize-stylus

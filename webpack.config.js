@@ -7,7 +7,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 module.exports = (env, options) => {
   const production = options.mode === 'production';
   const cssMap = !production;
-  const publicDir = production ? 'https://morganalf.github.io/FlatUI/dist/' : '/';
+  const publicDir = production ? 'https://morganalf.github.io/FlatUI/' : '/';
 
   return {
     entry: './src/index.js',
