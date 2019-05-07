@@ -1,4 +1,4 @@
-include ../../components/subheading/subheading
+include ../../components/main-title/main-title
 include ../../components/button/button
 include ../../components/arrow-button/arrow-button
 include ../../components/chart/chart
@@ -35,7 +35,7 @@ html
       main.ui-kit
         section.ui-kit__standart-buttons
           .ui-kit__standart-buttons-title-container
-            +subheading({title: "standard buttons", tag: "h1"})
+            +main-title({ title: "standard buttons", tag: "h1" })
           .ui-kit__standart-buttons-container
             .ui-kit__button-container
               +button({
@@ -107,7 +107,7 @@ html
               })
         section.ui-kit__arrow-buttons
           .ui-kit__arrow-buttons-title-container
-            +subheading({title: "arrow buttons"})
+            +main-title({ title: "arrow buttons", tag: "h1" })
           .ui-kit__arrow-buttons-container
             .ui-kit__arrow-button-container
               +arrow-button({background: "transparent", direction: "left"})
@@ -131,7 +131,7 @@ html
               +arrow-button({background: "transparent", direction: "right"})
         section.ui-kit__percentages
           .ui-kit__percentages-title-container
-            +subheading({title: "percentages / pie chart"})
+            +main-title({ title: "percentages / pie chart", tag: "h1" })
           .ui-kit__percentages-container
             .ui-kit__percentage-container
               +chart({type: "percentage", value: 0})
@@ -145,7 +145,7 @@ html
               +chart({type: "pie-chart", series: "10, 27, 30, 33"})
         section.ui-kit__sliders
           .ui-kit__sliders-title-container
-            +subheading({title: "sliders"})
+            +main-title({ title: "sliders", tag: "h1" })
           .ui-kit__sliders-container
             .ui-kit__sliders-col
               +slider({isTip: true, currentValue: "36"})
@@ -153,24 +153,24 @@ html
               +slider({isScale: true, progressBackground: "secondary", currentValue: "75", step: "25"})
         section.ui-kit__stages
           .ui-kit__stages-title-container
-            +subheading({title: "stages"})
+            +main-title({title: "stages"})
           +stage({length: 5, fullLength: 3})
         section.ui-kit__form-elements
           .ui-kit__form-elements-title-container
-            +subheading({title: "form elements"})
+            +main-title({ title: "form elements", tag: "h1" })
           .ui-kit__form-elements-container
             .ui-kit__form-elements-col
               .ui-kit__form-container
                 +contact-form
             .ui-kit__form-elements-col
               .ui-kit__form-elements-subtitle-container
-                +subheading({title: "toggles"})
+                +main-title({title: "toggles"})
               .ui-kit__toggle-container
                 +toggle
               .ui-kit__toggle-container
                 +toggle({isChecked: true})
               .ui-kit__form-elements-subtitle-container
-                +subheading({title: "tick boxes"})
+                +main-title({ title: "tick boxes", tag: "h1" })
               .ui-kit__tick-box-container
                 +tick-box(true)
               .ui-kit__tick-box-container
@@ -178,7 +178,7 @@ html
         section.ui-kit__search
           .ui-kit__search-col
             .ui-kit__search-title-container
-              +subheading({title: "search / drop down"})
+              +main-title({ title: "search / drop down", tag: "h1" })
             .ui-kit__search-container
               +search({placeholderText: "Search"})
             .ui-kit__search-container
@@ -195,7 +195,7 @@ html
             "Choose An Option")
           .ui-kit__search-col
             .ui-kit__search-title-container
-              +subheading({title: "user profile"})
+              +main-title({ title: "user profile", tag: "h1" })
             .ui-kit__user-container
               +user({imageSrc: "user-1", name: "John Smith", profession: "ux designer"})
             .ui-kit__user-container
@@ -207,7 +207,7 @@ html
               })
         section.ui-kit__news
           .ui-kit__news-title-container
-            +subheading({title: "news & events"})
+            +main-title({ title: "news & events", tag: "h1" })
           .ui-kit__news-container
             .ui-kit__news-col
               +news({
@@ -230,20 +230,20 @@ html
               })
         section.ui-kit__location
           .ui-kit__location-title-container
-            +subheading({title: "location"})
+            +main-title({ title: "location", tag: "h1" })
           +map({state: "1259  California St", city: "San Francisco, CA"})
         section.ui-kit__calendar
           .ui-kit__calendar-col
             .ui-kit__calendar-title-container
-              +subheading({title: "calendar"})
+              +main-title({ title: "calendar", tag: "h1" })
             +calendar
           .ui-kit__calendar-col
             .ui-kit__calendar-title-container
-              +subheading({title: "messaging"})
+              +main-title({ title: "messaging", tag: "h1" })
             +messaging
         section.ui-kit__video
           .ui-kit__video-title-container
-            +subheading({title: "video"})
+            +main-title({ title: "video", tag: "h1" })
           +player({
             src: "http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4",
             title: "New Zealand Landscapes Timelapse",

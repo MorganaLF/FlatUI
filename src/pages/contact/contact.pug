@@ -1,6 +1,6 @@
 extends ../../templates/template
 
-include ../../components/subheading/subheading
+include ../../components/main-title/main-title
 include ../../components/map/map
 include ../../components/contact-from/contact-form
 
@@ -16,7 +16,7 @@ block title
 block content
   main.contact
     .contact__title-container
-      +subheading({title: "contact us", tag: "h1"})
+      +main-title({ title: "contact us", tag: "h1" })
     .contact__container
       .contact__col.contact__col_big
         .contact__map-container

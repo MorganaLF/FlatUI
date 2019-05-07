@@ -1,7 +1,7 @@
 extends ../../templates/template
 
 include ../../components/page-header/page-header
-include ../../components/subheading/subheading
+include ../../components/main-title/main-title
 include ../../components/player/player
 include ../../components/tariff-plan/tariff-plan
 include ../../components/news/news
@@ -18,12 +18,12 @@ block content
   +page-header
   .index__container
     .index__subheading-container
-      +subheading({title: "choose your tariff plan"})
+      +main-title({ title: "choose your tariff plan" })
     +tariff-plan
   .index__fluid-container
     .index__about-container
       .index__subheading-container
-        +subheading({title: "how it works?", color: "light"})
+        +main-title({ title: "how it works?", color: "light" })
       +player({
         src: "http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4",
         title: "About our awesome company",
@@ -32,7 +32,7 @@ block content
   .index__container
     section.index__news
       .index__subheading-container
-        +subheading({title: "latest news"})
+        +main-title({ title: "latest news" })
       .index__news-container
         .index__news-col
           +news({

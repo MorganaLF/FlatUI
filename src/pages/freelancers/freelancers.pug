@@ -1,6 +1,6 @@
 extends ../../templates/template
 
-include ../../components/subheading/subheading
+include ../../components/main-title/main-title
 include ../../components/search/search
 include ../../components/filter/filter
 include ../../components/page-nav/page-nav
@@ -21,14 +21,14 @@ block content
     .freelancers__container
       aside.freelancers__col
         .freelancers__subheading-container
-          +subheading({title: "search"})
+          +main-title({ title: "search" })
         +search({placeholderText: "Search freelancers", isAutofocus: true})
         .freelancers__subheading-container
-          +subheading({title: "filter"})
+          +main-title({ title: "filter" })
         +filter
       main.freelancers__col
         .freelancers__main-title
-          +subheading({title: "search freelancers", tag: "h1"})
+          +main-title({ title: "search freelancers", tag: "h1" })
         .freelancers__page-nav-container
           +page-nav
         +freelancers-list
