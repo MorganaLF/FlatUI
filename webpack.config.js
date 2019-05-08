@@ -141,37 +141,7 @@ module.exports = (env, options) => {
           to: './fonts',
         },
         {
-          from: './src/components/**/*.jpg',
-          to: './images',
-          flatten: true,
-        },
-        {
-          from: './src/components/**/*.png',
-          to: './images',
-          flatten: true,
-        },
-        {
-          from: './src/components/**/*.svg',
-          to: './images',
-          flatten: true,
-        },
-        {
-          from: './src/plugins/**/*.svg',
-          to: './images',
-          flatten: true,
-        },
-        {
-          from: './src/plugins/**/*.jpg',
-          to: './images',
-          flatten: true,
-        },
-        {
-          from: './src/plugins/**/*.png',
-          to: './images',
-          flatten: true,
-        },
-        {
-          from: './src/pages/**/*.jpg',
+          from: './src/+(components|plugins|images|pages)/**/*.+(jpg|png|svg)',
           to: './images',
           flatten: true,
         },

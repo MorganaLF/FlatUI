@@ -1,18 +1,30 @@
 include ../button/button
 
 mixin news({titleTag = "h3", isEvent, image, title, date, description, isVerticallyStretched})
+  -
+    const titleTags = {
+      h1: "h1",
+      h2: "h2",
+      h3: "h3",
+      h4: "h4",
+      h5: "h5",
+      h6: "h6"
+    }
+
+    const defaultTitleTag = "h3"
+
   if(isEvent)
     article.news.news_with-event(
       class=isVerticallyStretched ? "news_vertically-stretched" : ""
     )
       .news__picture(
-        style=`background-image: url("images/${image}.jpg")`
-        )
+        style=`background-image: url(${image})`
+      )
       .news__text-block
         span.news__date.news__date_big
           span.news__day= `${date[0]} `
           span.news__month= date[1]
-        #{titleTag}.news__title.news__title_small= title
+        #{titleTags[titleTag] || defaultTitleTag}.news__title.news__title_small= title
         p.news__description= description
         .news__button
           +button({
@@ -25,9 +37,9 @@ mixin news({titleTag = "h3", isEvent, image, title, date, description, isVertica
       class=isVerticallyStretched ? "news_vertically-stretched" : ""
     )
       .news__picture(
-      style=`background-image: url("images/${image}.jpg")`
+        style=`background-image: url(${image})`
       )
       .news__text-block
-        #{titleTag}.news__title= title
+        #{titleTags[titleTag] || defaultTitleTag}.news__title= title
         span.news__date= date
         p.news__description= description
