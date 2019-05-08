@@ -1,6 +1,13 @@
 mixin slider({isTip, isScale, progressBackground, step, currentValue = 0, minValue = 0, maxValue = 100})
+  -
+    const backgroundModifiers = {
+      secondary: "secondary"
+    }
+
   .slider.js-slider(
-    class=progressBackground ? `slider_with-progress slider_${progressBackground}` : ""
+    class=backgroundModifiers[progressBackground]
+      ? `slider_with-progress slider_${backgroundModifiers[progressBackground]}`
+      : ""
     data-value=currentValue
     data-min=minValue
     data-max=maxValue
