@@ -1,7 +1,7 @@
 include ../button/button
 
 mixin contact-form({buttonAlign, textarea="true", isAutofocus} = {})
-  form.contact-form(
+  form.contact-form.js-contact-form(
       action="mock-address/change-me",
       method="get"
     )
@@ -12,14 +12,12 @@ mixin contact-form({buttonAlign, textarea="true", isAutofocus} = {})
           placeholder="Your Name",
           autofocus=isAutofocus
         )
-      .contact-form__tip.contact-form__tip_with-error
-        span.contact-form__tip-text ERROR
+      .contact-form__tip.contact-form__tip
     .contact-form__input-group
       input.contact-form__input(
           type="email", name="email", placeholder="Your Email"
         )
-      .contact-form__tip.contact-form__tip_with-success
-        span.contact-form__tip-text THANKS!
+      .contact-form__tip.contact-form__tip
     if (textarea)
       textarea.contact-form__textarea(
           name="message", placeholder="Your Message"
