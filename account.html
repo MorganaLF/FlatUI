@@ -16,38 +16,38 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
   <link href="https://morganalf.github.io/FlatUI/styles.css" rel="stylesheet"></head>
   <body>
-    <div class="page-menu__container">
-      <nav class="page-menu">
+    <div class="page-menu">
+      <nav class="page-menu__links">
         <ul class="menu">
           <li class="menu__item">
-            <div class="menu__button-container">
+            <div class="menu__button">
               <a class="button js-button button_secondary button_short button_fluid" href="index.html"><i class="fas fa-home"></i> home</a>
             </div>
           </li>
           <li class="menu__item">
-            <div class="menu__button-container">
+            <div class="menu__button">
               <a class="button js-button button_secondary button_short button_fluid" href="account.html"><i class="far fa-user"></i> account</a>
             </div>
           </li>
         </ul>
         <ul class="menu">
           <li class="menu__item">
-            <div class="menu__button-container">
+            <div class="menu__button">
               <a class="button js-button button_secondary button_short button_fluid" href="get-started.html"><i class="fas fa-edit"></i> get started</a>
             </div>
           </li>
           <li class="menu__item">
-            <div class="menu__button-container">
+            <div class="menu__button">
               <a class="button js-button button_secondary button_short button_fluid" href="freelancers.html"><i class="fas fa-users"></i> freelancers</a>
             </div>
           </li>
           <li class="menu__item">
-            <div class="menu__button-container">
+            <div class="menu__button">
               <a class="button js-button button_secondary button_short button_fluid" href="news.html"><i class="far fa-file-alt"></i> news and events</a>
             </div>
           </li>
           <li class="menu__item">
-            <div class="menu__button-container">
+            <div class="menu__button">
               <a class="button js-button button_secondary button_short button_fluid" href="contact.html"><i class="fas fa-map-marker-alt"></i> contact us</a>
             </div>
           </li>
@@ -61,10 +61,10 @@
       <div class="body-content">
         <main class="account">
           <div class="account__col account__col_left">
-            <div class="account__title-container">
+            <div class="account__title">
               <h1 class="main-title">your account</h1>
             </div>
-            <div class="account__user-container">
+            <div class="account__user">
               <div class="user user_big">
                 <div class="user__picture" style="background-image: url(&quot;images/user-6.jpg&quot;)"></div>
                 <div class="user__info">
@@ -75,14 +75,14 @@
                 </div>
               </div>
             </div>
-            <div class="account__title-container">
+            <div class="account__title">
               <h2 class="main-title">settings</h2>
             </div>
             <form class="settings" action="mock-address/change-me" method="post">
               <ul class="settings__list">
                 <li class="settings__item">
                   <p class="settings__text">Send e-mail</p>
-                  <div class="settings__toggle-container">
+                  <div class="settings__toggle">
                     <label class="toggle">
                       <input class="toggle__input" type="checkbox" checked><span class="toggle__switch"><span class="toggle__switch-text">on</span><span class="toggle__switch-round"></span><span class="toggle__switch-text">off</span></span>
                     </label>
@@ -90,7 +90,7 @@
                 </li>
                 <li class="settings__item">
                   <p class="settings__text">Send sound notifications</p>
-                  <div class="settings__toggle-container">
+                  <div class="settings__toggle">
                     <label class="toggle">
                       <input class="toggle__input" type="checkbox" checked><span class="toggle__switch"><span class="toggle__switch-text">on</span><span class="toggle__switch-round"></span><span class="toggle__switch-text">off</span></span>
                     </label>
@@ -98,7 +98,7 @@
                 </li>
                 <li class="settings__item">
                   <p class="settings__text">Enable newsletter</p>
-                  <div class="settings__toggle-container">
+                  <div class="settings__toggle">
                     <label class="toggle">
                       <input class="toggle__input" type="checkbox"><span class="toggle__switch"><span class="toggle__switch-text">on</span><span class="toggle__switch-round"></span><span class="toggle__switch-text">off</span></span>
                     </label>
@@ -106,7 +106,7 @@
                 </li>
                 <li class="settings__item">
                   <p class="settings__text">Enable private messages</p>
-                  <div class="settings__toggle-container">
+                  <div class="settings__toggle">
                     <label class="toggle">
                       <input class="toggle__input" type="checkbox"><span class="toggle__switch"><span class="toggle__switch-text">on</span><span class="toggle__switch-round"></span><span class="toggle__switch-text">off</span></span>
                     </label>
@@ -114,7 +114,7 @@
                 </li>
                 <li class="settings__item">
                   <p class="settings__text">Sound</p>
-                  <div class="settings__slider-container">
+                  <div class="settings__slider">
                     <div class="slider js-slider slider_with-progress slider_secondary" data-value="60" data-min="0" data-max="100">
                       <div class="custom-handle ui-slider-handle">
                       </div>
@@ -125,7 +125,7 @@
             </form>
           </div>
           <div class="account__col account__col_right">
-            <div class="account__title-container">
+            <div class="account__title">
               <h2 class="main-title">statistic</h2>
             </div>
             <div class="statistic">
@@ -143,7 +143,7 @@
                 </div>
               </div>
             </div>
-            <div class="account__title-container">
+            <div class="account__title">
               <h2 class="main-title">deadlines statistic</h2>
             </div>
             <section class="account__deadlines">
@@ -171,9 +171,9 @@
       </div>
       <footer class="page-footer">
         <div class="page-footer__container">
-          <section class="page-footer__search-container">
-            <div class="page-footer__subheading-container">
-              <h2 class="main-title"></h2>
+          <section class="page-footer__search">
+            <div class="page-footer__title">
+              <h2 class="main-title">search on site</h2>
             </div>
             <form class="search" action="mock-address/change-me" method="get">
               <input class="search__input search__input_primary" type="search" name="search" placeholder="Search">
