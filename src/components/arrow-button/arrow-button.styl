@@ -3,37 +3,35 @@
 .arrow-button
   position relative
   width 50px
-  border none
+  border 3px solid secondary-color
   border-radius 50%
+  background-color transparent
   transition background 0.3s ease
   square()
 
-  &_small
-    width 35px
+  &:hover
+    background-color secondary-color
 
-  &_transparent
-    border 3px solid secondary-color
-    background-color transparent
+  &:focus
+    border-color darken(secondary-color, 15%)
 
-    &:hover
-      background-color secondary-color
+  &:hover svg use
+  &:disabled svg use
+    fill white
 
-    &:focus
-      border-color darken(secondary-color, 15%)
+  &:disabled
+    border-color light-grey
+    background-color light-grey
 
-    &:hover svg use
-    &:disabled svg use
-      fill white
+  svg
+    position absolute
+    top 50%
+    width 52%
+    height 52%
+    transform translate(-50%, -50%)
 
-    svg
-      position absolute
-      top 50%
-      width 52%
-      height 52%
-      transform translate(-50%, -50%)
-
-    svg use
-      transition all 0.3s ease
+  svg use
+    transition all 0.3s ease
 
   &_left svg
     left 47%
@@ -41,6 +39,5 @@
   &_right svg
     left 53%
 
-  &:disabled
-    border-color light-grey
-    background-color light-grey
+  &_small
+    width 35px

@@ -1,10 +1,22 @@
-include arrow-svg-icon
-
 mixin arrow-button({background, direction, isDisabled, size})
+  -
+    const directionModifiers = {
+      left: "left",
+      right: "right"
+    };
+
+    const defaultDirectionModifier = "right";
+
+    const sizeModifiers = {
+      small: "small"
+    };
+
   button.arrow-button(
-    class=`arrow-button_${direction}`
-    class=background ? `arrow-button_${background}` : ""
-    class=size ? `arrow-button_${size}` : ""
+    class=`arrow-button_${directionModifiers[direction] || defaultDirectionModifier}`
+    class=sizeModifiers[size] ? `arrow-button_${sizeModifiers[size]}` : ""
     disabled=isDisabled
   )
-    +arrow-svg-icon(direction)
+    if (directionModifiers[direction] === "left")
+      include arrow-left.svg
+    else
+      include arrow-right.svg
