@@ -1,6 +1,6 @@
 extends ../../templates/template
 
-include ../../components/main-title/main-title
+include ../../components/title/title
 include ../../components/button/button
 include ../../components/stage/stage
 include ../../components/tariff-plan/tariff-plan
@@ -19,7 +19,7 @@ block title
 block content
   main.get-started
     .get-started__title
-      +main-title({ title: "how to start?", tag: "h1" })
+      +title({ title: "how to start?", tag: "h1" })
     +stage({length: 4, fullLength: 1, isContent: true})
       section.get-started__content-item
         h2.get-started__content-title Step 1: Choose optimal tariff plan

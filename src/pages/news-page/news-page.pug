@@ -1,6 +1,6 @@
 extends ../../templates/template
 
-include ../../components/main-title/main-title
+include ../../components/title/title
 include ../../components/news/news
 include ../../components/calendar/calendar
 include ../../components/search/search
@@ -18,13 +18,13 @@ block content
   .news-page
     aside.news-page__aside-column
       .news-page__title
-        +main-title({ title: "search news" })
+        +title({ title: "search news", tag: "h2" })
       .news-page__search
         +search({placeholderText: "Search...", isAutofocus: true})
       +calendar
     main.news-page__main-column
       .news-page__main-title
-        +main-title({ title: "news", tag: "h1" })
+        +title({ title: "news", tag: "h1" })
       .news-page__news
         +news({
           image: "news-3",
@@ -72,7 +72,7 @@ block content
         })
       +page-nav
       .news-page__main-title
-        +main-title({ title: "upcoming events" })
+        +title({ title: "upcoming events", tag: "h2" })
       .news-page__news
         +news({
           image: "news-6",

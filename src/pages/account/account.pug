@@ -1,6 +1,6 @@
 extends ../../templates/template
 
-include ../../components/main-title/main-title
+include ../../components/title/title
 include ../../components/user/user
 include ../../components/settings/settings
 include ../../components/statistic/statistic
@@ -18,7 +18,7 @@ block content
   main.account
     .account__col.account__col_left
       .account__title
-        +main-title({ title: "your account", tag: "h1" })
+        +title({ title: "your account", tag: "h1" })
       .account__user
         +user({
           imageSrc: "user-6",
@@ -27,14 +27,14 @@ block content
           size: "big"
         })
       .account__title
-        +main-title({ title: "settings" })
+        +title({ title: "settings", tag: "h2" })
       +settings
     .account__col.account__col_right
       .account__title
-        +main-title({ title: "statistic" })
+        +title({ title: "statistic", tag: "h2" })
       +account-statistic
       .account__title
-        +main-title({ title: "deadlines statistic" })
+        +title({ title: "deadlines statistic", tag: "h2" })
       section.account__deadlines
         .account__deadlines-col
           h3.account__deadlines-title Ahead of time

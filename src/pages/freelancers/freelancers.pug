@@ -1,6 +1,6 @@
 extends ../../templates/template
 
-include ../../components/main-title/main-title
+include ../../components/title/title
 include ../../components/search/search
 include ../../components/filter/filter
 include ../../components/page-nav/page-nav
@@ -21,14 +21,14 @@ block content
     .freelancers__container
       aside.freelancers__col
         .freelancers__title
-          +main-title({ title: "search" })
+          +title({ title: "search", tag: "h2" })
         +search({placeholderText: "Search freelancers", isAutofocus: true})
         .freelancers__title
-          +main-title({ title: "filter" })
+          +title({ title: "filter", tag: "h2" })
         +filter
       main.freelancers__col
         .freelancers__main-title
-          +main-title({ title: "search freelancers", tag: "h1" })
+          +title({ title: "search freelancers", tag: "h1" })
         .freelancers__page-nav
           +page-nav
         +freelancers-list

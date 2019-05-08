@@ -1,0 +1,21 @@
+mixin title({ title, tag="h1", color })
+  -
+    const tags = {
+      h1: "h1",
+      h2: "h2",
+      h3: "h3",
+      h4: "h4",
+      h5: "h5",
+      h6: "h6"
+    }
+
+    const defaultTag = "h1"
+
+    const colorModifiers = {
+      light: "light"
+    }
+
+  #{tags[tag] || defaultTag}.title(class=colorModifiers[color]
+      ? `title_${colorModifiers[color]}`
+      : ""
+    )= title
