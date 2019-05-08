@@ -22,10 +22,10 @@ class Dropdown {
 
   _addEventListeners() {
     const $window = $(window);
-    $window.on(`resize.dropdownResize${this.elementIndex}`, this._resizeDropdown.bind(this));
+    $window.on(`resize.dropdownResize${this.elementIndex}`, this._handleWindowResize.bind(this));
   }
 
-  _resizeDropdown() {
+  _handleWindowResize() {
     this.$element.select2('destroy');
     this._initSelectPlugin();
   }

@@ -26,8 +26,12 @@ class Chart {
 
     $window.on(
       `resize.percentageSetFont${this.elementIndex}`,
-      this._setResponsiveFontSize.bind(this),
+      this._handleWindowResize.bind(this),
     );
+  }
+
+  _handleWindowResize() {
+    this._setResponsiveFontSize();
   }
 
   _setValue() {

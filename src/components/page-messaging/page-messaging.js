@@ -10,7 +10,7 @@ class PageMessaging {
     this._addEventListeners();
   }
 
-  toggleMessagingWindow() {
+  handleMessagingButtonClick() {
     if (this.isMessagingOpened) {
       this.hideMessagingWindow();
     } else {
@@ -25,16 +25,16 @@ class PageMessaging {
       .closest('.js-page-messaging')
       .find('.js-page-messaging__container');
 
-    function removeClosingStyles() {
+    function handleMessagingContainerAnimationEnd() {
       $messagingContainer
         .css('display', 'none')
         .removeClass('page-messaging__container_closed')
-        .off('animationend', removeClosingStyles);
+        .off('animationend', handleMessagingContainerAnimationEnd);
     }
 
     $messagingContainer
       .addClass('page-messaging__container_closed')
-      .on('animationend', removeClosingStyles);
+      .on('animationend', handleMessagingContainerAnimationEnd);
   }
 
   showMessagingWindow() {
@@ -42,23 +42,23 @@ class PageMessaging {
       .closest('.js-page-messaging')
       .find('.js-page-messaging__container');
 
-    function removeOpeningStyles() {
+    function handleMessagingContainerAnimationEnd() {
       $messagingContainer
         .removeClass('page-messaging__container_opened-active')
-        .off('animationend', removeOpeningStyles);
+        .off('animationend', handleMessagingContainerAnimationEnd);
     }
 
     $messagingContainer
       .css('display', 'block')
       .addClass('page-messaging__container_opened page-messaging__container_opened-active')
       .removeClass('page-messaging__container_opened')
-      .on('animationend', removeOpeningStyles);
+      .on('animationend', handleMessagingContainerAnimationEnd);
   }
 
   _addEventListeners() {
     this.$element.on(
       `click.messagingToggle${this.elementIndex}`,
-      this.toggleMessagingWindow.bind(this),
+      this.handleMessagingButtonClick.bind(this),
     );
   }
 }

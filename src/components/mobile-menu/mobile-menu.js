@@ -27,9 +27,17 @@ class MobileMenu {
 
   _addEventListeners() {
     const $window = $(window);
-    $window.on(`resize.mobileMenuHide${this.elementIndex}`, this.hideMobileMenu.bind(this));
+    $window.on(`resize.mobileMenuHide${this.elementIndex}`, this._handleWindowResize.bind(this));
 
-    this.$element.on(`click.mobileMenuToggle${this.elementIndex}`, this.toggleMobileMenu.bind(this));
+    this.$element.on(`click.mobileMenuToggle${this.elementIndex}`, this._handleMenuClick.bind(this));
+  }
+
+  _handleWindowResize() {
+    this.hideMobileMenu();
+  }
+
+  _handleMenuClick() {
+    this.toggleMobileMenu();
   }
 }
 

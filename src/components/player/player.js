@@ -31,7 +31,7 @@ class Player {
     }
   }
 
-  rewindVideo(event) {
+  handleProgressLineClick(event) {
     const progressLineWidth = this.$progressLineContainer.width();
     const cursorXCoordinate = event.pageX - this.$progressLineContainer.offset().left;
 
@@ -41,7 +41,7 @@ class Player {
     this._updateProgressBar.bind(this);
   }
 
-  playInFullScreen() {
+  handleFullScreenButtonClick() {
     if (!this.isFullScreen) {
       this.$fullScreenButton.addClass('player__full-button_opened');
       this.$playerContainer[0].requestFullscreen();
@@ -64,16 +64,24 @@ class Player {
 
   _addEventListeners() {
     this.$element
-      .on(`click.playerPlayVideo${this.elementIndex}`, this.playVideo.bind(this));
+      .on(`click.playerPlayVideo${this.elementIndex}`, this._handlePlayerClick.bind(this));
 
     this.$playButton
-      .on(`click.playerPlayVideo${this.elementIndex}`, this.playVideo.bind(this));
+      .on(`click.playerPlayVideo${this.elementIndex}`, this._handlePlayButtonClick.bind(this));
 
     this.$fullScreenButton
-      .on(`click.playerFullScreen${this.elementIndex}`, this.playInFullScreen.bind(this));
+      .on(`click.playerFullScreen${this.elementIndex}`, this.handleFullScreenButtonClick.bind(this));
 
     this.$progressLineContainer
-      .on(`click.playerRewindVideo${this.elementIndex}`, this.rewindVideo.bind(this));
+      .on(`click.playerRewindVideo${this.elementIndex}`, this.handleProgressLineClick.bind(this));
+  }
+
+  _handlePlayerClick() {
+    this.playVideo();
+  }
+
+  _handlePlayButtonClick() {
+    this.playVideo();
   }
 
   _updateProgressBar() {

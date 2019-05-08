@@ -47,40 +47,24 @@ class Map {
 
     $addButton.on(
       `click.mapPlaceMarker${this.elementIndex}`,
-      this._placeMarker.bind(this),
+      this._handleAddButtonClick.bind(this),
     );
 
     const $geolocationButton = $mapContainer.find('.js-map__button_with-geolocation');
 
     $geolocationButton.on(
       `click.mapDefineGeolocation${this.elementIndex}`,
-      this._defineGeolocation.bind(this),
+      this._handleGeolocationButtonClick.bind(this),
     );
   }
 
-  _setCurrentLocaton(event) {
-    this.currentLocation = event.latLng;
-  }
-
-  _createMarker(position) {
-    return new this.google.maps.Marker({
-      position,
-      map: this.map,
-      icon: 'images/map-marker.png',
-    });
-  }
-
-  _placeMarker() {
+  _handleAddButtonClick() {
     const newMarker = this._createMarker(this.currentLocation);
     newMarker.addListener('dblclick', this._deleteMarker);
     this.markers.push(newMarker);
   }
 
-  _deleteMarker() {
-    this.setMap(null);
-  }
-
-  _defineGeolocation() {
+  _handleGeolocationButtonClick() {
     const infoWindow = new this.google.maps.InfoWindow();
 
     if (navigator.geolocation) {
@@ -100,6 +84,22 @@ class Map {
     } else {
       this._handleLocationError(false, infoWindow, this.map.getCenter());
     }
+  }
+
+  _setCurrentLocaton(event) {
+    this.currentLocation = event.latLng;
+  }
+
+  _createMarker(position) {
+    return new this.google.maps.Marker({
+      position,
+      map: this.map,
+      icon: 'images/map-marker.png',
+    });
+  }
+
+  _deleteMarker() {
+    this.setMap(null);
   }
 
   _handleLocationError(browserHasGeolocation, infoWindow, position) {

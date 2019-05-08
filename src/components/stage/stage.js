@@ -16,7 +16,7 @@ class Stage {
     this._addEventListeners();
   }
 
-  setActiveStage(currentIndex) {
+  handleStageItemClick(currentIndex) {
     this.currentStageItemIndex = currentIndex;
 
     this.$stageItem.each((index, item) => {
@@ -63,7 +63,7 @@ class Stage {
     this.$stageItem.each((index, item) => {
       $(item).on(
         `click.StageSetActive${this.stageIndex}`,
-        this.setActiveStage.bind(this, index),
+        this.handleStageItemClick.bind(this, index),
       );
     });
 
@@ -71,8 +71,12 @@ class Stage {
 
     $window.on(
       `resize.StageScroll${this.stageIndex}`,
-      this.scrollCarousel.bind(this, true),
+      this._handleWindowResize.bind(this),
     );
+  }
+
+  _handleWindowResize() {
+    this.scrollCarousel(true);
   }
 
   _findElements() {

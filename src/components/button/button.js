@@ -7,10 +7,10 @@ class Button {
   }
 
   init() {
-    this.$element.on(`click.buttonAddRipple${this.elementIndex}`, this._addRipple.bind(this));
+    this.$element.on(`click.buttonAddRipple${this.elementIndex}`, this._handleButtonClick.bind(this));
   }
 
-  _addRipple(event) {
+  _handleButtonClick(event) {
     event.preventDefault();
 
     this.$currentElement = $(event.target.closest('.js-button'));
@@ -25,8 +25,7 @@ class Button {
     $ripple
       .css({ top: `${yCoordinate}px`, left: `${xCoordinate}px` })
       .addClass('button__ripple_animated')
-      .on(`animationend.buttonRestoreDefault${this.elementIndex}`, this._restoreDefault.bind(this))
-      .on(`animationend.buttonRemoveRipple${this.elementIndex}`, this._removeRipple.bind(this, $ripple));
+      .on(`animationend.buttonRestoreDefault${this.elementIndex}`, this._handleRippleAnimationEnd.bind(this, $ripple));
   }
 
   _createRippleElement() {
@@ -37,7 +36,9 @@ class Button {
     return $ripple;
   }
 
-  _restoreDefault() {
+  _handleRippleAnimationEnd($ripple) {
+    this.$element.find($ripple).eq(0).remove();
+
     if (this.$currentElement.attr('href') !== undefined) {
       window.location.href = this.$currentElement.attr('href');
     }
@@ -46,10 +47,6 @@ class Button {
       const $form = this.$currentElement.closest('form');
       $form.submit();
     }
-  }
-
-  _removeRipple($ripple) {
-    this.$element.find($ripple).eq(0).remove();
   }
 
   _getRippleCoordinates($ripple, pageX, pageY) {
