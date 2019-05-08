@@ -18,19 +18,19 @@ mixin filter
       "Choose Category")
     .filter__row
       span.filter__subtitle Min cost of work
-      .filter__slider-container
+      .filter__slider
         +slider({isTip: true, value: "10"})
     .filter__row
       span.filter__subtitle Max cost of work
-      .filter__slider-container
+      .filter__slider
         +slider({isTip: true, value: "90"})
     .filter__row.filter__row_with-flex
       span.filter__subtitle Show busy freelancers
-      .filter__tick-box-container
+      .filter__tick-box
         +tick-box(true)
     .filter__row.filter__row_with-flex
       span.filter__subtitle Show only best freelancers
-      .filter__tick-box-container
+      .filter__tick-box
         +tick-box
     +button({
       text: "show results",

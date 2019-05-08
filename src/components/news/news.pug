@@ -14,7 +14,7 @@ mixin news({titleTag = "h3", isEvent, image, title, date, description, isVertica
           span.news__month= date[1]
         #{titleTag}.news__title.news__title_small= title
         p.news__description= description
-        .news__button-container
+        .news__button
           +button({
             text: "add to calendar",
             size: "xsmall",

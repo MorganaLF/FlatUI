@@ -17,15 +17,15 @@ block title
 block content
   .news-page
     aside.news-page__aside-column
-      .news-page__subheading-container
+      .news-page__title
         +main-title({ title: "search news" })
-      .news-page__search-container
+      .news-page__search
         +search({placeholderText: "Search...", isAutofocus: true})
       +calendar
     main.news-page__main-column
-      .news-page__title
+      .news-page__main-title
         +main-title({ title: "news", tag: "h1" })
-      .news-page__news-container
+      .news-page__news
         +news({
           image: "news-3",
           title: "Top 5 professions in freelance",
@@ -37,7 +37,7 @@ block content
           isVerticallyStretched: true
 
         })
-      .news-page__news-container
+      .news-page__news
         +news({
           image: "news-7",
           title: "How to prepare for an interview",
@@ -48,7 +48,7 @@ block content
               "nunc, a tincidunt eros.",
           isVerticallyStretched: true
         })
-      .news-page__news-container
+      .news-page__news
         +news({
           image: "news-4",
           title: "Work without leaving home",
@@ -59,7 +59,7 @@ block content
               "nunc, a tincidunt eros.",
           isVerticallyStretched: true
         })
-      .news-page__news-container
+      .news-page__news
         +news({
           image: "news-5",
           title: "What the designer should know",
@@ -71,9 +71,9 @@ block content
           isVerticallyStretched: true
         })
       +page-nav
-      .news-page__title
+      .news-page__main-title
         +main-title({ title: "upcoming events" })
-      .news-page__news-container
+      .news-page__news
         +news({
           image: "news-6",
           title: "javascript webinar",
@@ -82,7 +82,7 @@ block content
           isEvent: true,
           isVerticallyStretched: true
         })
-      .news-page__news-container
+      .news-page__news
         +news({
           image: "news-8",
           title: "open your own business",
@@ -91,7 +91,7 @@ block content
           isEvent: true,
           isVerticallyStretched: true
         })
-      .news-page__news-container
+      .news-page__news
         +news({
           image: "news-9",
           title: "web design workshop",
@@ -100,7 +100,7 @@ block content
           isEvent: true,
           isVerticallyStretched: true
         })
-      .news-page__news-container
+      .news-page__news
         +news({
           image: "news-10",
           title: "get a new profession",

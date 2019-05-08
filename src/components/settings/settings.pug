@@ -9,21 +9,21 @@ mixin settings
     ul.settings__list
       li.settings__item
         p.settings__text Send e-mail
-        .settings__toggle-container
+        .settings__toggle
           +toggle({isChecked: true})
       li.settings__item
         p.settings__text Send sound notifications
-        .settings__toggle-container
+        .settings__toggle
           +toggle({isChecked: true})
       li.settings__item
         p.settings__text Enable newsletter
-        .settings__toggle-container
+        .settings__toggle
           +toggle
       li.settings__item
         p.settings__text Enable private messages
-        .settings__toggle-container
+        .settings__toggle
           +toggle
       li.settings__item
         p.settings__text Sound
-        .settings__slider-container
+        .settings__slider
           +slider({progressBackground: "secondary", currentValue: "60"})

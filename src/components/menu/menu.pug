@@ -4,7 +4,7 @@ mixin menu(items)
   ul.menu
     each item in items
       li.menu__item
-        .menu__button-container
+        .menu__button
           +button({
             text: item[0],
             background: "secondary",

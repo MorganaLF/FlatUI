@@ -4,9 +4,9 @@ include ../main-title/main-title
 mixin page-footer
   footer.page-footer
     .page-footer__container
-      section.page-footer__search-container
-        .page-footer__subheading-container
-          +main-title("search on site")
+      section.page-footer__search
+        .page-footer__title
+          +main-title({title: "search on site" })
         +search({placeholderText: "Search", searchBackground: "primary"})
       nav.page-footer__menu-container
         ul.page-footer__menu

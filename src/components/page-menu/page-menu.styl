@@ -1,25 +1,25 @@
 @import "../../styles/variables.styl"
 
 .page-menu
-  display flex
-  justify-content space-between
+  z-index 9999
+  position fixed
+  top 0
+  left 0
+  width 100%
+  background page-dark-background
 
   +md()
-    flex-direction column
-    justify-content flex-start
-    padding 20px 10px
+    min-height 100%
+    z-index 0
 
-  &__container
-    z-index 9999
-    position fixed
-    top 0
-    left 0
-    width 100%
-    background page-dark-background
+  &__links
+    display flex
+    justify-content space-between
 
     +md()
-      min-height 100%
-      z-index 0
+      flex-direction column
+      justify-content flex-start
+      padding 20px 10px
 
   .far
   .fas

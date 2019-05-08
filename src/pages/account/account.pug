@@ -17,23 +17,23 @@ block title
 block content
   main.account
     .account__col.account__col_left
-      .account__title-container
+      .account__title
         +main-title({ title: "your account", tag: "h1" })
-      .account__user-container
+      .account__user
         +user({
           imageSrc: "user-6",
           name: "Peter Brown",
           profession: "developer",
           size: "big"
         })
-      .account__title-container
+      .account__title
         +main-title({ title: "settings" })
       +settings
     .account__col.account__col_right
-      .account__title-container
+      .account__title
         +main-title({ title: "statistic" })
       +account-statistic
-      .account__title-container
+      .account__title
         +main-title({ title: "deadlines statistic" })
       section.account__deadlines
         .account__deadlines-col

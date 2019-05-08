@@ -20,17 +20,17 @@ block content
   .freelancers
     .freelancers__container
       aside.freelancers__col
-        .freelancers__subheading-container
+        .freelancers__title
           +main-title({ title: "search" })
         +search({placeholderText: "Search freelancers", isAutofocus: true})
-        .freelancers__subheading-container
+        .freelancers__title
           +main-title({ title: "filter" })
         +filter
       main.freelancers__col
         .freelancers__main-title
           +main-title({ title: "search freelancers", tag: "h1" })
-        .freelancers__page-nav-container
+        .freelancers__page-nav
           +page-nav
         +freelancers-list
-        .freelancers__page-nav-container
+        .freelancers__page-nav
           +page-nav

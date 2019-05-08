@@ -5,10 +5,10 @@
   margin 0 auto
   padding 60px 10px
 
-  &__standart-buttons-title-container
+  &__standart-buttons-title
     margin-bottom 60px
 
-  &__standart-buttons-container
+  &__standart-buttons-row
     display flex
     flex-wrap wrap
     justify-content center
@@ -19,7 +19,7 @@
       margin 0 auto
 
       &:nth-child(1)
-        & ^[0]__button-container
+        & ^[0]__button
 
           &:nth-child(4)
             order 2
@@ -33,13 +33,13 @@
     +xxs()
       max-width 200px
 
-    &:nth-child(4) ^[0]__button-container
+    &:nth-child(4) ^[0]__button
       margin-bottom 0
 
       +xs()
         margin-bottom 19px
 
-  &__button-container
+  &__button
     margin 0 12px 17px
 
     +xs()
@@ -50,10 +50,10 @@
       &:nth-child(4)
         order 3
 
-  &__arrow-buttons-title-container
+  &__arrow-buttons-title
     margin 43px 0 25px
 
-  &__arrow-buttons-container
+  &__arrow-buttons-content
     display flex
     flex-wrap wrap
     justify-content center
@@ -62,7 +62,7 @@
       max-width 310px
       margin 0 auto
 
-  &__arrow-button-container
+  &__arrow-button
     margin 0 2%
 
     +xxs()
@@ -74,10 +74,10 @@
       &:nth-child(4)
         order 6
 
-  &__percentages-title-container
+  &__percentages-title
     margin 34px 0 15px
 
-  &__percentages-container
+  &__percentages-content
     display flex
     flex-wrap wrap
     justify-content space-between
@@ -86,7 +86,7 @@
     +xs()
       justify-content center
 
-  &__percentage-container
+  &__percentage
     width 16.32%
 
     +xs()
@@ -97,10 +97,10 @@
       width 60%
       margin 20px 0
 
-  &__sliders-title-container
+  &__sliders-title
     margin 24px 0 36px
 
-  &__sliders-container
+  &__sliders-row
     display flex
     flex-wrap wrap
 
@@ -124,13 +124,13 @@
       &:last-child
         padding-left 0
 
-  &__stages-title-container
+  &__stages-title
     margin 27px 0 16px
 
-  &__form-elements-title-container
+  &__form-elements-title
     margin 42px 0 25px
 
-  &__form-elements-container
+  &__form-elements-row
     display flex
     flex-wrap wrap
     text-align center
@@ -152,28 +152,28 @@
       &:last-child
         padding 0
 
-  &__form-container
+  &__form
     margin-top 15px
 
     +xs()
       margin-bottom 40px
 
-  &__form-elements-subtitle-container
+  &__form-elements-subtitle
     margin 0 0 20px
     line-height 0.8
 
     &:nth-child(4)
       margin 25px 0 21px
 
-  &__toggle-container
+  &__toggle
     display inline-block
     margin 0 2.05%
 
-  &__tick-box-container
+  &__tick-box
     display inline-block
     margin 0 3.5%
 
-  &__search
+  &__search-and-user
     display flex
     flex-wrap wrap
 
@@ -187,7 +187,7 @@
       &:last-child
         padding-left 1.68%
 
-        & ^[0]__search-title-container
+        & ^[0]__search-title
           margin-bottom 18px
 
       +xs()
@@ -197,13 +197,13 @@
         &:last-child
           padding 0
 
-  &__search-title-container
+  &__search-title
     margin 54px 0 10px
 
-  &__search-container
+  &__search
     margin-bottom 16px
 
-  &__user-container
+  &__user
     display flex
     flex-direction column
     align-items center
@@ -212,10 +212,10 @@
     +xs()
       margin-left 0
 
-  &__news-title-container
+  &__news-title
     margin 55px 0 23px
 
-  &__news-container
+  &__news-row
     display flex
     flex-wrap wrap
 
@@ -239,7 +239,7 @@
       &:last-child
         padding 0
 
-  &__location-title-container
+  &__location-title
     margin 37px 0 20px
 
   &__calendar
@@ -265,8 +265,8 @@
         &:last-child
           padding 0
 
-  &__calendar-title-container
+  &__calendar-title
     margin 41px 0 14px
 
-  &__video-title-container
+  &__video-title
     margin 42px 0 13px

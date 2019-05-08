@@ -18,7 +18,7 @@ block title
 
 block content
   main.get-started
-    .get-started__title-container
+    .get-started__title
       +main-title({ title: "how to start?", tag: "h1" })
     +stage({length: 4, fullLength: 1, isContent: true})
       section.get-started__content-item
@@ -95,7 +95,7 @@ block content
       section.get-started__content-item
         h2.get-started__content-title Step 4: Start working!
         p.get-started__content-title_big Just find orders!
-        .get-started__button-container
+        .get-started__button
           +button({
             text: "show new orders",
             size: "big",
