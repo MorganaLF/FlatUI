@@ -197,10 +197,14 @@ html
             .ui-kit__search-title
               +title({ title: "user profile", tag: "h1" })
             .ui-kit__user
-              +user({imageSrc: "user-1", name: "John Smith", profession: "ux designer"})
+              +user({
+                imageSrc: "images/user-1.jpg",
+                name: "John Smith",
+                profession: "ux designer"
+              })
             .ui-kit__user
               +user({
-                imageSrc: "user-2",
+                imageSrc: "images/user-2.jpg",
                 name: "Sarah Brown",
                 profession: "developer",
                 backgroundColor: "secondary"
