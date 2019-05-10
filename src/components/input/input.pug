@@ -1,0 +1,10 @@
+mixin input({ type, name, placeholder, pattern, isAutofocus })
+  .input
+    input.input__area(
+      type=type,
+      name=name,
+      placeholder=placeholder,
+      pattern=pattern,
+      autofocus=isAutofocus
+    )
+    .input__tip

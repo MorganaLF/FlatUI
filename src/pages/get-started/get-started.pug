@@ -4,7 +4,8 @@ include ../../components/title/title
 include ../../components/button/button
 include ../../components/stage/stage
 include ../../components/tariff-plan/tariff-plan
-include ../../components/contact-from/contact-form
+include ../../components/input/input
+include ../../components/textarea/textarea
 include ../../components/player/player
 
 block append meta
@@ -58,7 +59,30 @@ block content
                 Aspernatur impedit tempora ut voluptatibus.
           .get-started__registration-col
             h3.get-started__content-subtitle Enter your personal info
-            +contact-form({buttonAlign: "left", textarea: false})
+            form.get-started__contact-form(
+              action="mock-address/change-me",
+              method="get"
+            )
+              .get-started__text-input
+                +input({
+                  type: "text",
+                  name: "name",
+                  placeholder: "Your Name",
+                  pattern: "[A-Za-zА-Яа-яЁё\\s]{1,}"
+                })
+              .get-started__text-input
+                +input({
+                  type: "email",
+                  name: "email",
+                  placeholder: "Your Email",
+                  pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                })
+              .get-started__form-button
+                +button({
+                  text: "submit",
+                  background: "secondary-with-shadow",
+                  type: "submit"
+                })
       section.get-started__content-item
         h2.get-started__content-title.
           Step 3: Watch the video about how our exchange works

@@ -1,13 +1,13 @@
 @import "../../styles/variables.styl"
 
-.contact-form
-  &__input-group
-    display flex
-    margin-bottom 12px
+.input
+  display flex
 
-  &__input
-  &__textarea
+  &__area
     input()
+    width 100%
+    min-width 0
+    flex-grow 1
     border-radius 3px
     transition all 0.3s ease
 
@@ -15,11 +15,7 @@
     &:focus
       border 1px solid secondary-color
 
-  &__input
-    min-width 0
-    flex-grow 1
-
-    &_with-success + ^[0]__tip
+    &:valid:not(:focus):not(:placeholder-shown) + ^[0]__tip
       display block
       background secondary-color
 
@@ -29,7 +25,7 @@
       &:after
         background secondary-color
 
-    &_with-error + ^[0]__tip
+    &:invalid:not(:focus):not(:placeholder-shown) + ^[0]__tip
       display block
       background primary-color
 
@@ -69,15 +65,3 @@
       height 5px
       display inline-block
       transform  translate(-50%, -50%) rotate(45deg)
-
-  &__textarea
-    width 100%
-    min-height 88px
-    margin-bottom 7px
-    padding 10px 12px
-
-  &__left-button-container
-    text-align left
-
-  &__button-container
-    text-align right

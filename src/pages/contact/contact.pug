@@ -2,7 +2,8 @@ extends ../../templates/template
 
 include ../../components/title/title
 include ../../components/map/map
-include ../../components/contact-from/contact-form
+include ../../components/input/input
+include ../../components/textarea/textarea
 
 block append meta
   meta(name="keywords", content="Address of freelance-exchange, " +
@@ -23,7 +24,32 @@ block content
           +map({state: "1259  California St", city: "San Francisco, CA"})
         h2.contact__subtitle.
           Contact us through this form, we will answer!
-        +contact-form({isAutofocus: true})
+        form.contact__form(
+          action="mock-address/change-me",
+          method="post"
+        )
+          .contact__text-input
+            +input({
+              type: "text",
+              name: "name",
+              placeholder: "Your Name",
+              pattern: "[A-Za-zА-Яа-яЁё\\s]{1,}"
+            })
+          .contact__text-input
+            +input({
+              type: "email",
+              name: "email",
+              placeholder: "Your Email",
+              pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            })
+          .contact__message-textarea
+            +textarea({name: "message", placeholder: "Your Message"})
+          .contact__submit-button
+            +button({
+              text: "submit",
+              background: "secondary-with-shadow",
+              type: "submit"
+            })
       .contact__col.contact__col_small
         h2.contact__subtitle How contact us
         ul.contact__list

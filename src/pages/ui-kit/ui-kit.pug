@@ -4,7 +4,8 @@ include ../../components/arrow-button/arrow-button
 include ../../components/chart/chart
 include ../../components/slider/slider
 include ../../components/stage/stage
-include ../../components/contact-from/contact-form
+include ../../components/input/input
+include ../../components/textarea/textarea
 include ../../components/toggle/toggle
 include ../../components/tick-box/tick-box
 include ../../components/search/search
@@ -160,8 +161,33 @@ html
             +title({ title: "form elements", tag: "h1" })
           .ui-kit__form-elements-row
             .ui-kit__form-elements-col
-              .ui-kit__form
-                +contact-form
+              form.ui-kit__form(
+                action="mock-address/change-me",
+                method="post"
+              )
+                .ui-kit__text-input
+                  +input({
+                    type: "text",
+                    name: "name",
+                    placeholder: "Your Name",
+                    pattern: "[A-Za-zА-Яа-яЁё\\s]{1,}"
+                  })
+                .ui-kit__text-input
+                  +input({
+                    type: "email",
+                    name: "email",
+                    placeholder: "Your Email",
+                    pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  })
+                .ui-kit__message-textarea
+                  +textarea({ name: "message", placeholder: "Your Message" })
+                .ui-kit__submit-button
+                  +button({
+                    text: "submit",
+                    background: "secondary-with-shadow",
+                    type: "submit"
+                  })
+
             .ui-kit__form-elements-col
               .ui-kit__form-elements-subtitle
                 +title({title: "toggles"})
