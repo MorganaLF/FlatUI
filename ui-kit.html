@@ -176,22 +176,26 @@
           </div>
           <div class="ui-kit__form-elements-row">
             <div class="ui-kit__form-elements-col">
-              <div class="ui-kit__form">
-                <form class="contact-form js-contact-form" action="mock-address/change-me" method="get">
-                  <div class="contact-form__input-group">
-                    <input class="contact-form__input" type="text" name="name" placeholder="Your Name">
-                    <div class="contact-form__tip contact-form__tip"></div>
+              <form class="ui-kit__form" action="mock-address/change-me" method="post">
+                <div class="ui-kit__text-input">
+                  <div class="input">
+                    <input class="input__area" type="text" name="name" placeholder="Your Name" pattern="[A-Za-zА-Яа-яЁё\s]{1,}">
+                    <div class="input__tip"></div>
                   </div>
-                  <div class="contact-form__input-group">
-                    <input class="contact-form__input" type="email" name="email" placeholder="Your Email">
-                    <div class="contact-form__tip contact-form__tip"></div>
+                </div>
+                <div class="ui-kit__text-input">
+                  <div class="input">
+                    <input class="input__area" type="email" name="email" placeholder="Your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$">
+                    <div class="input__tip"></div>
                   </div>
-                  <textarea class="contact-form__textarea" name="message" placeholder="Your Message"></textarea>
-                  <div class="contact-form__button-container">
-                    <button class="button js-button button_secondary-with-shadow" type="submit">submit</button>
-                  </div>
-                </form>
-              </div>
+                </div>
+                <div class="ui-kit__message-textarea">
+                  <textarea class="textarea" name="message" placeholder="Your Message"></textarea>
+                </div>
+                <div class="ui-kit__submit-button">
+                  <button class="button js-button button_secondary-with-shadow" type="submit">submit</button>
+                </div>
+              </form>
             </div>
             <div class="ui-kit__form-elements-col">
               <div class="ui-kit__form-elements-subtitle">
