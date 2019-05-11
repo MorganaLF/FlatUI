@@ -207,12 +207,9 @@ html
             .ui-kit__search-title
               +title({ title: "search / drop down", tag: "h1" })
             .ui-kit__search
-              +search({placeholderText: "Search"})
+              +search({ placeholderText: "Search", errorPlaceholderText: "I’ve not found what I’m looking for..." })
             .ui-kit__search
-              +search({
-                placeholderText: "I’ve not found what I’m looking for...",
-                searchBackground: "primary"
-              })
+              +search({placeholderText: "Search", errorPlaceholderText: "I’ve not found what I’m looking for..."})
             +dropdown({
               "1": "This is option 1",
               "2": "This is option 2",

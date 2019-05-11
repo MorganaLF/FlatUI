@@ -7,7 +7,7 @@ mixin page-footer
       section.page-footer__search
         .page-footer__title
           +title({title: "search on site", tag: "h2" })
-        +search({placeholderText: "Search", searchBackground: "primary"})
+        +search({ placeholderText: "Search", errorPlaceholderText: "I’ve not found what I’m looking for..." })
       nav.page-footer__menu-container
         ul.page-footer__menu
           li.page-footer__menu-item
