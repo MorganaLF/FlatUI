@@ -63,9 +63,9 @@
           <h1 class="page-header__title">Welcome to our awesome freelance-exchange!</h1>
           <div class="page-header__search">
             <p class="page-header__search-title">Find new orders!</p>
-            <form class="search" action="mock-address/change-me" method="get">
-              <input class="search__input" type="search" name="search" placeholder="search orders..." autofocus>
-              <input class="search__button" type="submit" value="">
+            <form class="search js-search" action="mock-address/change-me" method="get">
+              <input class="search__input js-search__input" type="search" name="search" placeholder="search orders..." data-placeholder="search orders..." autofocus>
+              <input class="search__button js-search__button" type="submit" value="">
             </form>
           </div>
         </header>
@@ -263,9 +263,9 @@
             <div class="page-footer__title">
               <h2 class="title">search on site</h2>
             </div>
-            <form class="search" action="mock-address/change-me" method="get">
-              <input class="search__input search__input_primary" type="search" name="search" placeholder="Search">
-              <input class="search__button" type="submit" value="">
+            <form class="search js-search" action="mock-address/change-me" method="get">
+              <input class="search__input js-search__input" type="search" name="search" placeholder="Search" data-placeholder="Search" data-error-placeholder="I’ve not found what I’m looking for...">
+              <input class="search__button js-search__button" type="submit" value="">
             </form>
           </section>
           <nav class="page-footer__menu-container">
