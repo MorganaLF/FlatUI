@@ -1,0 +1,114 @@
+@import "../../../styles/variables.styl"
+
+.user
+  display flex
+  align-items center
+  width 100%
+  max-width 300px
+  text-align center
+
+  &_big
+    max-width 450px
+
+  &__picture
+    flex-shrink 0
+    width 34%
+    margin-right 2%
+    border 5px solid light-grey
+    border-radius 50%
+    background-position top center
+    background-size cover
+    square()
+
+  &__info
+    position relative
+    width calc(64% - 7px)
+    margin 0 0 0 7px
+    padding 10px 10px 12px
+    border-radius 10px
+    background-color light-grey
+
+    &:after
+      content ""
+      position absolute
+      top 50%
+      left 0
+      width 9px
+      height 9px
+      transform translate(-50%, -50%) rotate(45deg)
+      background-color light-grey
+
+    &_secondary
+      background-color secondary-color
+
+      &:after
+        background-color secondary-color
+
+  &__name
+    margin-bottom 3px
+    font-size 18px
+    color primary-color
+    break-word()
+
+    &_big
+      font-size 27px
+      margin-bottom 5px
+
+    &_white
+      color white
+
+  &__profession
+    margin-bottom 12px
+    font-size 11px
+    font-weight 900
+    text-transform uppercase
+    letter-spacing 0.55px
+    color dark-grey
+    break-word()
+
+    &_big
+      font-size 17px
+      margin-bottom 18px
+
+    &_white
+      color white
+
+  &__social-icons
+    display flex
+    justify-content space-between
+    align-items center
+    padding 0 15%
+
+  &__social-icon
+    width 21px
+    height 21px
+    background-size 100%
+    background-repeat no-repeat
+    background-position center
+
+    &:nth-child(2)
+      width 25px
+      height 25px
+
+    &:hover svg path
+    &:focus svg path
+      opacity 0.5
+
+    &_big
+      width 32px
+      height 32px
+
+      &:nth-child(2)
+        width 38px
+        height 38px
+
+    &_white svg path
+      fill white
+
+    svg
+      height 100%
+
+    svg path
+      height 100%
+      transition all 0.3s ease
+

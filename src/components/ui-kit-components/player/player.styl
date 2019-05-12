@@ -1,0 +1,104 @@
+@import "../../../styles/variables.styl"
+
+.player
+  position relative
+  padding-bottom 56.25%
+  border-radius 3px
+  background url("images/video.jpg") no-repeat center
+  background-size cover
+  overflow hidden
+
+  &__video
+    position absolute
+    width 100%
+    height 100%
+    top 0
+    right 0
+    bottom 0
+    left 0
+
+  &__header
+    position absolute
+    top 0
+    left 0
+    width 100%
+    padding 28px 39px
+    color white
+
+    +xxs()
+      padding 20px
+
+  &__title
+    margin-bottom 5px
+    font-size 36px
+    font-weight 300
+    line-height 1
+    letter-spacing -1.08px
+    break-word()
+
+    +xs()
+      font-size 25px
+
+    +xxs()
+      font-size 20px
+
+  &__author
+    font-size 12.5px
+    font-weight 900
+    text-transform uppercase
+    letter-spacing 0.63px
+
+    +xs()
+      font-size 10px
+
+  &__footer
+    position absolute
+    bottom 0
+    left 0
+    display flex
+    align-items center
+    width 100%
+    background-color rgba(black, 0.29)
+
+  &__play-button
+    flex-shrink 0
+    width 10px
+    height 13px
+    margin 0 19px 0 21px
+    background url("images/play-icon.svg") no-repeat center center
+    background-size 10px 13px
+    transition all 0.3s ease
+    cursor pointer
+
+    &_playing
+      background-image url("images/pause.svg")
+
+  &__progress-container
+    width 100%
+    height 5px
+    border-radius 3px
+    background-color light-grey
+    cursor pointer
+
+  &__progress
+    width 0
+    height 100%
+    border-radius 3px
+    background-color primary-color
+
+  &__full-button
+    flex-shrink 0
+    width 48px
+    height 48px
+    margin-left 22px
+    background primary-color url("images/fullscreen.svg") no-repeat center center
+    background-size 47%
+    transition all 0.3s ease
+    cursor pointer
+
+    +xxs()
+      width 35px
+      height 35px
+
+    &_opened
+      background-image url("images/exit-fullscreen.svg")

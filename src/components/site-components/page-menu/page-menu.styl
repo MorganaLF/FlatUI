@@ -1,0 +1,28 @@
+@import "../../../styles/variables.styl"
+
+.page-menu
+  z-index 9999
+  position fixed
+  top 0
+  left 0
+  width 100%
+  background page-dark-background
+
+  +md()
+    min-height 100%
+    z-index 0
+
+  &__links
+    display flex
+    justify-content space-between
+
+    +md()
+      flex-direction column
+      justify-content flex-start
+      padding 20px 10px
+
+  .far
+  .fas
+    display inline-block
+    width 10px
+    margin-right 10px

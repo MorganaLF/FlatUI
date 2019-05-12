@@ -1,0 +1,97 @@
+@import "../../../styles/variables.styl"
+
+.news
+  display flex
+  border-radius 3px
+  background-color primary-color
+  text-align left
+  color white
+  overflow hidden
+
+  &_vertically-stretched
+    height 100%
+
+  &_with-event
+    background-color secondary-color
+
+    & ^[0]__text-block
+      padding-left 15px
+      padding-top 13px
+      padding-bottom 25px
+
+      +xxs()
+        padding 12px 12px 26px
+
+    & ^[0]__description
+      margin-left 4px
+
+      +xxs()
+        margin-left 0
+
+  &__picture
+    flex-shrink 0
+    width 33.5%
+    background-position top center
+    background-size cover
+
+  &__text-block
+    min-width 0
+    padding 22px 22px 36px 22px
+
+    +xxs()
+      padding 12px 12px 26px
+
+  &__title
+    margin-bottom 10px
+    font-size 28px
+    font-weight 300
+    line-height 26px
+    break-word()
+
+    &_small
+      margin 0 0 3px 4px
+      font-size 13px
+      font-weight 900
+      line-height 1.2
+      text-transform uppercase
+      letter-spacing 0.63px
+
+      +xxs()
+        margin-left 0
+
+  &__date
+    display inline-block
+    margin-bottom 16px
+    font-size 11px
+    font-weight 900
+    line-height 0.7
+    text-transform uppercase
+    letter-spacing 0.55px
+
+    &_big
+      margin-bottom 15px
+
+  &__day
+    display inline-block
+    margin-right 15px
+    font-size 73px
+    font-weight 300
+    line-height 1
+    letter-spacing -2.92px
+
+  &__month
+    font-size 30px
+    font-weight 300
+    text-transform none
+
+  &__description
+    font-size 11px
+    letter-spacing 0.55px
+    line-height 1.2
+
+  &__button
+    text-align center
+    margin-top 18px
+
+    +xs()
+      text-align left

@@ -1,0 +1,86 @@
+@import "../../../styles/variables.styl"
+@import "../../../plugins/jQuery-UI/jquery-ui.min.css"
+
+.slider
+
+  &.ui-slider
+    height 5px
+    background-color light-grey
+    border 0
+
+  .ui-slider-handle
+    top 50%
+    width 20px
+    height 20px
+    border-radius 50%
+    background primary-color
+    border 0
+    cursor pointer
+    transform translate(0, -50%)
+    transition background 0.3s ease
+
+    &:hover
+    &:focus
+    &:hover ^[0]__tip
+    &:focus ^[0]__tip
+    &:hover ^[0]__tip:after
+    &:focus ^[0]__tip:after
+      background darker-primary-color
+
+  &_secondary .ui-slider-range
+  &_secondary .ui-slider-handle
+    background secondary-color
+
+    &:hover
+    &:focus
+      background darker-secondary-color
+
+  &__tip
+    position absolute
+    top -8px
+    left 50%
+    transform translate(-50%, -100%)
+    padding 5px 10px 5px
+    border-radius 5px
+    font-size 13px
+    text-align center
+    letter-spacing 0.65px
+    font-family "Lato", "Arial", sans-serif
+    color white
+    background primary-color
+    cursor pointer
+    transition background 0.3s ease
+
+    &:after
+      content ""
+      position absolute
+      bottom 0
+      left 50%
+      width 7px
+      height 7px
+      background primary-color
+      transform translate(-50%, 50%) rotate(45deg)
+      transition background 0.3s ease
+
+  &__scale
+    display flex
+    justify-content space-between
+    margin 10px 0 11px
+    list-style-type none
+    font-size 11px
+    letter-spacing 0.55px
+    color light-grey-text
+
+    &-item
+      position relative
+      width 0
+
+      &-text
+        position absolute
+        transform translate(-50%, 0)
+
+
+
+
+
+

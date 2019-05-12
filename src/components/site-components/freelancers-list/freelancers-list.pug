@@ -1,0 +1,105 @@
+include ../../ui-kit-components/user/user
+include ../../ui-kit-components/button/button
+
+mixin freelancers-list
+  ul.freelancers-list
+    li.freelancers-list__item
+      .freelancers-list__user
+        +user({imageSrc: "images/user-1.jpg", name: "John Smith", profession: "ux designer"})
+      .freelancers-list__item-footer
+        span.freelancers-list__notification Best freelancer!
+        .freelancers-list__button
+          +button({
+            text: "hire",
+            background: "primary-with-shadow"
+          })
+    li.freelancers-list__item
+      .freelancers-list__user
+        +user({
+          imageSrc: "images/user-2.jpg",
+          name: "Sarah Brown",
+          profession: "developer",
+          backgroundColor: "secondary"
+        })
+      .freelancers-list__item-footer
+        .freelancers-list__button
+          +button({
+            text: "hire",
+            background: "transparent-secondary"
+          })
+    li.freelancers-list__item
+      .freelancers-list__user
+        +user({
+          imageSrc: "images/user-3.jpg",
+          name: "Jane Taylor",
+          profession: "seo copywriter",
+          backgroundColor: "secondary"
+        })
+      .freelancers-list__item-footer
+        .freelancers-list__button
+          +button({
+            text: "hire",
+            background: "transparent-secondary"
+          })
+    li.freelancers-list__item
+      .freelancers-list__user
+        +user({
+          imageSrc: "images/user-4.jpg",
+          name: "Grace Peters",
+          profession: "developer",
+          backgroundColor: "secondary"
+        })
+      .freelancers-list__item-footer
+        .freelancers-list__button
+          +button({
+            text: "hire",
+            background: "transparent-secondary"
+          })
+    li.freelancers-list__item
+      .freelancers-list__user
+        +user({imageSrc: "images/user-5.jpg", name: "David Walton", profession: "developer"})
+      .freelancers-list__item-footer
+        span.freelancers-list__notification Best freelancer!
+        .freelancers-list__button
+          +button({
+            text: "hire",
+            background: "primary-with-shadow"
+          })
+    li.freelancers-list__item
+      .freelancers-list__user
+        +user({
+          imageSrc: "images/user-6.jpg",
+          name: "Peter Hoover",
+          profession: "developer",
+          backgroundColor: "secondary"
+        })
+      .freelancers-list__item-footer
+        .freelancers-list__button
+          +button({
+            text: "hire",
+            background: "transparent-secondary"
+          })
+    li.freelancers-list__item
+      .freelancers-list__user
+        +user({
+          imageSrc: "images/user-7.jpg",
+          name: "George Dalton",
+          profession: "designer",
+          backgroundColor: "secondary"
+        })
+      .freelancers-list__item-footer
+        .freelancers-list__button
+          +button({
+            text: "hire",
+            background: "transparent-secondary"
+          })
+    li.freelancers-list__item
+      .freelancers-list__user
+        +user({imageSrc: "images/user-8.jpg", name: "Mary Charles", profession: "seo copywriter"})
+      .freelancers-list__item-footer
+        span.freelancers-list__notification Best freelancer!
+        .freelancers-list__button
+          +button({
+            text: "hire",
+            background: "primary-with-shadow"
+          })

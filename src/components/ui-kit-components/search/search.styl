@@ -1,0 +1,35 @@
+@import "../../../styles/variables.styl"
+
+.search
+  display flex
+  border-radius 3px
+  overflow hidden
+
+  &__input
+    min-width 0
+    flex-grow 1
+    transition all 0.3s ease
+    input()
+
+    &:hover
+    &:focus
+      border 1px solid primary-color
+
+    &_primary
+      color white
+      background-color primary-color
+
+      +placeholder()
+        color white
+
+      &:hover
+      &:focus
+        background-color dark-primary-color
+
+  &__button
+    flex-shrink 0
+    width 33px
+    border 0
+    background primary-color url("images/search.svg") no-repeat center
+    background-size 42%
+    cursor pointer

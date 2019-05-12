@@ -1,0 +1,46 @@
+@import "../../../styles/variables.styl"
+
+.chart
+  position relative
+  text-align center
+  square()
+
+  &__value
+    display inline-block
+    margin-top 50%
+    font-size 40px
+    font-weight 300
+    color grey-text
+    transform translate(0, -50%)
+
+  &__svg
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0 // Необходимо для корректного отображения высоты в IE
+    width 100%
+    height 100%
+    transform rotate(-90deg)
+    transform-origin center center
+
+  &__bar
+    stroke transparent
+    stroke-width 5%
+    stroke-dashoffset 0
+    transition stroke-dashoffset 2s ease
+
+    &_wide
+      stroke-width 18%
+
+    &_primary
+      stroke primary-color
+
+    &_secondary
+      stroke secondary-color
+
+    &_light-grey
+      stroke light-grey
+
+    &_dark-grey
+      stroke grey

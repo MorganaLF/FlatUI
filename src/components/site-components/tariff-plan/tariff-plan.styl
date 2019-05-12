@@ -1,0 +1,67 @@
+@import "../../../styles/variables.styl"
+
+.tariff-plan
+  display flex
+  flex-direction column
+  width calc(28% - 40px)
+  padding 20px
+  margin 20px
+  border 1px solid light-grey-text
+  border-radius 3px
+  text-align center
+
+  +md()
+    width calc(50% - 40px)
+    padding 10px
+    margin 1%
+
+  +sm()
+    margin 10px
+
+  +xs()
+    width calc(100% - 40px)
+    max-width 350px
+
+  &:nth-child(2)
+    transform scale(1.2)
+    box-shadow 2px 11px 51px 0 rgba(black, 0.5)
+
+    +md()
+      transform scale(1)
+      box-shadow none
+
+  &__container
+    display flex
+    justify-content center
+    align-items stretch
+    padding-bottom 60px
+
+    +sm()
+      flex-wrap wrap
+      align-items center
+
+  &__title
+    margin-bottom 10px
+    font-size 20px
+
+  &__list
+    margin-bottom 20px
+    list-style-type none
+
+    &-item
+      display flex
+      justify-content space-between
+      align-items center
+      margin-bottom 10px
+
+  &__text
+    padding-right 10px
+    text-align left
+
+  &__toggle
+    flex-shrink 0
+    margin-left 10px
+    font-size 0
+
+  &__button
+    margin-top auto

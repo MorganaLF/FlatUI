@@ -1,0 +1,77 @@
+include ../../ui-kit-components/toggle/toggle
+include ../../ui-kit-components/button/button
+
+mixin tariff-plan
+  .tariff-plan__container
+    form.tariff-plan(
+      action="mock-address/change-me",
+      method="post"
+    )
+      h3.tariff-plan__title Lite
+      ul.tariff-plan__list
+        li.tariff-plan__list-item
+          p.tariff-plan__text Unlimited applications
+          .tariff-plan__toggle
+            +toggle({isDisabled: true})
+        li.tariff-plan__list-item
+          p.tariff-plan__text Unlimited categories
+          .tariff-plan__toggle
+            +toggle({isDisabled: true})
+        li.tariff-plan__list-item
+          p.tariff-plan__text Commission from the order
+          .tariff-plan__toggle
+            +toggle({isChecked: true, isDisabled: true})
+      .tariff-plan__button
+        +button({
+          text: "choose",
+          background: "primary",
+          type: "submit"
+        })
+    form.tariff-plan(
+      action="mock-address/change-me",
+      method="post"
+    )
+      h3.tariff-plan__title Premium
+      ul.tariff-plan__list
+        li.tariff-plan__list-item
+          p.tariff-plan__text Unlimited applications
+          .tariff-plan__toggle
+            +toggle({isChecked: true, isDisabled: true})
+        li.tariff-plan__list-item
+          p.tariff-plan__text Unlimited categories
+          .tariff-plan__toggle
+            +toggle({isChecked: true, isDisabled: true})
+        li.tariff-plan__list-item
+          p.tariff-plan__text Commission from the order
+          .tariff-plan__toggle
+            +toggle({isDisabled: true})
+      .tariff-plan__button
+        +button({
+          text: "choose",
+          background: "primary",
+          type: "submit"
+        })
+    form.tariff-plan(
+      action="mock-address/change-me",
+      method="post"
+    )
+      h3.tariff-plan__title Standard
+      ul.tariff-plan__list
+        li.tariff-plan__list-item
+          p.tariff-plan__text Unlimited applications
+          .tariff-plan__toggle
+            +toggle({isDisabled: true})
+        li.tariff-plan__list-item
+          p.tariff-plan__text Unlimited categories
+          .tariff-plan__toggle
+            +toggle({isChecked: true, isDisabled: true})
+        li.tariff-plan__list-item
+          p.tariff-plan__text Commission from the order
+          .tariff-plan__toggle
+            +toggle({isChecked: true, isDisabled: true})
+      .tariff-plan__button
+        +button({
+          text: "choose",
+          background: "primary",
+          type: "submit"
+        })
