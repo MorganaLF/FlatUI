@@ -61,6 +61,13 @@ class Calendar {
     this._setResponsiveFontSize();
     this._cutTitleSpaces();
     this._displayCurrentDay();
+
+    const $dayButton = this.$element.find('td[data-event="click"]');
+
+    $dayButton.on(
+      `click.calendarDisplayDay${this.elementIndex}`,
+      this._handleDayButtonClick.bind(this),
+    );
   }
 
   _handleDayButtonClick() {
@@ -78,6 +85,13 @@ class Calendar {
 
   _handleFooterClick() {
     this._setToday();
+
+    const $dayButton = this.$element.find('td[data-event="click"]');
+
+    $dayButton.on(
+      `click.calendarDisplayDay${this.elementIndex}`,
+      this._handleDayButtonClick.bind(this),
+    );
   }
 
   _setToday() {
