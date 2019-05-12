@@ -20,110 +20,113 @@ block title
 block content
   main.get-started
     .get-started__title
-      +title({ title: "how to start?", tag: "h1" })
-    +stage({length: 4, fullLength: 1, isContent: true})
-      section.get-started__content-item
-        h2.get-started__content-title Step 1: Choose optimal tariff plan
-        p.get-started__content-paragraph.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Facere, impedit, quidem. Id laudantium molestias optio placeat
-          praesentium quasi sed vero!
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Facere, impedit, quidem. Id laudantium molestias optio placeat
-          praesentium quasi sed vero!
-        +tariff-plan
-      section.get-started__content-item
-        h2.get-started__content-title Step 2: Register an account
-        .get-started__registration
-          .get-started__registration-col
-            p.get-started__content-paragraph.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Asperiores beatae est fugiat labore libero natus odit quia quos,
-              rem, repudiandae, soluta vero.
-            h3.get-started__content-subtitle.
-              Registering an account you accept these rules:
-            ol.get-started__list
-              li.get-started__list-item.
-                Accusamus nemo reprehenderit sint sunt, temporibus voluptatibus!
-                Ab asperiores eligendi, omnis rerum ut vero voluptatibus.
-              li.get-started__list-item.
-                Accusantium assumenda cumque eaque illum impedit natus optio
-                provident quaerat quos veritatis.
-              li.get-started__list-item.
-                A blanditiis consequuntur dicta ducimus, enim eos,
-                esse et ex exercitationem explicabo facere facilis,
-                harum hic illum incidunt inventore ipsam magnam maiores
-                natus pariatur quas quia quidem quos sapiente sed sequi
-                sunt temporibus tenetur vel vitae!
-              li.get-started__list-item.
-                Aspernatur impedit tempora ut voluptatibus.
-          .get-started__registration-col
-            h3.get-started__content-subtitle Enter your personal info
-            form.get-started__contact-form(
-              action="mock-address/change-me",
-              method="get"
-            )
-              .get-started__text-input
-                +input({
-                  type: "text",
-                  name: "name",
-                  placeholder: "Your Name",
-                  pattern: "[A-Za-zА-Яа-яЁё\\s]{1,}"
-                })
-              .get-started__text-input
-                +input({
-                  type: "email",
-                  name: "email",
-                  placeholder: "Your Email",
-                  pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                })
-              .get-started__form-button
-                +button({
-                  text: "submit",
-                  background: "secondary-with-shadow",
-                  type: "submit"
-                })
-      section.get-started__content-item
-        h2.get-started__content-title.
-          Step 3: Watch the video about how our exchange works
-        p.get-started__content-paragraph.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Aperiam atque commodi dignissimos ducimus, eum excepturi hic,
-          necessitatibus odio perspiciatis quisquam sapiente sequi, tenetur.
-          Beatae libero natus officiis omnis sequi voluptates.
-        .get-started__flex-container
-          .get-started__col
-            +player({
-              src: "http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4",
-              title: "About our company",
-              author: "freelance exchange"
-            })
-          .get-started__col
-            h3.get-started__content-subtitle How we work?
-            ol.get-started__list
-              li.get-started__list-item.
-                Accusamus nemo reprehenderit sint sunt,
-                temporibus voluptatibus! Ab asperiores eligendi,
-                omnis rerum ut vero voluptatibus.
-              li.get-started__list-item.
-                Accusantium assumenda cumque eaque illum
-                impedit natus optio provident quaerat quos veritatis.
-              li.get-started__list-item.
-                A blanditiis consequuntur dicta ducimus, enim eos,
-                esse et ex exercitationem explicabo facere facilis,
-                harum hic illum incidunt inventore ipsam magnam
-                maiores natus pariatur quas quia quidem quos sapiente
-                sed sequi sunt temporibus tenetur vel vitae!
-              li.get-started__list-item.
-                Aspernatur impedit tempora ut voluptatibus.
-      section.get-started__content-item
-        h2.get-started__content-title Step 4: Start working!
-        p.get-started__content-title_big Just find orders!
-        .get-started__button
-          +button({
-            text: "show new orders",
-            size: "big",
-            bg: "primary",
-            tag: "a",
-            href: "mock-address/change-me"
+      +title({title: "how to start?", tag: "h1"})
+    +stage({ length: 4, fullLength: 1 })
+    section.get-started__content-item
+      h2.get-started__content-title Step 1: Choose optimal tariff plan
+      p.get-started__content-paragraph.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Facere, impedit, quidem. Id laudantium molestias optio placeat
+        praesentium quasi sed vero!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Facere, impedit, quidem. Id laudantium molestias optio placeat
+        praesentium quasi sed vero!
+      +tariff-plan
+    +stage({ length: 4, fullLength: 2 })
+    section.get-started__content-item
+      h2.get-started__content-title Step 2: Register an account
+      .get-started__registration
+        .get-started__registration-col
+          p.get-started__content-paragraph.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Asperiores beatae est fugiat labore libero natus odit quia quos,
+            rem, repudiandae, soluta vero.
+          h3.get-started__content-subtitle.
+            Registering an account you accept these rules:
+          ol.get-started__list
+            li.get-started__list-item.
+              Accusamus nemo reprehenderit sint sunt, temporibus voluptatibus!
+              Ab asperiores eligendi, omnis rerum ut vero voluptatibus.
+            li.get-started__list-item.
+              Accusantium assumenda cumque eaque illum impedit natus optio
+              provident quaerat quos veritatis.
+            li.get-started__list-item.
+              A blanditiis consequuntur dicta ducimus, enim eos,
+              esse et ex exercitationem explicabo facere facilis,
+              harum hic illum incidunt inventore ipsam magnam maiores
+              natus pariatur quas quia quidem quos sapiente sed sequi
+              sunt temporibus tenetur vel vitae!
+            li.get-started__list-item.
+              Aspernatur impedit tempora ut voluptatibus.
+        .get-started__registration-col
+          h3.get-started__content-subtitle Enter your personal info
+          form.get-started__contact-form(
+            action="mock-address/change-me",
+            method="get"
+          )
+            .get-started__text-input
+              +input({
+                type: "text",
+                name: "name",
+                placeholder: "Your Name",
+                pattern: "[A-Za-zА-Яа-яЁё\\s]{1,}"
+              })
+            .get-started__text-input
+              +input({
+                type: "email",
+                name: "email",
+                placeholder: "Your Email",
+                pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              })
+            .get-started__form-button
+              +button({
+                text: "submit",
+                background: "secondary-with-shadow",
+                type: "submit"
+              })
+    +stage({ length: 4, fullLength: 3 })
+    section.get-started__content-item
+      h2.get-started__content-title.
+        Step 3: Watch the video about how our exchange works
+      p.get-started__content-paragraph.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Aperiam atque commodi dignissimos ducimus, eum excepturi hic,
+        necessitatibus odio perspiciatis quisquam sapiente sequi, tenetur.
+        Beatae libero natus officiis omnis sequi voluptates.
+      .get-started__flex-container
+        .get-started__col
+          +player({
+            src: "http://viktoriya-chernenko.tk/video/Landscapes-Volume-Two.mp4",
+            title: "About our company",
+            author: "freelance exchange"
           })
+        .get-started__col
+          h3.get-started__content-subtitle How we work?
+          ol.get-started__list
+            li.get-started__list-item.
+              Accusamus nemo reprehenderit sint sunt,
+              temporibus voluptatibus! Ab asperiores eligendi,
+              omnis rerum ut vero voluptatibus.
+            li.get-started__list-item.
+              Accusantium assumenda cumque eaque illum
+              impedit natus optio provident quaerat quos veritatis.
+            li.get-started__list-item.
+              A blanditiis consequuntur dicta ducimus, enim eos,
+              esse et ex exercitationem explicabo facere facilis,
+              harum hic illum incidunt inventore ipsam magnam
+              maiores natus pariatur quas quia quidem quos sapiente
+              sed sequi sunt temporibus tenetur vel vitae!
+            li.get-started__list-item.
+              Aspernatur impedit tempora ut voluptatibus.
+    +stage({ length: 4, fullLength: 4 })
+    section.get-started__content-item
+      h2.get-started__content-title Step 4: Start working!
+      p.get-started__content-title_big Just find orders!
+      .get-started__button
+        +button({
+          text: "show new orders",
+          size: "big",
+          bg: "primary",
+          tag: "a",
+          href: "mock-address/change-me"
+        })
