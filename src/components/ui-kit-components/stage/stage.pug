@@ -1,10 +1,8 @@
 mixin stage({ length, fullLength })
   .stage
-    -for (let i = 1; i <= length; i++)
-    if (i === 1)
-      .stage__item
-        span.stage__item-text= i
-    else
+    .stage__item
+      span.stage__item-text= 1
+    - for (let i = 2; i <= length; i++)
       .stage__line(class= i > fullLength ? "stage__line_inactive" : "")
       .stage__item(class= i > fullLength ? "stage__item_inactive" : "")
         span.stage__item-text= i
