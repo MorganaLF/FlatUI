@@ -1,22 +1,10 @@
 mixin stage({ length, fullLength })
-  .stage.js-stage
-    ul.stage__list
-      -for (let i = 1; i <= length; i++)
-      if (i < fullLength)
-        li.stage__item.js-stage__item
-          span.stage__item-text= i
-        li.stage__line.js-stage__line
-      else if (i === fullLength && i === length )
-        li.stage__item.js-stage__item
-          span.stage__item-text= i
-      else if (i === fullLength)
-        li.stage__item.js-stage__item
-          span.stage__item-text= i
-        li.stage__line.js-stage__line.stage__line_inactive
-      else if (i < length)
-        li.stage__item.js-stage__item.stage__item_inactive
-          span.stage__item-text= i
-        li.stage__line.js-stage__line.stage__line_inactive
-      else
-        li.stage__item.js-stage__item.stage__item_inactive
-          span.stage__item-text= i
+  .stage
+    -for (let i = 1; i <= length; i++)
+    if (i === 1)
+      .stage__item
+        span.stage__item-text= i
+    else
+      .stage__line(class= i > fullLength ? "stage__line_inactive" : "")
+      .stage__item(class= i > fullLength ? "stage__item_inactive" : "")
+        span.stage__item-text= i
