@@ -1,4 +1,4 @@
-import Chart from './chart';
+import Chart from './Chart';
 
 $(() => {
   const $chart = $('.js-chart');

@@ -1,4 +1,4 @@
-import Player from './player';
+import Player from './Player';
 
 $(() => {
   const $player = $('.js-player__video');

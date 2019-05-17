@@ -1,4 +1,4 @@
-import Calendar from './calendar';
+import Calendar from './Calendar';
 
 $(() => {
   const $calendar = $('.js-calendar__body');

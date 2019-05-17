@@ -1,4 +1,4 @@
-import Map from './map';
+import Map from './Map';
 
 $(() => {
   const $map = $('.js-map__body');
