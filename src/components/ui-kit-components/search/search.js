@@ -10,19 +10,19 @@ class Search {
 
     $searchButton.on(
       `click.search${this.elementIndex}`,
-      this._handleSearchButtonClick.bind(this)
+      this._handleSearchButtonClick.bind(this),
     );
 
     const $searchInput = this.$element.find('.js-search__input');
 
     $searchInput.on(
       `blur.search${this.elementIndex}`,
-      this._handleSearchInputBlur.bind(this)
+      this._handleSearchInputBlur.bind(this),
     );
 
     $searchButton.on(
       `blur.search${this.elementIndex}`,
-      this._handleSearchInputBlur.bind(this)
+      this._handleSearchInputBlur.bind(this),
     );
   }
 
@@ -46,10 +46,4 @@ class Search {
   }
 }
 
-$(() => {
-  const $search = $('.js-search');
-
-  $search.each((index, item) => {
-    new Search($(item), index);
-  });
-});
+export default Search;

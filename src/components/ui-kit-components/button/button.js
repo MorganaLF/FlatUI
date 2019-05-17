@@ -66,10 +66,4 @@ class Button {
   }
 }
 
-$(() => {
-  const $button = $('.js-button');
-
-  $button.each((index, item) => {
-    new Button($(item), index);
-  });
-});
+export default Button;
