@@ -9,13 +9,8 @@ mixin title({ title, tag="h1", color })
       h6: "h6"
     }
 
-    const defaultTag = "h1"
-
     const colorModifiers = {
-      light: "light"
+      light: "title_light"
     }
 
-  #{tags[tag] || defaultTag}.title(class=colorModifiers[color]
-      ? `title_${colorModifiers[color]}`
-      : ""
-    )= title
+  #{tags[tag] || "h1"}.title(class=colorModifiers[color] || "")= title

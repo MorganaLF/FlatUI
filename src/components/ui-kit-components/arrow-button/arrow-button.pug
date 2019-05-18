@@ -1,22 +1,20 @@
-mixin arrow-button({background, direction, isDisabled, size})
+mixin arrow-button({ background, direction, isDisabled, size })
   -
     const directionModifiers = {
-      left: "left",
-      right: "right"
+      left: "arrow-button_left",
+      right: "arrow-button_right"
     };
 
-    const defaultDirectionModifier = "right";
-
     const sizeModifiers = {
-      small: "small"
+      small: "arrow-button_small"
     };
 
   button.arrow-button(
-    class=`arrow-button_${directionModifiers[direction] || defaultDirectionModifier}`
-    class=sizeModifiers[size] ? `arrow-button_${sizeModifiers[size]}` : ""
+    class=directionModifiers[direction] || "arrow-button_right"
+    class=sizeModifiers[size] || ""
     disabled=isDisabled
   )
-    if (directionModifiers[direction] === "left")
+    if (direction === "left")
       include images/arrow-left.svg
     else
       include images/arrow-right.svg

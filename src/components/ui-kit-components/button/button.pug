@@ -1,36 +1,34 @@
-mixin button({tag = "button", size, background = "transparent-primary", length, isFluid, isVerticallyStretched, href, type, text})
+mixin button({ tag = "button", size, background = "transparent-primary", length, isFluid, isVerticallyStretched, href, type, text })
   -
     const tags = {
       button: "button",
       a: "a"
     }
 
-    const defaultTag = "button";
-
     const sizeModifiers = {
-      xsmall: "xsmall",
-      small: "small",
-      big: "big"
+      xsmall: "button_xsmall",
+      small: "button_small",
+      big: "button_big"
     }
 
     const backgroundModifiers = {
-      primary: "primary",
-      "primary-with-shadow": "primary-with-shadow",
-      secondary: "secondary",
-      "secondary-with-shadow": "secondary-with-shadow",
-      "transparent-primary": "transparent-primary",
-      "transparent-secondary": "transparent-secondary",
-      "transparent-dark-secondary": "transparent-dark-secondary"
+      primary: "button_primary",
+      "primary-with-shadow": "button_primary-with-shadow",
+      secondary: "button_secondary",
+      "secondary-with-shadow": "button_secondary-with-shadow",
+      "transparent-primary": "button_transparent-primary",
+      "transparent-secondary": "button_transparent-secondary",
+      "transparent-dark-secondary": "button_transparent-dark-secondary"
     }
 
     const lengthModifiers = {
-      short: "short"
+      short: "button_short"
     }
 
-  #{tags[tag] || defaultTag}.button.js-button(
-    class=sizeModifiers[size] ? `button_${sizeModifiers[size]}` : ""
-    class=backgroundModifiers[background] ? `button_${backgroundModifiers[background]}` : ""
-    class=lengthModifiers[length] ? `button_${lengthModifiers[length]}` : ""
+  #{tags[tag] || "button"}.button.js-button(
+    class=sizeModifiers[size] || ""
+    class=backgroundModifiers[background] || ""
+    class=lengthModifiers[length] || ""
     class=isFluid ? "button_fluid" : ""
     class=isVerticallyStretched ? "button_vertically-stretched" : ""
     href=href ? href : false
