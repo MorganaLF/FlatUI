@@ -89,7 +89,22 @@ module.exports = (env, options) => {
           },
         },
         {
+          test: /\.svg$/,
+          exclude: [
+            path.resolve(__dirname, './src/fonts'),
+          ],
+          use: [
+            {
+              loader: 'svg-sprite-loader',
+              options: {},
+            },
+          ],
+        },
+        {
           test: /\.(ttf|woff|svg)$/,
+          include: [
+            path.resolve(__dirname, './src/fonts'),
+          ],
           use: [
             {
               loader: 'file-loader',

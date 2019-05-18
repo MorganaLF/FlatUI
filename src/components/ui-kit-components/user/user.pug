@@ -1,48 +1,41 @@
-mixin user({imageSrc, facebookLink, twitterLink, dribbbleLink, name, profession, backgroundColor, size})
+mixin user({ imageSrc, facebookLink, twitterLink, dribbbleLink, name, profession, backgroundColor="grey", size="small" })
   -
-    const links = [
-      facebookLink || "https://www.facebook.com/",
-      twitterLink || "https://twitter.com/",
-      dribbbleLink || "https://dribbble.com/"
-    ];
-
     const sizes = {
-      big: "big"
-    }
+      small: { userMod: "user_small" },
+      big: { userMod: "user_big" }
+    };
 
     const backgrounds = {
-      secondary: "secondary"
-    }
+      grey: { infoMod: "user__info_grey" },
+      secondary: { infoMod: "user__info_secondary" }
+    };
 
-  .user(class=sizes[size] ? `user_${sizes[size]}` : "")
-    .user__picture(
-      style=`background-image: url(${imageSrc})`
-      )
-    .user__info(class=backgrounds[backgroundColor]
-      ? `user__info_${backgrounds[backgroundColor]}`
-      : ""
-      )
-      p.user__name(
-        class=backgrounds[backgroundColor] ? "user__name_white" : ""
-        class=sizes[size] ? `user__name_${sizes[size]}` : ""
-        )= name
-      p.user__profession(
-        class=backgrounds[backgroundColor] ? "user__profession_white" : ""
-        class=sizes[size] ? `user__profession_${sizes[size]}` : ""
-      )= profession
-      .user__social-icons(class=sizes[size] ? `user__social-icons_${sizes[size]}` : "")
-        -for(let i = 1; i <= 3; i++)
+    const icons = [
+      {
+        link: facebookLink || "https://www.facebook.com/",
+        image: "facebook-f-brands",
+      },
+      {
+        link: twitterLink || "https://twitter.com/",
+        image: "twitter-brands",
+      },
+      {
+        link: dribbbleLink || "https://dribbble.com/",
+        image: "dribbble-brands",
+      }
+    ];
+
+  .user(class=sizes[size].userMod)
+    .user__picture(style=`background-image: url(${imageSrc})`)
+    .user__info(class=backgrounds[backgroundColor].infoMod)
+      p.user__name= name
+      p.user__profession= profession
+      .user__social-icons
+        each icon in icons
           a.user__social-icon(
-            href=links[i - 1]
+            href=icon.link
             target="_blank"
             rel="noopener noreferrer"
-            class=backgrounds[backgroundColor] ? "user__social-icon_white" : ""
-            class=sizes[size] ? `user__social-icon_${sizes[size]}` : ""
           )
-            case i
-              when 1
-                include images/facebook-f-brands.svg
-              when 2
-                include images/twitter-brands.svg
-              when 3
-                include images/dribbble-brands.svg
+            svg.user__social-icon-image
+              use(xlink:href=`#${icon.image}`)
