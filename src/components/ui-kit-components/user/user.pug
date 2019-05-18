@@ -1,4 +1,4 @@
-mixin user({ imageSrc, facebookLink, twitterLink, dribbbleLink, name, profession, backgroundColor="grey", size="small" })
+mixin user({ imageSrc, facebookLink, twitterLink, dribbbleLink, name, profession, backgroundColor="neutral", size="small" })
   -
     const sizes = {
       small: { userMod: "user_small" },
@@ -6,7 +6,7 @@ mixin user({ imageSrc, facebookLink, twitterLink, dribbbleLink, name, profession
     };
 
     const backgrounds = {
-      grey: { infoMod: "user__info_grey" },
+      neutral: { infoMod: "user__info_neutral" },
       secondary: { infoMod: "user__info_secondary" }
     };
 
