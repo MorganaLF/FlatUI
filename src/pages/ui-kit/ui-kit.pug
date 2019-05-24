@@ -204,7 +204,7 @@ html
                 +tick-box
         section.ui-kit__search-and-user
           .ui-kit__search-and-user-col
-            .ui-kit__search-title
+            .ui-kit__search-and-user-title
               +title({ title: "search / drop down", tag: "h1" })
             .ui-kit__search
               +search({ placeholderText: "Search", errorPlaceholderText: "I’ve not found what I’m looking for..." })
@@ -218,7 +218,7 @@ html
             },
             "Choose An Option")
           .ui-kit__search-and-user-col
-            .ui-kit__search-title
+            .ui-kit__search-and-user-title
               +title({ title: "user profile", tag: "h1" })
             .ui-kit__user
               +user({
@@ -260,13 +260,13 @@ html
           .ui-kit__location-title
             +title({ title: "location", tag: "h1" })
           +map({state: "1259  California St", city: "San Francisco, CA"})
-        section.ui-kit__calendar
-          .ui-kit__calendar-col
-            .ui-kit__calendar-title
+        section.ui-kit__widgets
+          .ui-kit__widgets-col
+            .ui-kit__widgets-title
               +title({ title: "calendar", tag: "h1" })
             +calendar
-          .ui-kit__calendar-col
-            .ui-kit__calendar-title
+          .ui-kit__widgets-col
+            .ui-kit__widgets-title
               +title({ title: "messaging", tag: "h1" })
             +messaging
         section.ui-kit__video
