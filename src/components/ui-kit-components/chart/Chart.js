@@ -71,7 +71,9 @@ class Chart {
       if (index === 0) {
         offset = 0;
       } else {
-        offset = this.series.slice(0, index).reduce((sum, current) => Number(sum) + Number(current));
+        offset = this.series
+          .slice(0, index)
+          .reduce((sum, current) => Number(sum) + Number(current));
       }
 
       const $scale = this._drawScale('40', 'wide');

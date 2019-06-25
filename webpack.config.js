@@ -3,6 +3,9 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const Autoprefixer = require('autoprefixer');
+const Cssnano = require('cssnano');
+const PostcssPxtorem = require('postcss-pxtorem');
 
 module.exports = (env, options) => {
   const production = options.mode === 'production';
@@ -49,9 +52,9 @@ module.exports = (env, options) => {
                   plugins() {
                     if (production) {
                       return [
-                        require('autoprefixer'),
-                        require('cssnano'),
-                        require('postcss-pxtorem')({
+                        Autoprefixer,
+                        Cssnano,
+                        PostcssPxtorem({
                           rootValue: 14,
                           unitPrecision: 5,
                           propList: ['*', '!max-width', '!min-width'],
@@ -63,8 +66,8 @@ module.exports = (env, options) => {
                       ];
                     }
                     return [
-                      require('autoprefixer'),
-                      require('postcss-pxtorem')({
+                      Autoprefixer,
+                      PostcssPxtorem({
                         rootValue: 14,
                         unitPrecision: 5,
                         propList: ['*', '!max-width', '!min-width'],

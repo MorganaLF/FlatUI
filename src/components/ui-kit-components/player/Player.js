@@ -54,7 +54,7 @@ class Player {
   }
 
   _findElements() {
-    this.playerNode = this.$element[0];
+    [this.playerNode] = this.$element;
     this.$playerContainer = this.$element.closest('.js-player');
     this.$playButton = this.$playerContainer.find('.js-player__play-button');
     this.$fullScreenButton = this.$playerContainer.find('.js-player__full-button');
